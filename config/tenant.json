@@ -21,19 +21,19 @@
     "logoURL": "https://raw.githubusercontent.com/Fiserv/Developer-Portal-Tenant-API/develop/assets/images/Portal_Logo.png",
     "description": "To onboard properly into the Developer Studio as a tenant each product must support these APIs so that we can retrieve product specific API specifications and documentation.",
     "longDescription":"To onboard properly into the Developer Studi as a tenant each product must support these APIs so that we can retrieve product specific API specifications and documentation.",
-    "apiSpecification": "/v1/apis/<name_of_tenant>",
-    "layout": "/v1/layouts/<name_of_tenant>",
-    "documentation": "/v1/docs/<name_of_tenant>",
-    "documenttree": "/v1/docs/<name_of_tenant>",
-    "documenttreeV2": "/v2/docs/<name_of_tenant>",
-    "docsCount": "/v2/docs/count/<name_of_tenant>",
-    "sandbox": "/v1/sandboxrun/<name_of_tenant>",
-    "accessConfig": "/v1/fileAccess/<name_of_tenant>",
-    "assets": "/v1/assets/<name_of_tenant>",    
+    "apiSpecification": "/v1/apis/BrazilAPI",
+    "layout": "/v1/layouts/BrazilAPI",
+    "documentation": "/v1/docs/BrazilAPI",
+    "documenttree": "/v1/docs/BrazilAPI",
+    "documenttreeV2": "/v2/docs/BrazilAPI",
+    "docsCount": "/v2/docs/count/BrazilAPI",
+    "sandbox": "/v1/sandboxrun/BrazilAPI",
+    "accessConfig": "/v1/fileAccess/BrazilAPI",
+    "assets": "/v1/assets/BrazilAPI",    
     "feature":[
       {
         "name": "sandBox",
-        "value": false
+        "value": true
       },
       {
         "name": "plugins",
