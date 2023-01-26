@@ -1,13 +1,11 @@
 
 # APIs Support Documents
 
-
 Welcome to our APIs Support Documentation!
 
 To a brief introduction of how to use the APIS, please access our [introduction](https://docs-qa.firstdata.com/org/brazilapi/node/1013).
 
 Below you can check each link to access the detailed document for each Web-services (APIs), so you can develop and implement your business.
-
 
 ## Authentication
 ----
@@ -18,8 +16,6 @@ Below you can check each link to access the detailed document for each Web-servi
 [Online Boarding and Status](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-credenciamen)
 
 [Proposal Status - Consult (Out of Online Boarding)](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-status-propo)
-
-
 
 ## Merchant Information & Cases
 
@@ -69,7 +65,6 @@ Below you can check each link to access the detailed document for each Web-servi
 
 [Contract Historic](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-historico-contra)
 
-
 ## Devices Information
 
 [Merchant Device Availability - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-tmp-consulta-tec)
@@ -86,7 +81,6 @@ Below you can check each link to access the detailed document for each Web-servi
 
 [Update Device fees](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-update-device)
 
-
 ## Sales Information
 
 [Merchant Authorizations (Current Day) - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-cns-autoriza)
@@ -102,7 +96,6 @@ Below you can check each link to access the detailed document for each Web-servi
 [Merchant Operations - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-consulta-ops)
 
 [Consult Chargeback Information](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-Charge-Back)
-
 
 ## Payment & Prepayment Information
 
