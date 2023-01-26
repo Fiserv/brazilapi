@@ -23,7 +23,7 @@ Below you can check each link to access the detailed document for each Web-servi
 
 ## Merchant Information & Cases
 
----
+----
 
 [Chargeback Consult (not available - Rodrigo 20200316](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-cons-chargeback)      
 
@@ -73,7 +73,7 @@ Below you can check each link to access the detailed document for each Web-servi
 
 ## Devices Information
 
----
+----
 
 [Merchant Device Availability - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-tmp-consulta-tec)
 
@@ -91,7 +91,7 @@ Below you can check each link to access the detailed document for each Web-servi
 
 ## Sales Information
 
----
+----
 
 [Merchant Authorizations (Current Day) - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-cns-autoriza)
 
@@ -109,7 +109,7 @@ Below you can check each link to access the detailed document for each Web-servi
 
 ## Payment & Prepayment Information
 
----
+----
 
 [Payment Settlement Account - Update](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-dom-bancario)
 
@@ -129,7 +129,7 @@ Below you can check each link to access the detailed document for each Web-servi
 
 ## Service Order Information
 
----
+----
 
 [Service Order - Terminal Maintenance](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-wsm-mnt-term)
 
