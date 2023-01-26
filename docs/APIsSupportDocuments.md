@@ -1,373 +1,139 @@
----
-title: APIs Support Documents
----
 
-Welcome to our APIs&nbsp;Support Documentation!
+# APIs Support Documents
 
-To a brief introduction of&nbsp;how to use the APIS, please access our [introduction][1].
+
+Welcome to our APIs Support Documentation!
+
+To a brief introduction of how to use the APIS, please access our [introduction](https://docs-qa.firstdata.com/org/brazilapi/node/1013).
 
 Below you can check each link to access the detailed document for each Web-services (APIs), so you can develop and implement your business.
 
-**Authentication**
 
-<table class="ml-2 text-align-center">
-  <tbody>
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-token">Token Access</a>
-      </td>
-      
-      <td>
-        &nbsp;
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Authentication
+----
+[Token Access](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-token)
 
-&nbsp;
+## Online Boarding
 
-**Online Boarding**
+[Online Boarding and Status](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-credenciamen)
 
-<table class="ml-2 text-align-center">
-  <tbody>
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-credenciamen">Online Boarding and Status</a>
-      </td>
-      
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-status-propo">Proposal Status - Consult (Out of Online Boarding)</a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+[Proposal Status - Consult (Out of Online Boarding)](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-status-propo)
 
-&nbsp;
 
-**Merchant Information & Cases**
 
-<table class="ml-2 text-align-center">
-  <tbody>
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-cons-chargeback">Chargeback Consult (not available - Rodrigo 20200316)</a>
-      </td>
-      
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-val-cadastro">Existing Customer Validation</a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-dados-logisticos">Merchant Logistic Information - Add/Consult</a>
-      </td>
-      
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-wsm-atu-end">Merchant Addresses - Update</a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-wsm-atlz-con">Merchant Contact Information - Update</a>
-      </td>
-      
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-status-estabe">Merchant Contract Status - Update</a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-estabelecimento">Merchant Customer Information - Consult</a>
-      </td>
-      
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-ajuste-debito">Merchant Debits (fee, refund, reversal, etc)- Consult</a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-atualizar-socio">Merchant Information - Consult/Update Partner</a>
-      </td>
-      
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-consulta-dirf">Merchant Information - DIRF</a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-alter-cadast">Merchant Information - Demographic History</a>
-      </td>
-      
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-monthly-bill-pre">Merchant Information - Monthly Presumed Billing</a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-receb">Merchant Information - Registradora (CIRC3952)</a>
-      </td>
-      
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-Hier-Pagto">Merchant Payment Hierarchy - Consult</a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-Hierarquia-Relac">Merchant Relationship Hierarchy - Consult</a>
-      </td>
-      
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/SBA-EN-Con-Ser-Bande">Merchant Services - Consult/Update for Associations/Schema</a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-wsm-nme-fant">Merchant Trade Name - Update</a>
-      </td>
-      
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-wsm-work-fun">Merchant Working Hours - Update</a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-mdr-fee">Merchant Service Fees (MDR) - Consult</a>
-      </td>
-      
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-abertura-sol">Merchant Requests (Cases) - Open</a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-pesq-caso-sf">Requests (Cases/Comments) - Consult</a>
-      </td>
-      
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-con-prod-serv">Contracted Services - Consult</a>
-      </td>
-      
-      <td>
-        &nbsp;
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-historico-contra">Contract Historic</a>
-      </td>
-      
-      <td>
-        &nbsp;
-      </td>
-      
-      <td>
-        &nbsp;
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Merchant Information & Cases
 
-&nbsp;
+[Chargeback Consult (not available - Rodrigo 20200316](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-cons-chargeback)      
 
-**Devices Information**
+[Existing Customer Validation](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-val-cadastro)
 
-<table class="ml-2 text-align-center">
-  <tbody>
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-tmp-consulta-tec">Merchant Device Availability - Consult</a>
-      </td>
-      
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-con-taxa-eqp">Merchant Devices and Fees - Consult</a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-battery-Info">Merchant Devices - Battery Information</a>
-      </td>
-      
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-cob-hist-term">Merchant Devices Billing History</a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-dailypass">Merchant Devices Daily Password - Consult</a>
-      </td>
-      
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-solicitar-bobina">Paper Roll - Request</a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-update-device">Update Device fees</a>
-      </td>
-      
-      <td>
-        &nbsp;
-      </td>
-    </tr>
-  </tbody>
-</table>
+[Merchant Logistic Information - Add](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-dados-logisticos)
 
-&nbsp;
+[Merchant Addresses - Update](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-wsm-atu-end)
 
-**Sales Information**
+[Merchant Contact Information - Update](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-wsm-atlz-con)
 
-<table class="ml-2 text-align-center">
-  <tbody>
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-cns-autoriza">Merchant Authorizations (Current Day) - Consult</a>
-      </td>
-      
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-autoribw">Merchant Authorizations History - Consult</a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-cons-vendas">Merchant Sales - Paid or To Be Received - Consult</a>
-      </td>
-      
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/SBA-EN-Con-Trn-Digit">Merchant Sales - Keyed Trans Permission - Consult</a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/sba-EN-Trans-Suspens">Merchant Sales - Suspended Transactions - Consult</a>
-      </td>
-      
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-consulta-ops">Merchant Operations - Consult</a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-Charge-Back">Consult Chargeback Information</a>
-      </td>
-      
-      <td>
-        &nbsp;
-      </td>
-    </tr>
-  </tbody>
-</table>
+[Merchant Contract Status - Update](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-status-estabe)
 
-&nbsp;
+[Merchant Customer Information - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-estabelecimento)
 
-**Payment & Prepayment Information**
+[Merchant Debits (fee, refund, reversal, etc)- Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-ajuste-debito)
 
-<table class="ml-2 text-align-center">
-  <tbody>
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-dom-bancario">Payment Settlement Account - Update</a>
-      </td>
-      
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-val-dombanca">Payment Settlement Account - Validation</a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-pagamentos">Payments - Consult</a>&nbsp;
-      </td>
-      
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001_sba_wsm_flag_ant">Prepayment - Enable/Disable</a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-wsm-antecipa">Prepayment - Maintenance/Simulate/Confirm/Reject</a>
-      </td>
-      
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-pre-pay-history">Prepayment - History Fees Consult</a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-antecip-aut">Automatic Prepayment - Cancel</a>
-      </td>
-      
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/003-antecipacoes-rea">Transactions related to Manual/Automatic Prepayment</a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+[Merchant Information - Consult/Update Partner](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-atualizar-socio)
 
-&nbsp;
+[Merchant Information - DIRF](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-consulta-dirf)
 
-**Service Order Information**
+[Merchant Information - Demographic History](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-alter-cadast)
 
-<table class="ml-2 text-align-center">
-  <tbody>
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-wsm-mnt-term">Service Order - Terminal Maintenance</a>
-      </td>
-      
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-wsm-cancel-so">Service Order - Cancelling</a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-consulta-os">Service Order - Consult</a>
-      </td>
-      
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-consulta-cep">Zipcode (CEP) - Consult</a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-consulta-cpf">Tax ID (individual) Validation (not available PROD)</a>
-      </td>
-      
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-consulta-cnpj">Tax ID (company) Validation(not available PROD)</a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <a href="https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-brtmp-tickets">Service Order - Ticket</a>
-      </td>
-      
-      <td>
-        &nbsp;
-      </td>
-    </tr>
-  </tbody>
-</table>
+[Merchant Information - Monthly Presumed Billing](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-monthly-bill-pre)
 
- [1]: https://docs-qa.firstdata.com/org/brazilapi/node/1013
+[Merchant Information - Registradora (CIRC3952)](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-receb)
+
+[Merchant Payment Hierarchy - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-Hier-Pagto)
+
+[Merchant Relationship Hierarchy - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-Hierarquia-Relac)
+
+[Merchant Services - Consult/Update for Associations/Schema](https://docs-qa.firstdata.com/org/brazilapi/docs/api/SBA-EN-Con-Ser-Bande)
+
+[Merchant Trade Name - Update](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-wsm-nme-fant)
+
+[Merchant Working Hours - Update](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-wsm-work-fun)
+
+[Merchant Service Fees (MDR) - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-mdr-fee)
+
+[Merchant Requests (Cases) - Open](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-abertura-sol)
+
+[Requests (Cases/Comments) - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-pesq-caso-sf)
+
+[Contracted Services - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-con-prod-serv)
+
+[Contract Historic](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-historico-contra)
+
+
+## Devices Information
+
+[Merchant Device Availability - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-tmp-consulta-tec)
+
+[Merchant Devices and Fees - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-con-taxa-eqp)
+
+[Merchant Devices - Battery Information](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-battery-Info)
+
+[Merchant Devices Billing History](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-cob-hist-term)
+
+[Merchant Devices Daily Password - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-dailypass)
+
+[Paper Roll - Request](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-solicitar-bobina)
+
+[Update Device fees](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-update-device)
+
+
+## Sales Information
+
+[Merchant Authorizations (Current Day) - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-cns-autoriza)
+
+[Merchant Authorizations History - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-autoribw)
+
+[Merchant Sales - Paid or To Be Received - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-cons-vendas)
+
+[Merchant Sales - Keyed Trans Permission - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/SBA-EN-Con-Trn-Digit)
+
+[Merchant Sales - Suspended Transactions - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/sba-EN-Trans-Suspens)
+
+[Merchant Operations - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-consulta-ops)
+
+[Consult Chargeback Information](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-Charge-Back)
+
+
+## Payment & Prepayment Information
+
+[Payment Settlement Account - Update](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-dom-bancario)
+
+[Payment Settlement Account - Validation](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-val-dombanca)
+
+[Payments - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-pagamentos)
+
+[Prepayment - Enable/Disable](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001_sba_wsm_flag_ant)
+
+[Prepayment - Maintenance/Simulate/Confirm/Reject](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-wsm-antecipa)
+
+[Prepayment - History Fees Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-pre-pay-history)
+
+[Automatic Prepayment - Cancel](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-antecip-aut)
+
+[Transactions related to Manual/Automatic Prepayment](https://docs-qa.firstdata.com/org/brazilapi/docs/api/003-antecipacoes-rea)
+
+## Service Order Information
+
+[Service Order - Terminal Maintenance](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-wsm-mnt-term)
+
+[Service Order - Cancelling](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-wsm-cancel-so)
+
+[Service Order - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-consulta-os)
+
+[Zipcode (CEP) - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-consulta-cep)
+
+[Tax ID (individual) Validation (not available PROD)](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-consulta-cpf)
+
+[Tax ID (company) Validation(not available PROD)](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-consulta-cnpj)
+
+[Service Order - Ticket](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-brtmp-tickets)
