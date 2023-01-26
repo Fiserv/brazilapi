@@ -8,16 +8,21 @@ To a brief introduction of how to use the APIS, please access our [introduction]
 Below you can check each link to access the detailed document for each Web-services (APIs), so you can develop and implement your business.
 
 ## Authentication
+
 ----
 [Token Access](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-token)
 
 ## Online Boarding
+
+----
 
 [Online Boarding and Status](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-credenciamen)
 
 [Proposal Status - Consult (Out of Online Boarding)](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-status-propo)
 
 ## Merchant Information & Cases
+
+---
 
 [Chargeback Consult (not available - Rodrigo 20200316](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-cons-chargeback)      
 
@@ -67,6 +72,8 @@ Below you can check each link to access the detailed document for each Web-servi
 
 ## Devices Information
 
+---
+
 [Merchant Device Availability - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-tmp-consulta-tec)
 
 [Merchant Devices and Fees - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-con-taxa-eqp)
@@ -83,6 +90,8 @@ Below you can check each link to access the detailed document for each Web-servi
 
 ## Sales Information
 
+---
+
 [Merchant Authorizations (Current Day) - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-cns-autoriza)
 
 [Merchant Authorizations History - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-autoribw)
@@ -98,6 +107,8 @@ Below you can check each link to access the detailed document for each Web-servi
 [Consult Chargeback Information](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-Charge-Back)
 
 ## Payment & Prepayment Information
+
+---
 
 [Payment Settlement Account - Update](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-dom-bancario)
 
@@ -116,6 +127,8 @@ Below you can check each link to access the detailed document for each Web-servi
 [Transactions related to Manual/Automatic Prepayment](https://docs-qa.firstdata.com/org/brazilapi/docs/api/003-antecipacoes-rea)
 
 ## Service Order Information
+
+---
 
 [Service Order - Terminal Maintenance](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-wsm-mnt-term)
 
