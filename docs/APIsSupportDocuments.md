@@ -10,6 +10,7 @@ Below you can check each link to access the detailed document for each Web-servi
 ## Authentication
 
 ----
+
 [Token Access](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-token)
 
 ## Online Boarding
