@@ -11,15 +11,13 @@
     
 ---
 
- **Work with the best!** 
+ ## Work with the best!
  
  Specialized professionals in this industry that will dedicate 
  
  all the time to understand the complexity of your business.
 
-
-
-**Open Environment**
+## Open Environment
 
 If you are building a new solution 'all-in-one',
 
@@ -29,18 +27,18 @@ If you are building a new solution 'all-in-one',
  
  will save you time, money and resource.
 
-**All In One**
+## All In One
       
 Create, Test, Certify and Deliver application of payment through only one interface.
       
-**Value your Customers**
+## Value your Customers
       
 Create reward programs for your customers and develop Apps to our Clover Marketplace.
 
-**Customized Solutions**
+## Customized Solutions
       
 No matter the nature of your business, we have the ideal integration model.
 
-**Get Bonus**
+## Get Bonus
       
 Have one of our most flexible business models and be paid when you register customers to have payments processed with us.
