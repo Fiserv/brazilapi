@@ -11,7 +11,7 @@
     
 ---
 
- ## Work with the best!
+## Work with the best
  
  Specialized professionals in this industry that will dedicate 
  
