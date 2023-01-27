@@ -3,7 +3,7 @@
     
 ## We are here to help! To star, click on Start Link
  
-### We do the best for your Business.
+### We do the best for your Business
 
     Have access to a complete set of APIs&nbsp;without pain! Find development tools, samples of codes and resources to help you in order to integrate your Apps integrally or partially using Fiserv Platform!
     
