@@ -1,9 +1,9 @@
 
-# <center>Build best solutions</center>
+# Build best solutions
     
-## <center>We are here to help! To star, click on Start Link</center>
+## We are here to help! To star, click on Start Link
  
-### <center>We do the best for your Business.</center>
+### We do the best for your Business.
 
     Have access to a complete set of APIs&nbsp;without pain! Find development tools, samples of codes and resources to help you in order to integrate your Apps integrally or partially using Fiserv Platform!
     
@@ -11,15 +11,15 @@
     
 ---
 
- **<center>Work with the best!** 
+ **Work with the best!** 
  
  Specialized professionals in this industry that will dedicate 
  
- all the time to understand the complexity of your business.</center>
+ all the time to understand the complexity of your business.
 
 
 
-**<center>Open Environment**
+**Open Environment**
 
 If you are building a new solution 'all-in-one',
 
@@ -27,20 +27,20 @@ If you are building a new solution 'all-in-one',
  
  EMV or even any other requirement, our platform 
  
- will save you time, money and resource.</center>
+ will save you time, money and resource.
 
-**<center>All In One**
+**All In One**
       
-Create, Test, Certify and Deliver application of payment through only one interface.</center>
+Create, Test, Certify and Deliver application of payment through only one interface.
       
-**<center>Value your Customers**
+**Value your Customers**
       
-Create reward programs for your customers and develop Apps to our Clover Marketplace.</center>
+Create reward programs for your customers and develop Apps to our Clover Marketplace.
 
-**<center>Customized Solutions**
+**Customized Solutions**
       
-No matter the nature of your business, we have the ideal integration model.</center>
+No matter the nature of your business, we have the ideal integration model.
 
-**<center>Get Bonus**
+**Get Bonus**
       
-Have one of our most flexible business models and be paid when you register customers to have payments processed with us.</center>
+Have one of our most flexible business models and be paid when you register customers to have payments processed with us.
