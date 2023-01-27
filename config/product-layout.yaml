@@ -29,8 +29,8 @@
 ################################################################################
 header:
   productName: BrazilAPI
-  productionDescription: REPLACEME
-  whoIsItFor: REPLACEME
+  productionDescription: We do the best for your Business.
+  whoIsItFor: Fiserv and Clients
   image: 
     link: "/assets/images/Fiserv_Logo.jpg"
     altText: REPLACEME™
@@ -41,16 +41,16 @@ featuredFeatures:
     bullets: ["REPLACEME", "REPLACEME" ]  
     relatedDocs:
       - relatedDoc: 
-        title: REPLACEME
-        description: REPLACEME
+        title: APIs - Introduction
+        description: APIs - Introduction
         link: ./docs/REPLACE-ME1.md
       - relatedDoc: 
-        title: REPLACEME
-        description: REPLACEME
+        title: User Manuals
+        description: User Manuals
         link: ./docs/REPLACE-ME2.md
       - relatedDoc: 
-        title: REPLACEME
-        description: REPLACEME
+        title: Prepayment Information
+        description: Prepayment Information
         link: ./docs/REPLACE-ME3.md
     relatedAPIs:
       - relatedAPI: 
@@ -63,8 +63,4 @@ featuredFeatures:
         description: REPLACEME
         type: "post"        
         path: "/v1/REPLACEME2"
-      - relatedAPI: 
-        title: REPLACEME
-        description: REPLACEME
-        type: "get"        
-        path: "/v1/REPLACEME3"
+
