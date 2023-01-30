@@ -5,7 +5,7 @@
  
 ### We do the best for your Business
 
-    Have access to a complete set of APIs&nbsp;without pain! Find development tools, samples of codes and resources to help you in order to integrate your Apps integrally or partially using Fiserv Platform!
+    Have access to a complete set of APIs without pain! Find development tools, samples of codes and resources to help you in order to integrate your Apps integrally or partially using Fiserv Platform!
     
     Wish to start a new revenue source? Integrate your platform to Fiserv Marketplace, and register merchants to have payments processed directly in your site, and be paid for that!
     

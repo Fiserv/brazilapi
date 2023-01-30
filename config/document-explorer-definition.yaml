@@ -32,6 +32,46 @@
   - title: Getting Started
     link: docs/HomepageEditada.md
 - sections:
+  - title: Introduction
+    link: docs/APIs-Introduction.md
+- sections:
+  - title: User Manuals
+    link: docs/HomepageEditada.md
+- sections:
+  - title: APIs All
+  sections:
+    - title: Release Notes
+      link: docs/release-notes/2022/march.md
+    - title: Documentation
+      link: docs/APIsSupportDocuments.md
+- sections:
+  - title: Token Access
+    link: docs/HomepageEditada.md
+- sections:
+  - title: Prepayment Info
+    link: docs/HomepageEditada.md
+- sections:
+  - title: Backoffice
+    link: docs/HomepageEditada.md
+- sections:
+  - title: Update/Get Merchant Info
+    link: docs/HomepageEditada.md
+- sections:
+  - title: Boarding
+    link: docs/HomepageEditada.md
+- sections:
+  - title: Logistic
+    link: docs/HomepageEditada.md
+- sections:
+  - title: Sales
+    link: docs/HomepageEditada.md
+- sections:
+  - title: Split - Payments
+    link: docs/HomepageEditada.md
+- sections:
+  - title: Fiserv (Internal Use)
+    link: docs/HomepageEditada.md
+- sections:
   - title: Release notes
     sections:
     - title: March 2022
