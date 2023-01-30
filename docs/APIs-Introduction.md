@@ -176,6 +176,7 @@ The response is:
 ### 5.2 Sample in Python 3
 
 #### 5.2.1 Code
+
 ``` {.python }
     from hashlib import sha256
     import base64
@@ -236,6 +237,7 @@ The response is:
 ``` 
 
 #### 5.2.2 Output
+
 ``` {.payload }
     Status: 200
     Body: {
