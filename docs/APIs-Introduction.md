@@ -35,10 +35,10 @@ To generate the Token, you should access the page with specific instructions [To
 
 **Important&nbsp;Notice:**
 
-  * The custody of the credentials is the responsibility of the client;
-  * Do not share the Credentials with whom must not have access to them;
-  * Store the Token Credentials in an specific Vault. Avoid storing in the same application database that will consume resources;
-  * In case of compromise/lost your credentials, you must contact us, immediately;
+* The custody of the credentials is the responsibility of the client;
+* Do not share the Credentials with whom must not have access to them;
+* Store the Token Credentials in an specific Vault. Avoid storing in the same application database that will consume resources;
+* In case of compromise/lost your credentials, you must contact us, immediately;
 
 #### 2.1.1 Request
 
@@ -51,8 +51,8 @@ Body         | Body  | String| grant_type=password&client_id=estabelecimento&use
 
 where:
 
-  * user_name: the user name you got in the step #1
-  * password: the password you got in the step #1
+* user_name: the user name you got in the step #1
+* password: the password you got in the step #1
 
 #### 2.1.2 Response
 
@@ -74,7 +74,7 @@ Where access_token is the value to be used to in all other APIs.
 Sample of response
 
 
-```
+``` { .payload }
 {
   "access_token": "eyJhbGciOiJS [...] swVHg6f8opW1DzuWsilvQ",
   "expires_in": 62208000,
@@ -176,7 +176,7 @@ The response is:
 ### 5.2 Sample in Python 3
 
 #### 5.2.1 Code
-
+``` {.python }
     from hashlib import sha256
     import base64
     import time
@@ -233,11 +233,10 @@ The response is:
     r = requests.get(url + endpoint, headers=headers)
     print(f'Status: {r.status_code}\n'
           f'Body: {json.dumps(r.json(), indent=4, sort_keys=True, ensure_ascii=False)}')
-    
-    
+``` 
 
 #### 5.2.2 Output
-
+``` {.payload }
     Status: 200
     Body: {
         "cepResponse": {
@@ -252,11 +251,13 @@ The response is:
         "code": 200,
         "description": "Search done successfully!"
     }
+```
     
 ### 5.3 Sample in Shell script
 
 #### 5.3.1 Code
 
+``` {.script }
     #!/bin/bash
     
     # appkey extraída da página da aplicação do desenvolvedor
@@ -288,14 +289,18 @@ The response is:
     
     # envio do request com parâmetros no header
     curl -H "auth: $TOKEN" -H "Api-Key: $APPKEY" -H "Timestamp: $DATE" -H "Message-Signature: $HMAC_AUTH" -H "Client-Request-Id: $CLIENT_REQUEST_ID" $URL
+```
     
 #### 5.3.2 Output
+
+``` {.script }
 
       % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                      Dload  Upload   Total   Spent    Left  Speed
     100   249    0   249    0     0     86      0 --:--:--  0:00:02 --:--:--    86
     {"code":200,"description":"Search done successfully!","cepResponse":{"state":"SP","city":"São Paulo","neighborhood":"Vila Gertrudes","address":"Avenida das Nações Unidas","complement":"- lado ímpar","zipCode":"04794000","genericZipCode":"Não"}}
-    
+```
+
 ## 6. Request POST
 
 ### 6.1 Sample in Postman
@@ -320,6 +325,7 @@ The response is:
 
 #### 6.2.1 Code
 
+``` {.python }
     from hashlib import sha256
     import base64
     import time
@@ -396,11 +402,12 @@ The response is:
     r = requests.post(url + endpoint, json=body, headers=headers)
     print(f'Status: {r.status_code}\n'
           f'Body: {json.dumps(r.json(), indent=4, sort_keys=True, ensure_ascii=False)}')
-    
+```
     
 
 #### 6.2.2 Output
 
+``` {.script }
     Status: 200
     Body: {
         "processMessage": [
@@ -421,12 +428,13 @@ The response is:
             }
         ]
     }
-
+```
 
 ### 6.3 Sample of Shell script
 
 #### 6.3.1 Code
 
+``` {.script }
     #!/bin/bash
     
     # appkey extraída da página da aplicação do desenvolvedor
@@ -461,13 +469,16 @@ The response is:
     
     # envio do request com parâmetros no header e o body
     curl -H "auth: $TOKEN" -H "Api-Key: $APPKEY" -H "Timestamp: $DATE" -H "Message-Signature: $HMAC_AUTH" -H "Client-Request-Id: $CLIENT_REQUEST_ID" -H "Content-Type: application/json" -d "$JSON" -X POST $URL
+```
     
 #### 6.3.2 Output
 
+``` {.script}
       % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                      Dload  Upload   Total   Spent    Left  Speed
     100   462    0   218  100   244    102    114  0:00:02  0:00:02 --:--:--   217
     {"processMessage":[{"institutionNumber":"00000003","userId":"100066","response":{"responseInformationList":[{"responseCode":"11","responseCodeDesc":"Update already executed"}]},"accounts":{"accountInformation":null}}]}
+```
 
  [1]: https://docs-qa.firstdata.com/org/brazilapi/user/apps
  [2]: https://docs-qa.firstdata.com/org/brazilapi/node/1146
