@@ -69,7 +69,7 @@ Below you can check each link to access the detailed document for each Web-servi
 
 [Contracted Services - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-con-prod-serv)
 
-[Contract Historic](documentation/Merchant%20Information%20and%20Cases/historicoContrato_1.yaml)
+[Contract Historic](documentation/historicoContrato_1.yaml)
 
 ## Devices Information
 
