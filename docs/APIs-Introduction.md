@@ -74,7 +74,7 @@ Where access_token is the value to be used to in all other APIs.
 Sample of response
 
 
-``` { .payload }
+``` {.payload }
 {
   "access_token": "eyJhbGciOiJS [...] swVHg6f8opW1DzuWsilvQ",
   "expires_in": 62208000,
