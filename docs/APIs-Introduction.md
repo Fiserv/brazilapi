@@ -258,7 +258,7 @@ The response is:
 
 #### 5.3.1 Code
 
-```json
+```shell
     #!/bin/bash
     
     # appkey extraída da página da aplicação do desenvolvedor
@@ -435,7 +435,7 @@ The response is:
 
 #### 6.3.1 Code
 
-```json
+```shell
     #!/bin/bash
     
     # appkey extraída da página da aplicação do desenvolvedor

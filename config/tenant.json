@@ -14,6 +14,12 @@
         "versionType": "major",
         "releaseNotesPath": "docs/release-notes/2022/march.md",
         "apiSpecFileNames": ["openapi"]
+      },
+      {
+        "version": "1.0.0",
+        "versionType": "major",
+        "releaseNotesPath": "docs/release-notes/2022/march.md",
+        "apiSpecFileNames": ["historicoContrato_1"]
       }
   ],
   "product": {

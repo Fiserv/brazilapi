@@ -39,11 +39,6 @@
     link: docs/HomepageEditada.md
 - sections:
   - title: APIs All
-  sections:
-    - title: Release Notes
-      link: docs/release-notes/2022/march.md
-    - title: Documentation
-      link: docs/APIsSupportDocuments.md
 - sections:
   - title: Token Access
     link: docs/HomepageEditada.md
