@@ -74,7 +74,7 @@ Where access_token is the value to be used to in all other APIs.
 Sample of response
 
 
-``` {.payload }
+``` {.script }
 {
   "access_token": "eyJhbGciOiJS [...] swVHg6f8opW1DzuWsilvQ",
   "expires_in": 62208000,
@@ -238,7 +238,7 @@ The response is:
 
 #### 5.2.2 Output
 
-``` {.payload }
+``` {.script }
     Status: 200
     Body: {
         "cepResponse": {
