@@ -73,7 +73,7 @@ Where access_token is the value to be used to in all other APIs.
 
 Sample of response
 
-``` {.json }
+```json
 {
   "access_token": "eyJhbGciOiJS [...] swVHg6f8opW1DzuWsilvQ",
   "expires_in": 62208000,
@@ -176,7 +176,7 @@ The response is:
 
 #### 5.2.1 Code
 
-``` {.python }
+```python
     from hashlib import sha256
     import base64
     import time
@@ -237,7 +237,7 @@ The response is:
 
 #### 5.2.2 Output
 
-``` {.json }
+```json
     Status: 200
     Body: {
         "cepResponse": {
@@ -258,7 +258,7 @@ The response is:
 
 #### 5.3.1 Code
 
-``` {.json }
+```json
     #!/bin/bash
     
     # appkey extraída da página da aplicação do desenvolvedor
@@ -294,7 +294,7 @@ The response is:
     
 #### 5.3.2 Output
 
-``` {.json }
+```json
 
       % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                      Dload  Upload   Total   Spent    Left  Speed
@@ -326,7 +326,7 @@ The response is:
 
 #### 6.2.1 Code
 
-``` {.python }
+```python
     from hashlib import sha256
     import base64
     import time
@@ -408,7 +408,7 @@ The response is:
 
 #### 6.2.2 Output
 
-``` {.json }
+```json
     Status: 200
     Body: {
         "processMessage": [
@@ -435,7 +435,7 @@ The response is:
 
 #### 6.3.1 Code
 
-``` {.json }
+```json
     #!/bin/bash
     
     # appkey extraída da página da aplicação do desenvolvedor
@@ -474,7 +474,7 @@ The response is:
     
 #### 6.3.2 Output
 
-``` {.json}
+```json
       % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                      Dload  Upload   Total   Spent    Left  Speed
     100   462    0   218  100   244    102    114  0:00:02  0:00:02 --:--:--   217
