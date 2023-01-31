@@ -9,10 +9,10 @@ Below you can check each link to access the detailed document for each Web-servi
 
 ## Important Notice:
 
-  * The custody of the credentials is the responsibility of the client;
-  * Do not share the Credentials with whom must not have access to them;
-  * Store the Token Credentials in an specific Vault. Avoid storing in the same application database that will consume resources;
-  * In case of compromise/lost your credentials, you must contact us, immediately;
+* The custody of the credentials is the responsibility of the client;
+* Do not share the Credentials with whom must not have access to them;
+* Store the Token Credentials in an specific Vault. Avoid storing in the same application database that will consume resources;
+* In case of compromise/lost your credentials, you must contact us, immediately;
 
 [Token](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-token) 
 
