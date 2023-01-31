@@ -44,10 +44,10 @@ To generate the Token, you should access the page with specific instructions [To
 
 To receive the Token, you need to send a POST request for "https://int.api.firstdata.com/sba/token" with the following parameters:
 
-Content-Type | Local | Type | Value 
------------- | ----- | ---- | -----
-Content-Type | Header| String| application/x-www-form-urlencoded
-Body         | Body  | String| grant_type=password&client_id=estabelecimento&username={user_name}&password={password}
+| Content-Type | Local  | Type   | Value                                                                                  | 
+|--------------|--------|--------|----------------------------------------------------------------------------------------|
+| Content-Type | Header | String | application/x-www-form-urlencoded                                                      |
+| Body         | Body   | String | grant_type=password&client_id=estabelecimento&username={user_name}&password={password} |
 
 where:
 
@@ -58,17 +58,17 @@ where:
 
 The POST response is a JSON with the following information:
 
-Name| Type |Description | Sample
-----|------|------------|-------
-access_token | string | Token to be used in all other APIs | "eyJhbGciOiJS [...] swVHg6f8opW1DzuWsilvQ"
-expires_in   | integer| Token expiration time|  62208000
-refresh_expires_in| integer| Expiration time for refresh token| 1800
-refresh_token|string|Token to be used to refresh the authentication| "eyJhbGciOiJS [...] G8LSL7qfJLmLU59O8sskw"
-token_type|string|Token type|bearer
-id_token| string|Token Id|"eyJhbGciOiJS [...] 3utG5l7qC0ieC--oLzGQ6w"
-not-before-policy|integer||0
-session-state|string|Session Status|"3a639a9b-2c42-472e-911b-209f9e01e077"
-      
+| Name               | Type    | Description                                    | Sample                                      |
+|--------------------|---------|------------------------------------------------|---------------------------------------------|
+| access_token       | string  | Token to be used in all other APIs             | "eyJhbGciOiJS [...] swVHg6f8opW1DzuWsilvQ"  |
+| expires_in         | integer | Token expiration time                          | 62208000                                    |
+| refresh_expires_in | integer | Expiration time for refresh token              | 1800                                        |
+| refresh_token      | string  | Token to be used to refresh the authentication | "eyJhbGciOiJS [...] G8LSL7qfJLmLU59O8sskw"  |
+| token_type         | string  | Token type                                     | bearer                                      |
+| id_token           | string  | Token Id                                       | "eyJhbGciOiJS [...] 3utG5l7qC0ieC--oLzGQ6w" |
+| not-before-policy  | integer || 0                                              |     |
+| session-state      | string  | Session Status                                 | "3a639a9b-2c42-472e-911b-209f9e01e077"      |
+
 Where access_token is the value to be used to in all other APIs.
 
 Sample of response
@@ -94,13 +94,13 @@ To be able to access any of the Codes or APIs described in this platform, it wil
 
 You shall send the following parameters in header for each APIs request:
 
-Name | Description 
----- | --------
-auth | Generated Token
-Api-Key| Key got from developer application
-Timestamp|Date in "Unix epoch time" format - milisseconds
-Message-Signature|HMAC authentication string
-Client-Request-Id|Alphanumeric string randomly generated
+| Name              | Description                                     |
+|-------------------|-------------------------------------------------|
+| auth              | Generated Token                                 |
+| Api-Key           | Key got from developer application              |
+| Timestamp         | Date in "Unix epoch time" format - milisseconds |
+| Message-Signature | HMAC authentication string                      |
+| Client-Request-Id | Alphanumeric string randomly generated          |
 
 ### 3.1 auth
 
@@ -145,17 +145,17 @@ Sample: "6NYHj9Pgyxc84rmafpwG4fjhLwFfJYFVmxJOcgziD0QN3q6mGC"
 
 Fiserv returns HTTP standard code status, for successful and unsuccessful requests. See the below table for more detais:
 
-Code| Description | Meaning
-----| ------ | --------
-200 | OK |Successfully
-400 | Bad Request| Validation Error. The server was not able to process the request, due to any problem that might be coming from customer side. Ex: parameters or body request
-401 | Unauthorized | Authentication error related to HMAC or Token. Be sure the access Token is valid and not expired
-403 | Forbidden | The user is not authorized to access the APIs
-404 | Not found |APIs URI is incorrect or the resource might not be found
-409 | Conflict| The request cannot be completed due to a conflict with destination resource
-500 | Internal Server Error|Fiserv server might be down or unresponsive
-502 | Bad Gateway | The server (gateway or proxy) received an invalide response by an internal server
-      
+| Code | Description           | Meaning                                                                                                                                                      |
+|------|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 200  | OK                    | Successfully                                                                                                                                                 |
+| 400  | Bad Request           | Validation Error. The server was not able to process the request, due to any problem that might be coming from customer side. Ex: parameters or body request |
+| 401  | Unauthorized          | Authentication error related to HMAC or Token. Be sure the access Token is valid and not expired                                                             |
+| 403  | Forbidden             | The user is not authorized to access the APIs                                                                                                                |
+| 404  | Not found             | APIs URI is incorrect or the resource might not be found                                                                                                     |
+| 409  | Conflict              | The request cannot be completed due to a conflict with destination resource                                                                                  |
+| 500  | Internal Server Error | Fiserv server might be down or unresponsive                                                                                                                  |
+| 502  | Bad Gateway           | The server (gateway or proxy) received an invalide response by an internal server                                                                            |
+
 ## 5. Request GET
 
 ### 5.1 Postman Sample

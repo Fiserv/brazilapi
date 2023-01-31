@@ -39,33 +39,34 @@
     link: docs/HomepageEditada.md
 - sections:
   - title: APIs All
+    link: docs/APIsSupportDocuments.ms
 - sections:
   - title: Token Access
-    link: docs/HomepageEditada.md
+    link: docs/TokenGenerationforWeb-services.md
 - sections:
   - title: Prepayment Info
-    link: docs/HomepageEditada.md
+    link: docs/PrepaymentInformation.md
 - sections:
   - title: Backoffice
-    link: docs/HomepageEditada.md
+    link: docs/BackofficeInformation.md
 - sections:
   - title: Update/Get Merchant Info
-    link: docs/HomepageEditada.md
+    link: docs/UpdateGetMerchantInformation.md
 - sections:
   - title: Boarding
-    link: docs/HomepageEditada.md
+    link: docs/BoardingInformation.md
 - sections:
   - title: Logistic
-    link: docs/HomepageEditada.md
+    link: docs/LogisticInformation.md
 - sections:
   - title: Sales
-    link: docs/HomepageEditada.md
+    link: docs/SalesInformation.md
 - sections:
   - title: Split - Payments
-    link: docs/HomepageEditada.md
+    link: docs/SplitPaymentsInformation.md
 - sections:
   - title: Fiserv (Internal Use)
-    link: docs/HomepageEditada.md
+    link: docs/FiservInternalUseOnly.md
 - sections:
   - title: Release notes
     sections:

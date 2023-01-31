@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="brazilapi_spec">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/assets/brazilapi_spec.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
