@@ -43,11 +43,11 @@ featuredFeatures:
       - relatedDoc: 
         title: APIs - Introduction
         description: APIs - Introduction
-        link: ./docs/REPLACE-ME1.md
+        link: ./docs/APIs-Introduction.md
       - relatedDoc: 
-        title: User Manuals
-        description: User Manuals
-        link: ./docs/REPLACE-ME2.md
+        title: APIs All
+        description: APIs all
+        link: ./docs/APIsSupportDocuments.ms.md
       - relatedDoc: 
         title: Prepayment Information
         description: Prepayment Information
