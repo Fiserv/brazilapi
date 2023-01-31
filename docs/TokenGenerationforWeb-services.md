@@ -7,7 +7,7 @@ To a brief introduction of&nbsp;how to use the APIs, please access our [introduc
 
 Below you can check each link to access the detailed document for each Web-services (APIs), so you can develop and implement your business.
 
-## Important Notice:
+## Important Notice
 
 * The custody of the credentials is the responsibility of the client;
 * Do not share the Credentials with whom must not have access to them;
