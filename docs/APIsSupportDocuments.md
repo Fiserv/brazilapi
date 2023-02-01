@@ -146,4 +146,4 @@ Below you can check each link to access the detailed document for each Web-servi
 [Service Order - Ticket](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-brtmp-tickets)
 
 [1]: APIs-Introduction.md
-[2]: ../reference/1.0.0/historicoContrato_1.yaml
+[2]: ../1.0.0/historicoContrato_1.yaml
