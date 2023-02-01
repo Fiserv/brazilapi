@@ -47,7 +47,7 @@ featuredFeatures:
       - relatedDoc: 
         title: APIs All
         description: APIs all
-        link: ./docs/APIsSupportDocuments.ms.md
+        link: ./docs/APIsSupportDocuments.md
       - relatedDoc: 
         title: Prepayment Information
         description: Prepayment Information
