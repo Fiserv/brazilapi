@@ -3,7 +3,7 @@
 
 Welcome to our APIs Support Documentation!
 
-To a brief introduction of how to use the APIS, please access our [introduction](https://docs-qa.firstdata.com/org/brazilapi/node/1013).
+To a brief introduction of how to use the APIS, please access our [introduction][1].
 
 Below you can check each link to access the detailed document for each Web-services (APIs), so you can develop and implement your business.
 
@@ -69,7 +69,7 @@ Below you can check each link to access the detailed document for each Web-servi
 
 [Contracted Services - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-con-prod-serv)
 
-[Contract Historic](?path=../reference/1.0.0/historicoContrato_1.yaml)
+[Contract Historic][2]
 
 ## Devices Information
 
@@ -144,3 +144,6 @@ Below you can check each link to access the detailed document for each Web-servi
 [Tax ID (company) Validation(not available PROD)](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-consulta-cnpj)
 
 [Service Order - Ticket](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-brtmp-tickets)
+
+[1]: APIs-Introduction.md
+[2]: ../reference/1.0.0/historicoContrato_1.yaml

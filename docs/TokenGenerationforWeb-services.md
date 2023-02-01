@@ -14,6 +14,7 @@ Below you can check each link to access the detailed document for each Web-servi
 * Store the Token Credentials in an specific Vault. Avoid storing in the same application database that will consume resources;
 * In case of compromise/lost your credentials, you must contact us, immediately;
 
-[Token](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-token) 
+[Token][2] 
 
 [1]: APIs-Introduction.md
+[2]: TokenGenerationforWeb-services.md

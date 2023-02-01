@@ -63,4 +63,9 @@ featuredFeatures:
         description: REPLACEME
         type: "post"        
         path: "/v1/REPLACEME2"
+      - relatedAPI:
+        title: REPLACEME
+        description: REPLACEME
+        type: "get"
+        path: "/v1/REPLACEME3"
 

@@ -481,9 +481,9 @@ The response is:
     {"processMessage":[{"institutionNumber":"00000003","userId":"100066","response":{"responseInformationList":[{"responseCode":"11","responseCodeDesc":"Update already executed"}]},"accounts":{"accountInformation":null}}]}
 ```
 
- [1]: https://docs-qa.firstdata.com/org/brazilapi/user/apps
- [2]: https://docs-qa.firstdata.com/org/brazilapi/node/1146
+ [1]: APIsSupportDocuments.md
+ [2]: TokenGenerationforWeb-services.md
  [3]: https://tools.ietf.org/html/draft-cavage-http-signatures-00#section-2.1.2.2
  [4]: https://docs-qa.firstdata.com/org/brazilapi/user/register
- [5]: #gerando-token-sba
+ [5]: TokenGenerationforWeb-services.md
  [6]: https://www.getpostman.com
