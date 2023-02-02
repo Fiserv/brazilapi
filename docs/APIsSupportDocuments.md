@@ -149,4 +149,4 @@ Below you can check each link to access the detailed document for each Web-servi
 [Contract Historic][2]
 
 [1]: APIs-Introduction.md
-[2]: ../reference/1.0.0/historicoContrato_1.yaml
+[2]: api/?type=get&path=/v1/historicoContrato&branch=develop&version=1.0.0

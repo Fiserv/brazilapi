@@ -15,7 +15,6 @@ x-header-api-secret: 'N93nmFmoY0NzSMC5'
 x-production-url: prod.api.firstdata.com/bwa/historico-contrato/v1
 x-config:
   tryItOut: true
-x-proxy-name: Historic Contract
 tags:
   - name: Historico de Contrato
 paths:
@@ -23,6 +22,7 @@ paths:
     get:
       tags:
         - Search for Contract Historic by Merchant Code and Intitution
+      x-proxy-name: Historic Contract
       summary: Search for Contract Historic by Merchant Code and Intitution
       operationId: searchForAvailableDevicesByMerchantCode
       parameters:
