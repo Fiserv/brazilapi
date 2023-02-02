@@ -8,22 +8,21 @@ info:
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0
-serverUrl: https://cat.api.firstdata.com/bwa/historico-contrato
-authenticationScheme: "HMAC"
-apiKey: 'X0GW3QGOYFn4r7DHcVC8KuatUnNs6MGB'
-secret: 'N93nmFmoY0NzSMC5'
-selfSignedCert: false
+servers:
+  - url: https://cat.api.firstdata.com/bwa/historico-contrato
+x-header-api-key: 'X0GW3QGOYFn4r7DHcVC8KuatUnNs6MGB'
+x-header-api-secret: 'N93nmFmoY0NzSMC5'
 x-production-url: prod.api.firstdata.com/bwa/historico-contrato/v1
 x-config:
   tryItOut: true
+x-proxy-name: Historic Contract
 tags:
-  - name: Search for Contract Historic by Merchant Code and Intitution
+  - name: Historico de Contrato
 paths:
   /v1/historicoContrato:
     get:
       tags:
         - Search for Contract Historic by Merchant Code and Intitution
-      x-proxy-name: historic-contract
       summary: Search for Contract Historic by Merchant Code and Intitution
       operationId: searchForAvailableDevicesByMerchantCode
       parameters:
