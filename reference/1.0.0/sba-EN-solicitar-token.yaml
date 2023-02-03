@@ -1,0 +1,91 @@
+openapi: 3.0.2
+info:
+  description: "Use this endpoint to generate the access token, becase on your credentials. \n
+  Important Notice: \n
+  1) The custody of the credentials is the responsibility of the client. \n
+  2) Do not share the Credentials with whom must not have access to them. \n
+  3) Store the Token Credentials in an specific Vault. Avoid storing in the same application database that will consume resources. \n
+  4) In case of compromise/lost your credentials, you must contact us, immediately."
+  version: "1.0"
+  title: Request TOKEN for APIs access
+  termsOfService: urn:tos
+  contact:
+    name: First Data
+    url: https://www.firstdata.com/pt_br/home.html
+  license:
+    name: Licença - Open Source
+    url: https://www.firstdata.com/pt_br/home.html
+servers:
+  - url: https://cat.api.firstdata.com/sba/token
+x-header-api-key: 'X0GW3QGOYFn4r7DHcVC8KuatUnNs6MGB'
+x-header-api-secret: 'N93nmFmoY0NzSMC5'
+x-production-url: prod.api.firstdata.com/sba/token
+x-config:
+  tryItOut: false
+tags:
+  - name: Request TOKEN for APIs access
+paths:
+  /:
+    post:
+      tags:
+        - Request TOKEN for APIs access
+      summary: Token Access
+      x-proxy-name: Token Access
+      operationId: requestTokenForAPIsAccess
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: string
+              example: grant_type=password&client_id=estabelecimento&username={user_name}&password={password}
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response"
+      deprecated: false
+components:
+  schemas:
+    Response:
+      type: object
+      properties:
+        access_token:
+          type: string
+          description: Token Authentication to be used
+          example: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzYVdqaW5TNHQ4eUhQSkVqdG91MW9CQ2c0U1lUWHNBMllUM2kyU0o4UXJZIn0.eyJqdGkiOiJiNzc2MTQyOC1lMzE5LTRkMWUtYjQ4ZS0yNjcxNDU0YjFjNWUiLCJleHAiOjE1NzM1ODg1NTcsIm5iZiI6MCwiaWF0IjoxNTczNTU5NzU3LCJpc3MiOiJodHRwczovL3JicHZ3YjEwMDYuMWRjLmNvbS9hdXRoL3JlYWxtcy9GaXJzdERhdGEiLCJhdWQiOiJ0bXMtc2IiLCJzdWIiOiJlNzY0MTA1OC0xNmZmLTQ5NTMtOGRjYi1iZTM0ZDdkZDg5NjEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0bXMtc2IiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiJkNTg0ZWU4ZS05ZjhhLTQ2ZjgtOWEwOS05NGZmZWRlYzA5NjMiLCJhY3IiOiIxIiwiY2xpZW50X3Nlc3Npb24iOiIxM2MzOWYxZi03NzIxLTRlMDItYjFmYS0yOWYyMzIzMzY0YTIiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL3JhY3Z3YjEwMDYuMWRjLmNvbS90bXMtc2IvIiwiaHR0cHM6Ly9yYWN2d2IxMDA2LjFkYy5jb20vdG1zLXNiLyJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiUkVERSIsIkRPTUlDSUxJT0JBTkNBUklPIiwiU0lQQUciLCJGSVJTVERBVEEiLCJCSU4iLCJ2YW5ib2FyZGluZyIsIlNJQ1JFREkiLCJDUkVGSVNBIiwiQ1JFRElDQVJEIiwiR09PR0xFIiwiQkFOQ09PQiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sIm5hbWUiOiIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlMzYwIn0.dq_STtQwFwLZS6RrAvDmJTGhyfEG2d310DvdXebnOy3oDyOYv7EsRNeNaaiNW-CTHezTgkw30wsPg0v8XhxNlZoH-dsA5qQKZtMc9V3FXIErws4wYE0KQx1qG-NK81PHF_h-JIzthvNHm2gSBdUIqCiztif_JTVlxow16PWXPYsb7yR29SVw16GL8zstDgyXzOApwFS41Qqsbk9qzEx3x9kd1Ar1SlJBqJkH1w3PK8IAUn_vgDtC_iwBLBHLsSbz7QOcP_qksMolkE1n9GIoAaRcGM9W3xzqvQd23x6PKftG1cabSlWIjM9kFk_G8LCZ2eBNwogMhuBFq29Pm8k_Cw
+        expires_in:
+          type: integer
+          description: Token Authentication Expire time
+          example: 28800
+        refresh_expires_in:
+          type: integer
+          description: Refresh Token Authentication Expire Time
+          example: 1800
+        refresh_token:
+          type: string
+          description: Token Authentication to be used to Refresh the Authorization
+          example: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzYVdqaW5TNHQ4eUhQSkVqdG91MW9CQ2c0U1lUWHNBMllUM2kyU0o4UXJZIn0.eyJqdGkiOiI0ODkzZDY2OC05NzI4LTRkYWYtODMyMS1lYWE3NmIwZWQxOTIiLCJleHAiOjE1NzM1NjE1NTcsIm5iZiI6MCwiaWF0IjoxNTczNTU5NzU3LCJpc3MiOiJodHRwczovL3JicHZ3YjEwMDYuMWRjLmNvbS9hdXRoL3JlYWxtcy9GaXJzdERhdGEiLCJhdWQiOiJ0bXMtc2IiLCJzdWIiOiJlNzY0MTA1OC0xNmZmLTQ5NTMtOGRjYi1iZTM0ZDdkZDg5NjEiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoidG1zLXNiIiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiZDU4NGVlOGUtOWY4YS00NmY4LTlhMDktOTRmZmVkZWMwOTYzIiwiY2xpZW50X3Nlc3Npb24iOiIxM2MzOWYxZi03NzIxLTRlMDItYjFmYS0yOWYyMzIzMzY0YTIiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiUkVERSIsIkRPTUlDSUxJT0JBTkNBUklPIiwiU0lQQUciLCJGSVJTVERBVEEiLCJCSU4iLCJ2YW5ib2FyZGluZyIsIlNJQ1JFREkiLCJDUkVGSVNBIiwiQ1JFRElDQVJEIiwiR09PR0xFIiwiQkFOQ09PQiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX19.bS6G1CPn-m_C7VNmgNf9ao6Vndyyd1UGOTAKw0BHDzn7aRsIFkHHuAGjSBKa0pdBNcMeGeysyLNxr1QwAjI5IFIyAOu3HQf5yw8rPG9OC6OJg1zEEWCaybbGREaQCZoJm8ObNle6twPD4CSGjF8W40-1TwpzPY9MpRJibGTsD7Ji0Vt1Z6TI4PaFvHhyvshlGOS3BxNvxIoWciuhcwwinVewHi_I-cwvj6zG9c1xc5wi_WfGkraP2EndF7HIpuaGrtNVpTC_L4Pwip-TzvmLf259B4O6WmkOxCL5K8FysvImycWygE7msA0HR8M2eVThJmZ353tUAjzmST5i4sqRiQ
+        token_type:
+          type: string
+          description: Token Type
+          example: bearer
+        id_token:
+          type: string
+          description: Token ID
+          example: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzYVdqaW5TNHQ4eUhQSkVqdG91MW9CQ2c0U1lUWHNBMllUM2kyU0o4UXJZIn0.eyJqdGkiOiI2MjNmMzA3Zi0xZWExLTRmNjgtYjU0NS0zODcxNWQ0MjAyNWEiLCJleHAiOjE1NzM1ODg1NTcsIm5iZiI6MCwiaWF0IjoxNTczNTU5NzU3LCJpc3MiOiJodHRwczovL3JicHZ3YjEwMDYuMWRjLmNvbS9hdXRoL3JlYWxtcy9GaXJzdERhdGEiLCJhdWQiOiJ0bXMtc2IiLCJzdWIiOiJlNzY0MTA1OC0xNmZmLTQ5NTMtOGRjYi1iZTM0ZDdkZDg5NjEiLCJ0eXAiOiJJRCIsImF6cCI6InRtcy1zYiIsImF1dGhfdGltZSI6MCwic2Vzc2lvbl9zdGF0ZSI6ImQ1ODRlZThlLTlmOGEtNDZmOC05YTA5LTk0ZmZlZGVjMDk2MyIsImFjciI6IjEiLCJuYW1lIjoiIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2VydmljZTM2MCJ9.Td2ZUg_1_7xj3gi3vdKTNDA3X0i0LtV4LvkMARwV19A_XE50en9rdGVHT_9gm9hCJk4ttTPedI6Ul6WYpb6nkGfNvPQH9wX-kCycmnlRPxRledelOdbtbXauIG1k-kg6Y46kczi-_wZRLVtxgStCI8ACjrrEVSd05TtX3pvlHEfVoyE7iYfq5AEJvDySLEsJoqH8dUMcB4LYZ_IRfVd7Q6cj6y9OVFNVzr4D2SnmaI0KR3Z8OPLKDxRdUlgdDht9CnOKaixhonXtlK1jbSeQkUOWoFAFoMgPUxqN-ehEP36NeCazl3ZKu7wkXJ7_dykSweffq5laCtWB6wWoL_9kmA
+        not-before-policy:
+          type: integer
+          example: "0"
+        session_state:
+          type: string
+          description: Session State
+          example: d584ee8e-9f8a-46f8-9a09-94ffedec0963
+      title: TokenResponse
+      xml:
+        name: response
+        attribute: false
+        wrapped: false
+      description: Request TOKEN for APIs access

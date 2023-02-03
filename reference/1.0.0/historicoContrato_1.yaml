@@ -23,7 +23,7 @@ paths:
       tags:
         - APIs
       x-proxy-name: Historic Contract
-      summary: Search for Contract Historic by Merchant Code and Intitution
+      summary: Merchant Information & Cases
       operationId: searchForAvailableDevicesByMerchantCode
       parameters:
         - name: Message-Signature

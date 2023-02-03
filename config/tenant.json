@@ -12,8 +12,8 @@
       {
         "version": "1.0.0",
         "versionType": "major",
-        "releaseNotesPath": "docs/release-notes/2022/march.md",
-        "apiSpecFileNames": ["openapi", "historicoContrato_1"]
+        "releaseNotesPath": "docs/release-notes/2023/january.md",
+        "apiSpecFileNames": ["sba-EN-solicitar-token", "historicoContrato_1"]
       }
   ],
   "product": {
