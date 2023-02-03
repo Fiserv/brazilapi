@@ -27,7 +27,7 @@ paths:
   '/v1/relacionamento/obterEstabelecimentoPai':
     get:
       tags:
-        - 'Get The Merchant Relationship Hierarchy'
+        - Merchant Information & Cases
       x-proxy-name: Merchant Relationship Hierarchy - Consult
       summary: Merchant Information & Cases
       operationId: Search Merchant Relationship Hierarchy
@@ -127,7 +127,7 @@ paths:
   '/v1/relacionamento/incluir':
     post:
       tags:
-        - 'Add Merchant Relationship Hierarchy'
+        - Merchant Information & Cases
       x-proxy-name: Merchant Relationship Hierarchy - Add
       summary: Merchant Information & Cases
       operationId: addMerchantRelationshipHierarchy
@@ -233,7 +233,7 @@ paths:
   '/v1/relacionamento/excluir':
     post:
       tags:
-        - 'Remove Merchant Relationship Hierarchy'
+        - Merchant Information & Cases
       x-proxy-name: Merchant Relationship Hierarchy - Remove
       summary: Merchant Information & Cases
       operationId: removeMerchantRelationshipHierarchy

@@ -26,7 +26,7 @@ paths:
   '/v1/consulta/servicoBandeira':
     get:
       tags:
-        - Controller-Consultation-Service
+        - Merchant Information & Cases
       x-proxy-name: Merchant Services - Consult/Update for Associations/Schema
       summary: Merchant Information & Cases
       operationId: Search for Association/Schema Service Status
@@ -237,7 +237,7 @@ paths:
   '/v1/altera/status':
     post:
       tags:
-      - Change-Status-Controller
+        - Merchant Information & Cases
       x-proxy-name: Merchant Services - Update for Associations/Schema Status
       summary: Merchant Information & Cases
       operationId: Change for Association/Schema Service Status

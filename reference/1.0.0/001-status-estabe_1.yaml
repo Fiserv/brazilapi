@@ -19,7 +19,7 @@ paths:
   "/v1/atualizaStatusEstabelecimento":
     post:
       tags:
-        - "Merchant Contract Update"
+        - Merchant Information & Cases
       x-proxy-name: Merchant Contract Status - Update
       summary: Merchant Contract Update
       operationId: merchantContractUpdate

@@ -21,7 +21,7 @@ paths:
   /:
     post:
       tags:
-        - Merchant Trade Name Update
+        - Merchant Information & Cases
       x-proxy-name: Merchant Trade Name - Update
       summary: Merchant Information & Cases
       operationId: mechantTradeNameUpdate

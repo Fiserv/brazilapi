@@ -21,7 +21,7 @@ paths:
   /:
     post:
       tags:
-        - Merchant Working Hours Update
+        - Merchant Information & Cases
       x-proxy-name: Merchant Working Hours - Update
       summary: Merchant Information & Cases
       operationId: merchantWorkingHoursUpdate

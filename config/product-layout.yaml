@@ -29,14 +29,15 @@
 ################################################################################
 header:
   productName: Digital APIs Brazil
-  productionDescription: We do the best for your Business.
+  productionDescription: "Have access to a complete set of APIs without pain! Find development tools, samples of codes and resources to help you in order to integrate your Apps integrally or partially using Fiserv Platform! 
+  Wish to start a new revenue source? Integrate your platform to Fiserv Marketplace, and register merchants to have payments processed directly in your site, and be paid for that!"
   whoIsItFor: Fiserv and Clients
   image: 
     link: "/assets/images/Fiserv_Logo.jpg"
     altText: Fiserv
 featuredFeatures:
-  - title: General APIs Solutions
-    description:  Customer service solutions through APIs for internal and external use by Fiserv
+  - title: Work with the best!
+    description:  Specialized professionals in this industry that will dedicate all the time to understand the complexity of your business.
     tags: ["Development"]
     bullets: ["Development" ]
     relatedDocs:
@@ -58,4 +59,118 @@ featuredFeatures:
         description: Token Access
         type: "post"
         path: "/sba-EN-solicitar-token"
-
+  - title: Open Environment
+    description: If you are building a new solution 'all-in-one', looking for a PCI Compliance Solution, enabling EMV or even any other requirement, our platform will save you time, money and resource.
+    tags: [ "Development" ]
+    bullets: [ "Development" ]
+    relatedDocs:
+      - relatedDoc:
+        title: APIs - Introduction
+        description: APIs - Introduction
+        link: ./docs/APIs-Introduction.md
+      - relatedDoc:
+        title: Token Access
+        description: Token Access
+        link: ./docs/TokenGenerationforWeb-services.md
+      - relatedDoc:
+        title: APIs All
+        description: APIs All
+        link: ./docs/APIsSupportDocuments.md
+    relatedAPIs:
+      - relatedAPI:
+        title: Token Access
+        description: Token Access
+        type: "post"
+        path: "/sba-EN-solicitar-token"
+  - title: All In One
+    description: Create, Test, Certify and Deliver application of payment through only one interface.
+    tags: [ "Development" ]
+    bullets: [ "Development" ]
+    relatedDocs:
+      - relatedDoc:
+        title: APIs - Introduction
+        description: APIs - Introduction
+        link: ./docs/APIs-Introduction.md
+      - relatedDoc:
+        title: Token Access
+        description: Token Access
+        link: ./docs/TokenGenerationforWeb-services.md
+      - relatedDoc:
+        title: APIs All
+        description: APIs All
+        link: ./docs/APIsSupportDocuments.md
+    relatedAPIs:
+      - relatedAPI:
+        title: Token Access
+        description: Token Access
+        type: "post"
+        path: "/sba-EN-solicitar-token"
+  - title: Value your Customers
+    description: Create reward programs for your customers and develop Apps to our Clover Marketplace.
+    tags: [ "Development" ]
+    bullets: [ "Development" ]
+    relatedDocs:
+      - relatedDoc:
+        title: APIs - Introduction
+        description: APIs - Introduction
+        link: ./docs/APIs-Introduction.md
+      - relatedDoc:
+        title: Token Access
+        description: Token Access
+        link: ./docs/TokenGenerationforWeb-services.md
+      - relatedDoc:
+        title: APIs All
+        description: APIs All
+        link: ./docs/APIsSupportDocuments.md
+    relatedAPIs:
+      - relatedAPI:
+        title: Token Access
+        description: Token Access
+        type: "post"
+        path: "/sba-EN-solicitar-token"
+  - title: Customized Solutions
+    description: No matter the nature of your business, we have the ideal integration model.
+    tags: [ "Development" ]
+    bullets: [ "Development" ]
+    relatedDocs:
+      - relatedDoc:
+        title: APIs - Introduction
+        description: APIs - Introduction
+        link: ./docs/APIs-Introduction.md
+      - relatedDoc:
+        title: Token Access
+        description: Token Access
+        link: ./docs/TokenGenerationforWeb-services.md
+      - relatedDoc:
+        title: APIs All
+        description: APIs All
+        link: ./docs/APIsSupportDocuments.md
+    relatedAPIs:
+      - relatedAPI:
+        title: Token Access
+        description: Token Access
+        type: "post"
+        path: "/sba-EN-solicitar-token"
+  - title: Get Bonus
+    description: Have one of our most flexible business models and be paid when you register customers to have payments processed with us.
+    tags: [ "Development" ]
+    bullets: [ "Development" ]
+    relatedDocs:
+      - relatedDoc:
+        title: APIs - Introduction
+        description: APIs - Introduction
+        link: ./docs/APIs-Introduction.md
+      - relatedDoc:
+        title: Token Access
+        description: Token Access
+        link: ./docs/TokenGenerationforWeb-services.md
+      - relatedDoc:
+        title: APIs All
+        description: APIs All
+        link: ./docs/APIsSupportDocuments.md
+    relatedAPIs:
+      - relatedAPI:
+        title: Token Access
+        description: Token Access
+        type: "post"
+        path: "/sba-EN-solicitar-token"

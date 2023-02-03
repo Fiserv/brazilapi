@@ -22,7 +22,7 @@ paths:
   /v1/config/account-type:
     get:
       tags:
-        - Merchant Payment Hierarchy Maintenance
+        - Merchant Information & Cases
       x-proxy-name: Merchant Payment Hierarchy - Consult
       summary: Merchant Information & Cases
       operationId: searchMerchantPaymentHierarchy
@@ -123,7 +123,7 @@ paths:
   /v1/incluir:
     post:
       tags:
-        - Merchant Payment Hierarchy Maintenance
+        - Merchant Information & Cases
       x-proxy-name: Merchant Payment Hierarchy - Include
       summary: Merchant Information & Cases
       operationId: addMerchantPaymentHierarchy
@@ -226,7 +226,7 @@ paths:
   /v1/excluir:
     post:
       tags:
-        - Merchant Payment Hierarchy Maintenance
+        - Merchant Information & Cases
       x-proxy-name: Merchant Payment Hierarchy - Remove
       summary: Merchant Information & Cases
       operationId: removeMerchantPaymentHierarchy
@@ -329,7 +329,7 @@ paths:
   /v1/:
     post:
       tags:
-        - Payment Hierarchy
+        - Merchant Information & Cases
       x-proxy-name: Merchant Payment Hierarchy - Search for Payment Hierarchy
       summary: Merchant Information & Cases
       operationId: Get Payment Hierarchy

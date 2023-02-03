@@ -21,7 +21,7 @@ paths:
   "/api/chargeback/apigee/filter":
     post:
       tags:
-        - Search for Chargeback Information by Tax ID, Merchant Code and Instituion
+        - Merchant Information & Cases
       x-proxy-name: Consult Chargeback Information
       summary: Merchant Information & Cases
       operationId: Search for Chargeback Information by Tax ID, Merchant Code and Instituion

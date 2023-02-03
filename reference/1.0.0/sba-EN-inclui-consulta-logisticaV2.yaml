@@ -21,7 +21,7 @@ paths:
   /:
     post:
       tags:
-        - Consult or Update Logistic Information
+        - Merchant Information & Cases
       x-proxy-name: Merchant Logistic Information - Add/Update
       summary: Merchant Information & Cases
       operationId: addOrUpdateLogisticInformation
@@ -78,7 +78,7 @@ paths:
   /{numeroInstituicao}/{merchantId}/{cnpjCpf}:
     get:
       tags:
-        - Consult or Update Logistic Information
+        - Merchant Information & Cases
       x-proxy-name: Merchant Logistic Information - Consult Logistic Information
       summary: Merchant Information & Cases
       operationId: consultLogisticInformation

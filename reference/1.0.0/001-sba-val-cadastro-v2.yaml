@@ -624,7 +624,7 @@ paths:
   '/v3/credenciamento/tecnologia/{codigoTecnologia}/{instituicao}/{documento}/{service-contract}':
     get:
       tags:
-        - Validate if Customer can be Boarded - Applicable for BIN only
+        - Merchant Information & Cases
       x-proxy-name: Existing Customer Validation - Validation by Technology and Service contract - ECommerce X POS comparison
       summary: Merchant Information & Cases
       operationId: Validation by Technology and Service contract - ECommerce X POS comparison

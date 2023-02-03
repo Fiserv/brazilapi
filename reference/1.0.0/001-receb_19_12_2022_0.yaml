@@ -156,7 +156,8 @@ paths:
   "/v1/agendaOut/consulta/{dataInicio}/{dataFim}":
     get:
       tags:
-        - Agenda Out
+        - Merchant Information & Cases
+      x-proxy-name: Merchant Information - Agenda Out
       summary: Agenda Out
       operationId: Agenda Out
       parameters:
@@ -292,7 +293,8 @@ paths:
   "/v1/lockInformation/consulta/{dataInicio}/{dataFim}":
     get:
       tags:
-        - Lock Information
+        - Merchant Information & Cases
+      x-proxy-name: Merchant Information - Lock Information
       summary: Lock Information
       operationId: Lock Information
       parameters:

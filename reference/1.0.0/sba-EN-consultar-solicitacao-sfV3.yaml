@@ -25,7 +25,7 @@ paths:
   "/caso/{numeroInstituicao}":
     get:
       tags:
-        - Search for Cases opened in Salesforce
+        - Merchant Information & Cases
       x-proxy-name: Search for Cases opened in Salesforce
       summary: Merchant Information & Cases
       operationId: searchForCasesOpenedInSF
@@ -160,7 +160,7 @@ paths:
   "/comentarios":
     get:
       tags:
-        - Search for Comments related to a Case
+        - Merchant Information & Cases
       x-proxy-name: Search for Comments related to a Case
       summary: Merchant Information & Cases
       operationId: Search for Comments related to a Case
