@@ -45,27 +45,17 @@ featuredFeatures:
         description: APIs - Introduction
         link: ./docs/APIs-Introduction.md
       - relatedDoc: 
+        title: Token Access
+        description: Token Access
+        link: ./docs/TokenGenerationforWeb-services.md
+      - relatedDoc:
         title: APIs All
-        description: APIs all
+        description: APIs All
         link: ./docs/APIsSupportDocuments.md
-      - relatedDoc: 
-        title: Prepayment Information
-        description: Prepayment Information
-        link: ./docs/REPLACE-ME3.md
     relatedAPIs:
       - relatedAPI: 
-        title: Token
+        title: Token Access
         description: Token Access
         type: "post"
-        path: "/v1/token"
-      - relatedAPI: 
-        title: Online Boarding and Status
-        description: Online Boarding and Status
-        type: "post"        
-        path: "/v1/api/proposal"
-      - relatedAPI:
-        title: Proposal Status - Consult (Out of Online Boarding)
-        description: Proposal Status - Consult (Out of Online Boarding)
-        type: "get"
-        path: "/v1//{inst}/{doc}"
+        path: "/sba-EN-solicitar-token"
 

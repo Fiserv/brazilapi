@@ -13,7 +13,31 @@
         "version": "1.0.0",
         "versionType": "major",
         "releaseNotesPath": "docs/release-notes/2023/january.md",
-        "apiSpecFileNames": ["sba-EN-solicitar-token", "historicoContrato_1"]
+        "apiSpecFileNames": ["sba-EN-solicitar-token",
+          "historicoContrato_1",
+          "001-ajuste-debito",
+          "001-alter-cadast",
+          "001-atualizar-Socio",
+          "001-con-prod-serv",
+          "001-consulta-dirf_0",
+          "001-monthly-bill-presu_1",
+          "001-receb_19_12_2022_0",
+          "001-sba-abertura-sol_1",
+          "001-sba-Hier-Pagto",
+          "001-sba-mdr-fee_1_1",
+          "001-sba-val-cadastro-v2",
+          "001-sba-wsm-atu-end_0",
+          "001-sba-wsm-nme-fant",
+          "001-sba-wsm-work-fun",
+          "001-status-estabe_1",
+          "003-estabelecimento",
+          "chargeback-external_0",
+          "SBA-EN-Con-Ser-Bande_0",
+          "sba-EN-consultar-solicitacao-sfV3",
+          "sba-EN-Hierarquia-RelacionamentoV2",
+          "sba-EN-inclui-consulta-logisticaV2",
+          ""
+        ]
       }
   ],
   "product": {
