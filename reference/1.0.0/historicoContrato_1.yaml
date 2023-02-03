@@ -21,7 +21,7 @@ paths:
   /v1/historicoContrato:
     get:
       tags:
-        - Search for Contract Historic by Merchant Code and Intitution
+        - APIs
       x-proxy-name: Historic Contract
       summary: Search for Contract Historic by Merchant Code and Intitution
       operationId: searchForAvailableDevicesByMerchantCode

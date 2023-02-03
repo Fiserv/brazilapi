@@ -28,17 +28,17 @@
 # the delivery of this work
 ################################################################################
 header:
-  productName: BrazilAPI
+  productName: Digital APIs Brazil
   productionDescription: We do the best for your Business.
   whoIsItFor: Fiserv and Clients
   image: 
     link: "/assets/images/Fiserv_Logo.jpg"
-    altText: REPLACEME™
+    altText: Fiserv
 featuredFeatures:
-  - title: REPLACE ME
-    description:  REPLACE ME
-    tags: ["REPLACEME", "REPLACEME", "REPLACEME"]
-    bullets: ["REPLACEME", "REPLACEME" ]  
+  - title: General APIs Solutions
+    description:  Customer service solutions through APIs for internal and external use by Fiserv
+    tags: ["Development"]
+    bullets: ["Development" ]
     relatedDocs:
       - relatedDoc: 
         title: APIs - Introduction
@@ -54,18 +54,18 @@ featuredFeatures:
         link: ./docs/REPLACE-ME3.md
     relatedAPIs:
       - relatedAPI: 
-        title: REPLACEME
-        description: REPLACEME
-        type: "patch"        
-        path: "/v1/REPLACEME1"
+        title: Token
+        description: Token Access
+        type: "post"
+        path: "/v1/token"
       - relatedAPI: 
-        title: REPLACEME
-        description: REPLACEME
+        title: Online Boarding and Status
+        description: Online Boarding and Status
         type: "post"        
-        path: "/v1/REPLACEME2"
+        path: "/v1/api/proposal"
       - relatedAPI:
-        title: REPLACEME
-        description: REPLACEME
+        title: Proposal Status - Consult (Out of Online Boarding)
+        description: Proposal Status - Consult (Out of Online Boarding)
         type: "get"
-        path: "/v1/REPLACEME3"
+        path: "/v1//{inst}/{doc}"
 

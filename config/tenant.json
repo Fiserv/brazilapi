@@ -13,13 +13,7 @@
         "version": "1.0.0",
         "versionType": "major",
         "releaseNotesPath": "docs/release-notes/2022/march.md",
-        "apiSpecFileNames": ["openapi"]
-      },
-      {
-        "version": "1.0.0",
-        "versionType": "major",
-        "releaseNotesPath": "docs/release-notes/2023/january.md",
-        "apiSpecFileNames": ["historicoContrato_1"]
+        "apiSpecFileNames": ["openapi", "historicoContrato_1"]
       }
   ],
   "product": {
@@ -39,7 +33,7 @@
     "feature":[
       {
         "name": "sandBox",
-        "value": true
+        "value": false
       },
       {
         "name": "plugins",
@@ -57,19 +51,19 @@
   },
   "supportConfig": [{ 
     "bug": {
-      "label": "bug,CommerceHub",
-      "template": "bug.md",
-      "assignees": "ServicosAPIsBrazil"
+      "label": "",
+      "template": "",
+      "assignees": ""
     },  
     "feedback": {
-      "label": "feedback,CommerceHub",
-      "template": "feedback.md",
-      "assignees": "ServicosAPIsBrazil"
+      "label": "",
+      "template": "",
+      "assignees": ""
     },
     "enhancement": {
-      "label": "enhancement,CommerceHub",
-      "template": "feature.md",
-      "assignees": "ServicosAPIsBrazil"
+      "label": "",
+      "template": "",
+      "assignees": ""
     }
   }]
 }
