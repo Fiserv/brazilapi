@@ -70,16 +70,7 @@ paths:
           description: Institution Brand
           required: true
           allowEmptyValue: false
-          example: Bin
-          enum:
-            - Bin
-            - Sipag
-            - Hipercard
-            - Credicard
-            - Fdb
-            - Citi
-            - Sicredi
-            - etc.
+          example: "Bin"
           schema:
             type: string
         - name: merchantId

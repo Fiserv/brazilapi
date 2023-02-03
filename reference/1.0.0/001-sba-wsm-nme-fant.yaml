@@ -75,12 +75,12 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Response"
-        "200 Error":
-          description: Success
+        '401':
+          description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/processMessageUnauth"
+                $ref: '#/components/schemas/Unauthorized'
 components:
   securitySchemes:
     JWT:
@@ -175,18 +175,14 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/processMessage"
-    processMessageUnauth:
+    Unauthorized:
       type: object
-      description: "This API has two type of return when: This return payload when the message is not authorized to be processed"
       properties:
-        code: 
-          type: String
-          description: Validation Return Code
-          example: 401
-        description:
-          type: String
-          description: Validation Message Description
-          example: "MID + Institution combination invalid or not authorized."
-      response:
-        $ref: "#/components/schemas/response"
-
+        codigoRetorno:
+          description: Return Code
+          type: integer
+          example: 4
+        mensagem:
+          description: Description return code
+          example: Acesso nao autorizado ao conteudo pesquisado - (meaning Unauthorized Access)
+          type: string
