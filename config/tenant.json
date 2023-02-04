@@ -40,7 +40,7 @@
         ]
       },
       {
-        "version": "1.0.0/deviceInformation",
+        "version": "1.0.0",
         "versionType": "major",
         "releaseNotesPath": "docs/release-notes/2023/january.md",
         "apiSpecFileNames": [
