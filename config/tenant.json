@@ -13,7 +13,7 @@
         "version": "1.0.0",
         "versionType": "major",
         "releaseNotesPath": "docs/release-notes/2023/january.md",
-        "apiSpecFileNames": ["sba-EN-solicitar-token",
+        "apiSpecFileNames": [
           "historicoContrato_1",
           "001-ajuste-debito",
           "001-alter-cadast",
@@ -35,7 +35,8 @@
           "SBA-EN-Con-Ser-Bande_0",
           "sba-EN-consultar-solicitacao-sfV3",
           "sba-EN-Hierarquia-RelacionamentoV2",
-          "sba-EN-inclui-consulta-logisticaV2"
+          "sba-EN-inclui-consulta-logisticaV2",
+          "sba-EN-solicitar-token"
         ]
       }
   ],
