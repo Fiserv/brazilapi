@@ -59,7 +59,5 @@ f
 6reference/1.0.0/sba-EN-consultar-solicitacao-sfV3.yaml,d\8\d8e4da34c669e4f7dc548b3206794dd13acf106e
 g
 7reference/1.0.0/sba-EN-Hierarquia-RelacionamentoV2.yaml,4\0\40e3fb8f372e4c07b569a59bada42a8427e10ced
-g
-7reference/1.0.0/sba-EN-inclui-consulta-logisticaV2.yaml,8\7\873d2e2626dd144ca8fd2b0da7d1a96871966b17
 X
 (reference/1.0.0/001-status-estabe_1.yaml,2\b\2b8a6450328416270a3ccbb44bc9c1f1c2a9baab

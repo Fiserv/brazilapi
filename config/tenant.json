@@ -36,16 +36,20 @@
           "sba-EN-consultar-solicitacao-sfV3",
           "sba-EN-Hierarquia-RelacionamentoV2",
           "sba-EN-inclui-consulta-logisticaV2",
-          "sba-EN-solicitar-token"
-        ]
-      },
-      {
-        "version": "1.0.0",
-        "versionType": "major",
-        "releaseNotesPath": "docs/release-notes/2023/january.md",
-        "apiSpecFileNames": [
+          "sba-EN-solicitar-token",
           "tmp-EN-consulta-tecnologia-ecV2",
-          "001-sba-con-taxa-eqp_1"
+          "001-sba-con-taxa-eqp_1",
+          "001-autoribw",
+          "001-battery-Info",
+          "001-charge-Back",
+          "001-cob-hist-term",
+          "001-sba-cns-autoriza",
+          "001-sba-cons-vendas_2",
+          "001-sba-consulta-ops",
+          "001-sba-dailypass",
+          "001-solicitar-bobina",
+          "sba-EN-consultar-transacoes-digitadas2_0",
+          "sba-EN-Trans-Suspens"
         ]
       }
   ],
