@@ -38,6 +38,15 @@
           "sba-EN-inclui-consulta-logisticaV2",
           "sba-EN-solicitar-token"
         ]
+      },
+      {
+        "version": "1.0.0/deviceInformation",
+        "versionType": "major",
+        "releaseNotesPath": "docs/release-notes/2023/january.md",
+        "apiSpecFileNames": [
+          "tmp-EN-consulta-tecnologia-ecV2",
+          "001-sba-con-taxa-eqp_1"
+        ]
       }
   ],
   "product": {
