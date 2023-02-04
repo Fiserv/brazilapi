@@ -32,8 +32,6 @@ X
 ]
 -reference/1.0.0/001-monthly-bill-presu_1.yaml,f\2\f2cc10e4ed7c2c185da139af9b093c349dc48714
 [
-+reference/1.0.0/001-receb_19_12_2022_0.yaml,e\4\e4b92014137c134b9187b60181afadaba402bc13
-[
 +reference/1.0.0/001-sba-abertura-sol_1.yaml,6\c\6cf8e424dc6476908aa1bfe4a27024042952aea3
 X
 (reference/1.0.0/001-atualizar-Socio.yaml,b\c\bceb7ec4a95962831311b2d3746733b05619e4a6
