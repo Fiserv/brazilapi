@@ -126,7 +126,7 @@ paths:
   '/v1/consulta/servicoBandeira/{categoria}':
     get:
       tags:
-        - Controller-Consultation-Service
+        - Merchant Information & Cases
       x-proxy-name: Merchant Services - Consult for Associations/Schema Status by Category
       summary: Merchant Information & Cases
       operationId: Search for Association/Schema Service Status by Category

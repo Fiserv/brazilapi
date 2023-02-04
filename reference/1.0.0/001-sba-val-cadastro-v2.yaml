@@ -24,7 +24,7 @@ paths:
   '/v2/validacao/{documento}':
     get:
       tags:
-        - Search for Existing Customer by Tax ID (CPF/CNPJ) 
+        - Merchant Information & Cases
       x-proxy-name: Existing Customer Validation
       summary: Merchant Information & Cases
       operationId: Search Existing Customer by Tax ID (CPF/CNPJ)
@@ -124,7 +124,7 @@ paths:
   '/v2/credenciamento/documento/{instituicao}/{documento}':
     get:
       tags:
-        - Validate if Customer can be Boarded - Applicable for BIN only
+        - Merchant Information & Cases
       x-proxy-name: Existing Customer Validation - by Institution and Tax ID (CPF/CNPJ)
       summary: Merchant Information & Cases
       operationId: Validation by Institution and Tax ID
@@ -224,7 +224,7 @@ paths:
   '/v3/credenciamento/documento/{instituicao}/{documento}/{service-contract}':
     get:
       tags:
-        - Validate if Customer can be Boarded - Applicable for BIN only
+        - Merchant Information & Cases
       x-proxy-name: Existing Customer Validation - by Institution and Tax ID (CPF/CNPJ) and Service contract
       summary: Merchant Information & Cases
       operationId: Validation by Institution and Tax ID and Service contract
@@ -331,7 +331,7 @@ paths:
   '/v2/credenciamento/canal':
     post:
       tags:
-        - Validate if Customer can be Boarded - Applicable for BIN only
+        - Merchant Information & Cases
       x-proxy-name: Existing Customer Validation - Validation by Boarding Channel
       summary: Merchant Information & Cases
       operationId: Validation by Boarding Channel
@@ -424,7 +424,7 @@ paths:
   '/v2/credenciamento/taxa':
     post:
       tags:
-        - Validate if Customer can be Boarded - Applicable for BIN only
+        - Merchant Information & Cases
       x-proxy-name: Existing Customer Validation - Validation by MDR Comparison
       summary: Merchant Information & Cases
       operationId: Validation by MDR Comparison
@@ -517,7 +517,7 @@ paths:
   '/v2/credenciamento/tecnologia/{codigoTecnologia}/{instituicao}/{documento}':
     get:
       tags:
-        - Validate if Customer can be Boarded - Applicable for BIN only
+        - Merchant Information & Cases
       x-proxy-name: Existing Customer Validation - Validation by Technology - ECommerce X POS comparison
       summary: Merchant Information & Cases
       operationId: Validation by Technology - ECommerce X POS comparison
