@@ -23,7 +23,7 @@ paths:
     get:
       tags:
         - Devices Information
-      x-proxy-name: Get Terminal battery Information
+      x-proxy-name: Search for Device Billing History
       summary: Search for Device Billing History
       operationId: Search for Device Billing History
       parameters:

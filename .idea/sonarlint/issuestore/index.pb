@@ -67,13 +67,7 @@ g
 d
 4reference/1.0.0/tmp-EN-consulta-tecnologia-ecV2.yaml,2\f\2fe4e6baaa7661d2c88593f7d0c28f291c740bb6
 V
-&reference/1.0.0/001-cob-hist-term.yaml,6\7\674fd3ad4025f45535c6ccb26eecf431217ba603
-Y
-)reference/1.0.0/001-solicitar-bobina.yaml,7\d\7de028bbe8ae87841d4038e7f2111847a5119c6c
-V
 &reference/1.0.0/001-sba-dailypass.yaml,d\3\d3c4461ac67dd66181f689f756a2b0618dcbbdc1
-U
-%reference/1.0.0/001-battery-Info.yaml,d\0\d077ab352483319812774fa4ad9c133779f4f7e2
 Q
 !reference/1.0.0/001-autoribw.yaml,8\5\85bf618de1649a12b295f944b92cb62b576af832
 Z

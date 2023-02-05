@@ -23,7 +23,7 @@ paths:
     get:
       tags:
         - Devices Information
-      x-proxy-name: Get Terminal battery Information
+      x-proxy-name: Request of Device Paper Roll
       summary: Request of Device Paper Roll
       operationId: requestOfDevicePapreRoll
       parameters:
