@@ -2221,7 +2221,7 @@ paths:
     get:
       tags:
         - Online Boarding
-      x-proxy-name: List of Campaign Setup - Get the MDR Flex Fees associated to a campaign
+      x-proxy-name: List of Campaign Setup - Get the MDR Flex Fees associated to a campaign - Billing Value
       summary: Get the MDR Flex Fees associated to a campaign
       operationId: getMDRFlexFeesByCampaignWithBillingValue
       parameters:
