@@ -27,12 +27,8 @@ U
 %reference/1.0.0/001-alter-cadast.yaml,4\4\44f879f8c7398eedcce9046950c7bb69825f3522
 V
 &reference/1.0.0/001-con-prod-serv.yaml,0\f\0f8318e84253c621b4dbf87b4ae83cdaaef9d232
-X
-(reference/1.0.0/001-consulta-dirf_0.yaml,5\f\5fdd72273f507c8d140c4855d7d0263a9fda175f
 ]
 -reference/1.0.0/001-monthly-bill-presu_1.yaml,f\2\f2cc10e4ed7c2c185da139af9b093c349dc48714
-[
-+reference/1.0.0/001-sba-abertura-sol_1.yaml,6\c\6cf8e424dc6476908aa1bfe4a27024042952aea3
 X
 (reference/1.0.0/001-atualizar-Socio.yaml,b\c\bceb7ec4a95962831311b2d3746733b05619e4a6
 W
@@ -41,8 +37,6 @@ X
 (reference/1.0.0/001-sba-mdr-fee_1_1.yaml,1\3\134b52d810ea24b1662ecb173da1a3bfb1ad1e33
 Z
 *reference/1.0.0/001-sba-wsm-atu-end_0.yaml,2\e\2e3b0f8104684e60a40d55be0f07485f5ba3c55f
-Y
-)reference/1.0.0/001-sba-wsm-nme-fant.yaml,5\b\5b0961c750c3fcbb0cb979839a0557948dc81f98
 Y
 )reference/1.0.0/001-sba-wsm-work-fun.yaml,6\7\6707bbed692faf7d5ca635f95383d847845fd15a
 X
@@ -90,5 +84,3 @@ Y
 )reference/1.0.0/sba-EN-Trans-Suspens.yaml,2\d\2db253b28990ffa172fc63d41daf3aaecca51c78
 T
 $reference/1.0.0/001-charge-Back.yaml,c\9\c9974e8586da6ad4ef528f59ddde6dc0100fa8cc
-Y
-)reference/1.0.0/001-sba-cns-autoriza.yaml,8\5\85e482452715518271a4ae954540431b2b0d8af7

@@ -120,7 +120,7 @@ paths:
         tags:
           - Online Boarding
         x-proxy-name: Online Boarding and Status - Boarding New Proposals
-        summary: Boarding New Proposals. To prepare the payload area, it will be required to check some other endpoints as described in some fields
+        summary: Boarding New Proposals. To prepare the payload area, it will be required to check some other endpoints as described in some fields - V3
         description: >-
           Importante: Each person has its respective fields to be sent.
           The example has 2 fullfiled obects, one for Individual (PF) and oter for Companies (PJ). Use he examples.
@@ -339,7 +339,7 @@ paths:
         tags:
           - Online Boarding
         x-proxy-name: Verify Tax ID (CNPJ for company) at SERPRO
-        summary: Verify Tax ID (CPF for individual | CNPJ for company) at SERPRO
+        summary: Verify Tax ID (CNPJ for company) at SERPRO
         operationId: verifyTaxIdATSerpro
         parameters:
           - name: Message-Signature
@@ -409,7 +409,7 @@ paths:
         tags:
           - Online Boarding
         x-proxy-name: Verify Tax ID (CPF for individual) at SERPRO
-        summary: Verify Tax ID (CPF for individual | CNPJ for company) at SERPRO
+        summary: Verify Tax ID (CPF for individual) at SERPRO
         operationId: verifyTaxIdATSerproGET
         parameters:
           - name: Message-Signature
@@ -2873,7 +2873,7 @@ paths:
       get:
         tags:
           - Online Boarding
-        x-proxy-name: List of Campaign Setup - Get the Business Point associated to a campaign
+        x-proxy-name: List of Campaign Setup - Get the Business Point associated to a campaign - Billing value
         summary: Get the Business Point associated to a campaign
         operationId: getBusinessPointWithBillingValue
         parameters:
