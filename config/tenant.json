@@ -14,7 +14,12 @@
         "versionType": "major",
         "releaseNotesPath": "docs/release-notes/2023/january.md",
         "apiSpecFileNames": [
-          "historicoContrato_1",
+
+          "sba-EN-solicitar-token",
+
+          "001-sba-credenciamen",
+          "001-sba-status-propor",
+
           "001-ajuste-debito",
           "001-alter-cadast",
           "001-atualizar-Socio",
@@ -36,20 +41,39 @@
           "sba-EN-consultar-solicitacao-sfV3",
           "sba-EN-Hierarquia-RelacionamentoV2",
           "sba-EN-inclui-consulta-logisticaV2",
-          "sba-EN-solicitar-token",
+          "historicoContrato_1",
+
           "tmp-EN-consulta-tecnologia-ecV2",
           "001-sba-con-taxa-eqp_1",
           "001-autoribw",
           "001-battery-Info",
           "001-charge-Back",
           "001-cob-hist-term",
+
           "001-sba-cns-autoriza",
           "001-sba-cons-vendas_2",
           "001-sba-consulta-ops",
           "001-sba-dailypass",
           "001-solicitar-bobina",
           "sba-EN-consultar-transacoes-digitadas2_0",
-          "sba-EN-Trans-Suspens"
+          "sba-EN-Trans-Suspens",
+
+          "001-sba-dom-bancario",
+          "001-domicilio-bancario1",
+          "pagamentos_19_12_2022",
+          "002_sba_wsm_flag_ant",
+          "001-sba-wsm-antecipa_0 (1)",
+          "001-pre-pay-history_0",
+          "001-antecip-aut",
+          "001-antecipacoes-realizadas",
+
+          "001-sba-wsm-mnt-term",
+          "001-wsm-cancel-so",
+          "001-sba-consulta-os",
+          "sba-EN-consultar-cepV2",
+          "sba-EN-consultar-cpfV2",
+          "sba-EN-consultar-cnpjV2",
+          "001-brtmp-mcrsvcs_ticket"
         ]
       }
   ],

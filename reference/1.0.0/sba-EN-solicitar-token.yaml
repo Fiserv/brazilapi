@@ -29,8 +29,8 @@ paths:
     post:
       tags:
         - Token Access
-      summary: Token Access
       x-proxy-name: Token Access
+      summary: Token Access
       operationId: requestTokenForAPIsAccess
       requestBody:
         content:
