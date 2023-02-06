@@ -28,5 +28,3 @@ V
 :
 
 .docignore,0\5\058602980aa3c3dfe7e2bf3a636363bc87ad8206
-Z
-*reference/1.0.0/001-sba-status-propor.yaml,1\a\1a8da1afb2b92c52c3b2a3f1a96768b053b0bc94

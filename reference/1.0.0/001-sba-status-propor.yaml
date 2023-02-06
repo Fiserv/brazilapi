@@ -23,8 +23,10 @@ paths:
   "/{inst}/{doc}":
     get:
       tags:
-        - Online Boarding - Proposal Status
+        - Online Boarding
       x-proxy-name: Proposal Status - Consult (Out of Online Boarding)
+      x-group-name: Proposal Status - Consult (Out of Online Boarding)
+      x-child-product-name: Online Boarding
       summary: Search for Proposal Status
       operationId: searchForProposalStatus
       parameters:
