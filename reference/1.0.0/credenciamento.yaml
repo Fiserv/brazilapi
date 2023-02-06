@@ -890,7 +890,10 @@ paths:
   "/config/mcc/{institution}/{cnae-number}":
     get:
       tags:
-        - MCC
+        - Online Boarding
+      x-proxy-name: Returns an object containing Merchant category identification code
+      x-group-name: Online Boarding and Status
+      x-child-product-name: Online Boarding
       summary: returns an object containing Merchant category identification code
       operationId: getMcc
       parameters:
