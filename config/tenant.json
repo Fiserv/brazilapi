@@ -28,7 +28,7 @@
         "apiSpecFileNames": [
           "sba-EN-solicitar-token",
 
-          "001-sba-status-propor",
+          "001-sba-status-propor", "credenciamento",
 
           "001-ajuste-debito", "001-alter-cadast", "001-atualizar-Socio", "001-con-prod-serv", "001-consulta-dirf_0",
           "001-monthly-bill-presu_1", "001-receb_19_12_2022_0", "001-sba-abertura-sol_1", "001-sba-Hier-Pagto",
