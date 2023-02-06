@@ -23,6 +23,8 @@ paths:
       tags:
         - Payment & Prepayment Information
       x-proxy-name: Prepayment - Maintenance/Simulate/Confirm/Reject - Consult Available Balances For Prepayment (all Associations)
+      x-group-name: Prepayment - Maintenance/Simulate/Confirm/Reject
+      x-child-product-name: Payment & Prepayment Information
       summary: Consult Available Balances For Prepayment (all Associations)
       operationId: ConsultAvailableBalancesForPrepayment (all Associations) 
       parameters:
@@ -86,6 +88,8 @@ paths:
       tags:
         - Payment & Prepayment Information
       x-proxy-name: Automatic Prepayment Information Maintenance
+      x-group-name: Prepayment - Maintenance/Simulate/Confirm/Reject
+      x-child-product-name: Payment & Prepayment Information
       summary: Automatic Prepayment Information Maintenance
       operationId: automaticPrepaymentInformationMaintenance
       parameters:
@@ -149,6 +153,8 @@ paths:
       tags:
         - Payment & Prepayment Information
       x-proxy-name: Prepayment - Maintenance/Simulate/Confirm/Reject - Consult or Simulate Manual Prepayment
+      x-group-name: Prepayment - Maintenance/Simulate/Confirm/Reject
+      x-child-product-name: Payment & Prepayment Information
       summary: Consult or Simulate Manual Prepayment
       operationId: consultOrSimulatingManualPrepayment
       parameters:
@@ -212,6 +218,8 @@ paths:
       tags:
         - Payment & Prepayment Information
       x-proxy-name: Prepayment - Maintenance/Simulate/Confirm/Reject - Confirmation or Rejection of Manual Prepayment Simulation
+      x-group-name: Prepayment - Maintenance/Simulate/Confirm/Reject
+      x-child-product-name: Payment & Prepayment Information
       summary:  Confirmation or Rejection of Manual Prepayment Simulation
       operationId: ConfirmationOrRejectionOfManualPrepaymentSimulation
       parameters:

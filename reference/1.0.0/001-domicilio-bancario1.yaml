@@ -25,6 +25,8 @@ paths:
       tags:
         - Payment & Prepayment Information
       x-proxy-name: Payment Settlement Account - Validation
+      x-group-name: Payment Settlement Account - Validation
+      x-child-product-name: Payment & Prepayment Information
       summary: Search for Rules to Validate Account Payment Information
       operationId: searchForValidationRules
       parameters:
@@ -82,6 +84,8 @@ paths:
       tags:
         - Payment & Prepayment Information
       x-proxy-name: Payment Settlement Account - Validation based on Rules for Bank and Type of Account
+      x-group-name: Payment Settlement Account - Validation
+      x-child-product-name: Payment & Prepayment Information
       summary: Validate Bank, Branch/Digit, Account Digit based on the Rules for Bank and Type of Account
       operationId: validateAccountPaymentInformation
       parameters:
@@ -139,6 +143,8 @@ paths:
       tags:
         - Payment & Prepayment Information
       x-proxy-name: Payment Settlement Account - Validation based on Rules for Bank and Type of Account - V2
+      x-group-name: Payment Settlement Account - Validation
+      x-child-product-name: Payment & Prepayment Information
       summary: Validate domicilio bancario
       operationId: validate
       parameters:

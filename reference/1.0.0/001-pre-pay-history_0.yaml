@@ -21,6 +21,8 @@ paths:
       tags:
         - Payment & Prepayment Information
       x-proxy-name: Prepayment - History Fees Consult - Consult History of Prepayment Fees
+      x-group-name: Prepayment - History Fees Consult
+      x-child-product-name: Payment & Prepayment Information
       summary: "Consult History of Prepayment Fees: Manual and Automatic"
       operationId: searchForPrepaymentFees
       parameters:
@@ -190,6 +192,8 @@ paths:
       tags:
         - Payment & Prepayment Information
       x-proxy-name: Prepayment - History Fees Consult - Consult of Sales Related to Prepayment
+      x-group-name: Prepayment - History Fees Consult
+      x-child-product-name: Payment & Prepayment Information
       summary: "Consult of Sales Related to Prepayment"
       operationId: searchForPrepaymentSales
       parameters:

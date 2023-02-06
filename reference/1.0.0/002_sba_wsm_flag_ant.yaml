@@ -24,6 +24,8 @@ paths:
       tags:
         - Payment & Prepayment Information
       x-proxy-name: Service Order - Terminal Maintenance - Prepayment Flag Update (Turn On/Off)
+      x-group-name: Prepayment - Enable/Disable
+      x-child-product-name: Payment & Prepayment Information
       summary: Prepayment Flag Update (Turn On/Off)
       operationId: PrepaymentFlagUpdate
       parameters:

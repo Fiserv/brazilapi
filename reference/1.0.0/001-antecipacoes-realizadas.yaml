@@ -23,6 +23,8 @@ paths:
       tags:
         - Payment & Prepayment Information
       x-proxy-name: Transactions related to Manual/Automatic Prepayment - Get details of sales on prepayments made by period
+      x-group-name: Transactions related to Manual/Automatic Prepayment
+      x-child-product-name: Payment & Prepayment Information
       description: Get details of sales on prepayments made
       operationId: sumarizacaoSOCPER
       parameters:
@@ -176,6 +178,8 @@ paths:
       tags:
         - Payment & Prepayment Information
       x-proxy-name: Transactions related to Manual/Automatic Prepayment - Get details of sales on prepayments made by number
+      x-group-name: Transactions related to Manual/Automatic Prepayment
+      x-child-product-name: Payment & Prepayment Information
       description: Get details of sales on prepayments made
       operationId: sumarizacaoSOC
       parameters:
@@ -329,6 +333,8 @@ paths:
       tags:
         - Payment & Prepayment Information
       x-proxy-name: Transactions related to Manual/Automatic Prepayment
+      x-group-name: Transactions related to Manual/Automatic Prepayment
+      x-child-product-name: Payment & Prepayment Information
       description: Get details of sales on prepayments made
       operationId: detalhamentoAntecipacoes
       parameters:

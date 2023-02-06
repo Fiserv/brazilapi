@@ -53,8 +53,6 @@ X
 (reference/1.0.0/001-status-estabe_1.yaml,2\b\2b8a6450328416270a3ccbb44bc9c1f1c2a9baab
 V
 &docs/TokenGenerationforWeb-services.md,c\4\c496a2ba0fbe2a67e629af21db78c59a8cf9b013
-\
-,reference/1.0.0/001-sba-val-cadastro-v2.yaml,d\8\d86602c14be4d35297cc372960277b4f3fb2b44e
 [
 +reference/1.0.0/SBA-EN-Con-Ser-Bande_0.yaml,4\f\4f754ea18f959f1c79a9909f2db73eefc879a637
 :
@@ -68,18 +66,6 @@ V
 &reference/1.0.0/001-sba-dailypass.yaml,d\3\d3c4461ac67dd66181f689f756a2b0618dcbbdc1
 [
 +reference/1.0.0/001-receb_19_12_2022_0.yaml,e\4\e4b92014137c134b9187b60181afadaba402bc13
-Z
-*reference/1.0.0/pagamentos_19_12_2022.yaml,4\7\47ad57bd56e62a3bc4f67b3475fd0a24eb2c9c96
-T
-$reference/1.0.0/001-antecip-aut.yaml,1\3\1342b91a409ad4276ffca54ba0d239d84499118e
-`
-0reference/1.0.0/001-antecipacoes-realizadas.yaml,4\b\4b58edaa7a1c46b5c7409271379f6b055fcef397
-Z
-*reference/1.0.0/001-pre-pay-history_0.yaml,3\1\31b45c779228efea2cbe25f60647b88b23ff71f8
-Y
-)reference/1.0.0/002_sba_wsm_flag_ant.yaml,6\e\6e20f030f9801295c55da506609dc5cff692a037
-Y
-)reference/1.0.0/001-sba-dom-bancario.yaml,3\7\3750b0cb0bfbc7df6d7e788ec0ec0af90df63b81
 Y
 )reference/1.0.0/001-sba-wsm-mnt-term.yaml,9\6\96165c45dc4a01a98881a5e806aba4316175c432
 V
@@ -98,8 +84,6 @@ Z
 *reference/1.0.0/001-sba-status-propor.yaml,1\a\1a8da1afb2b92c52c3b2a3f1a96768b053b0bc94
 X
 (reference/1.0.0/001-consulta-dirf_0.yaml,5\f\5fdd72273f507c8d140c4855d7d0263a9fda175f
-\
-,reference/1.0.0/001-domicilio-bancario1.yaml,4\7\47c3c6a56400e01fe17be47eb4986ca0969aeffc
 [
 +reference/1.0.0/001-sba-abertura-sol_1.yaml,6\c\6cf8e424dc6476908aa1bfe4a27024042952aea3
 [

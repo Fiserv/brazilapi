@@ -25,6 +25,8 @@ paths:
       tags:
         - Payment & Prepayment Information
       x-proxy-name: Payments - Consult for All Transaction Period - Summarized
+      x-group-name: Payments - Consult
+      x-child-product-name: Payment & Prepayment Information
       summary: Search for All Transaction Period - Summarized
       operationId: searchForAllTransactionPeriodSumm
       parameters:
@@ -130,6 +132,8 @@ paths:
       tags:
         - Payment & Prepayment Information
       x-proxy-name: Payments - Consult for Completed Payments
+      x-group-name: Payments - Consult
+      x-child-product-name: Payment & Prepayment Information
       summary: Search for Completed Payments
       operationId: searchForCompletedPayments
       parameters:
@@ -226,6 +230,8 @@ paths:
       tags:
         - Payment & Prepayment Information
       x-proxy-name: Payments - Search for Payments in specific status suspended or rejected
+      x-group-name: Payments - Consult
+      x-child-product-name: Payment & Prepayment Information
       summary: Search for Payments in specific status suspended or rejected
       operationId: searchForSuspendedOrRejectedPayments
       parameters:
@@ -323,6 +329,8 @@ paths:
       tags:
         - Payment & Prepayment Information
       x-proxy-name: Payments - Search for Payment Order
+      x-group-name: Payments - Consult
+      x-child-product-name: Payment & Prepayment Information
       summary: Search for Payment Order
       operationId: searchPaymentOrderDetail
       parameters:
@@ -435,6 +443,8 @@ paths:
       tags:
         - Payment & Prepayment Information
       x-proxy-name: Payments - Search all Transactions for a period
+      x-group-name: Payments - Consult
+      x-child-product-name: Payment & Prepayment Information
       summary: Search all Transactions for a period
       operationId: searchAllTransactionsPeriod
       parameters:

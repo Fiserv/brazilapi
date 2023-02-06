@@ -22,7 +22,9 @@ paths:
     post:
       tags:
         - Payment & Prepayment Information
-      x-proxy-name: Payment Settlement Account - Validation
+      x-proxy-name: Payment Settlement Account - Update
+      x-group-name: Payment Settlement Account - Update
+      x-child-product-name: Payment & Prepayment Information
       summary: Payment Account Information for Settlement (Domicílio Bancário)
       operationId: paymentAccountForSettlement
       parameters:

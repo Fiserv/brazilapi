@@ -23,6 +23,8 @@ paths:
       tags:
         - Payment & Prepayment Information
       x-proxy-name: Automatic Prepayment - Cancel - Consult Automatic Prepayment
+      x-group-name: Automatic Prepayment - Cancel
+      x-child-product-name: Payment & Prepayment Information
       summary: 'Consult Automatic Prepayment - Cancel'
       operationId: 'Consult Automatic Prepayment - Cancel'
       parameters:
@@ -130,6 +132,8 @@ paths:
       tags:
         - Payment & Prepayment Information
       x-proxy-name: Automatic Prepayment - Cancel - Automatic Prepayment
+      x-group-name: Automatic Prepayment - Cancel
+      x-child-product-name: Payment & Prepayment Information
       summary: 'Automatic Prepayment - Cancel'
       operationId: 'Automatic Prepayment - Cancel'
       parameters:
