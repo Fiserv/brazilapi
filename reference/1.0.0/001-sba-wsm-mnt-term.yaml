@@ -23,6 +23,8 @@ paths:
       tags:
         - Service Order Information
       x-proxy-name: Service Order - Terminal Maintenance - Request Device - Additional Terminal
+      x-group-name: Service Order - Terminal Maintenance
+      x-child-product-name: Service Order Information
       summary: Request Device - Additional Terminal
       operationId: requestAdditionalTerminal
       parameters:
@@ -86,6 +88,8 @@ paths:
       tags:
         - Service Order Information
       x-proxy-name: Service Order - Terminal Maintenance - Request Device - Terminal Maintenance
+      x-group-name: Service Order - Terminal Maintenance
+      x-child-product-name: Service Order Information
       summary: Request Device - Terminal Maintenance
       operationId: requestDeviceMaintenance
       parameters:
@@ -149,6 +153,8 @@ paths:
       tags:
         - Service Order Information
       x-proxy-name: Service Order - Terminal Maintenance - Request Device - Replace Terminal
+      x-group-name: Service Order - Terminal Maintenance
+      x-child-product-name: Service Order Information
       summary: Request Device - Replace Terminal
       operationId: requestTerminalReplacement
       parameters:
@@ -212,6 +218,8 @@ paths:
       tags:
         - Service Order Information
       x-proxy-name: Service Order - Terminal Maintenance - Device Request -  Uninstall Terminal
+      x-group-name: Service Order - Terminal Maintenance
+      x-child-product-name: Service Order Information
       summary: Device Request -  Uninstall Terminal
       operationId: requestUninstallTerminal
       parameters:

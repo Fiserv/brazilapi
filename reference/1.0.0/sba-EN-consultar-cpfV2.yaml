@@ -23,6 +23,8 @@ paths:
       tags:
         - Service Order Information
       x-proxy-name: Tax ID (individual) Validation (not available PROD)
+      x-group-name: Tax ID (individual) Validation (not available PROD)
+      x-child-product-name: Service Order Information
       summary: Search Bureau for Individual Tax ID - CPF (SERPRO)
       operationId: searchIndividualTaxId
       parameters:

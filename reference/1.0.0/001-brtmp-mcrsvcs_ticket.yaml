@@ -16,6 +16,8 @@ paths:
       tags:
         - Service Order Information
       x-proxy-name: Service Order - Ticket - Find, by merchantId, the list of ticket registered in TMP
+      x-group-name: Service Order - Ticket
+      x-child-product-name: Service Order Information
       description: Find, by merchantId, the list of ticket registered in TMP
       operationId: findByMerchantId
       parameters:
@@ -91,6 +93,8 @@ paths:
       tags:
         - Service Order Information
       x-proxy-name: Service Order - Ticket - Find, by the Service Order number, the Service Order's logistic data
+      x-group-name: Service Order - Ticket
+      x-child-product-name: Service Order Information
       description: Find, by the Service Order number, the Service Order's logistic data
       operationId: findLogisticsBySoNumber
       parameters:

@@ -23,6 +23,8 @@ paths:
       tags:
         - Service Order Information
       x-proxy-name: Tax ID (company) Validation(not available PROD)
+      x-group-name: Tax ID (company) Validation(not available PROD)
+      x-child-product-name: Service Order Information
       summary: Search Bureau for Company Tax ID - CNPJ (SERPRO)
       operationId: searchCompanyTaxId
       parameters:

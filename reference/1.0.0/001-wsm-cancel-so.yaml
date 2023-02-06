@@ -23,6 +23,8 @@ paths:
       tags:
         - Service Order Information
       x-proxy-name: Service Order - Cancelling
+      x-group-name: Service Order - Cancelling
+      x-child-product-name: Service Order Information
       summary: Service Order Cancelling (Device Request)
       operationId: requestServiceOrderCancelling
       parameters:

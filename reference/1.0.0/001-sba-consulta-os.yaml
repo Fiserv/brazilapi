@@ -23,6 +23,8 @@ paths:
       tags:
         - Service Order Information
       x-proxy-name: Service Order - Consult - Service Order Search by Institution Number and Merchant Code
+      x-group-name: Service Order - Consult
+      x-child-product-name: Service Order Information
       summary: Service Order Search by Institution Number and Merchant Code
       operationId: serviceOrderSearch
       parameters:
@@ -88,6 +90,8 @@ paths:
       tags:
         - Service Order Information
       x-proxy-name: Service Order - Consult - Service Order Inquiry by Institution and Service Order Number
+      x-group-name: Service Order - Consult
+      x-child-product-name: Service Order Information
       summary: Service Order Inquiry by Institution and Service Order Number
       operationId: serviceOrderSearchById
       parameters:
@@ -153,6 +157,8 @@ paths:
       tags:
         - Service Order Information
       x-proxy-name: Service Order - Consult - Service Order Tracking by Institution Number and Merchant Code
+      x-group-name: Service Order - Consult
+      x-child-product-name: Service Order Information
       summary: Service Order Tracking by Institution Number and Merchant Code 
       operationId: serviceOrderTracking
       parameters:
@@ -218,6 +224,8 @@ paths:
       tags:
         - Service Order Information
       x-proxy-name: Service Order - Consult - Service Order Search by Institution Number and Merchant Code
+      x-group-name: Service Order - Consult
+      x-child-product-name: Service Order Information
       summary: Service Order Search by Institution Number and Merchant Code
       operationId: serviceOrderSearch
       parameters:
@@ -283,6 +291,8 @@ paths:
       tags:
         - Service Order Information
       x-proxy-name: Service Order - Consult - Service Order Inquiry by Institution and Service Order Number
+      x-group-name: Service Order - Consult
+      x-child-product-name: Service Order Information
       summary: Service Order Inquiry by Institution and Service Order Number
       operationId: serviceOrderSearchById
       parameters:
@@ -348,6 +358,8 @@ paths:
       tags:
         - Service Order Information
       x-proxy-name: Service Order - Consult - Service Order Tracking by Institution Number and Merchant Code
+      x-group-name: Service Order - Consult
+      x-child-product-name: Service Order Information
       summary: Service Order Tracking by Institution Number and Merchant Code 
       operationId: serviceOrderTracking
       parameters:
@@ -413,6 +425,8 @@ paths:
       tags:
         - Service Order Information
       x-proxy-name: Service Order - Consult - Service Order Tracking by Institution Number, Merchant Code and Service Order Number
+      x-group-name: Service Order - Consult
+      x-child-product-name: Service Order Information
       summary: Service Order Tracking by Institution Number, Merchant Code and Service Order Number 
       operationId: serviceOrderTrackingByOS
       parameters:

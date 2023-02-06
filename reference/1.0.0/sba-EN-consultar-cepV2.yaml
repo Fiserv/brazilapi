@@ -23,6 +23,8 @@ paths:
       tags:
         - Service Order Information
       x-proxy-name: Zipcode (CEP) - Consult
+      x-group-name: Zipcode (CEP) - Consult
+      x-child-product-name: Service Order Information
       summary: Search ZIPCODE (Brazil)
       operationId: searchZipcode
       parameters:
@@ -87,6 +89,8 @@ paths:
       tags:
         - Service Order Information
       x-proxy-name: Zipcode (CEP) - Consult - Search for City Name
+      x-group-name: Zipcode (CEP) - Consult
+      x-child-product-name: Service Order Information
       summary: Search for City Name
       operationId: searchForCityName
       parameters:
