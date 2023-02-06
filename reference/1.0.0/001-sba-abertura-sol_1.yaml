@@ -26,6 +26,8 @@ paths:
       tags:
         - Merchant Information & Cases
       x-proxy-name: Merchant Requests (Cases) - Open
+      x-group-name: Merchant Requests (Cases) - Open
+      x-child-product-name: Merchant Information & Cases
       summary: Merchant Information & Cases
       operationId: searchForCaseReasons
       parameters:
@@ -79,6 +81,8 @@ paths:
       tags:
         - Merchant Information & Cases
       x-proxy-name: Merchant Requests (Cases) - Search for Sub-Reasons to be used for Salesforce Case Opening by Reason
+      x-group-name: Merchant Requests (Cases) - Open
+      x-child-product-name: Merchant Information & Cases
       summary: Search for Sub-Reasons to be used for Salesforce Case Opening by Reason from /motivos
       operationId: searchForCaseSub-Reason
       parameters:
@@ -139,6 +143,8 @@ paths:
       tags:
         - Merchant Information & Cases
       x-proxy-name: Merchant Requests (Cases) - Search for Symptom to be used for Salesforce Case Opening by Symptoms
+      x-group-name: Merchant Requests (Cases) - Open
+      x-child-product-name: Merchant Information & Cases
       summary: Search for Symptom to be used for Salesforce Case Opening by Symptoms from /sub-motivos
       operationId: searchForCaseSymptoms
       parameters:
@@ -199,6 +205,8 @@ paths:
       tags:
         - Merchant Information & Cases
       x-proxy-name: Merchant Requests (Cases) - Request Opening (Cases in Salesforce)
+      x-group-name: Merchant Requests (Cases) - Open
+      x-child-product-name: Merchant Information & Cases
       summary: Request Opening (Cases in Salesforce)
       operationId: requestOpening
       parameters:
@@ -252,6 +260,8 @@ paths:
       tags:
         - Merchant Information & Cases
       x-proxy-name: Merchant Requests (Cases) - Request Opening by Brand (Cases in Salesforce)
+      x-group-name: Merchant Requests (Cases) - Open
+      x-child-product-name: Merchant Information & Cases
       summary: Request Opening by Brand (Cases in Salesforce)
       operationId: requestOpeningByBrand
       parameters:

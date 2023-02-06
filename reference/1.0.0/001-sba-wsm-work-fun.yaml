@@ -23,6 +23,8 @@ paths:
       tags:
         - Merchant Information & Cases
       x-proxy-name: Merchant Working Hours - Update
+      x-group-name: Merchant Working Hours - Update
+      x-child-product-name: Merchant Information & Cases
       summary: Merchant Information & Cases
       operationId: merchantWorkingHoursUpdate
       parameters:

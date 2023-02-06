@@ -24,6 +24,8 @@ paths:
       tags:
         - Merchant Information & Cases
       x-proxy-name: Merchant Information - Demographic History
+      x-group-name: Merchant Information - Demographic History
+      x-child-product-name: Merchant Information & Cases
       summary: Merchant Registration Changes History
       operationId: Merchant Registration Changes History
       parameters:

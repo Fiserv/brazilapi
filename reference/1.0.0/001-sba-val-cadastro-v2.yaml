@@ -26,6 +26,8 @@ paths:
       tags:
         - Merchant Information & Cases
       x-proxy-name: Existing Customer Validation
+      x-group-name: Existing Customer Validation
+      x-child-product-name: Merchant Information & Cases
       summary: Merchant Information & Cases
       operationId: Search Existing Customer by Tax ID (CPF/CNPJ)
       parameters:
@@ -126,6 +128,8 @@ paths:
       tags:
         - Merchant Information & Cases
       x-proxy-name: Existing Customer Validation - by Institution and Tax ID (CPF/CNPJ)
+      x-group-name: Existing Customer Validation
+      x-child-product-name: Merchant Information & Cases
       summary: Merchant Information & Cases
       operationId: Validation by Institution and Tax ID
       parameters:
@@ -226,6 +230,8 @@ paths:
       tags:
         - Merchant Information & Cases
       x-proxy-name: Existing Customer Validation - by Institution and Tax ID (CPF/CNPJ) and Service contract
+      x-group-name: Existing Customer Validation
+      x-child-product-name: Merchant Information & Cases
       summary: Merchant Information & Cases
       operationId: Validation by Institution and Tax ID and Service contract
       parameters:
@@ -333,6 +339,8 @@ paths:
       tags:
         - Merchant Information & Cases
       x-proxy-name: Existing Customer Validation - Validation by Boarding Channel
+      x-group-name: Existing Customer Validation
+      x-child-product-name: Merchant Information & Cases
       summary: Merchant Information & Cases
       operationId: Validation by Boarding Channel
       parameters:
@@ -426,6 +434,8 @@ paths:
       tags:
         - Merchant Information & Cases
       x-proxy-name: Existing Customer Validation - Validation by MDR Comparison
+      x-group-name: Existing Customer Validation
+      x-child-product-name: Merchant Information & Cases
       summary: Merchant Information & Cases
       operationId: Validation by MDR Comparison
       parameters:
@@ -519,6 +529,8 @@ paths:
       tags:
         - Merchant Information & Cases
       x-proxy-name: Existing Customer Validation - Validation by Technology - ECommerce X POS comparison
+      x-group-name: Existing Customer Validation
+      x-child-product-name: Merchant Information & Cases
       summary: Merchant Information & Cases
       operationId: Validation by Technology - ECommerce X POS comparison
       parameters:
@@ -626,6 +638,8 @@ paths:
       tags:
         - Merchant Information & Cases
       x-proxy-name: Existing Customer Validation - Validation by Technology and Service contract - ECommerce X POS comparison
+      x-group-name: Existing Customer Validation
+      x-child-product-name: Merchant Information & Cases
       summary: Merchant Information & Cases
       operationId: Validation by Technology and Service contract - ECommerce X POS comparison
       parameters:

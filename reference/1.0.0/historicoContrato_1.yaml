@@ -23,6 +23,8 @@ paths:
       tags:
         - Merchant Information & Cases
       x-proxy-name: Historic Contract
+      x-group-name: Historic Contract
+      x-child-product-name: Merchant Information & Cases
       summary: Merchant Information & Cases
       operationId: searchForAvailableDevicesByMerchantCode
       parameters:

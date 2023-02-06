@@ -24,10 +24,10 @@ paths:
   '/api/chargeback/ec/apigee/filter':
     post:
       tags:
-        - Sales Information
+        - Merchant Information & Cases
       x-proxy-name: Merchant Chargeback - Consult
-      x-group-name: Consult Chargeback Information
-      x-child-product-name: Sales Information
+      x-group-name: Chargeback Consult (not available - Rodrigo 20200316)
+      x-child-product-name: Merchant Information & Cases
       summary: Search for Chargeback Information
       operationId: Search for Chargeback Information
       parameters:

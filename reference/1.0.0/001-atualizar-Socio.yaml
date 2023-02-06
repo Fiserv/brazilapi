@@ -26,6 +26,8 @@ paths:
       tags:
         - Merchant Information & Cases
       x-proxy-name: Merchant Information - Consult Partner
+      x-group-name: Merchant Information - Consult/Update Partner
+      x-child-product-name: Merchant Information & Cases
       summary: Search Merchant Partner Information
       operationId: Search Merchant Partner Information
       parameters:
@@ -133,6 +135,8 @@ paths:
       tags:
         - Merchant Information & Cases
       x-proxy-name: Merchant Information - Update Partner
+      x-group-name: Merchant Information - Consult/Update Partner
+      x-child-product-name: Merchant Information & Cases
       summary: Update Merchant Partnet Information
       operationId: Update Merchant Partnet Information
       parameters:

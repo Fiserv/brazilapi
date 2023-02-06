@@ -27,6 +27,8 @@ paths:
       tags:
         - Merchant Information & Cases
       x-proxy-name: Search for Cases opened in Salesforce
+      x-group-name: Requests (Cases/Comments) - Consult
+      x-child-product-name: Merchant Information & Cases
       summary: Merchant Information & Cases
       operationId: searchForCasesOpenedInSF
       parameters:
@@ -162,6 +164,8 @@ paths:
       tags:
         - Merchant Information & Cases
       x-proxy-name: Search for Comments related to a Case
+      x-group-name: Requests (Cases/Comments) - Consult
+      x-child-product-name: Merchant Information & Cases
       summary: Merchant Information & Cases
       operationId: Search for Comments related to a Case
       parameters:

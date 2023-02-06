@@ -1,32 +1,32 @@
 openapi: 3.0.2
 info:
-  description: Merchant Trade Name Update
+  description: Merchant Contact Information Update
   version: "1.0"
-  title: Merchant Trade Name Update
+  title: Merchant Contact Information Update
   termsOfService: urn:tos
   contact: {}
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0
 servers:
-  - url: https://cat.api.firstdata.com/bwa/wsm/merchantinformation/tradeName/updateTradeName
+  - url: https://cat.api.firstdata.com/bwa/wsm/merchantinformation/contact/updateContactInformation
 x-header-api-key: 'X0GW3QGOYFn4r7DHcVC8KuatUnNs6MGB'
 x-header-api-secret: 'N93nmFmoY0NzSMC5'
-x-production-url: prod.api.firstdata.com/bwa/wsm/merchantinformation/tradeName/updateTradeName
+x-production-url: prod.api.firstdata.com/bwa/wsm/merchantinformation/contact/updateContactInformation
 x-config:
   tryItOut: true
 tags:
-  - name: Merchant Trade Name Update
+  - name: Merchant Contact Information Update
 paths:
   /:
     post:
       tags:
         - Merchant Information & Cases
-      x-proxy-name: Merchant Trade Name - Update
-      x-group-name: Merchant Trade Name - Update
+      x-proxy-name: Merchant Contact Information - Update
+      x-group-name: Merchant Contact Information - Update
       x-child-product-name: Merchant Information & Cases
-      summary: Merchant Information & Cases
-      operationId: mechantTradeNameUpdate
+      summary: Update Contact Information. Processing system stores only 1 contact, so that the Contact information provided will replace the current Contact information
+      operationId: Merchant Contact Information Update
       parameters:
         - name: Message-Signature
           in: header
@@ -82,7 +82,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Unauthorized'
+                $ref: "#/components/schemas/Unauthorized"
 components:
   securitySchemes:
     JWT:
@@ -90,12 +90,16 @@ components:
       name: Authorization
       in: header
   schemas:
-    updateTradeName:
+    updateContactInformation:
       type: object
       required:
         - institutionNumber
         - merchantID
-        - tradeName
+        - contactName
+        - servicePhone
+        - mobileNumber
+        - email
+        - pepIndicator
       properties:
         institutionNumber:
           type: string
@@ -105,25 +109,61 @@ components:
           type: string
           description: Merchant Code
           example: "91002806"
-        tradeName:
+        contactName:
           type: string
-          description: Merchant Trade Name to be Updated
-          example: "Nome Fantasia da Empresa"
+          description: Merchant Contact Name - Max 50 characters
+          example: "Marcelo Soares"
+        servicePhone:
+          type: string
+          description: Merchant Contact Phone Number
+          example: 1136368181
+        mobileNumber:
+          type: string
+          description: Merchant Contact Cellphone Number
+          example: 1198737382
+        website:
+          type: string
+          description: Merchant Website Information
+          example: www.sitedaempresa.com.br
+        email:
+          type: string
+          description: Merchant E-mail
+          example: e-mail@email.com.br
+        pepIndicator:
+          type: string
+          description: Politically Exposed Person Indicator
+          example: "000"
+          enum: 
+            - 000 - No
+            - 001 - Yes 
+        signedAverageTicketValue:
+          type: string
+          description: Merchant Average Ticket of sales
+          example: "000000000000150.00"
+        totMoneyCredDeb:
+          type: string
+          description: Total Debit and Credit Amount in Cash
+          example: "000000000000150.00"
+        totCredDeb:
+          type: string
+          description: Total Debit and Credit Amount
+          example: "000000000000150.00"
     Body:
       type: object
       properties:
-        updateTradeName:
+        updateContactInformation:
           type: array
+          description: Update Contact Information. Processing system stores only 1 contact, so that the Contact information provided will replace the current Contact information
           items:
-            $ref: "#/components/schemas/updateTradeName"
+            $ref: "#/components/schemas/updateContactInformation"
     responseInformationList:
       type: object
       properties:
         responseCode:
           type: string
-          description: Return Code
+          description: Return code 
           example: "00"
-          enum: 
+          enum:
             - 00 - Atualização realizada com sucesso. -(meaning Updated Successfully Done)
             - 01 - Atualização realizada com sucesso, mas mensagem UNS não enviada - (meaning Update Successfully done without UNS)
             - 02 - Parâmetros inválidos - (meaning Invalid Parameters)
@@ -132,11 +172,13 @@ components:
             - 05 - Atualização rejeitada pelos sistemas TMS/FHM - (meaning Updated not confirmed)
             - 06 - Informações mandatórias não enviadas - (meaning Required Information not Provided)
             - 07 - Estabelecimento Comercial não Ativo/Suspenso - (meaning (Merchaint is not active or suspended)
+            - 08 - Indicador de PEP para o CNPJ é inválido - (meaning PEP information as TRUE cannot be Company)
             - 99 - Erro de Sistema - (meaning System Error)
         responseCodeDesc:
           type: string
           description: Return Code Description
-          enum: 
+          example: "Descrição da mensagem em inglês"
+          enum:
             - 00 - Atualização realizada com sucesso. -(meaning Updated Successfully Done)
             - 01 - Atualização realizada com sucesso, mas mensagem UNS não enviada - (meaning Update Successfully done without UNS)
             - 02 - Parâmetros inválidos - (meaning Invalid Parameters)
@@ -145,14 +187,12 @@ components:
             - 05 - Atualização rejeitada pelos sistemas TMS/FHM - (meaning Updated not confirmed)
             - 06 - Informações mandatórias não enviadas - (meaning Required Information not Provided)
             - 07 - Estabelecimento Comercial não Ativo/Suspenso - (meaning (Merchaint is not active or suspended)
+            - 08 - Indicador de PEP para o CNPJ é inválido - (meaning PEP information as TRUE cannot be Company)
             - 99 - Erro de Sistema - (meaning System Error)
     response:
-      type: object
-      properties:
-        responseInformationList:
-          type: array
-          items:
-            $ref: "#/components/schemas/responseInformationList"
+      type: array
+      items:
+        $ref: "#/components/schemas/responseInformationList"
     processMessage:
       type: object
       properties:
@@ -164,19 +204,12 @@ components:
           type: string
           description: Merchant Code
           example: "91002806"
-        tradeName:
-          type: string
-          description: Merchant Trade Name
-          example: "Nome Fantasia da Empresa"
         response:
           $ref: "#/components/schemas/response"
     Response:
-      type: object
-      properties:
-        processMessage:
-          type: array
-          items:
-            $ref: "#/components/schemas/processMessage"
+      type: array
+      items:
+        $ref: "#/components/schemas/processMessage"
     Unauthorized:
       type: object
       properties:

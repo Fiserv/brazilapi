@@ -24,6 +24,8 @@ paths:
       tags:
         - Merchant Information & Cases
       x-proxy-name: Contracted Services - Consult
+      x-group-name: Contracted Services - Consult
+      x-child-product-name: Merchant Information & Cases
       operationId: Consult the Products and Services contracted by the Merchant
       parameters:
         - name: Message-Signature

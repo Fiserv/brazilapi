@@ -29,6 +29,8 @@ paths:
       tags:
         - Merchant Information & Cases
       x-proxy-name: Merchant Relationship Hierarchy - Consult
+      x-group-name: Merchant Relationship Hierarchy - Consult
+      x-child-product-name: Merchant Information & Cases
       summary: Merchant Information & Cases
       operationId: Search Merchant Relationship Hierarchy
       parameters:
@@ -129,6 +131,8 @@ paths:
       tags:
         - Merchant Information & Cases
       x-proxy-name: Merchant Relationship Hierarchy - Add
+      x-group-name: Merchant Relationship Hierarchy - Consult
+      x-child-product-name: Merchant Information & Cases
       summary: Merchant Information & Cases
       operationId: addMerchantRelationshipHierarchy
       parameters:
@@ -235,6 +239,8 @@ paths:
       tags:
         - Merchant Information & Cases
       x-proxy-name: Merchant Relationship Hierarchy - Remove
+      x-group-name: Merchant Relationship Hierarchy - Consult
+      x-child-product-name: Merchant Information & Cases
       summary: Merchant Information & Cases
       operationId: removeMerchantRelationshipHierarchy
       parameters:
