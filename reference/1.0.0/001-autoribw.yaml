@@ -24,6 +24,8 @@ paths:
       tags:
         - Sales Information
       x-proxy-name: Merchant Authorizations History - Consult
+      x-group-name: Merchant Authorizations History - Consult
+      x-child-product-name: Sales Information
       summary: Query History of Authorized Transactions
       operationId: Query History of Authorized Transactions
       parameters:

@@ -25,6 +25,8 @@ paths:
       tags:
         - Sales Information
       x-proxy-name: Merchant Sales - Paid or To Be Received - Consult
+      x-group-name: Merchant Sales - Paid or To Be Received - Consult
+      x-child-product-name: Sales Information
       summary: Search for Paid Sales or Sales to be Received By Period, Institution, Merchant and Other Options. It allows the seleciton of ONLY ONE association schema
       operationId: searchForSalesReceivedOrToBeReceivedByOneAssociation
       parameters:
@@ -200,6 +202,8 @@ paths:
       tags:
         - Sales Information
       x-proxy-name: Merchant Sales - Paid or To Be Received - Consult - It allows the selection of MULTIPLE association schema
+      x-group-name: Merchant Sales - Paid or To Be Received - Consult
+      x-child-product-name: Sales Information
       summary: Search for Paid Sales or Sales to be Received By Period, Institution, Merchant and Other Options. It allows the selection of MULTIPLE association schema
       operationId: searchForSalesReceivedOrToBeReceivedByMultipleAssociation
       parameters:

@@ -23,6 +23,8 @@ paths:
       tags:
         - Sales Information
       x-proxy-name: Merchant Sales - Suspended Transactions - Consult
+      x-group-name: Merchant Sales - Suspended Transactions - Consult
+      x-child-product-name: Sales Information
       summary: 'Search for suspended transactions by Merchant ID'
       operationId: Search for suspended transactions by Merchant ID
       parameters:
@@ -151,6 +153,8 @@ paths:
       tags:
         - Sales Information
       x-proxy-name: Merchant Sales - Suspended Transactions - Consult suspended summarized by Merchant ID
+      x-group-name: Merchant Sales - Suspended Transactions - Consult
+      x-child-product-name: Sales Information
       summary: 'Search for suspended summarized by Merchant ID'
       operationId: Search for suspended summarized by Merchant ID
       parameters:

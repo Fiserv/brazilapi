@@ -23,6 +23,8 @@ paths:
       tags:
         - Sales Information
       x-proxy-name: Operations - Consult
+      x-group-name: Merchant Operations - Consult
+      x-child-product-name: Sales Information
       summary: Search Device Operation
       operationId: searchDeviceOperation
       parameters:

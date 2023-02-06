@@ -26,6 +26,8 @@ paths:
       tags:
         - Sales Information
       x-proxy-name: Merchant Chargeback - Consult
+      x-group-name: Consult Chargeback Information
+      x-child-product-name: Sales Information
       summary: Search for Chargeback Information
       operationId: Search for Chargeback Information
       parameters:

@@ -25,7 +25,9 @@ paths:
     get:
       tags:
         - Sales Information
-      x-proxy-name: Merchant Authorizations - Consult
+      x-proxy-name: Merchant Authorizations - Consult (Institute and marchant)
+      x-group-name: Merchant Authorizations (Current Day) - Consult
+      x-child-product-name: Sales Information
       summary: Transacions Authorization
       operationId: searchTransactionsAuthorization
       parameters:
@@ -91,6 +93,8 @@ paths:
       tags:
         - Sales Information
       x-proxy-name: Merchant Authorizations - Consult by Institution Number, Merchant Code and Terminal
+      x-group-name: Merchant Authorizations (Current Day) - Consult
+      x-child-product-name: Sales Information
       summary: Search the last transaction for devices to a given Institution Number and Merchant Code 
       operationId: searchLastTransaction
       parameters:

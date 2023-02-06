@@ -22,6 +22,8 @@ paths:
       tags:
         - Sales Information
       x-proxy-name: Merchant Sales - Keyed Trans Permission - Consult
+      x-group-name: Merchant Sales - Keyed Trans Permission - Consult
+      x-child-product-name: Sales Information
       summary: 'Search detailed information by Customer Information'
       operationId: Search detailed information by Customer Information
       parameters:
