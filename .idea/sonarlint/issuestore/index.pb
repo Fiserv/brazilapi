@@ -60,10 +60,6 @@ V
 .docignore,0\5\058602980aa3c3dfe7e2bf3a636363bc87ad8206
 g
 7reference/1.0.0/sba-EN-inclui-consulta-logisticaV2.yaml,8\7\873d2e2626dd144ca8fd2b0da7d1a96871966b17
-d
-4reference/1.0.0/tmp-EN-consulta-tecnologia-ecV2.yaml,2\f\2fe4e6baaa7661d2c88593f7d0c28f291c740bb6
-V
-&reference/1.0.0/001-sba-dailypass.yaml,d\3\d3c4461ac67dd66181f689f756a2b0618dcbbdc1
 [
 +reference/1.0.0/001-receb_19_12_2022_0.yaml,e\4\e4b92014137c134b9187b60181afadaba402bc13
 Z
@@ -72,5 +68,3 @@ X
 (reference/1.0.0/001-consulta-dirf_0.yaml,5\f\5fdd72273f507c8d140c4855d7d0263a9fda175f
 [
 +reference/1.0.0/001-sba-abertura-sol_1.yaml,6\c\6cf8e424dc6476908aa1bfe4a27024042952aea3
-[
-+reference/1.0.0/001-sba-con-taxa-eqp_1.yaml,f\b\fb5e4fbfbe3843a7880e6a7f78e8100fb5da06d6

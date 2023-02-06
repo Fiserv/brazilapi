@@ -21,6 +21,8 @@ paths:
       tags:
         - Devices Information
       x-proxy-name: Search for Device Fees based on Merchant Institution and Merchant Code
+      x-group-name: Merchant Devices and Fees - Consult
+      x-child-product-name: Devices Information
       summary: Search for Device Fees based on Merchant Institution and Merchant Code
       operationId: searchForDeviceFees - Deprecated
       parameters:
@@ -86,6 +88,8 @@ paths:
       tags:
         - Devices Information
       x-proxy-name: Search for Device Fees based on Merchant Institution and Merchant Code - Changed the resource name
+      x-group-name: Merchant Devices and Fees - Consult
+      x-child-product-name: Devices Information
       summary: Search for Device Fees based on Merchant Institution and Merchant Code - Changed the resource name
       operationId: searchForDeviceFees
       parameters:
@@ -151,6 +155,8 @@ paths:
       tags:
         - Devices Information
       x-proxy-name: Search for Device Service Types
+      x-group-name: Merchant Devices and Fees - Consult
+      x-child-product-name: Devices Information
       summary: Search for Device Service Types 
       operationId: searchForDeviceServiceTypes
       parameters:

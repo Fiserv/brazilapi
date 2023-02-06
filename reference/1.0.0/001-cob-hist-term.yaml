@@ -24,6 +24,8 @@ paths:
       tags:
         - Devices Information
       x-proxy-name: Search for Device Billing History
+      x-group-name: Merchant Devices Billing History
+      x-child-product-name: Devices Information
       summary: Search for Device Billing History
       operationId: Search for Device Billing History
       parameters:

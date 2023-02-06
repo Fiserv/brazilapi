@@ -23,6 +23,8 @@ paths:
       tags:
         - Devices Information
       x-proxy-name: Get Daily Passorword Valid for the Day
+      x-group-name: Merchant Devices Daily Password - Consult
+      x-child-product-name: Devices Information
       summary: Get Daily Passorword Valid for the Day
       operationId: getDailyPassword
       parameters:

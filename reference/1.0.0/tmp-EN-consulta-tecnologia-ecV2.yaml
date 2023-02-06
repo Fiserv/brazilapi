@@ -23,6 +23,8 @@ paths:
       tags:
         - Devices Information
       x-proxy-name: Search for Available Devices by Merchant Code
+      x-group-name: Merchant Device Availability - Consult
+      x-child-product-name: Devices Information
       summary: Search for Available Devices by Merchant Code
       operationId: searchForAvailableDevicesByMerchantCode
       parameters:
