@@ -54,8 +54,6 @@ Z
 *reference/1.0.0/001-pre-pay-history_0.yaml,3\1\31b45c779228efea2cbe25f60647b88b23ff71f8
 T
 $reference/1.0.0/001-antecip-aut.yaml,1\3\1342b91a409ad4276ffca54ba0d239d84499118e
-`
-0reference/1.0.0/001-antecipacoes-realizadas.yaml,4\b\4b58edaa7a1c46b5c7409271379f6b055fcef397
 V
 &reference/1.0.0/001-wsm-cancel-so.yaml,1\9\19373a314c391fbcf08f533d44fd30363b77531a
 X

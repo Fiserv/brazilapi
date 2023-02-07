@@ -28,24 +28,27 @@
         "apiSpecFileNames": [
           "Authentication/sba-EN-solicitar-token",
 
-          "001-sba-status-propor", "credenciamento",
+          "OnlineBoarding/001-sba-status-propor", "OnlineBoarding/credenciamento",
 
           "001-ajuste-debito", "001-alter-cadast", "001-atualizar-Socio", "001-con-prod-serv", "001-consulta-dirf_0",
           "001-monthly-bill-presu_1", "001-receb_19_12_2022_0", "001-sba-abertura-sol_1", "001-sba-Hier-Pagto",
           "001-sba-mdr-fee_1_1", "001-sba-val-cadastro-v2", "001-sba-wsm-atu-end_0", "001-sba-wsm-nme-fant",
           "001-sba-wsm-work-fun", "001-status-estabe_1", "003-estabelecimento", "chargeback-external_0",
           "SBA-EN-Con-Ser-Bande_0", "sba-EN-consultar-solicitacao-sfV3", "sba-EN-Hierarquia-RelacionamentoV2",
-          "sba-EN-inclui-consulta-logisticaV2", "historicoContrato_1", "001-sba-wsm-atlz-com",
+          "sba-EN-inclui-consulta-logisticaV2", "historicoContrato_1", "001-sba-wsm-atlz-com", "001-charge-Back",
 
-          "tmp-EN-consulta-tecnologia-ecV2", "001-sba-con-taxa-eqp_1", "001-autoribw", "001-battery-Info",
-          "001-charge-Back", "001-cob-hist-term",
+          "DevicesInformation/tmp-EN-consulta-tecnologia-ecV2", "DevicesInformation/001-sba-con-taxa-eqp_1",
+          "DevicesInformation/001-battery-Info", "DevicesInformation/001-cob-hist-term",
+          "DevicesInformation/001-solicitar-bobina", "DevicesInformation/001-sba-dailypass",
 
-          "001-sba-cons-vendas_2", "001-sba-consulta-ops", "001-sba-dailypass", "001-solicitar-bobina",
-          "sba-EN-consultar-transacoes-digitadas2_0", "sba-EN-Trans-Suspens",
+          "SalesInformation/001-sba-cons-vendas_2", "SalesInformation/001-sba-consulta-ops",
+          "SalesInformation/sba-EN-consultar-transacoes-digitadas2_0", "SalesInformation/sba-EN-Trans-Suspens",
+          "SalesInformation/001-sba-cns-autoriza", "SalesInformation/001-autoribw",
 
-          "001-sba-cns-autoriza", "001-sba-dom-bancario", "001-domicilio-bancario1", "pagamentos_19_12_2022",
-          "002_sba_wsm_flag_ant", "001-sba-wsm-antecipa_0(1)", "001-pre-pay-history_0", "001-antecip-aut",
-          "001-antecipacoes-realizadas",
+          "PaymentPrepaymentInformation/001-sba-dom-bancario", "PaymentPrepaymentInformation/001-domicilio-bancario1",
+          "PaymentPrepaymentInformation/pagamentos_19_12_2022", "PaymentPrepaymentInformation/002_sba_wsm_flag_ant",
+          "PaymentPrepaymentInformation/001-sba-wsm-antecipa_0(1)", "PaymentPrepaymentInformation/001-pre-pay-history_0",
+          "PaymentPrepaymentInformation/001-antecip-aut", "PaymentPrepaymentInformation/001-antecipacoes-realizadas",
 
           "ServiceOrderInformation/001-sba-wsm-mnt-term", "ServiceOrderInformation/001-wsm-cancel-so",
           "ServiceOrderInformation/001-sba-consulta-os", "ServiceOrderInformation/sba-EN-consultar-cepV2",
