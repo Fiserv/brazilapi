@@ -44,11 +44,13 @@
           "sba-EN-consultar-transacoes-digitadas2_0", "sba-EN-Trans-Suspens",
 
           "001-sba-cns-autoriza", "001-sba-dom-bancario", "001-domicilio-bancario1", "pagamentos_19_12_2022",
-          "002_sba_wsm_flag_ant", "001-sba-wsm-antecipa_0 (1)", "001-pre-pay-history_0", "001-antecip-aut",
+          "002_sba_wsm_flag_ant", "001-sba-wsm-antecipa_0(1)", "001-pre-pay-history_0", "001-antecip-aut",
           "001-antecipacoes-realizadas",
 
-          "001-sba-wsm-mnt-term", "001-wsm-cancel-so", "001-sba-consulta-os", "sba-EN-consultar-cepV2",
-          "sba-EN-consultar-cpfV2", "sba-EN-consultar-cnpjV2", "001-brtmp-mcrsvcs_ticket"
+          "ServiceOrderInformation/001-sba-wsm-mnt-term", "ServiceOrderInformation/001-wsm-cancel-so",
+          "ServiceOrderInformation/001-sba-consulta-os", "ServiceOrderInformation/sba-EN-consultar-cepV2",
+          "ServiceOrderInformation/sba-EN-consultar-cpfV2", "ServiceOrderInformation/sba-EN-consultar-cnpjV2",
+          "ServiceOrderInformation/001-brtmp-mcrsvcs_ticket"
         ]
       }
   ],

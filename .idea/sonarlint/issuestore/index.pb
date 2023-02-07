@@ -66,8 +66,6 @@ X
 +reference/1.0.0/sba-EN-consultar-cpfV2.yaml,4\7\471efce38762ec7b931e22d0af5377641758f77f
 \
 ,reference/1.0.0/sba-EN-consultar-cnpjV2.yaml,6\f\6f1eae122b337b33fd2d905764e60ecf11389d7a
-]
--reference/1.0.0/001-brtmp-mcrsvcs_ticket.yaml,4\2\426f12ec86030409b73a96613a4d0dd7edbd9b6a
 Y
 )reference/1.0.0/001-solicitar-bobina.yaml,7\d\7de028bbe8ae87841d4038e7f2111847a5119c6c
 d
