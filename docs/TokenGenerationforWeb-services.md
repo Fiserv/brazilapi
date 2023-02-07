@@ -11,9 +11,8 @@ Below you can check each link to access the detailed document for each Web-servi
 
 * The custody of the credentials is the responsibility of the client;
 * Do not share the Credentials with whom must not have access to them;
-* Store the Token Credentials in an specific Vault. Avoid storing in the same application database that will consume resources;
+* Store the Token Credentials in a specific Vault. Avoid storing in the same application database that will consume resources;
 * In case of compromise/lost your credentials, you must contact us, immediately;
 
-[API page](../api?type=post&path=/v1/apis)
 
 [1]: APIs-Introduction.md

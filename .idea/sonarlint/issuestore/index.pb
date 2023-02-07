@@ -13,8 +13,6 @@ G
 docs/getting-started.md,9\8\980fc86dbce9c0cdce28255dfc275d1dd842443a
 M
 docs/FiservInternalUseOnly.md,8\0\80a2b21319cfadf4904759d982d97536c1b069ab
-I
-docs/APIs-Introduction.md,a\1\a1f0046854d41a4e0bc5ae25c9a59f7b7eb413bf
 Z
 *reference/1.0.0/chargeback-external_0.yaml,9\2\928f31fb5184a4cf80c7dc64081f8bc25f865831
 Y
