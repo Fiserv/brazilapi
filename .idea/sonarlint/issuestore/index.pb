@@ -2,10 +2,6 @@
 P
  docs/release-notes/2022/march.md,f\e\fe34b186c414f907c17c3ceb0258a7f1c8aa95b9
 C
-recipes/config.yaml,5\6\563edc98ed61a38ce1f5d852e4d708307b1e71bd
-C
-recipes/Recipe-1.md,5\5\5598d6301ad4ba4e040ea716b8c9885bc91c78aa
-C
 recipes/Recipe-2.md,4\6\463047989a04cc690ff0a3bbd0ae3c156974a076
 S
 #docs/documentation/documentation.md,c\d\cde886fee779b0e075fd4742406530c4f01c6793
@@ -21,13 +17,6 @@ I
 docs/APIs-Introduction.md,a\1\a1f0046854d41a4e0bc5ae25c9a59f7b7eb413bf
 Z
 *reference/1.0.0/chargeback-external_0.yaml,9\2\928f31fb5184a4cf80c7dc64081f8bc25f865831
-L
-reference/1.0.0/openapi.yaml,a\f\af563522782900f4447ac6eee360e296cc5921e7
-V
-&docs/TokenGenerationforWeb-services.md,c\4\c496a2ba0fbe2a67e629af21db78c59a8cf9b013
-:
-
-.docignore,0\5\058602980aa3c3dfe7e2bf3a636363bc87ad8206
 Y
 )reference/1.0.0/001-sba-cns-autoriza.yaml,8\5\85e482452715518271a4ae954540431b2b0d8af7
 Q
