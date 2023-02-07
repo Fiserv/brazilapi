@@ -26,7 +26,7 @@
         "versionType": "major",
         "releaseNotesPath": "docs/release-notes/2023/january.md",
         "apiSpecFileNames": [
-          "sba-EN-solicitar-token",
+          "Authentication/sba-EN-solicitar-token",
 
           "001-sba-status-propor", "credenciamento",
 
