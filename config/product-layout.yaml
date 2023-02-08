@@ -28,44 +28,67 @@
 # the delivery of this work
 ################################################################################
 header:
-  productName: BrazilAPI
-  productionDescription: We do the best for your Business.
+  productName: LATAM BR - Digital APIs
+  productionDescription: "Have access to a complete set of APIs without pain! Find development tools, samples of codes and resources to help you in order to integrate your Apps integrally or partially using Fiserv Platform! Wish to start a new revenue source? Integrate your platform to Fiserv Marketplace, and register merchants to have payments processed directly in your site, and be paid for that!"
   whoIsItFor: Fiserv and Clients
   image: 
     link: "/assets/images/Fiserv_Logo.jpg"
-    altText: REPLACEME™
+    altText: Fiserv
 featuredFeatures:
-  - title: REPLACE ME
-    description:  REPLACE ME
-    tags: ["REPLACEME", "REPLACEME", "REPLACEME"]
-    bullets: ["REPLACEME", "REPLACEME" ]  
+  - title: Work with the best!
+    description:  Specialized professionals in this industry that will dedicate all the time to understand the complexity of your business.
+    tags: ["sba-EN-solicitar-token"]
+    bullets: ["sba-EN-solicitar-token" ]
     relatedDocs:
       - relatedDoc: 
         title: APIs - Introduction
         description: APIs - Introduction
         link: ./docs/APIs-Introduction.md
       - relatedDoc: 
-        title: APIs All
-        description: APIs all
-        link: ./docs/APIsSupportDocuments.md
-      - relatedDoc: 
-        title: Prepayment Information
-        description: Prepayment Information
-        link: ./docs/REPLACE-ME3.md
+        title: Token Access
+        description: Token Access
+        link: ./docs/TokenGenerationforWeb-services.md
     relatedAPIs:
       - relatedAPI: 
-        title: REPLACEME
-        description: REPLACEME
-        type: "patch"        
-        path: "/v1/REPLACEME1"
-      - relatedAPI: 
-        title: REPLACEME
-        description: REPLACEME
-        type: "post"        
-        path: "/v1/REPLACEME2"
+        title: Token Access
+        description: Token Access
+        type: "post"
+        path: "/"
+  - title: Open Environment
+    description: If you are building a new solution 'all-in-one', looking for a PCI Compliance Solution, enabling EMV or even any other requirement, our platform will save you time, money and resource.
+    tags: [ "sba-EN-solicitar-token" ]
+    bullets: [ "sba-EN-solicitar-token" ]
+    relatedDocs:
+      - relatedDoc:
+        title: APIs - Introduction
+        description: APIs - Introduction
+        link: ./docs/APIs-Introduction.md
+      - relatedDoc:
+        title: Token Access
+        description: Token Access
+        link: ./docs/TokenGenerationforWeb-services.md
+    relatedAPIs:
       - relatedAPI:
-        title: REPLACEME
-        description: REPLACEME
-        type: "get"
-        path: "/v1/REPLACEME3"
-
+        title: Token Access
+        description: Token Access
+        type: "post"
+        path: "/"
+  - title: All In One
+    description: Create, Test, Certify and Deliver application of payment through only one interface.
+    tags: [ "sba-EN-solicitar-token" ]
+    bullets: [ "sba-EN-solicitar-token" ]
+    relatedDocs:
+      - relatedDoc:
+        title: APIs - Introduction
+        description: APIs - Introduction
+        link: ./docs/APIs-Introduction.md
+      - relatedDoc:
+        title: Token Access
+        description: Token Access
+        link: ./docs/TokenGenerationforWeb-services.md
+    relatedAPIs:
+      - relatedAPI:
+        title: Token Access
+        description: Token Access
+        type: "post"
+        path: "/"

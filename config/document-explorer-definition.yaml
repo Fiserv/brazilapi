@@ -38,9 +38,6 @@
   - title: User Manuals
     link: docs/HomepageEditada.md
 - sections:
-  - title: APIs All
-    link: docs/APIsSupportDocuments.md
-- sections:
   - title: Token Access
     link: docs/TokenGenerationforWeb-services.md
 - sections:

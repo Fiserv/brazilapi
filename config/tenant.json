@@ -12,14 +12,44 @@
       {
         "version": "1.0.0",
         "versionType": "major",
-        "releaseNotesPath": "docs/release-notes/2022/march.md",
-        "apiSpecFileNames": ["openapi"]
-      },
-      {
-        "version": "1.0.0",
-        "versionType": "major",
         "releaseNotesPath": "docs/release-notes/2023/january.md",
-        "apiSpecFileNames": ["historicoContrato_1"]
+        "apiSpecFileNames": [
+          "Authentication/tokenAccess",
+
+          "OnlineBoarding/statusProposal", "OnlineBoarding/onlineBoarding",
+
+          "MerchantInformationCases/accountDebits", "MerchantInformationCases/merchantRegistrationChangesHistory",
+          "MerchantInformationCases/updateMerchantPartnetInformation", "MerchantInformationCases/contractedServices",
+          "MerchantInformationCases/dirfConsult", "MerchantInformationCases/monthlyPresumedBilling",
+          "MerchantInformationCases/receivableRegister", "MerchantInformationCases/requestOpening",
+          "MerchantInformationCases/paymentHierarchy", "MerchantInformationCases/mdrFees",
+          "MerchantInformationCases/customerValidation", "MerchantInformationCases/updateAddress",
+          "MerchantInformationCases/updateTradeName", "MerchantInformationCases/updateWorkingHours",
+          "MerchantInformationCases/merchantContractStatus", "MerchantInformationCases/merchantCustomerInformation",
+          "MerchantInformationCases/chargeback","MerchantInformationCases/searchMerchantServices",
+          "MerchantInformationCases/searchCasesOpenedSalesforce", "MerchantInformationCases/relationshipHierarchy",
+          "MerchantInformationCases/logisticInformation",
+          "MerchantInformationCases/historicContract", "MerchantInformationCases/updateContactInformation",
+          "MerchantInformationCases/chargebackExternal",
+
+          "DevicesInformation/deviceAvailability", "DevicesInformation/devicesFees",
+          "DevicesInformation/batteryInformation", "DevicesInformation/deviceBillingHistory",
+          "DevicesInformation/devicePaperRoll", "DevicesInformation/dailyPass",
+
+          "SalesInformation/merchantSales", "SalesInformation/processConsultOperation",
+          "SalesInformation/keyedConsultTransaction", "SalesInformation/suspendedConsultTransaction",
+          "SalesInformation/merchantAuthorizations", "SalesInformation/authorizationsHistoryBW",
+
+          "PaymentPrepaymentInformation/paymentAccountInfo", "PaymentPrepaymentInformation/accountPaymentInformationValidation",
+          "PaymentPrepaymentInformation/paymentsInformation", "PaymentPrepaymentInformation/prepaymentFlagUpdate",
+          "PaymentPrepaymentInformation/prepaymentInformation", "PaymentPrepaymentInformation/historyFeesConsult",
+          "PaymentPrepaymentInformation/automaticPrepayment", "PaymentPrepaymentInformation/anticipationsRealized",
+
+          "ServiceOrderInformation/devicesMaintenance", "ServiceOrderInformation/serviceOrderCancelling",
+          "ServiceOrderInformation/serviceOrderSearch", "ServiceOrderInformation/zipcodeConsult",
+          "ServiceOrderInformation/cpfConsult", "ServiceOrderInformation/cnpjConsult",
+          "ServiceOrderInformation/microservices"
+        ]
       }
   ],
   "product": {
@@ -57,19 +87,19 @@
   },
   "supportConfig": [{ 
     "bug": {
-      "label": "bug,CommerceHub",
-      "template": "bug.md",
-      "assignees": "ServicosAPIsBrazil"
+      "label": "",
+      "template": "",
+      "assignees": ""
     },  
     "feedback": {
-      "label": "feedback,CommerceHub",
-      "template": "feedback.md",
-      "assignees": "ServicosAPIsBrazil"
+      "label": "",
+      "template": "",
+      "assignees": ""
     },
     "enhancement": {
-      "label": "enhancement,CommerceHub",
-      "template": "feature.md",
-      "assignees": "ServicosAPIsBrazil"
+      "label": "",
+      "template": "",
+      "assignees": ""
     }
   }]
 }

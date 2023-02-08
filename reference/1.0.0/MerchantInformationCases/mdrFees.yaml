@@ -1,0 +1,533 @@
+openapi: 3.0.0
+info:
+  description: Search for MDR Fees for Merchant
+  version: "1.0"
+  title: Search for MDR Fees for Merchant
+  termsOfService: urn:tos
+  contact:
+    name: First Data
+    url: https://www.firstdata.com/pt_br/home.html
+  license:
+    name: Licença - Open Source
+    url: https://www.firstdata.com/pt_br/home.html
+servers:
+  - url: https://cat.api.firstdata.com/bwa/mdr-fees
+x-header-api-key: 'X0GW3QGOYFn4r7DHcVC8KuatUnNs6MGB'
+x-header-api-secret: 'N93nmFmoY0NzSMC5'
+x-production-url: prod.api.firstdata.com/bwa/mdr-fees
+x-config:
+  tryItOut: true
+tags:
+  - name: Search for MDR Fees for Merchant
+paths:
+  "/{institution}/{merchanID}":
+    get:
+      tags:
+        - Merchant Information & Cases
+      x-proxy-name: Merchant Service Fees (MDR) - Search for MDR Fees based on Institution Number and Merchant Code
+      x-group-name: Merchant Service Fees (MDR) - Consult
+      x-child-product-name: Merchant Information & Cases
+      summary: Merchant Information & Cases
+      operationId: searchForMDRFees
+      parameters:
+        - name: Message-Signature
+          in: header
+          description: HMAC
+          required: true
+          example: 1tsmkG9Ip3k2rcO5cETButfP3D/RS6U8troFF+mUrno=
+          schema:
+            type: string
+        - name: Api-Key
+          in: header
+          description: APigee Key
+          required: true
+          example: X0GW3QGOYFn4r7DHcVC8KuatUnNs6MGB
+          schema:
+            type: string
+        - name: auth
+          in: header
+          description: Oauth Key
+          required: true
+          example: 
+          schema:
+            type: string
+        - name: Timestamp
+          in: header
+          description: Date - Epoch Format
+          required: true
+          example: 1563309156733
+          schema:
+            type: string
+        - name: Client-Request-Id
+          in: header
+          description: Deve ser gerada aleatoriamente pelo Cliente
+          required: true
+          example: 6NYHj9Pgyxc84rmafpwG4fjhLwFfJYFVmxJOcgziD0QN3q6mGC
+          schema:
+            type: string
+        - name: institution
+          in: path
+          description: Merchant Institution Number
+          example: "00000003"
+          required: true
+          schema:
+            type: string
+        - name: merchanID
+          in: path
+          description: Merchant Code
+          example: "91002806"
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ServiceFeesResponse"
+      deprecated: false
+  "/v2":
+    get:
+      tags:
+        - Merchant Information & Cases
+      x-proxy-name: Merchant Service Fees (MDR) - Consult
+      x-group-name: Merchant Service Fees (MDR) - Consult
+      x-child-product-name: Merchant Information & Cases
+      summary: Merchant Information & Cases
+      operationId: searchForMDRFees v2
+      parameters:
+        - name: Message-Signature
+          in: header
+          description: HMAC
+          required: true
+          example: 1tsmkG9Ip3k2rcO5cETButfP3D/RS6U8troFF+mUrno=
+          schema:
+            type: string
+        - name: Api-Key
+          in: header
+          description: APigee Key
+          required: true
+          example: X0GW3QGOYFn4r7DHcVC8KuatUnNs6MGB
+          schema:
+            type: string
+        - name: auth
+          in: header
+          description: Oauth Key
+          required: true
+          example: 
+          schema:
+            type: string
+        - name: Timestamp
+          in: header
+          description: Date - Epoch Format
+          required: true
+          example: 1563309156733
+          schema:
+            type: string
+        - name: Client-Request-Id
+          in: header
+          description: Deve ser gerada aleatoriamente pelo Cliente
+          required: true
+          example: 6NYHj9Pgyxc84rmafpwG4fjhLwFfJYFVmxJOcgziD0QN3q6mGC
+          schema:
+            type: string
+        - name: institution
+          in: header
+          description: Merchant Institution Number
+          example: "00000003"
+          required: true
+          schema:
+            type: string
+        - name: merchant
+          in: header
+          description: Merchant Code
+          example: "91002806"
+          required: true
+          schema:
+            type: string
+        - name: captureMethod
+          in: query
+          description: Capture Method
+          example: "999"
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SuccessServiceFeesResponse"
+      deprecated: false
+components:
+  securitySchemes:
+    JWT:
+      type: apiKey
+      name: Authorization
+      in: header
+  schemas:
+    SuccessServiceFeesResponse:
+      type: object
+      properties:
+        codigoRetorno:
+          type: integer
+          description: Return code
+          format: int32
+          example: 0
+          enum:
+            - 0
+        mensagem:
+          type: string
+          description: Sucesso.
+          enum:
+            - Sucesso.
+        conteudo:
+          type: array
+          description: Field containing the request return
+          items:
+            $ref: '#/components/schemas/ServiceFeesResponseV2'
+    ServiceFeesResponseV2:
+      type: object
+      properties:
+        captureMethod:
+          type: string
+          description: Return Code
+          example: "999"
+        services:
+          type: array
+          items:
+            $ref: "#/components/schemas/CardSchemeV2"
+      title: ServiceFeesResponse
+      xml:
+        name: response
+        attribute: false
+        wrapped: false
+    CardSchemeV2:
+      type: object
+      properties:
+        cardSchemeId:
+          type: string
+          description: Association/Schema Code
+          example: "004"
+          enum:
+            - 002 - Mastercard
+            - 003 - Visa
+            - 004 - Amex Full
+            - 009 - CABAL
+            - 020 - MDS
+            - 024 - Hipercard/Hiper
+            - 025 - ELO Full
+        cardSchemeDescription:
+          type: string
+          description: "Association/Schema Code Description"
+          example: "AMEX Full Crédito"
+          enum: 
+            - 002 - Mastercard
+            - 003 - Visa
+            - 004 - Amex Full
+            - 009 - CABAL
+            - 020 - MDS
+            - 024 - Hipercard/Hiper
+            - 025 - ELO Full
+        serviceId:
+          type: string
+          description: Installment Number
+          example: "12"
+        serviceDescription:
+          type: string
+          example: "Credit Card"
+        numberOFInstallmentos:
+          type: string
+          example: "12"
+        transactionTypeId:
+          type: string
+          description: Product Type
+          example: "005"
+        transactionTypeDescription:
+          type: string
+          example: "Purchase"
+        areaOfEvent:
+          type: string
+          example: "001"
+        feePercent:
+          type: string
+          example: "000001.5400"
+        feeBase:
+          type: string
+          example: "000000.0000"
+        feeMinimum:
+          type: string
+          example: "000000.0000"
+        feeMaximum:
+          type: string
+          example: "000000.0000"
+        numberOfDays:
+          type: string
+          example: "030"
+        feeMode:
+          type: string
+          example: "001"
+        feeCategory:
+          type: string
+          example: "502"
+        valueOfReference:
+          type: string
+          example: "207"
+        reviewDate:
+          type: string
+          example: "20221231"
+        captureMethod:
+          type: string
+          example: "999"
+          enum:
+            - 999 – All (default value)
+            - 500 – POS – Point of Sale
+              501 – BAT – Batch
+              502 – COM – E-commerce
+              503 – CLO – Clover
+              504 – ISO – ISV Terminal
+              505 - TEF
+      title: CardScheme
+      xml:
+        name: cardScheme
+        attribute: false
+        wrapped: false
+    CardScheme:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Association/Schema Code
+          example: "004"
+          enum:
+            - 002 - Mastercard
+            - 003 - Visa
+            - 004 - Amex Full
+            - 009 - CABAL
+            - 020 - MDS
+            - 024 - Hipercard/Hiper
+            - 025 - ELO Full
+        description:
+          type: string
+          description: "Association/Schema Code Description"
+          example: "AMEX Full Crédito"
+          enum: 
+            - 002 - Mastercard
+            - 003 - Visa
+            - 004 - Amex Full
+            - 009 - CABAL
+            - 020 - MDS
+            - 024 - Hipercard/Hiper
+            - 025 - ELO Full
+        numberOfInstallments:
+          type: string
+          description: Installment Number
+          example: "12"
+        type:
+          type: string
+          description: Product Type
+          example: "All"
+          enum:
+            - "All"
+            - "Debit Card"
+            - "Credit Card"
+        services:
+          type: array
+          items:
+            $ref: "#/components/schemas/Service"
+      title: CardScheme
+      xml:
+        name: cardScheme
+        attribute: false
+        wrapped: false
+    Service:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Product Type Code (associated to the Association/Schema ID). It will show only the code
+          example: "113"
+          enum:
+            - "109 - All - Hipercard/Hiper-Credit"
+            - "102 - Credit Card - MC Credit"
+            - "110 - Credit Card - ELO"
+            - "111 - Debit Card - ELO"
+            - "113 - All - Amex"
+            - "200 - All - Visa Debit"
+            - "201 - All - Visa Credit"
+            - "716 - All - MC Debit"
+        description:
+          type: string
+          description: Product Type Description. Apresentatará apenas a descrição (sem informação de Bandeira).
+          example: "All"
+          enum:
+            - "109 - All - Hipercard/Hiper-Credit"
+            - "102 - Credit Card - MC Credit"
+            - "110 - Credit Card - ELO"
+            - "111 - Debit Card - ELO"
+            - "113 - All - Amex"
+            - "200 - All - Visa Debit"
+            - "201 - All - Visa Credit"
+            - "716 - All - MC Debit"
+        transactionTypes:
+          type: array
+          items:
+            $ref: "#/components/schemas/TransactionType"
+      title: Service
+      xml:
+        name: service
+        attribute: false
+        wrapped: false
+    ServiceFeesResponse:
+      type: object
+      properties:
+        returnCode:
+          type: string
+          description: Return Code
+          example: "00"
+          enum:
+            - "00 - Succesfully Done"
+            - "01 - System Error"
+        returnDescription:
+          type: string
+          description: Descrição do Retorno
+          example: "Successfully Done"
+          enum:
+            - "00 - Succesfully Done"
+            - "01 - System Error"
+        cardSchemes:
+          type: array
+          items:
+            $ref: "#/components/schemas/CardScheme"
+      title: ServiceFeesResponse
+      xml:
+        name: response
+        attribute: false
+        wrapped: false
+    TransactionType:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Transaction Type Code (It will return only the code)
+          example: "005"
+          enum: 
+            - 005 - Compra - (meaning Purchase)
+            - 461 - Compra com 02 parcelas - (meaning Purchase 02 installments)
+            - 462 - Compra com 03 parcelas - (meaning Purchase 03 installments)
+            - 463 - Compra com 04 parcelas - (meaning Purchase 04 installments)
+            - 464 - Compra com 05 parcelas - (meaning Purchase 05 installments)
+            - 465 - Compra com 06 parcelas - (meaning Purchase 06 installments)
+            - 466 - Compra com 07 parcelas - (meaning Purchase 07 installments)
+            - 467 - Compra com 08 parcelas - (meaning Purchase 08 installments)
+            - 468 - Compra com 09 parcelas - (meaning Purchase 09 installments)
+            - 469 - Compra com 10 parcelas - (meaning Purchase 10 installments)
+            - 470 - Compra com 11 parcelas - (meaning Purchase 11 installments)
+            - 471 - Compra com 12 parcelas - (meaning Purchase 12 installments)
+            - 472 - Compra com >12 parcelas - (meaning Purchase > 12 issuer installments)
+            - 473 - Parcelado Emissor-02 parc - (meaning Purchase 02 issuer installments)
+            - 474 - Parcelado Emissor-03 parc - (meaning Purchase 03 issuer installments)
+            - 475 - Parcelado Emissor-04 parc - (meaning Purchase 04 issuer installments)
+            - 476 - Parcelado Emissor-05 parc - (meaning Purchase 05 issuer installments)
+            - 477 - Parcelado Emissor-06 parc - (meaning Purchase 06 issuer installments)
+            - 478 - Parcelado Emissor-07 parc - (meaning Purchase 07 issuer installments)
+            - 479 - Parcelado Emissor-08 parc - (meaning Purchase 08 issuer installments)
+            - 480 - Parcelado Emissor-09 parc - (meaning Purchase 09 issuer installments)
+            - 481 - Parcelado Emissor-10 parc - (meaning Purchase 10 issuer installments)
+            - 482 - Parcelado Emissor-11 parc - (meaning Purchase 11 issuer installments)
+            - 483 - Parcelado Emissor-12 parc - (meaning Purchase 12 issuer installments)
+            - 484 - Parcelado Emissor >12 parc - (meaning Purchase 12 issuer installments)
+            - 999 - ALL
+        description:
+          type: string
+          description: Transaction Descrition (It will show only description)
+          example: "Purchase"
+          enum:
+            - 005 - Compra - (meaning Purchase)
+            - 461 - Compra com 02 parcelas - (meaning Purchase 02 installments)
+            - 462 - Compra com 03 parcelas - (meaning Purchase 03 installments)
+            - 463 - Compra com 04 parcelas - (meaning Purchase 04 installments)
+            - 464 - Compra com 05 parcelas - (meaning Purchase 05 installments)
+            - 465 - Compra com 06 parcelas - (meaning Purchase 06 installments)
+            - 466 - Compra com 07 parcelas - (meaning Purchase 07 installments)
+            - 467 - Compra com 08 parcelas - (meaning Purchase 08 installments)
+            - 468 - Compra com 09 parcelas - (meaning Purchase 09 installments)
+            - 469 - Compra com 10 parcelas - (meaning Purchase 10 installments)
+            - 470 - Compra com 11 parcelas - (meaning Purchase 11 installments)
+            - 471 - Compra com 12 parcelas - (meaning Purchase 12 installments)
+            - 472 - Compra com >12 parcelas - (meaning Purchase > 12 issuer installments)
+            - 473 - Parcelado Emissor-02 parc - (meaning Purchase 02 issuer installments)
+            - 474 - Parcelado Emissor-03 parc - (meaning Purchase 03 issuer installments)
+            - 475 - Parcelado Emissor-04 parc - (meaning Purchase 04 issuer installments)
+            - 476 - Parcelado Emissor-05 parc - (meaning Purchase 05 issuer installments)
+            - 477 - Parcelado Emissor-06 parc - (meaning Purchase 06 issuer installments)
+            - 478 - Parcelado Emissor-07 parc - (meaning Purchase 07 issuer installments)
+            - 479 - Parcelado Emissor-08 parc - (meaning Purchase 08 issuer installments)
+            - 480 - Parcelado Emissor-09 parc - (meaning Purchase 09 issuer installments)
+            - 481 - Parcelado Emissor-10 parc - (meaning Purchase 10 issuer installments)
+            - 482 - Parcelado Emissor-11 parc - (meaning Purchase 11 issuer installments)
+            - 483 - Parcelado Emissor-12 parc - (meaning Purchase 12 issuer installments)
+            - 484 - Parcelado Emissor >12 parc - (meaning Purchase 12 issuer installments)
+            - 999 - ALL
+        areaOfEvent:
+          type: string
+          description: Card Type 
+          example: "001"
+          enum:
+            - "001 - Internacional"
+            - "002 - Nacional"
+        percentage:
+          type: string
+          description: MDR Fee
+          example: "3.11"
+        base:
+          type: string
+          description: Transaction Base Amount (Transaction Amount Charge only)
+          example: "0.0000"
+        min:
+          type: string
+          description: Charge Minimum Amount (Not used)
+          example: "0.0000"
+        max:
+          type: string
+          description: Charge Maximum Amount  (Not used)
+          example: "0.0000"
+        numberOfDays:
+          type: string
+          description: Number of Days for Payment
+          example: "2"
+        effectiveDate:
+          type: string
+          description: Fee Effective Date
+          example: YYYYMMDD
+        expireDate:
+          type: string
+          description: Fee Expire Date
+          example: YYYMMDD
+        mode:
+          type: string
+          description: Fee Mode, fixed '001'
+          example: "001"
+        category:
+          type: string
+          description: Fee Category - MDR or MDR Flex
+          example: "502"
+          enum:
+            - 003 or 502 - MDR
+            - 501 - MDR Flex
+        valueDayRef:
+          type: string
+          description: Value Day Reference for payment. It will return 207 - Payment Date + Business Day
+          example: "207"
+        reviewDate:
+          type: string
+          description: Last Updated Date information
+
+          example: YYYYMMDD
+      title: TransactionType
+      xml:
+        name: service
+        attribute: false
+        wrapped: false
