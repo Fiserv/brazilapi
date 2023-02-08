@@ -17,10 +17,6 @@ C
 recipes/Recipe-1.md,5\5\5598d6301ad4ba4e040ea716b8c9885bc91c78aa
 C
 recipes/config.yaml,5\6\563edc98ed61a38ce1f5d852e4d708307b1e71bd
-J
-config/product-layout.yaml,9\5\95a48117b460e88d1b44f0ca9df85306aca85e01
-R
-"docs/release-notes/2023/january.md,3\d\3d8b5977b05801448046be748bc78b1384214c45
 b
 2reference/1.0.0/OnlineBoarding/statusProposal.yaml,7\5\75633c6a23b1b034fc9c12289a69495155a5f799
 :
@@ -126,8 +122,6 @@ v
 Freference/1.0.0/MerchantInformationCases/updateContactInformation.yaml,7\3\73a9ab49115c8abe19e727207201ae78ee2159d4
 p
 @reference/1.0.0/MerchantInformationCases/chargebackExternal.yaml,9\e\9ea8519fcb48ede7d9dc321a8af9e08e77709793
-_
-/reference/1.0.0/Authentication/tokenAccess.yaml,9\b\9bb875b6949911d7b54150f96be94325ec6e52f6
 V
 &docs/TokenGenerationforWeb-services.md,c\4\c496a2ba0fbe2a67e629af21db78c59a8cf9b013
 b
