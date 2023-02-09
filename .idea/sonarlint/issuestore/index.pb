@@ -31,8 +31,6 @@ t
 Dreference/1.0.0/PaymentPrepaymentInformation/paymentAccountInfo.yaml,4\1\41a5ef9de2cb1b981d4c4bd78ad88b3d10af3528
 v
 Freference/1.0.0/PaymentPrepaymentInformation/prepaymentFlagUpdate.yaml,0\c\0c09030207fa559da60a90a3cada1b55c18ea3ab
-j
-:reference/1.0.0/DevicesInformation/batteryInformation.yaml,c\9\c9142ee8840d24ad362611cd49a54e9c6cab72cc
 a
 1reference/1.0.0/DevicesInformation/dailyPass.yaml,2\7\279525c3ef05993d6095e2f4513f091e6179a682
 j
@@ -117,8 +115,6 @@ M
 docs/FiservInternalUseOnly.md,8\0\80a2b21319cfadf4904759d982d97536c1b069ab
 j
 :reference/1.0.0/ServiceOrderInformation/microservices.yaml,d\f\dfe849660ecf8fc70e09e1f2e9368a21bcf4227e
-b
-2reference/1.0.0/OnlineBoarding/onlineBoarding.yaml,0\a\0ab1db84ebe935661e961de2c176c6325bbffcd0
 I
 docs/APIs-Introduction.md,a\1\a1f0046854d41a4e0bc5ae25c9a59f7b7eb413bf
 :
