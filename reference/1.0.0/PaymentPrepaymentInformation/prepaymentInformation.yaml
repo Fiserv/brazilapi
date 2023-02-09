@@ -215,8 +215,8 @@ paths:
                 $ref: '#/components/schemas/Unauthorized'
   /prepaySimulationsAction/prepaySimConfReject:
     post:
-      tags:
-        - Prepayment Information Maintenance
+      # tags:
+      #   - Prepayment Information Maintenance
       x-proxy-name: Prepayment - Maintenance/Simulate/Confirm/Reject - Confirmation or Rejection of Manual Prepayment Simulation
       x-group-name: Prepayment - Maintenance/Simulate/Confirm/Reject
       x-child-product-name: Payment & Prepayment Information
