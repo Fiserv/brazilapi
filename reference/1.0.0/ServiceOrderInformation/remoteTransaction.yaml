@@ -1,0 +1,703 @@
+openapi: 3.0.2
+info:
+  description: Service Orders Opening API TMS Microservices
+  version: '1.0'
+  title: Service Orders Opening API TMS Microservices
+  termsOfService: 'urn:tos'
+  contact: {}
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0
+servers:
+  - url: https://cat.api.firstdata.com/bwa/brtms-microservices
+x-header-api-key: 'X0GW3QGOYFn4r7DHcVC8KuatUnNs6MGB'
+x-header-api-secret: 'N93nmFmoY0NzSMC5'
+x-production-url: prod.api.firstdata.com/bwa/brtms-microservices
+x-config:
+  tryItOut: true
+tags:
+  - name: Service Order Opening for API TMS Microservices
+
+paths:
+  "/serviceorder/remote/transaction":
+    post:
+      tags:
+        - Service Order Opening for API TMS Microservices
+      x-proxy-name: Service Order Opening for API TMS Microservices
+      x-group-name: Service Order Opening for API TMS Microservices
+      x-child-product-name: Service Order Information
+      summary: Service Order Opening for API TMS Microservices
+      operationId: serviceOrderOpeningForAPITMSMicroservices
+      
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/APITMSRequest'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/APITMSResponse'
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+      deprecated: false
+  
+components:
+  schemas:
+    APITMSRequest:
+      type: object
+      properties:
+        reasonId:
+          type: string
+          description: opening reason code
+          example: "C01"
+          enum:
+            - C01 (Troca de operadora/estabelecimento) 
+            - F05 (Problema com leitora)
+            - M01 Outros (problemas de comunicação)
+        messageType:
+          type: string
+          description: message type 0300 / 0800 (bobina request only)
+          example: "0300"
+          enum:
+            - "0300"
+            - "0800 - bobina request only"
+        messagePcode:
+          type: string
+          description: message codes - 400000 Install / 410000 maintenance  / 415000 simcard exchange / 470000 supply / 440000 uninstall / 490000 update / 420000 exchange technology / 450000 cancellation
+          example: "410000"
+          enum:
+            - "400000 - Install"
+            - "410000 - maintenance"
+            - "415000 - simcard"
+            - "420000 - exchange"
+            - "440000 - uninstall"
+            - "450000 - cancellation"
+            - "470000 - supply"
+            - "490000 - update"
+        trace:
+          type: string
+          description: Unique number to trace an request - Created by source system
+          example: "123456"
+        dateLocal:
+          type: string
+          description: Date request - yyyymmdd
+          example: "20220407"
+        timeLocal:
+          type: string
+          description: Time request - HHmmss
+          example: "150000"
+        cardAcceptorTermID:
+          type: string
+          description: Terminal logical number
+          example: "GPRG0RW8"
+        urgencyCode:
+          type: string
+          description: Urgency Code
+          example: "25"
+        terminalSerialNumber:
+          type: string
+          description: Terminal serial number - send blank at installation P. code 400000
+          example: "209998888555522222"
+        typeOfTechnology:
+          type: string
+          description: Type of Technology - PGW, ETH, MVC, ETD, GPR, TFI, LNK, etc.
+          example: "PGW"
+          enum:
+            - "PGW"
+            - "GPR"
+            - "ETH"
+            - "MVC"
+            - "ETD"
+            - "TFI"
+            - "LNK"
+            - "OTHERS"
+        typeOfTechnologyOld:
+          type: string
+          description: Type of Technology - PGW, ETH, MVC, ETD, GPR, TFI, LNK, etc. send only in pcodes 410000 415000 
+          example: "PGW"
+          enum:
+            - "PGW"
+            - "GPR"
+            - "ETH"
+            - "MVC"
+            - "ETD"
+            - "TFI"
+            - "LNK"
+            - "OTHERS"
+        terminalSerialNumberOld:
+          type: string
+          description: Terminal serial number old - send blank at installation P. code 400000
+          example: "209998888555544222"
+        pinMasterKeyPOS:
+          type: string
+          description: Master Key POS - fixed value
+          example: "12341234123412341234"
+        parametersOfLoyalty:
+          type: "string"
+          description: Parameters Of Loyalty - fixed value
+          example: "00"
+        parametersOfRechargeMobile:
+          type: "string"
+          description: Message Master Key POS- fixed value
+          example: "00"
+        workingDaysAndTime:
+          type: "string"
+          description: Working days and time - Merchat Working Hours for each day of the week. Format "1HHMMHHMM2HHMMHHMM..." 1=Sunday, 2=Monday, etc."
+          example: "10000000020900180030900180040900180050900180060900180070000000"
+        cancellationId:
+          type: string
+          description: cancelation motive (only in Pcode 450000)
+          example: "MCT1355"
+        cancellationDescription:
+          type: string
+          description: description of cancelation (only in Pcode 450000)
+          example: "DESISTENCIA DA SOLICITACAO"
+        obsoleteTerminal:
+          type: string
+          description: Parameter that determines the withdrawal of a terminal uninstalled from a client ("0" - does not withdraw / "1" - withdraws)
+          example: "0"
+          
+        costumerInformation: 
+          type: object
+          properties:
+            email:
+              type: "string"
+              example: "name@email.com"
+            cellPhone:
+              type: "string"
+              example: "1199552121"
+        
+        notes:
+          type: object
+          properties:
+            contact:
+              type: "string"
+              example: "Jose da Silva"
+            time:
+              type: "string"
+              example: "1800"
+            descriptions:
+              type: "string"
+              example: "bobina"
+            notes:
+              type: "string"
+              example: "anotações gerais"
+        
+        supplyCode:
+          type: string
+          description: Code of Supply - send only in P. Code 470000 - fixed value
+          example: "B01"
+        
+        mcc:
+          type: string
+          description: mcc
+          example: "7701"
+        
+        currencyCode: 
+          type: string
+          description: Code of Curency
+          example: "986"
+        
+        specialConditionFlag:
+          type: string
+          description: Flag of special condition
+          example: "OUVIDORIA"
+        
+        modal:
+          type: string
+          description: Id modal
+          example: "replace"
+        
+        notesFlag:
+          type: string
+          description: Notes of Flag
+          example: "notas da condição especial"
+        
+        descripitionFlag:
+          type: string
+          description: Descripition do flag
+          example: "atendimento consolidado"
+        
+        mobileOperator: 
+          type: string
+          description: mobile Operator
+          example: "05"
+          
+        simcardType:
+          type: string
+          description: sincard type - TRIPLE CUT / ONE-PIECE - Send only in P. Code 415000
+          example: "TRIPLE CUT"
+          enum:
+            - "TRIPLE CUT"
+            - "ONE-PIECE"
+          
+        lunchTimeMonday:
+          type: string
+          description: lunch time
+          example: "10:00|12:00|13:00|18:00" 
+        
+        lunchTimeTuesday:
+          type: string
+          description: lunch time
+          example: "10:00|12:00|13:00|18:00"
+        
+        lunchTimeWednesday:
+          type: string
+          description: lunch time
+          example: "10:00|12:00|13:00|18:00"
+        
+        lunchTimeThursday:
+          type: string
+          description: lunch time
+          example: "10:00|12:00|13:00|18:00"
+        
+        lunchTimeFriday:
+          type: string
+          description: lunch time
+          example: "10:00|12:00|13:00|18:00"
+        
+        lunchTimeSaturday:
+          type: string
+          description: lunch time
+          example: "10:00|12:00|13:00|18:00"
+        
+        lunchTimeSunday:
+          type: string
+          description: lunch time
+          example: "10:00|12:00|13:00|18:00"
+        
+        maintenanceTimeMonday:
+          type: string
+          description: maintenance Time
+          example: "10:00|12:00|13:00|18:00"
+        
+        maintenanceTimeTuesday:
+          type: string
+          description: maintenance Time
+          example: "10:00|12:00|13:00|18:00"
+        
+        maintenanceTimeWednesday:
+          type: string
+          description: maintenance Time
+          example: "10:00|12:00|13:00|18:00"
+        
+        maintenanceTimeThursday:
+          type: string
+          description: maintenance Time
+          example: "10:00|12:00|13:00|18:00"
+        
+        maintenanceTimeFriday:
+          type: string
+          description: maintenance Time
+          example: "10:00|12:00|13:00|18:00"
+          
+        maintenanceTimeSaturday:
+          type: string
+          description: maintenance Time
+          example: "10:00|12:00|13:00|18:00"
+          
+        maintenanceTimeSunday:
+          type: string
+          description: maintenance Time
+          example: "10:00|12:00|13:00|18:00"
+        
+        geolocationLongitude:
+          type: string
+          description: geo location Longitude
+          example: "-30.028609"
+        
+        geolocationLatitude:
+          type: string
+          description: geo location Latitude
+          example: "-51.1994847"
+        
+        recipientName: 
+          type: string
+          description: recipeient name
+          example: "John doe"
+          
+        contactRecipient:
+          type: string
+          description: recipeient Contact
+          example: "01199625-5000"
+        
+        referencePoint:
+          type: string
+          description: reference point
+          example: "Posto Shell"
+        
+        complement:
+          type: string
+          description: complement
+          example: "quadra 02"
+        
+        establishmentName:
+          type: string
+          description: establishment Name
+          example: "Empresa Ltda"
+        
+        activityBranch:
+          type: string
+          description: activity Branch
+          example: "Comercio Varejista"
+          
+        typeLocationDelivery:
+          type: string
+          description: type Location Delivery
+          example: "1"
+        
+        advencedPost:
+          type: string
+          description: advenced Post
+          example: "000000000014"
+        
+        generatedBy:
+          type: string
+          description: generated By - source system name
+          example: "API TMS"
+          
+        valueFee:
+          type: string
+          description: POS terminal rental value
+          example: "85.00"
+        
+        settlementIndicator:
+          type: string
+          description: Payment Split activation automation (Y/N)
+          example: "Y"
+        
+        expiryDate:
+          type: string
+          description: expiry Date of terminal
+          example: "Y"
+        
+        origin:
+          type: string
+          description: Origin API - only in Pcode 450000
+          example: "Salesforce"
+          
+        userName:
+          type: string
+          description: User Name - only in Pcode 450000
+          example: "Joe"
+        
+        reason:
+          type: string
+          description: reason for cancellation - only in Pcode 450000
+          example: "canceled"
+        
+          
+        merchantInfo:
+          $ref: '#/components/schemas/MerchantInfo'
+        installAddress:
+          $ref: '#/components/schemas/InstallAddress'
+          
+      required:
+        - messageType
+        - messagePcode
+        - cardAcceptorTermID
+        
+        
+      title: APITMSRequest
+      xml:
+        name: response
+        attribute: false
+        wrapped: false
+        
+    MerchantInfo:
+      type: object
+      properties:
+        taxIdNumber:
+          type: string
+          description: CNPJ ou CPF
+          example: "10904159000194"
+        name:
+          type: string
+          description: Merchant Name
+          example: "Teste Desenvolvimento"
+        nameTrade:
+          type: string
+          description: Merchant Trade Name
+          example: "Teste Desenvolvimento"
+        address:
+          type: string
+          description: Merchant Address
+          example: "Avenida Manoel Pedro Pimentel"
+        addressNumber:
+          type: string
+          description: Merchant Address Number
+          example: "265"
+        complement:
+          type: string
+          description: Merchant Address Complement
+          example: "102 Bloco G"
+        neighborhood:
+          type: string
+          description: Neighborhood
+          example: "Continental"
+        zipCode:
+          type: string
+          description: ZIPCODE
+          example: "06020194"
+        city:
+          type: string
+          description: City
+          example: "Osasco"
+        state:
+          type: string
+          description: State (2 letters) - UF
+          example: "SP"
+        RG:
+          type: string
+          description: RG - registro na Secretaria de Segurança pública
+          example: "20.410.888-5"
+        CNAE:
+          type: string
+          description: CNAE Code (Economical Activity Nacional Classification)
+          example: "4742-3/00"
+        taxIdNumber2:
+          type: string
+          description: Merchant City License
+          example: "999999999999999"
+        taxIdNumber3:
+          type: string
+          description: Merchant State License
+          example: "123123123123"
+        phoneNumber:
+          type: string
+          description: pohne number
+          example: "115454-8989"
+        boardingChannel:
+          type: string
+          description: Hierarchy Channel Code. Provided by Fiserv
+          example: "756"
+        boardingChannelDescription:
+          type: string
+          description: Hierarchy Channel Description. Provided by Fiserv
+          example: "BANCOOB"
+        boardingChannelType:
+          type: string
+          description: Hierarchy Type Channel Codel. Provided by Fiserv 
+          example: "007"
+        boardingChannelTypeDescription:
+          type: string
+          description: Hierarchy Type Channel Description. Provided by Fiserv 
+          example: "01. Banco"
+        boardingSubChannel:
+          type: string
+          description: Hierarchy Subchannel Code. Provided by Fiserv
+          example: "99999"
+        boardingSubChannelDescription:
+          type: string
+          description: Hierarchy Subchannel Code Description. Provided by Fiserv
+          example: "PROPOSTA ELETRONICA"
+        agent:
+          type: string
+          description: Agent Code
+          example: "FCUGDEM"
+        agentName:
+          type: string
+          description: Agent Name
+          example: "Nome do Agente"
+        serviceContractId:
+          type: string
+          description: Service Contract ID
+          example: "101"
+      title: MerchantInfo
+      required:
+        - taxIdNumber
+        - name
+        - nameTrade
+        - address
+        - addressNumber
+        - complement
+        - neighborhood
+        - zipCode
+        - city
+        - state
+        - RG
+        - CNAE
+        - taxIdNumber2
+        - taxIdNumber3
+        - phoneNumber
+        - boardingChannel
+        - boardingChannelDescription
+        - boardingChannelType
+        - boardingChannelTypeDescription
+        - boardingSubChannel
+        - boardingSubChannelDescription
+        - agent
+        - agentName
+        - serviceContractId
+      
+    InstallAddress:
+      type: object
+      properties:
+        taxIdNumber:
+          type: string
+          description: CNPJ ou CPF
+          example: "10904159000194"
+        name:
+          type: string
+          description: Merchant Name
+          example: "Teste Desenvolvimento Ltda"
+        nameTrade:
+          type: string
+          description: Merchant Trade Name
+          example: "Teste Desenvolvimento"
+        address:
+          type: string
+          description: Merchant Shipping Address 
+          example: "Avenida Manoel Pedro Pimentel"
+        number:
+          type: string
+          description: Merchant Shipping Address Number
+          example: "265"
+        complement:
+          type: string
+          description: Merchant Shipping Address Complement
+          example: "102 Bloco G"
+        neighborhood:
+          type: string
+          description: Merchant Shipping Neighborhood
+          example: "Continental"
+        city:
+          type: string
+          description: Merchatn Shipping City
+          example: "Osasco"
+        state:
+          type: string
+          description: Merchant Shipping State
+          example: "SP"
+        zipCode:
+          type: string
+          description: ZIPCODE
+          example: "06020194"
+      title: InstallAddress
+      required:
+        - taxIdNumber
+        - name
+        - nameTrade
+        - address
+        - number
+        - complement
+        - neighborhood
+        - zipCode
+        - city
+        - state
+    
+    APITMSResponse:
+      type: object
+      description: Information related to the API return
+      properties:
+      
+        cardAcceptorIDCode:
+          type: string
+          description: Marchant Code
+          example: "000000000000001"
+        cardAcceptorTermID:
+          type: string
+          description: Terminal Code
+          example: "GPR00001"
+        responseCode:
+          type: string
+          description: Return Code
+          example: "00"
+          enum:
+            - 00 Manutencao solicitada com sucesso
+            - 01 invalid message formatting
+            - 04 Erro - Ja existe pedido
+            - 02 Invalid message type
+            - 07 Invalid Operation
+            - 98 Transacao invalida - Gravar/atualizar slip na base de dados terminal bloqueado
+            - FC problemas de comunicacao na consulta dos dados (TMS FHM)
+            - IE Internal error
+            - BE Falha no processamento junto ao Base 24
+            - 00 Operacao Realizada com Sucesso
+            - 27 Erro - Ja existe ticket aberto para este pedido
+            - 05 invalid parameters
+            - 23 invalid notes/descriptions
+            - 37 invalid urgency code
+            - 62 Resposta invalida - Falha no processamento
+            - 77 transaction in progress
+            - 80 transaction not found
+            - B6 Moeda Informada invalida
+            - B7 Invalid Institution Data
+            - 17 invalid parameters RECHARGE MOBILE
+            - 19 Called not active
+            - 21 Numero logico invalido
+            - 41 invalid identification technician
+            - 43 POS nao correspondente ao projeto
+            - 96 system error
+            - 03 Invalid message type
+            - 11 invalid merchant info
+            - 44 Invalid Data try again
+            - 55 transaction suspended
+            - 61 Resposta invalida - Falha no processamento
+            - 86 transaction canceled
+            - 92 invalid route
+            - 99 Erro ao atualizar o serial number - invalid transaction
+            - B8 Tecnologia nao ativa
+            - FE erro na consulta dos dados TMS FHM
+
+        responseMessage:
+          type: string
+          description: Return Description
+          example: "Manutencao solicitada com sucesso"
+          enum:
+            - Manutencao solicitada com sucesso
+            - invalid message formatting
+            - Erro - Ja existe pedido
+            - Invalid message type
+            - Invalid Operation
+            - Transacao invalida - Gravar/atualizar slip na base de dados terminal bloqueado
+            - problemas de comunicacao na consulta dos dados (TMS FHM)
+            - Internal error
+            - Falha no processamento junto ao Base 24
+            - Operacao Realizada com Sucesso
+            - Erro - Ja existe ticket aberto para este pedido
+            - invalid parameters
+            - invalid notes/descriptions
+            - invalid urgency code
+            - Resposta invalida - Falha no processamento
+            - transaction in progress
+            - transaction not found
+            - Moeda Informada invalida
+            - Invalid Institution Data
+            - invalid parameters RECHARGE MOBILE
+            - Called not active
+            - Numero logico invalido
+            - invalid identification technician
+            - POS nao correspondente ao projeto
+            - system error
+            - Invalid message type
+            - invalid merchant info
+            - Invalid Data try again
+            - transaction suspended
+            - Resposta invalida - Falha no processamento
+            - transaction canceled
+            - invalid route
+            - Erro ao atualizar o serial number - invalid transaction
+            - Tecnologia nao ativa
+            - erro na consulta dos dados TMS FHM
+                        
+        referenceNumberId:
+          type: string
+          description: Service Order Number
+          example: "600000000001"
+        SRRN:
+          type: string
+          description: System Retrieval Reference Number - For TMS use only
+          example: "600000000002"
+      title: APITMSResponse
+      
+      
