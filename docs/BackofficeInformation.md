@@ -7,7 +7,7 @@ To a brief introduction of how to use the APIs, please access our [introduction]
 
 Below you can check each link to access the detailed document for each Web-services (APIs), so you can develop and implement your business.
 
-- [API Explorer](../api/?type=post&path=/)
+- [API Explorer](../api/?type=post&path=/token/)
 
 [Token Access](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-token)
 

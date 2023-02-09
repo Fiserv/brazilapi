@@ -49,7 +49,7 @@ featuredFeatures:
         title: Token Access
         description: Token Access
         type: "post"
-        path: "/"
+        path: "/token/"
   - title: Get a Token for APIs access
     description: To access the APIs get the orientation in the Token Access page.
     tags: [ "tokenAccess" ]
@@ -64,4 +64,4 @@ featuredFeatures:
         title: Token Access
         description: Token Access
         type: "post"
-        path: "/"
+        path: "/token/"
