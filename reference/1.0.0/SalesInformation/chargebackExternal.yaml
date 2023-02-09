@@ -23,6 +23,8 @@ paths:
       tags:
         - Search for Chargeback Information by Tax ID, Merchant Code and Instituion
       x-proxy-name: Consult Chargeback Information
+      x-group-name: Consult Chargeback Information
+      x-child-product-name: Sales Information
       summary: Merchant Information & Cases
       operationId: Search for Chargeback Information by Tax ID, Merchant Code and Instituion
       parameters:

@@ -14,5 +14,7 @@ Below you can check each link to access the detailed document for each Web-servi
 * Store the Token Credentials in a specific Vault. Avoid storing in the same application database that will consume resources;
 * In case of compromise/lost your credentials, you must contact us, immediately;
 
+[API Explorer](../api/?type=post&path=/)
+
 
 [1]: APIs-Introduction.md

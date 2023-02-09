@@ -30,6 +30,7 @@ paths:
       tags:
         - Request TOKEN for APIs access
       x-proxy-name: Token Access
+      x-group-name: Token Access
       x-child-product-name: Authentication
       summary: Token Access
       operationId: requestTokenForAPIsAccess
