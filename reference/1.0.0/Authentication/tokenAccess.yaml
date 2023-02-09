@@ -26,6 +26,7 @@ tags:
   - name: Request TOKEN for APIs access
 paths:
   /:
+    x-model-version: 1.0
     post:
       tags:
         - Request TOKEN for APIs access

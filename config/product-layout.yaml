@@ -37,8 +37,8 @@ header:
 featuredFeatures:
   - title: Iniciate your experience
     description:  Access the Introduction page for inicial orientation for how to use the APIs.
-    tags: ["sba-EN-solicitar-token"]
-    bullets: ["sba-EN-solicitar-token" ]
+    tags: ["tokenAccess"]
+    bullets: ["tokenAccess" ]
     relatedDocs:
       - relatedDoc: 
         title: APIs - Introduction
@@ -52,8 +52,8 @@ featuredFeatures:
         path: "/"
   - title: Get a Token for APIs access
     description: To access the APIs get the orientation in the Token Access page.
-    tags: [ "sba-EN-solicitar-token" ]
-    bullets: [ "sba-EN-solicitar-token" ]
+    tags: [ "tokenAccess" ]
+    bullets: [ "tokenAccess" ]
     relatedDocs:
       - relatedDoc:
         title: Token Access
