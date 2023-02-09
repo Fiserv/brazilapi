@@ -33,7 +33,7 @@ info:
   title: Dev Portal Tenant APIs.
   description: To onboard properly into the Fiserv Developer Studio as a tenant each
     product must support these APIs so that we can retrieve product specific API specifications
-    and documentation.
+    and documentation.test
   version: 1.0.0
 servers:
   - url: https://tenants.fiserv.com/
