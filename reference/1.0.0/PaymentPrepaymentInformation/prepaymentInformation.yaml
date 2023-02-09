@@ -21,7 +21,7 @@ paths:
   /consultations/consultPrepayment:
     post:
       tags:
-        Prepayment Information Maintenance
+        - Prepayment Information Maintenance
       x-proxy-name: Prepayment - Maintenance/Simulate/Confirm/Reject - Consult Available Balances For Prepayment (all Associations)
       x-group-name: Prepayment - Maintenance/Simulate/Confirm/Reject
       x-child-product-name: Payment & Prepayment Information
@@ -86,7 +86,7 @@ paths:
   /autoPrepayments/automaticPrepayment:
     post:
       tags:
-        Prepayment Information Maintenance
+        - Prepayment Information Maintenance
       x-proxy-name: Automatic Prepayment Information Maintenance
       x-group-name: Prepayment - Maintenance/Simulate/Confirm/Reject
       x-child-product-name: Payment & Prepayment Information
@@ -151,7 +151,7 @@ paths:
   /prepaySimulations/prepaymentSimulation:
     post:
       tags:
-        Prepayment Information Maintenance
+        - Prepayment Information Maintenance
       x-proxy-name: Prepayment - Maintenance/Simulate/Confirm/Reject - Consult or Simulate Manual Prepayment
       x-group-name: Prepayment - Maintenance/Simulate/Confirm/Reject
       x-child-product-name: Payment & Prepayment Information
@@ -216,7 +216,7 @@ paths:
   /prepaySimulationsAction/prepaySimConfReject:
     post:
       tags:
-        Prepayment Information Maintenance
+        - Prepayment Information Maintenance
       x-proxy-name: Prepayment - Maintenance/Simulate/Confirm/Reject - Confirmation or Rejection of Manual Prepayment Simulation
       x-group-name: Prepayment - Maintenance/Simulate/Confirm/Reject
       x-child-product-name: Payment & Prepayment Information
