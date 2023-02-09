@@ -21,7 +21,7 @@ paths:
   /canceloperation/processCancelOperationRequest:
     post:
       tags:
-        - Service Order Information
+        - Service Order Cancelling
       x-proxy-name: Service Order - Cancelling
       x-group-name: Service Order - Cancelling
       x-child-product-name: Service Order Information

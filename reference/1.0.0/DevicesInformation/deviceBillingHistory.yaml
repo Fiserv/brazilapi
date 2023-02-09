@@ -22,7 +22,7 @@ paths:
   "/v1/consulta/{data}":
     get:
       tags:
-        - Devices Information
+        - Search for Device Billing History
       x-proxy-name: Search for Device Billing History
       x-group-name: Merchant Devices Billing History
       x-child-product-name: Devices Information

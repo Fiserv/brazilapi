@@ -21,7 +21,7 @@ paths:
   /:
     post:
       tags:
-        - Payment & Prepayment Information
+        - Payment Account Information for Settlement
       x-proxy-name: Payment Settlement Account - Update
       x-group-name: Payment Settlement Account - Update
       x-child-product-name: Payment & Prepayment Information

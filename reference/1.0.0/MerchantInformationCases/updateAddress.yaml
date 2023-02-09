@@ -21,7 +21,7 @@ paths:
   /:
     post:
       tags:
-        - Merchant Information & Cases
+        - Merchant Address Update
       x-proxy-name: Merchant Addresses - Update
       x-group-name: Merchant Addresses - Update
       x-child-product-name: Merchant Information & Cases

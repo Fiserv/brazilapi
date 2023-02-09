@@ -41,7 +41,7 @@ paths:
   "/api/proposal":
     post:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: Online Boarding and Status
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -120,7 +120,7 @@ paths:
   "/api/proposal/v3":
     post:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: Online Boarding and Status - Boarding New Proposals
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -200,7 +200,7 @@ paths:
   "/api/proposal/{proposalNumber}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: Check Proposal Status
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -273,7 +273,7 @@ paths:
   "/api/payment/report":
     post:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: Declare Payment - Used for Device Sales
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -345,7 +345,7 @@ paths:
   "/api/serpro/cnpj/{cnpj}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: Verify Tax ID (CNPJ for company) at SERPRO
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -417,7 +417,7 @@ paths:
   "/api/serpro/cpf/{cpf}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: Verify Tax ID (CPF for individual) at SERPRO
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -489,7 +489,7 @@ paths:
   "/config/service-contract":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: Service Contract Parameters. It is an internal code used in Fiserv to identify the Partner
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -548,7 +548,7 @@ paths:
   "/config/account-fees/{serviceContract}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: Acount Fees for Required Service Parameters (accountFees)
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -617,7 +617,7 @@ paths:
   "/config/bank-accounts/{serviceContract}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: Associations/Schemas Product Code for Settlement Parameters
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -686,7 +686,7 @@ paths:
   "/config/bank-accounts/{serviceContract}/prepayment":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: Associations/Schemas Product Code for Settlement Parameters with prepayment enable value
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -755,7 +755,7 @@ paths:
   "/config/bank":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: List of Banks for Settlement to be used during boarding
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -816,7 +816,7 @@ paths:
   "/config/cnae/{institution}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: List of CNAEs Parameter for Boarding
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -890,7 +890,7 @@ paths:
   "/config/mcc/{institution}/{cnae-number}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: Returns an object containing Merchant category identification code
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -933,7 +933,7 @@ paths:
   "/config/professional-license/{service-contract}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: Returns the object 'ApiResult' with the status of professional license
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -1014,7 +1014,7 @@ paths:
   "/config/restricted-cnae":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: Restricted/Unwanted CNAEs for Boarding
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -1142,7 +1142,7 @@ paths:
   "/config/fees/{serviceContract}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: MDR Service Fees Parameters (Standard Fees, for reference only)
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -1226,7 +1226,7 @@ paths:
   "/config/acquisition/{serviceContract}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: Associations/Schemas List
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -1295,7 +1295,7 @@ paths:
   "/config/additional-services/{serviceContract}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: Additional Services Parameters
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -1364,7 +1364,7 @@ paths:
   "/config/frequencies/{serviceContract}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: Frequency Cycles for Additional Services
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -1439,7 +1439,7 @@ paths:
   "/config/capture-solution/{serviceContract}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: Capture Solutions Parameters
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -1531,7 +1531,7 @@ paths:
   "/config/mobile-operator":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: Phone Operators Parameters
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -1592,7 +1592,7 @@ paths:
   "/config/compliance/merchantId/{merchantId}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: Merchant - Compliance (Not Available)
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -1659,7 +1659,7 @@ paths:
   "/config/campaigns/simulator":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: List of Campaign Setup
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -1759,7 +1759,7 @@ paths:
   "/config/campaigns/billing-range/id-campaign/{id-campaign}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: Range of Revenue for the Campaign
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -1862,7 +1862,7 @@ paths:
   "/config/campaigns/factor-flex/id-campaign/{id-campaign}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: List of Campaign Setup
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -1986,7 +1986,7 @@ paths:
   "/config/campaigns/factor-flex/billing-value/id-campaign/{id-campaign}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: List of Campaign Setup - Get the Factor fees for MDR Flex associated to a campaign
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -2109,7 +2109,7 @@ paths:
   "/config/campaigns/mdr-flex/id-campaign/{id-campaign}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: List of Campaign Setup - Get the MDR Flex Fees associated to a campaign
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -2275,7 +2275,7 @@ paths:
   "/config/campaigns/mdr-flex/billing-value/id-campaign/{id-campaign}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: List of Campaign Setup - Get the MDR Flex Fees associated to a campaign - Billing Value
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -2440,7 +2440,7 @@ paths:
   "/config/campaigns/mdr/id-campaign/{id-campaign}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: List of Campaign Setup - Get MDR Fees for a given campaign
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -2607,7 +2607,7 @@ paths:
   "/config/campaigns/mdr/billing-value/id-campaign/{id-campaign}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: List of Campaign Setup - Get the MDR Fees associated to a campaign
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -2773,7 +2773,7 @@ paths:
   "/config/campaigns/current-approvers/id-campaign/{id-campaign}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: List of Campaign Setup - Get the current campaign approvers
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -2855,7 +2855,7 @@ paths:
   "/config/campaigns/approvers/service-contract/{service-contract}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: List of Campaign Setup - Get possible approvers for a campaign
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -2937,7 +2937,7 @@ paths:
   "/config/campaigns/business-point/billing-value/id-campaign/{id-campaign}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: List of Campaign Setup - Get the Business Point associated to a campaign - Billing value
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -3050,7 +3050,7 @@ paths:
   "/config/campaigns/business-point/id-campaign/{id-campaign}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: List of Campaign Setup - Get the Business Point associated to a campaign
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -3163,7 +3163,7 @@ paths:
   "/config/campaigns/technology-price-discount-fee/billing-value/id-campaign/{id-campaign}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: List of Campaign Setup - Get the technology price discount fee associated to a campaign
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -3276,7 +3276,7 @@ paths:
   "/config/campaigns/premium-uf/service-contract/{service-contract}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: List of Campaign Setup - Get the Premium Rate according to the State/Servicecontract
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -3392,7 +3392,7 @@ paths:
   "/config/campaigns/prepayment/id-campaign/{id-campaign}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: List of Campaign Setup - Get PrePayment Fees for Campaign
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -3509,7 +3509,7 @@ paths:
   "/config/campaigns/prepayment/billing-value/id-campaign/{id-campaign}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: List of Campaign Setup - Get PrePayment Fees for Campaign V2
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -3625,7 +3625,7 @@ paths:
   "/config/campaigns/pricing-technology/id-campaign/{id-campaign}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: List of Campaign Setup - Get Device Prices associated to a Campaign
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -3750,7 +3750,7 @@ paths:
   "/config/campaigns/service-contract/{service-contract}":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: List of Campaign Setup - Get the Available Campaigns
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -3878,7 +3878,7 @@ paths:
   "/config/proposal/build-fees":
     post:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: List of Campaign Setup -  Return the JSON with a model of Fees to be sent
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -3961,7 +3961,7 @@ paths:
   "/config/proposal/status":
     get:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: List of Setup to Send Proposal - Get the Proposal Status
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding
@@ -4059,7 +4059,7 @@ paths:
   "/config/proposal/build-fees/v2":
     post:
       tags:
-        - Online Boarding
+        - Online Boarding Process
       x-proxy-name: List of Setup to Send Proposal -  Return the JSON with a model of Fees to be sent
       x-group-name: Online Boarding and Status
       x-child-product-name: Online Boarding

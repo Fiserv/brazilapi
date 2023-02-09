@@ -24,7 +24,7 @@ paths:
   '/api/chargeback/ec/apigee/filter':
     post:
       tags:
-        - Merchant Information & Cases
+        - Search for Chargeback Information (Chargeback Portal)
       x-proxy-name: Merchant Chargeback - Consult
       x-group-name: Chargeback Consult (not available - Rodrigo 20200316)
       x-child-product-name: Merchant Information & Cases

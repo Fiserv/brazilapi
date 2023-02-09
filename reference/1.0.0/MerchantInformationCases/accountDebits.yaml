@@ -23,7 +23,7 @@ paths:
   '/v1/obter':
     get:
       tags:
-        - Merchant Information & Cases
+        - Search for EC's Account Debits
       x-proxy-name: Merchant Debits (fee, refund, reversal, etc)- Consult
       x-group-name: Merchant Debits (fee, refund, reversal, etc)- Consult
       x-child-product-name: Merchant Information & Cases

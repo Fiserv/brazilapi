@@ -21,7 +21,7 @@ paths:
   "/{cnpj}":
     get:
       tags:
-        - Service Order Information
+        - Bureau for Tax ID - Company - CNPJ
       x-proxy-name: Tax ID (company) Validation(not available PROD)
       x-group-name: Tax ID (company) Validation(not available PROD)
       x-child-product-name: Service Order Information

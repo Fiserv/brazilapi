@@ -21,7 +21,7 @@ paths:
   /v1/historicoContrato:
     get:
       tags:
-        - Merchant Information & Cases
+        - Historico de Contrato
       x-proxy-name: Historic Contract
       x-group-name: Historic Contract
       x-child-product-name: Merchant Information & Cases

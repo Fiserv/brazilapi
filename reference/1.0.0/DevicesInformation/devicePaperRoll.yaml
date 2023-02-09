@@ -22,7 +22,7 @@ paths:
   "/{instituicao}/{merchant}/{logico}":
     get:
       tags:
-        - Devices Information
+        - Request of Device Paper Roll
       x-proxy-name: Request of Device Paper Roll
       x-group-name: Paper Roll - Request
       x-child-product-name: Devices Information

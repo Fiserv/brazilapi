@@ -22,7 +22,7 @@ paths:
   /:
     post:
       tags:
-        - Payment & Prepayment Information
+        - Prepayment Flag Update
       x-proxy-name: Service Order - Terminal Maintenance - Prepayment Flag Update (Turn On/Off)
       x-group-name: Prepayment - Enable/Disable
       x-child-product-name: Payment & Prepayment Information

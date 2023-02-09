@@ -19,7 +19,7 @@ paths:
   "/v1/atualizaStatusEstabelecimento":
     post:
       tags:
-        - Merchant Information & Cases
+        - API Merchant Contract Update
       x-proxy-name: Merchant Contract Status - Update
       x-group-name: Merchant Contract Status - Update
       x-child-product-name: Merchant Information & Cases

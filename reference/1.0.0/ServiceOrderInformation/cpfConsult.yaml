@@ -21,7 +21,7 @@ paths:
   "/{cpf}":
     get:
       tags:
-        - Service Order Information
+        - Bureau for Tax ID - Individual - CPF
       x-proxy-name: Tax ID (individual) Validation (not available PROD)
       x-group-name: Tax ID (individual) Validation (not available PROD)
       x-child-product-name: Service Order Information

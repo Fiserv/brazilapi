@@ -8,3 +8,5 @@ docs/documentation/**
 
 # Declaring one particular markdown file to ignore
 api-nomenclature.md
+
+docs/FiservInternalUseOnly.md

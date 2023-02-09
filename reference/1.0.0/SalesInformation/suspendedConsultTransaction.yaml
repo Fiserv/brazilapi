@@ -21,7 +21,7 @@ paths:
   '/v1/consulta/transacaosuspensa':
     post:
       tags:
-        - Sales Information
+        - Consult suspended transactions by Merchant
       x-proxy-name: Merchant Sales - Suspended Transactions - Consult
       x-group-name: Merchant Sales - Suspended Transactions - Consult
       x-child-product-name: Sales Information
@@ -151,7 +151,7 @@ paths:
   '/v1/consulta/transacaosuspensaSumarizada':
     post:
       tags:
-        - Sales Information
+        - Consult suspended transactions by Merchant
       x-proxy-name: Merchant Sales - Suspended Transactions - Consult suspended summarized by Merchant ID
       x-group-name: Merchant Sales - Suspended Transactions - Consult
       x-child-product-name: Sales Information

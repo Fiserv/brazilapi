@@ -23,7 +23,7 @@ paths:
   "/resources/v1/{tipoVenda}/{inst}/{merchant}/{dataInicio}/{dataFim}":
     get:
       tags:
-        - Sales Information
+        - Search for Sales for a Merchant
       x-proxy-name: Merchant Sales - Paid or To Be Received - Consult
       x-group-name: Merchant Sales - Paid or To Be Received - Consult
       x-child-product-name: Sales Information
@@ -200,7 +200,7 @@ paths:
   "/resources/v2/{tipoVenda}/{dataInicio}/{dataFim}":
     get:
       tags:
-        - Sales Information
+        - Search for Sales for a Merchant
       x-proxy-name: Merchant Sales - Paid or To Be Received - Consult - It allows the selection of MULTIPLE association schema
       x-group-name: Merchant Sales - Paid or To Be Received - Consult
       x-child-product-name: Sales Information

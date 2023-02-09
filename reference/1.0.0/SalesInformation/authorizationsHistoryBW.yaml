@@ -22,7 +22,7 @@ paths:
   "/v1/autorizacoesbw":
     get:
       tags:
-        - Sales Information
+        - Query History of Authorized Transactions
       x-proxy-name: Merchant Authorizations History - Consult
       x-group-name: Merchant Authorizations History - Consult
       x-child-product-name: Sales Information

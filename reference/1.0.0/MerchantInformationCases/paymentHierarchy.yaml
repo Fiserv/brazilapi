@@ -22,7 +22,7 @@ paths:
   /v1/config/account-type:
     get:
       tags:
-        - Merchant Information & Cases
+        -  Merchant Payment Hierarchy Maintenance
       x-proxy-name: Merchant Payment Hierarchy - Consult
       x-group-name: Merchant Payment Hierarchy - Consult
       x-child-product-name: Merchant Information & Cases
@@ -125,7 +125,7 @@ paths:
   /v1/incluir:
     post:
       tags:
-        - Merchant Information & Cases
+        -  Merchant Payment Hierarchy Maintenance
       x-proxy-name: Merchant Payment Hierarchy - Include
       x-group-name: Merchant Payment Hierarchy - Consult
       x-child-product-name: Merchant Information & Cases
@@ -230,7 +230,7 @@ paths:
   /v1/excluir:
     post:
       tags:
-        - Merchant Information & Cases
+        -  Merchant Payment Hierarchy Maintenance
       x-proxy-name: Merchant Payment Hierarchy - Remove
       x-group-name: Merchant Payment Hierarchy - Consult
       x-child-product-name: Merchant Information & Cases
@@ -335,7 +335,7 @@ paths:
   /v1/:
     post:
       tags:
-        - Merchant Information & Cases
+        -  Merchant Payment Hierarchy Maintenance
       x-proxy-name: Merchant Payment Hierarchy - Search for Payment Hierarchy
       x-group-name: Merchant Payment Hierarchy - Consult
       x-child-product-name: Merchant Information & Cases

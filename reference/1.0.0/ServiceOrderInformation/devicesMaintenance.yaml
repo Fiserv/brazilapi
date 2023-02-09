@@ -21,7 +21,7 @@ paths:
   /addterminal/processAddTerminalRequest:
     post:
       tags:
-        - Service Order Information
+        - Devices Maintenance
       x-proxy-name: Service Order - Terminal Maintenance - Request Device - Additional Terminal
       x-group-name: Service Order - Terminal Maintenance
       x-child-product-name: Service Order Information
@@ -86,7 +86,7 @@ paths:
   /maintenance/processMaintenanceRequest:
     post:
       tags:
-        - Service Order Information
+        - Devices Maintenance
       x-proxy-name: Service Order - Terminal Maintenance - Request Device - Terminal Maintenance
       x-group-name: Service Order - Terminal Maintenance
       x-child-product-name: Service Order Information
@@ -151,7 +151,7 @@ paths:
   /replacechange/processReplaceChangeRequest:
     post:
       tags:
-        - Service Order Information
+        - Devices Maintenance
       x-proxy-name: Service Order - Terminal Maintenance - Request Device - Replace Terminal
       x-group-name: Service Order - Terminal Maintenance
       x-child-product-name: Service Order Information
@@ -216,7 +216,7 @@ paths:
   /uninstall/processUninstallRequest:
     post:
       tags:
-        - Service Order Information
+        - Devices Maintenance
       x-proxy-name: Service Order - Terminal Maintenance - Device Request -  Uninstall Terminal
       x-group-name: Service Order - Terminal Maintenance
       x-child-product-name: Service Order Information

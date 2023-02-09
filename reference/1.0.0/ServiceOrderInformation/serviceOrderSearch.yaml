@@ -21,7 +21,7 @@ paths:
   /{instituicao}/{numeroMerchant}:
     get:
       tags:
-        - Service Order Information
+        - Service Order Search
       x-proxy-name: Service Order - Consult - Service Order Search by Institution Number and Merchant Code
       x-group-name: Service Order - Consult
       x-child-product-name: Service Order Information
@@ -88,7 +88,7 @@ paths:
   /byos/{instituicao}/{osNumero}:
     get:
       tags:
-        - Service Order Information
+        - Service Order Search
       x-proxy-name: Service Order - Consult - Service Order Inquiry by Institution and Service Order Number
       x-group-name: Service Order - Consult
       x-child-product-name: Service Order Information
@@ -155,7 +155,7 @@ paths:
   /trackos/{instituicao}/{numeroMerchant}:
     get:
       tags:
-        - Service Order Information
+        - Service Order Search
       x-proxy-name: Service Order - Consult - Service Order Tracking by Institution Number and Merchant Code
       x-group-name: Service Order - Consult
       x-child-product-name: Service Order Information
@@ -222,7 +222,7 @@ paths:
   /resources/v2/os:
     get:
       tags:
-        - Service Order Information
+        - Service Order Search
       x-proxy-name: Service Order - Consult - Service Order Search by Institution Number and Merchant Code
       x-group-name: Service Order - Consult
       x-child-product-name: Service Order Information
@@ -289,7 +289,7 @@ paths:
   /resources/v1/os/{osNumero}:
     get:
       tags:
-        - Service Order Information
+        - Service Order Search
       x-proxy-name: Service Order - Consult - Service Order Inquiry by Institution and Service Order Number
       x-group-name: Service Order - Consult
       x-child-product-name: Service Order Information
@@ -356,7 +356,7 @@ paths:
   /resources/v1/trackos:
     get:
       tags:
-        - Service Order Information
+        - Service Order Search
       x-proxy-name: Service Order - Consult - Service Order Tracking by Institution Number and Merchant Code
       x-group-name: Service Order - Consult
       x-child-product-name: Service Order Information
@@ -423,7 +423,7 @@ paths:
   /resources/v1/trackos/{osNumero}:
     get:
       tags:
-        - Service Order Information
+        - Service Order Search
       x-proxy-name: Service Order - Consult - Service Order Tracking by Institution Number, Merchant Code and Service Order Number
       x-group-name: Service Order - Consult
       x-child-product-name: Service Order Information

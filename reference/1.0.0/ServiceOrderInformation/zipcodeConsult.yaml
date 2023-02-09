@@ -21,7 +21,7 @@ paths:
   /cep/{cep}:
     get:
       tags:
-        - Service Order Information
+        - Search Zipcode or City (Brazil)
       x-proxy-name: Zipcode (CEP) - Consult
       x-group-name: Zipcode (CEP) - Consult
       x-child-product-name: Service Order Information
@@ -87,7 +87,7 @@ paths:
   /cidade/{city}:
     get:
       tags:
-        - Service Order Information
+        - Search Zipcode or City (Brazil)
       x-proxy-name: Zipcode (CEP) - Consult - Search for City Name
       x-group-name: Zipcode (CEP) - Consult
       x-child-product-name: Service Order Information

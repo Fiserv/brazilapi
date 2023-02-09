@@ -23,7 +23,7 @@ paths:
   /:
     post:
       tags:
-        - Payment & Prepayment Information
+        - Account Payment Information Validation
       x-proxy-name: Payment Settlement Account - Validation
       x-group-name: Payment Settlement Account - Validation
       x-child-product-name: Payment & Prepayment Information
@@ -82,7 +82,7 @@ paths:
   /validar:
     post:
       tags:
-        - Payment & Prepayment Information
+        - Account Payment Information Validation
       x-proxy-name: Payment Settlement Account - Validation based on Rules for Bank and Type of Account
       x-group-name: Payment Settlement Account - Validation
       x-child-product-name: Payment & Prepayment Information
@@ -141,7 +141,7 @@ paths:
   /resources/v2/domicilio-bancario/validate:
     post:
       tags:
-        - Payment & Prepayment Information
+        - Account Payment Information Validation
       x-proxy-name: Payment Settlement Account - Validation based on Rules for Bank and Type of Account - V2
       x-group-name: Payment Settlement Account - Validation
       x-child-product-name: Payment & Prepayment Information

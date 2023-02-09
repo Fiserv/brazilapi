@@ -24,7 +24,7 @@ paths:
   "/config/motivos":
     get:
       tags:
-        - Merchant Information & Cases
+        - Search for Reason, Sub-Reason and Symptom for Cases to be opened in Salesforce
       x-proxy-name: Merchant Requests (Cases) - Open
       x-group-name: Merchant Requests (Cases) - Open
       x-child-product-name: Merchant Information & Cases
@@ -79,7 +79,7 @@ paths:
   "/config/sub-motivos/{Id}":
     get:
       tags:
-        - Merchant Information & Cases
+        - Search for Reason, Sub-Reason and Symptom for Cases to be opened in Salesforce
       x-proxy-name: Merchant Requests (Cases) - Search for Sub-Reasons to be used for Salesforce Case Opening by Reason
       x-group-name: Merchant Requests (Cases) - Open
       x-child-product-name: Merchant Information & Cases
@@ -141,7 +141,7 @@ paths:
   "/config/sintomas/{Id}":
     get:
       tags:
-        - Merchant Information & Cases
+        - Search for Reason, Sub-Reason and Symptom for Cases to be opened in Salesforce
       x-proxy-name: Merchant Requests (Cases) - Search for Symptom to be used for Salesforce Case Opening by Symptoms
       x-group-name: Merchant Requests (Cases) - Open
       x-child-product-name: Merchant Information & Cases
@@ -203,7 +203,7 @@ paths:
   "/":
     post:
       tags:
-        - Merchant Information & Cases
+        - Search for Reason, Sub-Reason and Symptom for Cases to be opened in Salesforce
       x-proxy-name: Merchant Requests (Cases) - Request Opening (Cases in Salesforce)
       x-group-name: Merchant Requests (Cases) - Open
       x-child-product-name: Merchant Information & Cases
@@ -258,7 +258,7 @@ paths:
   "/{marca}":
     post:
       tags:
-        - Merchant Information & Cases
+        - Search for Reason, Sub-Reason and Symptom for Cases to be opened in Salesforce
       x-proxy-name: Merchant Requests (Cases) - Request Opening by Brand (Cases in Salesforce)
       x-group-name: Merchant Requests (Cases) - Open
       x-child-product-name: Merchant Information & Cases

@@ -21,7 +21,7 @@ paths:
   /:
     post:
       tags:
-        - Merchant Information & Cases
+        - Merchant Working Hours Update
       x-proxy-name: Merchant Working Hours - Update
       x-group-name: Merchant Working Hours - Update
       x-child-product-name: Merchant Information & Cases

@@ -19,7 +19,7 @@ paths:
   /monthly/presumed:
     get:
       tags:
-        - Merchant Information & Cases
+        - Consult the Merchant Monthly Presumed Billing
       x-proxy-name: Merchant Information - Monthly Presumed Billing
       x-group-name: Merchant Information - Monthly Presumed Billing
       x-child-product-name: Merchant Information & Cases

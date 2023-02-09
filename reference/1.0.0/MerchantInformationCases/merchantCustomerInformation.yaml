@@ -21,7 +21,7 @@ paths:
   "/v2":
     get:
       tags:
-        - Merchant Information & Cases
+        - Search for Merchant Information by Tax ID or Merchant Code
       x-proxy-name: Merchant Customer Information - Consult
       x-group-name: Merchant Customer Information - Consult
       x-child-product-name: Merchant Information & Cases
@@ -94,7 +94,7 @@ paths:
   "/{instituicao}/{documento}":
     get:
       tags:
-        - Merchant Information & Cases
+        - Search for Merchant Information by Tax ID or Merchant Code
       x-proxy-name: Merchant Customer Information - Search for Merchant - To be retired (TBD)
       x-group-name: Merchant Customer Information - Consult
       x-child-product-name: Merchant Information & Cases

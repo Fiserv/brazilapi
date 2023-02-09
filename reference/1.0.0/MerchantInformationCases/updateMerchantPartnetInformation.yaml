@@ -24,7 +24,7 @@ paths:
   '/v1/consultaEstabelecimento/{clientNumber}':
     get:
       tags:
-        - Merchant Information & Cases
+        - Get or Update Merchant Partner Information
       x-proxy-name: Merchant Information - Consult Partner
       x-group-name: Merchant Information - Consult/Update Partner
       x-child-product-name: Merchant Information & Cases
@@ -133,7 +133,7 @@ paths:
   '/v1/atualizaEstabelecimento/{clientNumber}':
     post:
       tags:
-        - Merchant Information & Cases
+        - Get or Update Merchant Partner Information
       x-proxy-name: Merchant Information - Update Partner
       x-group-name: Merchant Information - Consult/Update Partner
       x-child-product-name: Merchant Information & Cases

@@ -21,7 +21,7 @@ paths:
   /:
     post:
       tags:
-        - Sales Information
+        - Search Device Operation
       x-proxy-name: Operations - Consult
       x-group-name: Merchant Operations - Consult
       x-child-product-name: Sales Information

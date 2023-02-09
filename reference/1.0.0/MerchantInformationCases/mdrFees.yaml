@@ -23,7 +23,7 @@ paths:
   "/{institution}/{merchanID}":
     get:
       tags:
-        - Merchant Information & Cases
+        - Search for MDR Fees for Merchant
       x-proxy-name: Merchant Service Fees (MDR) - Search for MDR Fees based on Institution Number and Merchant Code
       x-group-name: Merchant Service Fees (MDR) - Consult
       x-child-product-name: Merchant Information & Cases
@@ -90,7 +90,7 @@ paths:
   "/v2":
     get:
       tags:
-        - Merchant Information & Cases
+        - Search for MDR Fees for Merchant
       x-proxy-name: Merchant Service Fees (MDR) - Consult
       x-group-name: Merchant Service Fees (MDR) - Consult
       x-child-product-name: Merchant Information & Cases

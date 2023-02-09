@@ -19,7 +19,7 @@ paths:
   "/{institution}/{merchanID}":
     get:
       tags:
-        - Devices Information
+        - Search for Device Informations
       x-proxy-name: Search for Device Fees based on Merchant Institution and Merchant Code
       x-group-name: Merchant Devices and Fees - Consult
       x-child-product-name: Devices Information
@@ -86,7 +86,7 @@ paths:
   "/v2":
     get:
       tags:
-        - Devices Information
+        - Search for Device Informations
       x-proxy-name: Search for Device Fees based on Merchant Institution and Merchant Code - Changed the resource name
       x-group-name: Merchant Devices and Fees - Consult
       x-child-product-name: Devices Information
@@ -153,7 +153,7 @@ paths:
   "/device-service":
     get:
       tags:
-        - Devices Information
+        - Search for Device Informations
       x-proxy-name: Search for Device Service Types
       x-group-name: Merchant Devices and Fees - Consult
       x-child-product-name: Devices Information

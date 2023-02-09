@@ -19,7 +19,7 @@ paths:
   "/v1/receivableUnit/consulta/{dataInicio}/{dataFim}":
     get:
       tags:
-        - Merchant Information & Cases
+        - Receivable Register, Receivable Unit and Agenda Out
       x-proxy-name: Merchant Information - Registradora (CIRC3952)
       x-group-name: Merchant Information - Registradora (CIRC3952)
       x-child-product-name: Merchant Information & Cases
@@ -158,7 +158,7 @@ paths:
   "/v1/agendaOut/consulta/{dataInicio}/{dataFim}":
     get:
       tags:
-        - Merchant Information & Cases
+        - Receivable Register, Receivable Unit and Agenda Out
       x-proxy-name: Merchant Information - Agenda Out
       x-group-name: Merchant Information - Registradora (CIRC3952)
       x-child-product-name: Merchant Information & Cases
@@ -297,7 +297,7 @@ paths:
   "/v1/lockInformation/consulta/{dataInicio}/{dataFim}":
     get:
       tags:
-        - Merchant Information & Cases
+        - Receivable Register, Receivable Unit and Agenda Out
       x-proxy-name: Merchant Information - Lock Information
       x-group-name: Merchant Information - Registradora (CIRC3952)
       x-child-product-name: Merchant Information & Cases

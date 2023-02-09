@@ -21,7 +21,7 @@ paths:
   '/v1/antecipacao/':
     get:
       tags:
-        - Payment & Prepayment Information
+        - Automatic Prepayment
       x-proxy-name: Automatic Prepayment - Cancel - Consult Automatic Prepayment
       x-group-name: Automatic Prepayment - Cancel
       x-child-product-name: Payment & Prepayment Information
@@ -130,7 +130,7 @@ paths:
   '/v1/antecipacao':
     post:
       tags:
-        - Payment & Prepayment Information
+        - Automatic Prepayment
       x-proxy-name: Automatic Prepayment - Cancel - Automatic Prepayment
       x-group-name: Automatic Prepayment - Cancel
       x-child-product-name: Payment & Prepayment Information

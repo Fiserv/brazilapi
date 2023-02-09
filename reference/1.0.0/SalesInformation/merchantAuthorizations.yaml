@@ -24,7 +24,7 @@ paths:
   "/{inst}/{merchant}":
     get:
       tags:
-        - Sales Information
+        - Search for Transactions Authorization
       x-proxy-name: Merchant Authorizations - Consult (Institute and marchant)
       x-group-name: Merchant Authorizations (Current Day) - Consult
       x-child-product-name: Sales Information
@@ -91,7 +91,7 @@ paths:
   "/{inst}/{merchant}/{terminals}":
     get:
       tags:
-        - Sales Information
+        - Search for Transactions Authorization
       x-proxy-name: Merchant Authorizations - Consult by Institution Number, Merchant Code and Terminal
       x-group-name: Merchant Authorizations (Current Day) - Consult
       x-child-product-name: Sales Information

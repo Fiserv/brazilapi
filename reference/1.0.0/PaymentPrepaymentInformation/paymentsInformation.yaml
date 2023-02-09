@@ -23,7 +23,7 @@ paths:
   /resources/v1/transacoes/sumarizacao/{inst}/{merchant}/{dataInicio}/{dataFim}:
     get:
       tags:
-        - Payment & Prepayment Information
+        - Payments Information
       x-proxy-name: Payments - Consult for All Transaction Period - Summarized
       x-group-name: Payments - Consult
       x-child-product-name: Payment & Prepayment Information
@@ -130,7 +130,7 @@ paths:
   /resources/v1/{inst}/{merchant}/{dataInicio}/{dataFim}:
     get:
       tags:
-        - Payment & Prepayment Information
+        - Payments Information
       x-proxy-name: Payments - Consult for Completed Payments
       x-group-name: Payments - Consult
       x-child-product-name: Payment & Prepayment Information
@@ -228,7 +228,7 @@ paths:
   /resources/v1/{tipoPagamento}/{inst}/{merchant}/{dataInicio}/{dataFim}:
     get:
       tags:
-        - Payment & Prepayment Information
+        - Payments Information
       x-proxy-name: Payments - Search for Payments in specific status suspended or rejected
       x-group-name: Payments - Consult
       x-child-product-name: Payment & Prepayment Information
@@ -327,7 +327,7 @@ paths:
   /resources/v1/transacoes/{inst}/{merchant}/{dataInicio}/{dataFim}/{ordemPagamento}:
     get:
       tags:
-        - Payment & Prepayment Information
+        - Payments Information
       x-proxy-name: Payments - Search for Payment Order
       x-group-name: Payments - Consult
       x-child-product-name: Payment & Prepayment Information
@@ -441,7 +441,7 @@ paths:
   /resources/v1/transacoes/{inst}/{merchant}/{dataInicio}/{dataFim}:
     get:
       tags:
-        - Payment & Prepayment Information
+        - Payments Information
       x-proxy-name: Payments - Search all Transactions for a period
       x-group-name: Payments - Consult
       x-child-product-name: Payment & Prepayment Information

@@ -25,7 +25,7 @@ paths:
   "/caso/{numeroInstituicao}":
     get:
       tags:
-        - Merchant Information & Cases
+        - Search for Cases and comments opened in Salesforce
       x-proxy-name: Search for Cases opened in Salesforce
       x-group-name: Requests (Cases/Comments) - Consult
       x-child-product-name: Merchant Information & Cases
@@ -162,7 +162,7 @@ paths:
   "/comentarios":
     get:
       tags:
-        - Merchant Information & Cases
+        - Search for Cases and comments opened in Salesforce
       x-proxy-name: Search for Comments related to a Case
       x-group-name: Requests (Cases/Comments) - Consult
       x-child-product-name: Merchant Information & Cases

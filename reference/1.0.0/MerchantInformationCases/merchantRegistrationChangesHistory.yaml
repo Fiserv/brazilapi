@@ -22,7 +22,7 @@ paths:
   "/v1/consulta":
     get:
       tags:
-        - Merchant Information & Cases
+        - Merchant Registration Changes History
       x-proxy-name: Merchant Information - Demographic History
       x-group-name: Merchant Information - Demographic History
       x-child-product-name: Merchant Information & Cases
