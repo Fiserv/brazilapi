@@ -48,7 +48,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -115,7 +115,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -162,11 +162,6 @@ paths:
                 $ref: "#/components/schemas/SuccessServiceFeesResponse"
       deprecated: false
 components:
-  securitySchemes:
-    JWT:
-      type: apiKey
-      name: Authorization
-      in: header
   schemas:
     SuccessServiceFeesResponse:
       type: object
@@ -223,7 +218,7 @@ components:
           type: string
           description: "Association/Schema Code Description"
           example: "AMEX Full Crédito"
-          enum: 
+          enum:
             - 002 - Mastercard
             - 003 - Visa
             - 004 - Amex Full
@@ -313,7 +308,7 @@ components:
           type: string
           description: "Association/Schema Code Description"
           example: "AMEX Full Crédito"
-          enum: 
+          enum:
             - 002 - Mastercard
             - 003 - Visa
             - 004 - Amex Full
@@ -413,7 +408,7 @@ components:
           type: string
           description: Transaction Type Code (It will return only the code)
           example: "005"
-          enum: 
+          enum:
             - 005 - Compra - (meaning Purchase)
             - 461 - Compra com 02 parcelas - (meaning Purchase 02 installments)
             - 462 - Compra com 03 parcelas - (meaning Purchase 03 installments)
@@ -473,7 +468,7 @@ components:
             - 999 - ALL
         areaOfEvent:
           type: string
-          description: Card Type 
+          description: Card Type
           example: "001"
           enum:
             - "001 - Internacional"

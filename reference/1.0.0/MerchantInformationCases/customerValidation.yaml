@@ -49,7 +49,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -122,7 +122,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InternalServerError'              
+                $ref: '#/components/schemas/InternalServerError'
   '/v2/credenciamento/documento/{instituicao}/{documento}':
     get:
       tags:
@@ -224,7 +224,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InternalServerError'      
+                $ref: '#/components/schemas/InternalServerError'
   '/v3/credenciamento/documento/{instituicao}/{documento}/{service-contract}':
     get:
       tags:
@@ -333,7 +333,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InternalServerError'                        
+                $ref: '#/components/schemas/InternalServerError'
   '/v2/credenciamento/canal':
     post:
       tags:
@@ -428,7 +428,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InternalServerError'              
+                $ref: '#/components/schemas/InternalServerError'
   '/v2/credenciamento/taxa':
     post:
       tags:
@@ -523,7 +523,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InternalServerError'                            
+                $ref: '#/components/schemas/InternalServerError'
   '/v2/credenciamento/tecnologia/{codigoTecnologia}/{instituicao}/{documento}':
     get:
       tags:
@@ -632,7 +632,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InternalServerError'      
+                $ref: '#/components/schemas/InternalServerError'
   '/v3/credenciamento/tecnologia/{codigoTecnologia}/{instituicao}/{documento}/{service-contract}':
     get:
       tags:
@@ -748,7 +748,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InternalServerError'                   
+                $ref: '#/components/schemas/InternalServerError'
 components:
   schemas:
     PartialContent:
@@ -759,14 +759,14 @@ components:
           example: 9
           type: integer
           format: int32
-          enum: 
+          enum:
             - 9
             - 10
         mensagem:
           description: Description return code
           example: Campos mandatorios - (meaning Mandatory Fields)
           type: string
-          enum: 
+          enum:
             - 9 - Campos mandatorios - (meaning Mandatory Fields)
             - 10 - (Erro validaçao) - (meaning VAlidation Error)
     Unauthorized:
@@ -787,14 +787,14 @@ components:
           example: 3
           type: integer
           format: int32
-          enum: 
+          enum:
             - 3
             - 6
         mensagem:
           description: Description return code
           example: Acesso negado - Meaning Denied Access
           type: string
-          enum: 
+          enum:
             - "3 - Acesso negado - (Meaning Denied Access)"
             - "6 - Token expirado - (Meaning Expired Token"
     NotFound:
@@ -825,86 +825,16 @@ components:
           example: 2
           type: integer
           format: int32
-          enum: 
+          enum:
             - 2
             - 7
         mensagem:
           description: Description return code
           example: Erro Interno - (Meaning Internal Error)
           type: string
-          enum: 
+          enum:
             - "2 - Erro Interno - (Meaning Internal Error)"
             - "7 - Erro na integracao da API. Detalhe - (Meaning Integration Error)"
-    DRespondeConsultaClienteDTORefactory:
-      type: object
-      properties:
-        findCpfCnpj:
-          description: Merchant Tax ID (CPF or CNPJ)
-          example: 04962772000165
-          type: string
-        statusClientCode:
-          description: Status code client
-          example: '00'
-          type: string
-          enum:
-            - 00 - Cliente consta em nossa base de dados - (meaning Existing Customer)
-            - 01 - Cliente não consta em nossa base de dados, siga com o fluxo de credenciamento - (meaning Customer does not exist)
-            - 02 - Cliente suspenso ou fechado - (meaning Suspended or Cancelled Customer)
-            - 03 - Cliente liberado para credenciamento - (meaning Customer can be boarded)
-            - 91 - CPF ou CNPJ do solicitante inválido  - (meaning Requester CPF or CNPJ invalid)
-            - 99 - Erro de sistema  - (meaning System Error)
-        statusClientDescription:
-          description: Description of status code client
-          example: Cliente consta em nossa base de dados
-          type: string
-          enum:
-            - 00 - Cliente consta em nossa base de dados - (meaning Existing Customer)
-            - 01 - Cliente não consta em nossa base de dados, siga com o fluxo de credenciamento - (meaning Customer does not exist)
-            - 02 - Cliente suspenso ou fechado - (meaning Suspended or Cancelled Customer)
-            - 03 - Cliente liberado para credenciamento - (meaning Customer can be boarded)
-            - 91 - CPF ou CNPJ do solicitante inválido  - (meaning Requester CPF or CNPJ invalid)
-            - 99 - Erro de sistema  - (meaning System Error)
-        responseClientDetailsVO:
-          type: array
-          items:
-            $ref: '#/components/schemas/DetalhesClienteDTORefactory'
-    DetalhesClienteDTORefactory:
-      type: object
-      properties:
-        clientNumber:
-          description: Merchant Code
-          example: '19005420'
-          type: string
-        institutionNumber:
-          description: Merchant Institution Number
-          example: '00000003'
-          type: string
-        clientStatus:
-          description: Merchant Status
-          type: string
-          enum:
-            - Ativo - (meaning Active)
-            - Inativo  - (meaning Inactive)
-            - Suspenso  - (meaning Suspended)
-            - Fechado  - (meaning Closed)
-            - Cobrança  - (meaning Collection Process)
-            - Incobrável  - (meaning Uncollected)
-            - Sem Cobrança  - (meaning Without Collection)
-        boardingDate:
-          description: Merchant Boarded Date
-          example: YYYYMMDD
-          type: string
-        marca:
-          description: Service Contract Code
-          example: BIN
-          type: string
-          enum:
-            - 101 - Bin
-            - 104 - Sipag
-            - 113 - Credicard
-            - 116 - Hipercard
-            - 125 - Fdb
-            - 128 - Banco Inter
     DRespondeConsultaClienteDTO:
       type: object
       properties:
@@ -918,7 +848,8 @@ components:
           type: string
         conteudo:
           type: object
-          $ref: '#/components/schemas/ConsultaClienteDTO'
+          allOf:
+            - $ref: '#/components/schemas/ConsultaClienteDTO'
     ConsultaClienteDTO:
       type: object
       properties:
@@ -1002,7 +933,8 @@ components:
           type: string
         conteudo:
           type: object
-          $ref: '#/components/schemas/CredenciamentoRespDTODocumento'
+          allOf:
+            - $ref: '#/components/schemas/CredenciamentoRespDTODocumento'
     CredenciamentoRespDTODocumento:
       type: object
       properties:
@@ -1046,7 +978,8 @@ components:
           type: string
         conteudo:
           type: object
-          $ref: '#/components/schemas/CredenciamentoRespDTOChannel'
+          allOf:
+            - $ref: '#/components/schemas/CredenciamentoRespDTOChannel'
     CredenciamentoRespDTOChannel:
       type: object
       properties:
@@ -1121,7 +1054,7 @@ components:
             - 113 - Acq-AMEX Full Credit
             - 200 - Adq-VISA Débito
             - 716 - Adq-MC Débito
-            - 201 - Adq-VISA Crédito 
+            - 201 - Adq-VISA Crédito
         taxa:
           description: Fee Rate
           example: '11.31'
@@ -1130,7 +1063,7 @@ components:
           description: Transaction type
           example: '467'
           type: string
-          enum: 
+          enum:
             - 005 - Compra - (meaning Purchase)
             - 461 - Compra com 02 parcelas - (meaning Purchase 02 installments)
             - 462 - Compra com 03 parcelas - (meaning Purchase 03 installments)
@@ -1170,7 +1103,8 @@ components:
           type: string
         conteudo:
           type: object
-          $ref: '#/components/schemas/CredenciamentoRespDTOTaxa'
+          allOf:
+            - $ref: '#/components/schemas/CredenciamentoRespDTOTaxa'
     CredenciamentoRespDTOTaxa:
       type: object
       properties:
@@ -1195,7 +1129,8 @@ components:
           type: string
         conteudo:
           type: object
-          $ref: '#/components/schemas/CredenciamentoRespDTOTecnologia'
+          allOf:
+            - $ref: '#/components/schemas/CredenciamentoRespDTOTecnologia'
     CredenciamentoRespDTOTecnologia:
       type: object
       properties:

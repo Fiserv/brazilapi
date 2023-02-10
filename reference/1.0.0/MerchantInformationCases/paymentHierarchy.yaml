@@ -47,7 +47,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -150,7 +150,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -255,7 +255,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -360,7 +360,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -453,30 +453,25 @@ components:
             $ref: "#/components/schemas/DRequestHierarquiaRemove"
       description: Hierarchy to remove
       required: true
-  securitySchemes:
-    JWT:
-      type: apiKey
-      name: Authorization
-      in: header
   schemas:
     PartialContent:
-        type: object
-        properties:
-          codigoRetorno:
-            description: Return Code
-            example: 9
-            type: integer
-            format: int32
-            enum: 
-              - 9
-              - 10
-          mensagem:
-            description: Description return code
-            example: Campos mandatorios (meaning mdantory Fields Missing)
-            type: string
-            enum: 
-              - "9 - Campos mandatorios - (meaning Mandatory Fields Missing"
-              - "10 - (Erro validaçao) - (meaning Validation Error)"
+      type: object
+      properties:
+        codigoRetorno:
+          description: Return Code
+          example: 9
+          type: integer
+          format: int32
+          enum:
+            - 9
+            - 10
+        mensagem:
+          description: Description return code
+          example: Campos mandatorios (meaning mdantory Fields Missing)
+          type: string
+          enum:
+            - "9 - Campos mandatorios - (meaning Mandatory Fields Missing"
+            - "10 - (Erro validaçao) - (meaning Validation Error)"
     Unauthorized:
       type: object
       properties:
@@ -496,14 +491,14 @@ components:
           example: 3
           type: integer
           format: int32
-          enum: 
+          enum:
             - 3
             - 6
         mensagem:
           description: Description return code
           example: Acesso negado
           type: string
-          enum: 
+          enum:
             - "3 - Acesso negado - (meaning Access Denied)"
             - "6 - Token expirado - (meaning Expired Token)"
     NotFound:
@@ -536,14 +531,14 @@ components:
           example: 2
           type: integer
           format: int32
-          enum: 
+          enum:
             - 2
             - 7
         mensagem:
           description: Description return code
           example: Erro Interno - (meaning Internal Error)
           type: string
-          enum: 
+          enum:
             - "2 - Erro Interno - (meaning Internal Error)"
             - "7 - Erro na integracao da API. Detalhe - (meaning API Integration Error)"
     DRequestHierarquiaInsert:
@@ -581,10 +576,10 @@ components:
           type: integer
           enum:
             - 0
-            - 1 
-            - 2 
-            - 3 
-            - 4 
+            - 1
+            - 2
+            - 3
+            - 4
             - 5
             - 6
             - 7
@@ -686,11 +681,11 @@ components:
         conteudo:
           type: array
           items:
-           $ref: '#/components/schemas/StcSearchResponseDTO'
+            $ref: '#/components/schemas/StcSearchResponseDTO'
     StcSearchResponseDTO:
       type: object
       properties:
-        accountTypeID: 
+        accountTypeID:
           description: "Account Type ID"
           example: "050"
           type: string

@@ -46,7 +46,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -111,7 +111,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -176,7 +176,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -241,7 +241,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -391,11 +391,6 @@ paths:
 #              schema:
 #                $ref: "#/components/schemas/Response"
 components:
-  securitySchemes:
-    JWT:
-      type: apiKey
-      name: Authorization
-      in: header
   schemas:
     BodyMaintenance:
       type: object
@@ -405,33 +400,33 @@ components:
         - contactName
         - terminalID
       properties:
-         maintenance:
-           type: array
-           items:
-             type: object
-             required:
-               - institutionNumber
-               - merchantID
-               - contactName
-               - terminalID
-             properties:
-               institutionNumber:
-                 type: string
-                 description: Merchant Institution Number
-                 example: "00000003"
-               merchantID:
-                 type: string
-                 description: Merchant Code
-                 example: "91002806"
-               contactName:
-                 type: string
-                 description: Merchant Contact Name (max 20 characters)
-                 example: Marcelo Soares
-               terminalID:
-                 type: string
-                 description: Terminal Identification for Maintenance
-                 example: "ETH39PZA"
-               reason:
+        maintenance:
+          type: array
+          items:
+            type: object
+            required:
+              - institutionNumber
+              - merchantID
+              - contactName
+              - terminalID
+            properties:
+              institutionNumber:
+                type: string
+                description: Merchant Institution Number
+                example: "00000003"
+              merchantID:
+                type: string
+                description: Merchant Code
+                example: "91002806"
+              contactName:
+                type: string
+                description: Merchant Contact Name (max 20 characters)
+                example: Marcelo Soares
+              terminalID:
+                type: string
+                description: Terminal Identification for Maintenance
+                example: "ETH39PZA"
+              reason:
                 type: string
                 description: Reason of maitenance terminal
                 example: "TESTE"
@@ -535,31 +530,31 @@ components:
                 description: Merchant Terminal Type
                 example: "303"
                 enum:
-                 - "367 - POS Auto Credenc (meaning POS Auto Boarding)"
-                 - "334 - Ecommerce TEF"
-                 - "330 - TEF Dedicado-conec (meaning Balance Eletronic Transfer - Dedicated)"
-                 - "352 - Mobile POS"
-                 - "331 - TEF IP-conec (meaning Balance Eletronic Transfer - IP)"
-                 - "377 - POS Web"
-                 - "378 - POS TEF Terceiros (meaning Balance Eletronic Transfer - Third Party)"
-                 - "380 - POS MP5"
-                 - "309 - Arquivo de lote (meaning Batch file)"
-                 - "386 - POS do Futuro (meaning Future POS)"
-                 - "301 - POS GPRS"
-                 - "307 - TEF Discado-conec (meaning Balance Eletronic Transfer - Dial in)"
-                 - "305 - POS 3 Conexões (meaning POS three Connections)"
-                 - "366 - POS Wifi"
-                 - "357 - POGO"
-                 - "364 - POS Virtual"
-                 - "395 - POS MOBY6500 Aluguel (meaning POS MOBY6500 Rent)"
-                 - "365 - POS Wifi GPRS"
-                 - "308 - E-Commerce Gateway 1"
-                 - "391 - App Hardwareless"
-                 - "356 - E-Comm IPG"
-                 - "300 - POS ISO"
-                 - "306 - PINPAD"
-                 - "379 - Gateway WhiteLabel"
-                 - "303 - POS Internet/Discado"              
+                  - "367 - POS Auto Credenc (meaning POS Auto Boarding)"
+                  - "334 - Ecommerce TEF"
+                  - "330 - TEF Dedicado-conec (meaning Balance Eletronic Transfer - Dedicated)"
+                  - "352 - Mobile POS"
+                  - "331 - TEF IP-conec (meaning Balance Eletronic Transfer - IP)"
+                  - "377 - POS Web"
+                  - "378 - POS TEF Terceiros (meaning Balance Eletronic Transfer - Third Party)"
+                  - "380 - POS MP5"
+                  - "309 - Arquivo de lote (meaning Batch file)"
+                  - "386 - POS do Futuro (meaning Future POS)"
+                  - "301 - POS GPRS"
+                  - "307 - TEF Discado-conec (meaning Balance Eletronic Transfer - Dial in)"
+                  - "305 - POS 3 Conexões (meaning POS three Connections)"
+                  - "366 - POS Wifi"
+                  - "357 - POGO"
+                  - "364 - POS Virtual"
+                  - "395 - POS MOBY6500 Aluguel (meaning POS MOBY6500 Rent)"
+                  - "365 - POS Wifi GPRS"
+                  - "308 - E-Commerce Gateway 1"
+                  - "391 - App Hardwareless"
+                  - "356 - E-Comm IPG"
+                  - "300 - POS ISO"
+                  - "306 - PINPAD"
+                  - "379 - Gateway WhiteLabel"
+                  - "303 - POS Internet/Discado"
               userID:
                 type: string
                 description: User ID. Please chec with Fiserv representative
@@ -649,10 +644,10 @@ components:
           items:
             type: object
             required:
-               - institutionNumber
-               - merchantID
-               - contactName
-               - terminalID
+              - institutionNumber
+              - merchantID
+              - contactName
+              - terminalID
             properties:
               institutionNumber:
                 type: string
@@ -674,56 +669,6 @@ components:
                 type: string
                 description: Reason of uninstall terminal
                 example: "TESTE"
-    BodyUnistallComponent:
-      type: object
-      required:
-        - institutionNumber
-        - merchantID
-        - contactName
-        - terminalID
-        - currentComponentType
-        - newQuantity
-      properties:
-        uninstall:
-          type: array
-          items:
-            type: object
-            required:
-              - institutionNumber
-              - merchantID
-              - contactName
-              - terminalID
-              - currentComponentType
-              - newQuantity
-            properties:
-              institutionNumber:
-                type: string
-                description: Merchant Institution Number
-                example: "00000003"
-              merchantID:
-                type: string
-                description: Merchant Code
-                example: "91002806"
-              contactName:
-                type: string
-                description: Merchant Contact Name (max 20 characters)
-                example: Marcelo Soares
-              terminalID:
-                type: string
-                description: Terminal Identification to be uninstalled
-                example: "ETH39PZA"
-              currentComponentType:
-                type: string
-                description: Component Type Code (3 Digit)
-                example: "359"
-                enum:
-                  - 359 - Clover Mobile Print
-                  - 360 - Clover Mobile Dock
-                  - 361 - Clover Mobile - Clip
-              newQuantity:
-                type: string
-                description: The amount of components with the selected component type
-                example: "01"
     BodyReplaceTerminal:
       type: object
       required:
@@ -771,31 +716,31 @@ components:
                 description: Component Type Code (3 Digit)
                 example: "365"
                 enum:
-                 - "367 - POS Auto Credenc (meaning POS Auto Boarding)"
-                 - "334 - Ecommerce TEF"
-                 - "330 - TEF Dedicado-conec (meaning Balance Eletronic Transfer - Dedicated)"
-                 - "352 - Mobile POS"
-                 - "331 - TEF IP-conec (meaning Balance Eletronic Transfer - IP)"
-                 - "377 - POS Web"
-                 - "378 - POS TEF Terceiros (meaning Balance Eletronic Transfer - Third Party)"
-                 - "380 - POS MP5"
-                 - "309 - Arquivo de lote (meaning Batch file)"
-                 - "386 - POS do Futuro (meaning Future POS)"
-                 - "301 - POS GPRS"
-                 - "307 - TEF Discado-conec (meaning Balance Eletronic Transfer - Dial in)"
-                 - "305 - POS 3 Conexões (meaning POS three Connections)"
-                 - "366 - POS Wifi"
-                 - "357 - POGO"
-                 - "364 - POS Virtual"
-                 - "395 - POS MOBY6500 Aluguel (meaning POS MOBY6500 Rent)"
-                 - "365 - POS Wifi GPRS"
-                 - "308 - E-Commerce Gateway 1"
-                 - "391 - App Hardwareless"
-                 - "356 - E-Comm IPG"
-                 - "300 - POS ISO"
-                 - "306 - PINPAD"
-                 - "379 - Gateway WhiteLabel"
-                 - "303 - POS Internet/Discado"
+                  - "367 - POS Auto Credenc (meaning POS Auto Boarding)"
+                  - "334 - Ecommerce TEF"
+                  - "330 - TEF Dedicado-conec (meaning Balance Eletronic Transfer - Dedicated)"
+                  - "352 - Mobile POS"
+                  - "331 - TEF IP-conec (meaning Balance Eletronic Transfer - IP)"
+                  - "377 - POS Web"
+                  - "378 - POS TEF Terceiros (meaning Balance Eletronic Transfer - Third Party)"
+                  - "380 - POS MP5"
+                  - "309 - Arquivo de lote (meaning Batch file)"
+                  - "386 - POS do Futuro (meaning Future POS)"
+                  - "301 - POS GPRS"
+                  - "307 - TEF Discado-conec (meaning Balance Eletronic Transfer - Dial in)"
+                  - "305 - POS 3 Conexões (meaning POS three Connections)"
+                  - "366 - POS Wifi"
+                  - "357 - POGO"
+                  - "364 - POS Virtual"
+                  - "395 - POS MOBY6500 Aluguel (meaning POS MOBY6500 Rent)"
+                  - "365 - POS Wifi GPRS"
+                  - "308 - E-Commerce Gateway 1"
+                  - "391 - App Hardwareless"
+                  - "356 - E-Comm IPG"
+                  - "300 - POS ISO"
+                  - "306 - PINPAD"
+                  - "379 - Gateway WhiteLabel"
+                  - "303 - POS Internet/Discado"
               terminalEffectiveDate:
                 type: string
                 description: Terminal Effective Date in YYYYMMDD Format
@@ -812,84 +757,6 @@ components:
                 type: string
                 description: Reason of replace terminal
                 example: "TESTE"
-    BodyReplaceComponent:
-      type: object
-      required:
-        - institutionNumber
-        - merchantID
-        - contactName
-        - terminalID
-        - currentComponentType
-        - newComponentType
-        - newQuantity
-        - newEffectiveDate
-        - newExpiryDate
-        - newFeeApplied
-      properties:
-        uninstall:
-          type: array
-          items:
-            type: object
-            required:
-              - institutionNumber
-              - merchantID
-              - contactName
-              - terminalID
-              - currentComponentType
-              - newComponentType
-              - newQuantity
-              - newEffectiveDate
-              - newExpiryDate
-              - newFeeApplied
-            properties:
-              institutionNumber:
-                type: string
-                description: Merchant Institution Number
-                example: "00000003"
-              merchantID:
-                type: string
-                description: Merchant Code
-                example: "91002806"
-              contactName:
-                type: string
-                description: Merchant Contact Name (max 20 characters)
-                example: Marcelo Soares
-              terminalID:
-                type: string
-                description: Terminal Identification to be uninstalled
-                example: "ETH39PZA"
-              currentComponentType:
-                type: string
-                description: Component Type Code (3 Digit)
-                example: "360"
-                enum:
-                  - 359 - Clover Mobile Printer
-                  - 360 - Clover Mobile Dock
-                  - 361 - Clover Mobile Holster - Clip
-              newComponentType:
-                type: string
-                description: New Component Type code (3 Digit)
-                example: "360"
-                enum:
-                  - 359 - Clover Mobile Printer
-                  - 360 - Clover Mobile Dock
-                  - 361 - Clover Mobile Holster - Clip
-              newQuantity:
-                type: string
-                description: Quantity of Components
-                example: "20200102"
-              newEffectiveDate:
-                type: string
-                description: Terminal Effective Date in YYYYMMDD Format
-                example: "20200102"
-              newExpiryDate:
-                type: string
-                description: Terminal Expire Date in YYYYMMDD Format
-                example: "20201201"
-              newFeeApplied:
-                type: string
-                description: Fee Amount with 2 Decimals and comma
-                example: "90,99"
     Unauthorized:
       type: object
       properties:

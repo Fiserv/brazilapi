@@ -46,7 +46,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -94,66 +94,61 @@ paths:
           description: Not Found
       deprecated: false
 components:
-  securitySchemes:
-    JWT:
-      type: apiKey
-      name: Authorization
-      in: header
   schemas:
-      DResponse:
-        type: object
-        properties:
-          codigoRetorno:
-            type: integer
-            format: int32
-            example: 0
-            description: Return Code
-            enum:
-              - '0'
-              - '1'
-          mensagem:
-            type: string
-            description: Return Message
-            example: Error Message
-            enum:
-              - Successfully Done
-              - Invalid Request Information (Institution, merchant ou service-contract) (400 BAD REQUEST)
-          conteudo:
-            type: array
-            description: List of Historic contracts
-            items:
-              $ref: '#/components/schemas/historicoContrato'
-        title: DResponse
-      historicoContrato:
-        type: object
-        properties:
-          dataEfetivacao:
-            type: string
-            description: Contract date
-            example: 20220628
-          statusContrato:
-            type: string
-            description: Status of the contract
-            example: Ativo
-            enum:
-              - 'Ativo'
-              - 'Inativo'
-          indicadorAntecipacao:
-            type: string
-            description: Antecipation indicator
-            example: Sim
-            enum:
-              - 'Sim'
-              - 'Não'
-          indicadorFraude:
-            type: string
-            description: Froud indicator
-            example: Sim
-            enum:
-              - 'Sim'
-              - 'Não'   
-          percentualReserva:
-            type: string
-            description: Froud indicator
-            example: 1.00
-        title: historicoContrato
+    DResponse:
+      type: object
+      properties:
+        codigoRetorno:
+          type: integer
+          format: int32
+          example: 0
+          description: Return Code
+          enum:
+            - 0
+            - 1
+        mensagem:
+          type: string
+          description: Return Message
+          example: Error Message
+          enum:
+            - Successfully Done
+            - Invalid Request Information (Institution, merchant ou service-contract) (400 BAD REQUEST)
+        conteudo:
+          type: array
+          description: List of Historic contracts
+          items:
+            $ref: '#/components/schemas/historicoContrato'
+      title: DResponse
+    historicoContrato:
+      type: object
+      properties:
+        dataEfetivacao:
+          type: string
+          description: Contract date
+          example: 20220628
+        statusContrato:
+          type: string
+          description: Status of the contract
+          example: Ativo
+          enum:
+            - 'Ativo'
+            - 'Inativo'
+        indicadorAntecipacao:
+          type: string
+          description: Antecipation indicator
+          example: Sim
+          enum:
+            - 'Sim'
+            - 'Não'
+        indicadorFraude:
+          type: string
+          description: Froud indicator
+          example: Sim
+          enum:
+            - 'Sim'
+            - 'Não'
+        percentualReserva:
+          type: string
+          description: Froud indicator
+          example: 1.00
+      title: historicoContrato

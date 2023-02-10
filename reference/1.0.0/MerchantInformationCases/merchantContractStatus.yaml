@@ -10,7 +10,7 @@ info:
     url: http://www.apache.org/licenses/LICENSE-2.0
 servers:
   - url: https://cat.api.firstdata.com/bwa/status-estabelecimento
-x-header-api-key: 'X0GW3QGOYFn4r7DHcVC8KuatUnNs6MGB' 
+x-header-api-key: 'X0GW3QGOYFn4r7DHcVC8KuatUnNs6MGB'
 x-header-api-secret: 'N93nmFmoY0NzSMC5'
 x-production-url: prod.api.firstdata.com/bwa/status-estabelecimento
 x-config:
@@ -44,7 +44,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -140,13 +140,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/InternalServerError'
       deprecated: false
-  
+
 components:
-  securitySchemes:
-    JWT:
-      type: apiKey
-      name: Authorization
-      in: header
   schemas:
     ContractUpdateResponse:
       type: object
@@ -165,16 +160,16 @@ components:
           enum:
             - 0 - Sucesso (meaning Success)
         conteudo:
-            $ref: '#/components/schemas/StcContractUpdateResponseDTO'
+          $ref: '#/components/schemas/StcContractUpdateResponseDTO'
     StcContractUpdateResponseDTO:
       type: object
       properties:
-        statusCode: 
+        statusCode:
           description: "Status code"
           example: 0
           type: integer
           format: int32
-          enum: 
+          enum:
             - 0
             - 1
             - 2
@@ -189,7 +184,7 @@ components:
           description: Description return code
           example: Merchant status updated.
           type: string
-          enum: 
+          enum:
             - 0 - Merchant status updated...
             - 1 - Merchant status already set...
             - 2 - Merchant not found...
@@ -208,14 +203,14 @@ components:
           example: 9
           type: integer
           format: int32
-          enum: 
+          enum:
             - 9
             - 10
         mensagem:
           description: Description return code
           example: Campos mandatorios (meaning Missing Mandatory Fields)
           type: string
-          enum: 
+          enum:
             - 9 - Campos mandatorios...
             - 10 - (Erro validaçao)...
     Unauthorized:
@@ -236,14 +231,14 @@ components:
           example: 3
           type: integer
           format: int32
-          enum: 
+          enum:
             - 3
             - 6
         mensagem:
           description: Description return code
           example: Acesso negado (meaning Access Denied)
           type: string
-          enum: 
+          enum:
             - 3 - Acesso negado (meaning Access Denied)
             - 6 - Token expirado (meaning Expired Token)
     NotFound:
@@ -254,14 +249,14 @@ components:
           example: 5
           type: integer
           format: int32
-          enum: 
+          enum:
             - 5
             - 11
         mensagem:
           description: Description return code
           example: Item nao encontrado (meaning Item not found)
           type: string
-          enum: 
+          enum:
             - 5 - Item nao encontrado (meaning Item not found)
             - 11 - Registros nao encontrados (meaning No records found)
     Conflict:
@@ -282,13 +277,13 @@ components:
           example: 2
           type: integer
           format: int32
-          enum: 
+          enum:
             - 2
             - 7
         mensagem:
           description: Description return code
           example: Erro Interno (meaning Internal Error)
           type: string
-          enum: 
+          enum:
             - 2 - Erro Interno (meaning Internal Error)
             - 7 - Erro na integracao da API. Detalhe (meaning Integration Error)

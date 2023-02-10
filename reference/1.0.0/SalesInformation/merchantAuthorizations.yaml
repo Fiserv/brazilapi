@@ -1,6 +1,6 @@
 openapi: 3.0.1
 info:
-  description: Search for Transactions Authorization 
+  description: Search for Transactions Authorization
   version: "1.0"
   title: Search for Transactions Authorization
   termsOfService: urn:tos
@@ -49,7 +49,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -95,7 +95,7 @@ paths:
       x-proxy-name: Merchant Authorizations - Consult by Institution Number, Merchant Code and Terminal
       x-group-name: Merchant Authorizations (Current Day) - Consult
       x-child-product-name: Sales Information
-      summary: Search the last transaction for devices to a given Institution Number and Merchant Code 
+      summary: Search the last transaction for devices to a given Institution Number and Merchant Code
       operationId: searchLastTransaction
       parameters:
         - name: Message-Signature
@@ -109,14 +109,14 @@ paths:
           in: header
           description: APigee Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: auth
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -163,11 +163,6 @@ paths:
                 $ref: "#/components/schemas/Response"
       deprecated: false
 components:
-  securitySchemes:
-    JWT:
-      type: apiKey
-      name: Authorization
-      in: header
   schemas:
     Autorizacoes:
       type: object
@@ -189,50 +184,50 @@ components:
           description: Association/Schema code related to the authorization
           example: "VL"
           enum:
-          - visa domestic debit= "VL",
-          - visa domestic credit= "VN",
-          - visa foreign debit= "VF",
-          - visa foreign credit= "V ",
-          - visa corporate credit= "VC",
-          - mastercard domestic debit= "ML",
-          - master thru bnet domestic= "MB",
-          - mastercard domestic credit= "MN",
-          - mastercard foreign debit= "MF",
-          - mastercard foreign credit= "M ",
-          - mastercard corporate credit= "MC",
-          - cabal domestic credit= "CN",
-          - cabal domestic debit= "CL",
-          - cabal foreign credit= "CG",
-          - cabal foreign debit= "CF",
-          - cabal voucher reficao = "CR",
-          - cabal voucher alimentacao = "CA",
-          - cabal voucher cultura = "CT",
-          - soroc domestic credit= "SN",
-          - soroc domestic debit= "SL",
-          - soroc voucher reficao = "SR",
-          - soroc voucher alimentacao = "SA",
-          - elo voucher reficao = "LR"
-          - elo voucher alimentacao = "LA"
-          - elo voucher cultura = "LC"
-          - elo voucher auto = "LV"
-          - banese domestic credit= "GN"
-          - banese domestic debit= "GL"
-          - banese voucher = "GV"
-          - banestes domestic credit= "TN"
-          - banestes domestic debit= "TL"
-          - ticket voucher alimentacao = "KA"
-          - ticket voucher refeicao= "KR"
-          - ticket voucher cultura= "KT"
-          - hiperc domestic credit= "HC"
-          - hiper domestic credit= "HN"
-          - elof domestic credit= "ON"
-          - elof domestic debit= "OL"
-          - amex foreign credit= "A "
-          - amexf domestic credit= "XN"
-          - amexf foreign credit= "X "
-          - sodexo voucher alimentacao = "FA"
-          - sodexo voucher refeicao= "FR"
-          - sodexo voucher cultura= "FT"
+            - visa domestic debit= "VL",
+            - visa domestic credit= "VN",
+            - visa foreign debit= "VF",
+            - visa foreign credit= "V ",
+            - visa corporate credit= "VC",
+            - mastercard domestic debit= "ML",
+            - master thru bnet domestic= "MB",
+            - mastercard domestic credit= "MN",
+            - mastercard foreign debit= "MF",
+            - mastercard foreign credit= "M ",
+            - mastercard corporate credit= "MC",
+            - cabal domestic credit= "CN",
+            - cabal domestic debit= "CL",
+            - cabal foreign credit= "CG",
+            - cabal foreign debit= "CF",
+            - cabal voucher reficao = "CR",
+            - cabal voucher alimentacao = "CA",
+            - cabal voucher cultura = "CT",
+            - soroc domestic credit= "SN",
+            - soroc domestic debit= "SL",
+            - soroc voucher reficao = "SR",
+            - soroc voucher alimentacao = "SA",
+            - elo voucher reficao = "LR"
+            - elo voucher alimentacao = "LA"
+            - elo voucher cultura = "LC"
+            - elo voucher auto = "LV"
+            - banese domestic credit= "GN"
+            - banese domestic debit= "GL"
+            - banese voucher = "GV"
+            - banestes domestic credit= "TN"
+            - banestes domestic debit= "TL"
+            - ticket voucher alimentacao = "KA"
+            - ticket voucher refeicao= "KR"
+            - ticket voucher cultura= "KT"
+            - hiperc domestic credit= "HC"
+            - hiper domestic credit= "HN"
+            - elof domestic credit= "ON"
+            - elof domestic debit= "OL"
+            - amex foreign credit= "A "
+            - amexf domestic credit= "XN"
+            - amexf foreign credit= "X "
+            - sodexo voucher alimentacao = "FA"
+            - sodexo voucher refeicao= "FR"
+            - sodexo voucher cultura= "FT"
         codAutorizacao:
           type: string
           description: Authorization Code
@@ -243,7 +238,7 @@ components:
           example: "0200"
         codProcessamento:
           type: string
-          description: Processing Authorization Code 
+          description: Processing Authorization Code
           example: "003000"
         data:
           type: string
@@ -257,7 +252,7 @@ components:
           type: string
           description: Reversal Authorization Identification
           example: "0"
-          enum: 
+          enum:
             - "0 - Not reversal"
             - "1 - reversal"
         horario:
@@ -291,7 +286,7 @@ components:
             $ref: "#/components/schemas/Autorizacoes"
         codigoRetorno:
           type: string
-          description: Return Code 
+          description: Return Code
           example: "00"
           enum:
             - "00 - Successfully Done"

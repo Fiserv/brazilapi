@@ -299,7 +299,8 @@ components:
         institution:
           type: object
           description: Institution object
-          $ref: '#/components/schemas/DInstitutionResponse'
+          oneOf:
+            - $ref: '#/components/schemas/DInstitutionResponse'
     DInstitutionResponse:
       type: object
       title: DInstitutionResponse

@@ -46,7 +46,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -65,7 +65,7 @@ paths:
             type: string
         - name: cnpj
           in: path
-          description: Company Tax ID (CNPJ) to be searched 
+          description: Company Tax ID (CNPJ) to be searched
           required: true
           schema:
             type: string
@@ -78,11 +78,6 @@ paths:
                 $ref: "#/components/schemas/Response"
       deprecated: false
 components:
-  securitySchemes:
-    JWT:
-      type: apiKey
-      name: Authorization
-      in: header
   schemas:
     Response:
       type: object
@@ -165,7 +160,7 @@ components:
               type: string
               description: Company Situation Code
               example: "8"
-              enum: 
+              enum:
                 - 2 - Ativa - (meaning Active)
                 - 3 - Suspensa - (meaning Suspended)
                 - 4 - Inapta - (meaning Blocked)
@@ -227,9 +222,9 @@ components:
                 type: string
                 description: CNAE - Secondary Activity Description
                 example: "Consultoria em tecnologia da informação"
-        nome_orgao: 
+        nome_orgao:
           type: string
-          description: State 
+          description: State
           example: São Paulo
         ente_federativo:
           type: string
@@ -240,7 +235,7 @@ components:
           description: Corporate Structure
           items:
             properties:
-              nome: 
+              nome:
                 type: string
                 description: Partner Name
                 example: "Partner #1"
@@ -252,11 +247,11 @@ components:
                 type: string
                 description: Partner Share Capital
                 example: "00000000099000"
-              codigoPais: 
+              codigoPais:
                 type: string
                 description: Partner Country Code
                 example: "000"
-              qualificacaoRepLegal: 
+              qualificacaoRepLegal:
                 type: string
                 description: Partner Classification Description
                 example: ""

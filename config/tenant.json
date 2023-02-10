@@ -39,7 +39,7 @@
           "SalesInformation/merchantSales", "SalesInformation/processConsultOperation",
           "SalesInformation/keyedConsultTransaction", "SalesInformation/suspendedConsultTransaction",
           "SalesInformation/merchantAuthorizations", "SalesInformation/authorizationsHistoryBW",
-          "SalesInformation/chargebackExternal",
+
 
           "PaymentPrepaymentInformation/paymentAccountInfo", "PaymentPrepaymentInformation/accountPaymentInformationValidation",
           "PaymentPrepaymentInformation/paymentsInformation", "PaymentPrepaymentInformation/prepaymentFlagUpdate",
