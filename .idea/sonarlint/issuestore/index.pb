@@ -32,7 +32,3 @@ M
 docs/BackofficeInformation.md,7\4\74296bb5eecec9e48cb6c8a981d058881adc1a84
 V
 &docs/TokenGenerationforWeb-services.md,c\4\c496a2ba0fbe2a67e629af21db78c59a8cf9b013
-X
-(config/document-explorer-definition.yaml,6\0\601a0134adac18814337d21776b531dbe009b2bd
-J
-config/product-layout.yaml,9\5\95a48117b460e88d1b44f0ca9df85306aca85e01

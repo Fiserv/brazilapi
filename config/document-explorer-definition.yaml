@@ -62,11 +62,6 @@
   - title: Split - Payments
     link: docs/SplitPaymentsInformation.md
 - sections:
-  - title: Fiserv (Internal Use)
-    link: docs/FiservInternalUseOnly.md
-    access: private
-    groups: []
-- sections:
   - title: Release notes
     sections:
     - title: March 2022
