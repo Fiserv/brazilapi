@@ -19,7 +19,7 @@ x-config:
 tags:
   - name: Merchant Payment Hierarchy Maintenance
 paths:
-  /v1/config/account-type:
+  "/v1/config/account-type":
     get:
       tags:
         -  Merchant Payment Hierarchy Maintenance
@@ -122,7 +122,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/InternalServerError'
       deprecated: false
-  /v1/incluir:
+  "/v1/incluir":
     post:
       tags:
         -  Merchant Payment Hierarchy Maintenance
@@ -227,7 +227,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/InternalServerError'
       deprecated: false
-  /v1/excluir:
+  "/v1/excluir":
     post:
       tags:
         -  Merchant Payment Hierarchy Maintenance
@@ -332,7 +332,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/InternalServerError'
       deprecated: false
-  /v1/:
+  "/v1/":
     post:
       tags:
         -  Merchant Payment Hierarchy Maintenance

@@ -18,7 +18,7 @@ x-config:
 tags:
   - name: Consult or Update Logistic Information
 paths:
-  /:
+  "/":
     post:
       tags:
         - Consult or Update Logistic Information
@@ -77,7 +77,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ResponseInclusao"
-  /{numeroInstituicao}/{merchantId}/{cnpjCpf}:
+  "/{numeroInstituicao}/{merchantId}/{cnpjCpf}":
     get:
       tags:
         - Consult or Update Logistic Information
