@@ -9,17 +9,17 @@ info:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0
 servers:
-  - url: https://cat.api.firstdata.com/bwa/wsm/fundingtools/prepayFlag/updatePrepayFlag
+  - url: https://cat.api.firstdata.com/bwa/wsm/fundingtools/prepayFlag
 x-header-api-key: 'X0GW3QGOYFn4r7DHcVC8KuatUnNs6MGB'
 x-header-api-secret: 'N93nmFmoY0NzSMC5'
-x-production-url: prod.api.firstdata.com/bwa/wsm/fundingtools/prepayFlag/updatePrepayFlag
+x-production-url: prod.api.firstdata.com/bwa/wsm/fundingtools/prepayFlag
 x-config:
   tryItOut: true
 tags:
   - name: Prepayment Flag Update
     description: Prepayment Flag Update
 paths:
-  /:
+  "/updatePrepayFlag/":
     post:
       tags:
         - Prepayment Flag Update

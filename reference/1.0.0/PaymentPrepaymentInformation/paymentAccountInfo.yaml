@@ -18,7 +18,7 @@ x-config:
 tags:
   - name: Payment Account Information for Settlement (Domicílio Bancário)
 paths:
-  /:
+  "/paymentAccountInfo/":
     post:
       tags:
         - Payment Account Information for Settlement

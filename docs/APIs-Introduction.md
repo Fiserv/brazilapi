@@ -31,7 +31,7 @@ _* If you are not aware of your Institution or Service Contract, please contact 
 
 ### 2.1 Generating Token
 
-To generate the Token, you should access the page with specific instructions [Token][2].
+To generate the Token, you should access the page with specific instructions [Token Access](../api/?type=post&path=/token/).
 
 **Important&nbsp;Notice:**
 
@@ -42,7 +42,7 @@ To generate the Token, you should access the page with specific instructions [To
 
 #### 2.1.1 Request
 
-To receive the Token, you need to send a POST request for "https://int.api.firstdata.com/sba/token" with the following parameters:
+To receive the Token, you need to send a POST request for "[Token Access](../api/?type=post&path=/token/)" with the following parameters:
 
 | Content-Type | Local  | Type   | Value                                                                                  | 
 |--------------|--------|--------|----------------------------------------------------------------------------------------|
@@ -88,9 +88,9 @@ Sample of response
 
 ## 3. Authentication
 
-Fiserv APIs use [HMAC Authentication][3].
+Fiserv APIs use [HMAC Authentication][2].
 
-To be able to access any of the Codes or APIs described in this platform, it will require the credentials sent by e-mail. Don't have the credentials? [Create your account][4] and request an User/Password sending an e-mail to the box **FiservDigitalBrazil@firstdatacorp.com.br**.
+To be able to access any of the Codes or APIs described in this platform, it will require the credentials sent by e-mail. Don't have the credentials? Create your account and request an User/Password sending an e-mail to the box **FiservDigitalBrazil@firstdatacorp.com.br**.
 
 You shall send the following parameters in header for each APIs request:
 
@@ -104,7 +104,7 @@ You shall send the following parameters in header for each APIs request:
 
 ### 3.1 auth
 
-In **auth** parameter - header - the user must sent the value got in [Token details][5].
+In **auth** parameter - header - the user must sent the value got in [Token details][2].
 
 Token sample: "eyJhbGciOiJSUzI1NiIsInR5cCIgO [...] tFlCzaiEx06ETdkwoTC-CfzSaVA"
 
@@ -160,7 +160,7 @@ Fiserv returns HTTP standard code status, for successful and unsuccessful reques
 
 ### 5.1 Postman Sample
 
-Following an example of a GET Request from CEP Verification, using [Postman][6].
+Following an example of a GET Request from CEP Verification, using [Postman][3].
 
 ![Imagem mostrando a URL utilizada, com o CEP sendo igual a 04794000](../assets/images/cep-url.JPG "cep")
 
@@ -483,7 +483,4 @@ The response is:
 
  [1]: APIsSupportDocuments.md
  [2]: TokenGenerationforWeb-services.md
- [3]: https://tools.ietf.org/html/draft-cavage-http-signatures-00#section-2.1.2.2
- [4]: https://docs-qa.firstdata.com/org/brazilapi/user/register
- [5]: TokenGenerationforWeb-services.md
- [6]: https://www.getpostman.com
+ [3]: https://www.getpostman.com

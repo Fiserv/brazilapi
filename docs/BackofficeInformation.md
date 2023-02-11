@@ -7,30 +7,30 @@ To a brief introduction of how to use the APIs, please access our [introduction]
 
 Below you can check each link to access the detailed document for each Web-services (APIs), so you can develop and implement your business.
 
-- [API Explorer](../api/?type=post&path=/token/)
 
-[Token Access](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-token)
 
-[Merchant Addresses - Update](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-wsm-mnt-term)
+[Token Access](../api/?type=post&path=/token/)
 
-[Merchant Devices Billing History](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-cob-hist-term)
+[Merchant Addresses - Update](../api/?type=post&path=/updateAddress/)
 
-[Merchant Devices and Fees - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-con-taxa-eqp)
+[Merchant Devices Billing History](../api/?type=get&path=/v1/consulta/{data}/)
 
-[Merchant Trade Name - Update](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-wsm-nme-fant)
+[Merchant Devices and Fees - Consult](../api/?type=get&path=/{institution}/{merchanID}/)
 
-[Merchant Working Hours - Update](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-wsm-work-fun)
+[Merchant Trade Name - Update](../api/?type=post&path=/updateTradeName/)
 
-[Requests (Cases) - Open](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-abertura-sol)
+[Merchant Working Hours - Update](../api/?type=post&path=/updateWorkingHours/)
 
-[Requests (Cases) - Search](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-pesq-caso-sf)
+[Requests (Cases) - Open](../api/?type=get&path=/config/motivos)
 
-[Paper Roll - Request](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-solicitar-bobina)
+[Requests (Cases) - Search](../api/?type=get&path=/config/sub-motivos/{Id})
 
-[Service Order - Terminal Maintenance](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-wsm-mnt-term)
+[Paper Roll - Request](../api/?type=get&path=/{instituicao}/{merchant}/{logico})
 
-[Service Order - Cancelling](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-wsm-cancel-so)
+[Service Order - Terminal Maintenance](../api/?type=post&path=/updatePrepayFlag/)
 
-[Service Order - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-consulta-os)
+[Service Order - Cancelling](../api/?type=post&path=/canceloperation/processCancelOperationRequest)
+
+[Service Order - Consult](../api/?type=get&path=/{instituicao}/{numeroMerchant}/)
 
 [1]: APIs-Introduction.md

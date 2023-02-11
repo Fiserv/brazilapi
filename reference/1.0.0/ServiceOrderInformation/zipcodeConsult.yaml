@@ -18,7 +18,7 @@ x-config:
 tags:
   - name: Search Zipcode or City (Brazil)
 paths:
-  /cep/{cep}:
+  "/cep/{cep}":
     get:
       tags:
         - Search Zipcode or City (Brazil)
@@ -84,7 +84,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/ResponseCode"
       deprecated: false
-  /cidade/{city}:
+  "/cidade/{city}":
     get:
       tags:
         - Search Zipcode or City (Brazil)
