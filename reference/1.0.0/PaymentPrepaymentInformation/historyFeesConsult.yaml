@@ -91,7 +91,7 @@ paths:
             type: string
         - name: statusAntecipacao
           in: query
-          description: "Anticipation status. Possible values: '001'(INICIALIZADO) | '002'(PENDENTE) | '003'(RECUSADA) | '004'(VENCIDO)  | '006'(PAGO) | '007'(SOLICITACAO EM ANDAMENTO) | '008'(EFETUADA ENVIADA P PAGTO) | '009'(EFET PARC ENVIADA P PAGTO) | '010'(NAO EFETUADA). Search example: 001,002"
+          description: "Anticipation status. Possible values: '001'(INICIALIZADO) | '002'(PENDENTE) | '003'(RECUSADA) | '004'(VENCIDO)  | '006'(PAGO) | '007'(AGUARDANDO CONFIRMACAO) | '008'(EFETUADA ENVIADA P PAGTO) | '009'(EFET PARC ENVIADA P PAGTO) | '010'(SOLICITACAO NAO APROVADA). Search example: 001,002"
           example: "006"
           required: false
           schema:

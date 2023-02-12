@@ -20,10 +20,6 @@ h
 8reference/1.0.0/MerchantInformationCases/chargeback.yaml,a\4\a4cecf63e9e2ee50bb22b83de9bbfe7a84b921af
 B
 config/tenant.json,0\6\060a8992387cc7c257f6bf762a9a609cd6ecbcbb
-X
-(config/document-explorer-definition.yaml,6\0\601a0134adac18814337d21776b531dbe009b2bd
-J
-config/product-layout.yaml,9\5\95a48117b460e88d1b44f0ca9df85306aca85e01
 L
 docs/APIsSupportDocuments.md,9\1\912da999f54a47577d93353b004a353bbb5af5eb
 K

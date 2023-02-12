@@ -23,12 +23,9 @@ paths:
     post:
       tags:
         - Service Order Opening for API TMS Microservices
-      x-proxy-name: Service Order Opening for API TMS Microservices
-      x-group-name: Service Order Opening for API TMS Microservices
-      x-child-product-name: Service Order Information
       summary: Service Order Opening for API TMS Microservices
       operationId: serviceOrderOpeningForAPITMSMicroservices
-      
+
       requestBody:
         required: true
         content:
@@ -49,7 +46,7 @@ paths:
         '404':
           description: Not Found
       deprecated: false
-  
+
 components:
   schemas:
     APITMSRequest:
@@ -60,7 +57,7 @@ components:
           description: opening reason code
           example: "C01"
           enum:
-            - C01 (Troca de operadora/estabelecimento) 
+            - C01 (Troca de operadora/estabelecimento)
             - F05 (Problema com leitora)
             - M01 Outros (problemas de comunicação)
         messageType:
@@ -122,7 +119,7 @@ components:
             - "OTHERS"
         typeOfTechnologyOld:
           type: string
-          description: Type of Technology - PGW, ETH, MVC, ETD, GPR, TFI, LNK, etc. send only in pcodes 410000 415000 
+          description: Type of Technology - PGW, ETH, MVC, ETD, GPR, TFI, LNK, etc. send only in pcodes 410000 415000
           example: "PGW"
           enum:
             - "PGW"
@@ -165,8 +162,8 @@ components:
           type: string
           description: Parameter that determines the withdrawal of a terminal uninstalled from a client ("0" - does not withdraw / "1" - withdraws)
           example: "0"
-          
-        costumerInformation: 
+
+        costumerInformation:
           type: object
           properties:
             email:
@@ -175,7 +172,7 @@ components:
             cellPhone:
               type: "string"
               example: "1199552121"
-        
+
         notes:
           type: object
           properties:
@@ -191,47 +188,47 @@ components:
             notes:
               type: "string"
               example: "anotações gerais"
-        
+
         supplyCode:
           type: string
           description: Code of Supply - send only in P. Code 470000 - fixed value
           example: "B01"
-        
+
         mcc:
           type: string
           description: mcc
           example: "7701"
-        
-        currencyCode: 
+
+        currencyCode:
           type: string
           description: Code of Curency
           example: "986"
-        
+
         specialConditionFlag:
           type: string
           description: Flag of special condition
           example: "OUVIDORIA"
-        
+
         modal:
           type: string
           description: Id modal
           example: "replace"
-        
+
         notesFlag:
           type: string
           description: Notes of Flag
           example: "notas da condição especial"
-        
+
         descripitionFlag:
           type: string
           description: Descripition do flag
           example: "atendimento consolidado"
-        
-        mobileOperator: 
+
+        mobileOperator:
           type: string
           description: mobile Operator
           example: "05"
-          
+
         simcardType:
           type: string
           description: sincard type - TRIPLE CUT / ONE-PIECE - Send only in P. Code 415000
@@ -239,180 +236,180 @@ components:
           enum:
             - "TRIPLE CUT"
             - "ONE-PIECE"
-          
+
         lunchTimeMonday:
           type: string
           description: lunch time
-          example: "10:00|12:00|13:00|18:00" 
-        
+          example: "10:00|12:00|13:00|18:00"
+
         lunchTimeTuesday:
           type: string
           description: lunch time
           example: "10:00|12:00|13:00|18:00"
-        
+
         lunchTimeWednesday:
           type: string
           description: lunch time
           example: "10:00|12:00|13:00|18:00"
-        
+
         lunchTimeThursday:
           type: string
           description: lunch time
           example: "10:00|12:00|13:00|18:00"
-        
+
         lunchTimeFriday:
           type: string
           description: lunch time
           example: "10:00|12:00|13:00|18:00"
-        
+
         lunchTimeSaturday:
           type: string
           description: lunch time
           example: "10:00|12:00|13:00|18:00"
-        
+
         lunchTimeSunday:
           type: string
           description: lunch time
           example: "10:00|12:00|13:00|18:00"
-        
+
         maintenanceTimeMonday:
           type: string
           description: maintenance Time
           example: "10:00|12:00|13:00|18:00"
-        
+
         maintenanceTimeTuesday:
           type: string
           description: maintenance Time
           example: "10:00|12:00|13:00|18:00"
-        
+
         maintenanceTimeWednesday:
           type: string
           description: maintenance Time
           example: "10:00|12:00|13:00|18:00"
-        
+
         maintenanceTimeThursday:
           type: string
           description: maintenance Time
           example: "10:00|12:00|13:00|18:00"
-        
+
         maintenanceTimeFriday:
           type: string
           description: maintenance Time
           example: "10:00|12:00|13:00|18:00"
-          
+
         maintenanceTimeSaturday:
           type: string
           description: maintenance Time
           example: "10:00|12:00|13:00|18:00"
-          
+
         maintenanceTimeSunday:
           type: string
           description: maintenance Time
           example: "10:00|12:00|13:00|18:00"
-        
+
         geolocationLongitude:
           type: string
           description: geo location Longitude
           example: "-30.028609"
-        
+
         geolocationLatitude:
           type: string
           description: geo location Latitude
           example: "-51.1994847"
-        
-        recipientName: 
+
+        recipientName:
           type: string
           description: recipeient name
           example: "John doe"
-          
+
         contactRecipient:
           type: string
           description: recipeient Contact
           example: "01199625-5000"
-        
+
         referencePoint:
           type: string
           description: reference point
           example: "Posto Shell"
-        
+
         complement:
           type: string
           description: complement
           example: "quadra 02"
-        
+
         establishmentName:
           type: string
           description: establishment Name
           example: "Empresa Ltda"
-        
+
         activityBranch:
           type: string
           description: activity Branch
           example: "Comercio Varejista"
-          
+
         typeLocationDelivery:
           type: string
           description: type Location Delivery
           example: "1"
-        
+
         advencedPost:
           type: string
           description: advenced Post
           example: "000000000014"
-        
+
         generatedBy:
           type: string
           description: generated By - source system name
           example: "API TMS"
-          
+
         valueFee:
           type: string
           description: POS terminal rental value
           example: "85.00"
-        
+
         settlementIndicator:
           type: string
           description: Payment Split activation automation (Y/N)
           example: "Y"
-        
+
         expiryDate:
           type: string
           description: expiry Date of terminal
           example: "Y"
-        
+
         origin:
           type: string
           description: Origin API - only in Pcode 450000
           example: "Salesforce"
-          
+
         userName:
           type: string
           description: User Name - only in Pcode 450000
           example: "Joe"
-        
+
         reason:
           type: string
           description: reason for cancellation - only in Pcode 450000
           example: "canceled"
-        
-          
+
+
         merchantInfo:
           $ref: '#/components/schemas/MerchantInfo'
         installAddress:
           $ref: '#/components/schemas/InstallAddress'
-          
+
       required:
         - messageType
         - messagePcode
         - cardAcceptorTermID
-        
-        
+
+
       title: APITMSRequest
       xml:
         name: response
         attribute: false
         wrapped: false
-        
+
     MerchantInfo:
       type: object
       properties:
@@ -486,11 +483,11 @@ components:
           example: "BANCOOB"
         boardingChannelType:
           type: string
-          description: Hierarchy Type Channel Codel. Provided by Fiserv 
+          description: Hierarchy Type Channel Codel. Provided by Fiserv
           example: "007"
         boardingChannelTypeDescription:
           type: string
-          description: Hierarchy Type Channel Description. Provided by Fiserv 
+          description: Hierarchy Type Channel Description. Provided by Fiserv
           example: "01. Banco"
         boardingSubChannel:
           type: string
@@ -538,7 +535,7 @@ components:
         - agent
         - agentName
         - serviceContractId
-      
+
     InstallAddress:
       type: object
       properties:
@@ -556,7 +553,7 @@ components:
           example: "Teste Desenvolvimento"
         address:
           type: string
-          description: Merchant Shipping Address 
+          description: Merchant Shipping Address
           example: "Avenida Manoel Pedro Pimentel"
         number:
           type: string
@@ -594,12 +591,12 @@ components:
         - zipCode
         - city
         - state
-    
+
     APITMSResponse:
       type: object
       description: Information related to the API return
       properties:
-      
+
         cardAcceptorIDCode:
           type: string
           description: Marchant Code
@@ -689,7 +686,7 @@ components:
             - Erro ao atualizar o serial number - invalid transaction
             - Tecnologia nao ativa
             - erro na consulta dos dados TMS FHM
-                        
+
         referenceNumberId:
           type: string
           description: Service Order Number
@@ -699,5 +696,5 @@ components:
           description: System Retrieval Reference Number - For TMS use only
           example: "600000000002"
       title: APITMSResponse
-      
-      
+
+
