@@ -1,11 +1,11 @@
 
-# Logistic Information
+# Informação Logística
 
-Welcome to our APIs Support Documentation!
+Bem-vindo à nossa documentação de suporte de APIs!
 
-To a brief introduction of how to use the APIS, please access our [introduction][1].
+Para uma breve introdução de como usar o APIS, acesse nossa [introdução][1].
 
-Below you can check each link to access the detailed document for each Web-services (APIs), so you can develop and implement your business.
+Abaixo você pode conferir cada link para acessar o documento detalhado de cada Web-service (APIs), para que você possa desenvolver e implementar o seu negócio.
 
 [Token Access](../api/?type=post&path=/token/)
 
