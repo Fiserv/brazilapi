@@ -78,19 +78,19 @@ paths:
             type: string
         - name: service-contract
           in: header
-          description: Merchant Service Contract 
+          description: Merchant Service Contract
           required: true
           example: '101'
           schema:
             type: string
             enum:
-              - 101
-              - 104
-              - 110
-              - 113
-              - 116
-              - 125
-              - 128
+              - "101"
+              - "104"
+              - "110"
+              - "113"
+              - "116"
+              - "125"
+              - "128"
       responses:
         '200':
           description: Sucesso
@@ -107,6 +107,8 @@ paths:
         '404':
           description: Not Found
       deprecated: false
+      security:
+        - JWT: []
 components:
   securitySchemes:
     JWT:
@@ -114,163 +116,164 @@ components:
       name: Authorization
       in: header
   schemas:
-      DResponse:
-        type: object
-        properties:
-          codigoRetorno:
-            type: integer
-            format: int32
-            example: 0
-            description: Return Code
-            enum:
-              - '0'
-              - '1'
-          mensagem:
-            type: string
-            description: Return Message
-            example: Error Message
-            enum:
-              - Successfully Done
-              - Invalid Request Information (Institution, merchant ou service-contract) (400 BAD REQUEST)
-          conteudo:
-            description: Detailed Information
-            $ref: '#/components/schemas/DTecnologias'
-        title: DResponse
-      DTecnologia:
-        type: object
-        properties:
-          codigo:
-            type: string
-            description: Device Technology Model (3 letras)
-            example: PGW
-            enum:
-             - "ETH"
-             - "GPR"
-             - "ETD"
-             - "EGD"
-             - "PIN"
-             - "TFD"
-             - "ECA"
-             - "BAT"
-             - "PTF"
-             - "TFX"
-             - "TFI"
-             - "ECB"
-             - "ECC"
-             - "ECD"
-             - "ECE"
-             - "ECS"
-             - "ECO"
-             - "MPS"
-             - "KNI"
-             - "KMM"
-             - "CON"
-             - "EII"
-             - "POG"
-             - "ISD"
-             - "PGW"
-             - "WIF"
-             - "PMO"
-             - "PNM"
-             - "ISK"
-             - "PTT"
-             - "ECO"
-             - "MPA"
-             - "MVA"
-             - "MVB"
-             - "MVC"
-             - "PAB"
-             - "PAC"
-             - "PFT"
-             - "MVD"
-             - "MVE"
-             - "HLS"
-             - "CVA"
-             - "MBA"
-             - "MBV"
-             - "CVB"
-             - "CVD"
-             - "CVE"
-             - "LNK"
-             - "WAP"
-             - "MPG"
-             - "MPF"
-             - "MVH"
-             - "TFP"
-             - "PDX"
-             - "MVF"
-             - "MVG"
-             - "CVF"
-          id:
-            type: string
-            description: Device Technology Code
-            example: 366
-            enum:
-             - "300 - ETH POS ISO"
-             - "301 - GPR POS GPRS Mobile"
-             - "303 - ETD POS Eth. + Desktop"
-             - "305 - EGD POS GPRS Dt+Dial+Eth"
-             - "306 - PIN PINPAD USB"
-             - "307 - TFD TEF Dial Up"
-             - "308 - ECA E-Comm Gateway 1"
-             - "309 - BAT Batch File"
-             - "312 - PTF POS-TEF Browser"
-             - "330 - TFX TEF Dedicated"
-             - "331 - TFI TEF IP"
-             - "333 - ECB E Comm Gateway 2"
-             - "334 - ECC Ecommerce TEF"
-             - "335 - ECD E Comm Gateway 4"
-             - "336 - ECE E Comm Gateway 5"
-             - "337 - ECS E Comm Sub-Acq"
-             - "338 - ECO E Comm Own Solution"
-             - "352 - MPS Mobile POS"
-             - "353 - KNI Clover Mobile Wi-Fi"
-             - "354 - KMM Clover Mini Wi-Fi"
-             - "355 - CON eCommerce SE Conecta"
-             - "356 - EII E-Comm IPG"
-             - "357 - POG POGO"
-             - "364 - ISD POS Virtual"
-             - "365 - PGW POS Wifi GPRS"
-             - "366 - WIF POS Wifi"
-             - "367 - PMO POS Auto Credenc"
-             - "369 - PNM POS Crefisinha"
-             - "377 - ISK POS Web"
-             - "378 - PTT POS TEF Terceiros"
-             - "379 - ECO WhiteLabel"
-             - "380 - MPA POS MP5"
-             - "381 - MVA POS Move5000"
-             - "382 - MVB POS Link2500 2G"
-             - "383 - MVC POS Link2500 3G"
-             - "384 - PAB Rental POS 2G"
-             - "385 - PAC Rental POS 3G"
-             - "386 - PFT Future POS"
-             - "389 - MVD Fair/Events_Move"
-             - "390 - MVE Fair/Events_Link"
-             - "391 - HLS POS no celular"
-             - "392 - CVA POS Move5000 NovoCom"
-             - "394 - MBA POS MOBY6500 Rental"
-             - "395 - MBV POS MOBY6500 Sale"
-             - "396 - CVB POS Link2500 2G NCom"
-             - "397 - CVD Move 5000 Mega Pop"
-             - "398 - CVE Link 2500 2G Pop"
-             - "399 - LNK Link de Pagamento"
-             - "451 - WAP WhatsApp Pay"
-             - "452 - MPG MP 35 - Gertec"
-             - "453 - MPF MP 35 - Gertec"
-             - "454 - MVH POS Link2500 4G"
-             - "506 - TFP POS-TEF Whitelabel"
-             - "507 - PDX POS Movel Teclado Vi"
-             - "598 - MVF POS Link2500 2G_PENT"
-             - "599 - MVG POS Link2500 3G_PENT"
-             - "614 - CVF Moby6500 entrega BAU"
-        title: DTecnologia
-      DTecnologias:
-        type: object
-        description: Devices available
-        properties:
-          tecnologias:
-            type: array
-            description: List of Technology Devices available for the Merchant
-            items:
-              $ref: '#/components/schemas/DTecnologia'
-        title: DTecnologias
+    DResponse:
+      type: object
+      properties:
+        codigoRetorno:
+          type: integer
+          format: int32
+          example: 0
+          description: Return Code
+          enum:
+            - 0
+            - 1
+        mensagem:
+          type: string
+          description: Return Message
+          example: Error Message
+          enum:
+            - Successfully Done
+            - Invalid Request Information (Institution, merchant ou service-contract) (400 BAD REQUEST)
+        conteudo:
+          description: Detailed Information
+          allOf:
+            - $ref: '#/components/schemas/DTecnologias'
+      title: DResponse
+    DTecnologia:
+      type: object
+      properties:
+        codigo:
+          type: string
+          description: Device Technology Model (3 letras)
+          example: PGW
+          enum:
+            - "ETH"
+            - "GPR"
+            - "ETD"
+            - "EGD"
+            - "PIN"
+            - "TFD"
+            - "ECA"
+            - "BAT"
+            - "PTF"
+            - "TFX"
+            - "TFI"
+            - "ECB"
+            - "ECC"
+            - "ECD"
+            - "ECE"
+            - "ECS"
+            - "ECO"
+            - "MPS"
+            - "KNI"
+            - "KMM"
+            - "CON"
+            - "EII"
+            - "POG"
+            - "ISD"
+            - "PGW"
+            - "WIF"
+            - "PMO"
+            - "PNM"
+            - "ISK"
+            - "PTT"
+            - "ECO"
+            - "MPA"
+            - "MVA"
+            - "MVB"
+            - "MVC"
+            - "PAB"
+            - "PAC"
+            - "PFT"
+            - "MVD"
+            - "MVE"
+            - "HLS"
+            - "CVA"
+            - "MBA"
+            - "MBV"
+            - "CVB"
+            - "CVD"
+            - "CVE"
+            - "LNK"
+            - "WAP"
+            - "MPG"
+            - "MPF"
+            - "MVH"
+            - "TFP"
+            - "PDX"
+            - "MVF"
+            - "MVG"
+            - "CVF"
+        id:
+          type: string
+          description: Device Technology Code
+          example: 366
+          enum:
+            - "300 - ETH POS ISO"
+            - "301 - GPR POS GPRS Mobile"
+            - "303 - ETD POS Eth. + Desktop"
+            - "305 - EGD POS GPRS Dt+Dial+Eth"
+            - "306 - PIN PINPAD USB"
+            - "307 - TFD TEF Dial Up"
+            - "308 - ECA E-Comm Gateway 1"
+            - "309 - BAT Batch File"
+            - "312 - PTF POS-TEF Browser"
+            - "330 - TFX TEF Dedicated"
+            - "331 - TFI TEF IP"
+            - "333 - ECB E Comm Gateway 2"
+            - "334 - ECC Ecommerce TEF"
+            - "335 - ECD E Comm Gateway 4"
+            - "336 - ECE E Comm Gateway 5"
+            - "337 - ECS E Comm Sub-Acq"
+            - "338 - ECO E Comm Own Solution"
+            - "352 - MPS Mobile POS"
+            - "353 - KNI Clover Mobile Wi-Fi"
+            - "354 - KMM Clover Mini Wi-Fi"
+            - "355 - CON eCommerce SE Conecta"
+            - "356 - EII E-Comm IPG"
+            - "357 - POG POGO"
+            - "364 - ISD POS Virtual"
+            - "365 - PGW POS Wifi GPRS"
+            - "366 - WIF POS Wifi"
+            - "367 - PMO POS Auto Credenc"
+            - "369 - PNM POS Crefisinha"
+            - "377 - ISK POS Web"
+            - "378 - PTT POS TEF Terceiros"
+            - "379 - ECO WhiteLabel"
+            - "380 - MPA POS MP5"
+            - "381 - MVA POS Move5000"
+            - "382 - MVB POS Link2500 2G"
+            - "383 - MVC POS Link2500 3G"
+            - "384 - PAB Rental POS 2G"
+            - "385 - PAC Rental POS 3G"
+            - "386 - PFT Future POS"
+            - "389 - MVD Fair/Events_Move"
+            - "390 - MVE Fair/Events_Link"
+            - "391 - HLS POS no celular"
+            - "392 - CVA POS Move5000 NovoCom"
+            - "394 - MBA POS MOBY6500 Rental"
+            - "395 - MBV POS MOBY6500 Sale"
+            - "396 - CVB POS Link2500 2G NCom"
+            - "397 - CVD Move 5000 Mega Pop"
+            - "398 - CVE Link 2500 2G Pop"
+            - "399 - LNK Link de Pagamento"
+            - "451 - WAP WhatsApp Pay"
+            - "452 - MPG MP 35 - Gertec"
+            - "453 - MPF MP 35 - Gertec"
+            - "454 - MVH POS Link2500 4G"
+            - "506 - TFP POS-TEF Whitelabel"
+            - "507 - PDX POS Movel Teclado Vi"
+            - "598 - MVF POS Link2500 2G_PENT"
+            - "599 - MVG POS Link2500 3G_PENT"
+            - "614 - CVF Moby6500 entrega BAU"
+      title: DTecnologia
+    DTecnologias:
+      type: object
+      description: Devices available
+      properties:
+        tecnologias:
+          type: array
+          description: List of Technology Devices available for the Merchant
+          items:
+            $ref: '#/components/schemas/DTecnologia'
+      title: DTecnologias
