@@ -7,8 +7,6 @@ S
 #docs/documentation/documentation.md,c\d\cde886fee779b0e075fd4742406530c4f01c6793
 C
 recipes/Recipe-1.md,5\5\5598d6301ad4ba4e040ea716b8c9885bc91c78aa
-C
-recipes/config.yaml,5\6\563edc98ed61a38ce1f5d852e4d708307b1e71bd
 L
 reference/1.0.0/openapi.yaml,a\f\af563522782900f4447ac6eee360e296cc5921e7
 R
@@ -20,10 +18,6 @@ h
 8reference/1.0.0/MerchantInformationCases/chargeback.yaml,a\4\a4cecf63e9e2ee50bb22b83de9bbfe7a84b921af
 L
 docs/APIsSupportDocuments.md,9\1\912da999f54a47577d93353b004a353bbb5af5eb
-K
-docs/BoardingInformation.md,4\2\420f822fe6adfb2a15d71a10a0322706086f395d
-M
-docs/BackofficeInformation.md,7\4\74296bb5eecec9e48cb6c8a981d058881adc1a84
 M
 docs/FiservInternalUseOnly.md,8\0\80a2b21319cfadf4904759d982d97536c1b069ab
 G
@@ -40,8 +34,6 @@ P
  docs/SplitPaymentsInformation.md,9\0\90855f2f09c6f384a75a06e78fd54f64c7e592ec
 V
 &docs/TokenGenerationforWeb-services.md,c\4\c496a2ba0fbe2a67e629af21db78c59a8cf9b013
-I
-docs/APIs-Introduction.md,a\1\a1f0046854d41a4e0bc5ae25c9a59f7b7eb413bf
 T
 $docs/UpdateGetMerchantInformation.md,3\9\395ad899a54f8b15374b65ec5557c623b1eb3a83
 k
