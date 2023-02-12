@@ -23,6 +23,9 @@ paths:
     post:
       tags:
         - Service Order Opening for API TMS Microservices
+      x-proxy-name: Service Order Opening for API TMS Microservices
+      x-group-name: Service Order Opening for API TMS Microservices
+      x-child-product-name: Service Order Information
       summary: Service Order Opening for API TMS Microservices
       operationId: serviceOrderOpeningForAPITMSMicroservices
 

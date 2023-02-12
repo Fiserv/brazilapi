@@ -18,8 +18,6 @@ R
 .docignore,0\5\058602980aa3c3dfe7e2bf3a636363bc87ad8206
 h
 8reference/1.0.0/MerchantInformationCases/chargeback.yaml,a\4\a4cecf63e9e2ee50bb22b83de9bbfe7a84b921af
-B
-config/tenant.json,0\6\060a8992387cc7c257f6bf762a9a609cd6ecbcbb
 L
 docs/APIsSupportDocuments.md,9\1\912da999f54a47577d93353b004a353bbb5af5eb
 K
