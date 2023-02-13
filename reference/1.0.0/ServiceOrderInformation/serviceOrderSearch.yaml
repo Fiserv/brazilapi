@@ -21,7 +21,7 @@ paths:
   /{instituicao}/{numeroMerchant}:
     get:
       tags:
-        - Service Order Information
+        - Service Order Search
       x-proxy-name: Service Order - Consult - Service Order Search by Institution Number and Merchant Code
       x-group-name: Service Order - Consult
       x-child-product-name: Service Order Information
@@ -46,7 +46,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -88,7 +88,7 @@ paths:
   /byos/{instituicao}/{osNumero}:
     get:
       tags:
-        - Service Order Information
+        - Service Order Search
       x-proxy-name: Service Order - Consult - Service Order Inquiry by Institution and Service Order Number
       x-group-name: Service Order - Consult
       x-child-product-name: Service Order Information
@@ -113,7 +113,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -155,11 +155,11 @@ paths:
   /trackos/{instituicao}/{numeroMerchant}:
     get:
       tags:
-        - Service Order Information
+        - Service Order Search
       x-proxy-name: Service Order - Consult - Service Order Tracking by Institution Number and Merchant Code
       x-group-name: Service Order - Consult
       x-child-product-name: Service Order Information
-      summary: Service Order Tracking by Institution Number and Merchant Code 
+      summary: Service Order Tracking by Institution Number and Merchant Code
       operationId: serviceOrderTracking
       parameters:
         - name: Message-Signature
@@ -180,7 +180,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -222,12 +222,12 @@ paths:
   /resources/v2/os:
     get:
       tags:
-        - Service Order Information
+        - Service Order Search
       x-proxy-name: Service Order - Consult - Service Order Search by Institution Number and Merchant Code
       x-group-name: Service Order - Consult
       x-child-product-name: Service Order Information
       summary: Service Order Search by Institution Number and Merchant Code
-      operationId: serviceOrderSearch
+      operationId: serviceOrderSearch1
       parameters:
         - name: Message-Signature
           in: header
@@ -247,7 +247,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -289,12 +289,12 @@ paths:
   /resources/v1/os/{osNumero}:
     get:
       tags:
-        - Service Order Information
+        - Service Order Search
       x-proxy-name: Service Order - Consult - Service Order Inquiry by Institution and Service Order Number
       x-group-name: Service Order - Consult
       x-child-product-name: Service Order Information
       summary: Service Order Inquiry by Institution and Service Order Number
-      operationId: serviceOrderSearchById
+      operationId: serviceOrderSearchById1
       parameters:
         - name: Message-Signature
           in: header
@@ -314,7 +314,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -356,12 +356,12 @@ paths:
   /resources/v1/trackos:
     get:
       tags:
-        - Service Order Information
+        - Service Order Search
       x-proxy-name: Service Order - Consult - Service Order Tracking by Institution Number and Merchant Code
       x-group-name: Service Order - Consult
       x-child-product-name: Service Order Information
-      summary: Service Order Tracking by Institution Number and Merchant Code 
-      operationId: serviceOrderTracking
+      summary: Service Order Tracking by Institution Number and Merchant Code
+      operationId: serviceOrderTracking2
       parameters:
         - name: Message-Signature
           in: header
@@ -381,7 +381,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -423,11 +423,11 @@ paths:
   /resources/v1/trackos/{osNumero}:
     get:
       tags:
-        - Service Order Information
+        - Service Order Search
       x-proxy-name: Service Order - Consult - Service Order Tracking by Institution Number, Merchant Code and Service Order Number
       x-group-name: Service Order - Consult
       x-child-product-name: Service Order Information
-      summary: Service Order Tracking by Institution Number, Merchant Code and Service Order Number 
+      summary: Service Order Tracking by Institution Number, Merchant Code and Service Order Number
       operationId: serviceOrderTrackingByOS
       parameters:
         - name: Message-Signature
@@ -448,7 +448,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -495,11 +495,6 @@ paths:
                 $ref: "#/components/schemas/DResponseTrack"
       deprecated: false
 components:
-  securitySchemes:
-    JWT:
-      type: apiKey
-      name: Authorization
-      in: header
   schemas:
     Response:
       type: object
@@ -525,7 +520,7 @@ components:
           example: Successfully done
         ordemServico:
           type: array
-          description: Return Information 
+          description: Return Information
           items:
             type: object
             properties:
@@ -674,7 +669,7 @@ components:
                 example: "2018-03-27 10:20:30"
               dateTimeTrack:
                 type: string
-                description: Log Date of the Request 
+                description: Log Date of the Request
                 example: "2018-03-27 11:12:33"
               descTracking:
                 type: string
@@ -698,7 +693,8 @@ components:
           example: "Sucesso."
         conteudo:
           type: object
-          $ref: "#/components/schemas/Response"
+          oneOf:
+            - $ref: "#/components/schemas/Response"
       title: DResponse
     DResponseTrack:
       type: object
@@ -712,6 +708,8 @@ components:
           description: API result message
           example: "Sucesso."
         conteudo:
-          type: ResponseTrack
-          $ref: "#/components/schemas/ResponseTrack"
+          type: object
+          oneOf:
+            - $ref: "#/components/schemas/ResponseTrack"
       title: DResponseTrack
+

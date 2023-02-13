@@ -7,26 +7,26 @@ To a brief introduction of how to use the APIS, please access our [introduction]
 
 Below you can check each link to access the detailed document for each Web-services (APIs), so you can develop and implement your business.
 
-[Token Access](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-token)
+[Token Access](../api/?type=post&path=/token/)
 
-[Logistic Information - Add/Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-dados-logisticos)
+[Logistic Information - Add/Consult](../api/?type=post&path=/dados-logistica/)
 
-[Merchant Addresses - Update](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-wsm-mnt-term)
+[Merchant Addresses - Update](../api/?type=post&path=/updateAddress/)
 
-[Merchant Contact Information - Update](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-wsm-atlz-con)
+[Merchant Contact Information - Update](../api/?type=post&path=/updateContactInformation/)
 
-[Merchant Working Hours - Update](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-wsm-work-fun)
+[Merchant Working Hours - Update](../api/?type=post&path=/updateWorkingHours/)
 
-[Paper Roll - Request](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-solicitar-bobina)
+[Paper Roll - Request](../api/?type=get&path=/{instituicao}/{merchant}/{logico})
 
-[Prepayment - Enable/Disable](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001_sba_wsm_flag_ant)
+[Prepayment - Enable/Disable](../api/?type=post&path=/updatePrepayFlag/)
 
-[Service Order - Cancelling](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-wsm-cancel-so)
+[Service Order - Cancelling](../api/?type=post&path=/canceloperation/processCancelOperationRequest)
 
-[Service Order - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-consulta-os)
+[Service Order - Consult](../api/?type=get&path=/{instituicao}/{numeroMerchant}/)
 
-[Service Order - Terminal Maintenance](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-wsm-mnt-term)
+[Service Order - Terminal Maintenance](../api/?type=post&path=/updatePrepayFlag/)
 
-[Zipcode (CEP) - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-consulta-cep)
+[Zipcode (CEP) - Consult](../api/?type=get&path=/cep/{cep})
 
 [1]: APIs-Introduction.md

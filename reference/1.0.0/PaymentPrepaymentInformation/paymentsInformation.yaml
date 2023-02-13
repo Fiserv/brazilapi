@@ -23,7 +23,7 @@ paths:
   /resources/v1/transacoes/sumarizacao/{inst}/{merchant}/{dataInicio}/{dataFim}:
     get:
       tags:
-        - Payment & Prepayment Information
+        - Payments Information
       x-proxy-name: Payments - Consult for All Transaction Period - Summarized
       x-group-name: Payments - Consult
       x-child-product-name: Payment & Prepayment Information
@@ -48,7 +48,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -74,13 +74,13 @@ paths:
           schema:
             type: string
             enum:
-            - "002"
-            - "003"
-            - "004"
-            - "009"
-            - "020"
-            - "024"
-            - "025"
+              - "002"
+              - "003"
+              - "004"
+              - "009"
+              - "020"
+              - "024"
+              - "025"
         - name: dataFim
           in: path
           description: Search End Date - Format YYYYMMDD
@@ -130,7 +130,7 @@ paths:
   /resources/v1/{inst}/{merchant}/{dataInicio}/{dataFim}:
     get:
       tags:
-        - Payment & Prepayment Information
+        - Payments Information
       x-proxy-name: Payments - Consult for Completed Payments
       x-group-name: Payments - Consult
       x-child-product-name: Payment & Prepayment Information
@@ -155,7 +155,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -228,7 +228,7 @@ paths:
   /resources/v1/{tipoPagamento}/{inst}/{merchant}/{dataInicio}/{dataFim}:
     get:
       tags:
-        - Payment & Prepayment Information
+        - Payments Information
       x-proxy-name: Payments - Search for Payments in specific status suspended or rejected
       x-group-name: Payments - Consult
       x-child-product-name: Payment & Prepayment Information
@@ -253,7 +253,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -327,7 +327,7 @@ paths:
   /resources/v1/transacoes/{inst}/{merchant}/{dataInicio}/{dataFim}/{ordemPagamento}:
     get:
       tags:
-        - Payment & Prepayment Information
+        - Payments Information
       x-proxy-name: Payments - Search for Payment Order
       x-group-name: Payments - Consult
       x-child-product-name: Payment & Prepayment Information
@@ -352,7 +352,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -441,7 +441,7 @@ paths:
   /resources/v1/transacoes/{inst}/{merchant}/{dataInicio}/{dataFim}:
     get:
       tags:
-        - Payment & Prepayment Information
+        - Payments Information
       x-proxy-name: Payments - Search all Transactions for a period
       x-group-name: Payments - Consult
       x-child-product-name: Payment & Prepayment Information
@@ -466,7 +466,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -547,11 +547,6 @@ paths:
                 $ref: "#/components/schemas/TransacaoOrdemResponse"
       deprecated: false
 components:
-  securitySchemes:
-    JWT:
-      type: apiKey
-      name: Authorization
-      in: header
   schemas:
     Sumarizacao:
       type: object
@@ -598,7 +593,7 @@ components:
             - 113 - Acq-AMEX Full Credit
             - 200 - Adq-VISA Débito
             - 716 - Adq-MC Débito
-            - 201 - Adq-VISA Crédito 
+            - 201 - Adq-VISA Crédito
         descricaoProduto:
           type: string
           description: Product Description. Returned when type is T, P.
@@ -613,12 +608,12 @@ components:
             - 113 - Acq-AMEX Full Credit
             - 200 - Adq-VISA Débito
             - 716 - Adq-MC Débito
-            - 201 - Adq-VISA Crédito 
+            - 201 - Adq-VISA Crédito
         codTipoTransacao:
           type: string
           description: Payment Type Code. Returned when type is T, P.
           example: "005"
-          enum: 
+          enum:
             - 005 - Compra - (meaning Purchase)
             - 461 - Compra com 02 parcelas - (meaning Purchase 02 installments)
             - 462 - Compra com 03 parcelas - (meaning Purchase 03 installments)
@@ -648,7 +643,7 @@ components:
           type: string
           description: Payment Type Code Description. Returned when type is T, P.
           example: "Compra"
-          enum: 
+          enum:
             - 005 - Compra - (meaning Purchase)
             - 461 - Compra com 02 parcelas - (meaning Purchase 02 installments)
             - 462 - Compra com 03 parcelas - (meaning Purchase 03 installments)
@@ -749,9 +744,9 @@ components:
           example: "000001094"
         codProdutoTransacao:
           type: string
-          description: Transaction Product Code 
+          description: Transaction Product Code
           example: 102
-          enum: 
+          enum:
             - "200 - Adq - VISA Debit"
             - "109 - Adq - Hiper Credit"
             - "102 - Adq - MC Credit"
@@ -764,7 +759,7 @@ components:
           type: string
           description: Transaction Product Code Description
           example: "Adq - VISA Débito"
-          enum: 
+          enum:
             - "200 - Adq - VISA Debit"
             - "109 - Adq - Hiper Credit"
             - "102 - Adq - MC Credit"
@@ -801,7 +796,7 @@ components:
           type: string
           description: Transaction Type Code
           example: 469
-          enum: 
+          enum:
             - 005 - Compra - (meaning Purchase)
             - 461 - Compra com 02 parcelas - (meaning Purchase 02 installments)
             - 462 - Compra com 03 parcelas - (meaning Purchase 03 installments)
@@ -831,7 +826,7 @@ components:
           type: string
           description: Transaction Type Code Description
           example: Compra com 10 parcelas
-          enum: 
+          enum:
             - 005 - Compra - (meaning Purchase)
             - 461 - Compra com 02 parcelas - (meaning Purchase 02 installments)
             - 462 - Compra com 03 parcelas - (meaning Purchase 03 installments)
@@ -943,7 +938,7 @@ components:
             - "303 - POS Internet/Discado"
         codTipoCartao:
           type: string
-          description: Card Type Code 
+          description: Card Type Code
           example: 898
           enum:
             - "204 - Estrangeiro Master (meaning Foreigner Master)"
@@ -1226,7 +1221,7 @@ components:
           type: string
           description: Payment Status Code
           example: "002 (always 002)"
-          enum: 
+          enum:
             -  "002"
         descStatusPagto:
           type: string
@@ -1259,4 +1254,3 @@ components:
             - "Pago (meaning Paid)"
             - "Enviado (meaning Sent)"
       title: TransacaoDetalhe
-

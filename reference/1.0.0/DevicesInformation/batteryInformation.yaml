@@ -21,7 +21,7 @@ paths:
   '/v1/consulta/comportamentoBateria':
     post:
       tags:
-        - Devices Information
+        - Behavior Battery Terminals Status
       x-proxy-name: Get Terminal battery Information
       x-group-name: Merchant Devices - Battery Information
       x-child-product-name: Devices Information

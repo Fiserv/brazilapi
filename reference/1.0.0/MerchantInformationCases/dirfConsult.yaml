@@ -23,7 +23,7 @@ paths:
   '/v1/dirf/irpdf/{ano}':
     get:
       tags:
-        - Merchant Information & Cases
+        - Consult DIRF
       x-proxy-name: Merchant Information - DIRF
       x-group-name: Merchant Information - DIRF
       x-child-product-name: Merchant Information & Cases

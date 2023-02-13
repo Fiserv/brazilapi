@@ -48,7 +48,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -87,11 +87,6 @@ paths:
                 $ref: "#/components/schemas/ObjetoStatusResponse"
       deprecated: false
 components:
-  securitySchemes:
-    JWT:
-      type: apiKey
-      name: Authorization
-      in: header
   schemas:
     ObjetoStatusResponse:
       type: object
@@ -150,7 +145,7 @@ components:
           type: string
           description: E-Commercer Indicator
           example: "1"
-          enum: 
+          enum:
             - "1 - No"
             - "0 - Yes"
         statusPropostas:

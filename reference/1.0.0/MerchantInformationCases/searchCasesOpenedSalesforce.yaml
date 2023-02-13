@@ -25,7 +25,7 @@ paths:
   "/caso/{numeroInstituicao}":
     get:
       tags:
-        - Merchant Information & Cases
+        - Search for Cases and comments opened in Salesforce
       x-proxy-name: Search for Cases opened in Salesforce
       x-group-name: Requests (Cases/Comments) - Consult
       x-child-product-name: Merchant Information & Cases
@@ -50,7 +50,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -101,7 +101,7 @@ paths:
         - name: dataFim
           in: query
           description: Search End Date. Format DD-MM-YYYY
-          example: 
+          example:
           required: false
           allowEmptyValue: false
           schema:
@@ -116,7 +116,7 @@ paths:
         - name: idCaso
           in: query
           description: Case ID Number (SF Internal Number). Sample '5000g000022h4qHAAQ'
-          example: 
+          example:
           required: false
           allowEmptyValue: false
           schema:
@@ -162,7 +162,7 @@ paths:
   "/comentarios":
     get:
       tags:
-        - Merchant Information & Cases
+        - Search for Cases and comments opened in Salesforce
       x-proxy-name: Search for Comments related to a Case
       x-group-name: Requests (Cases/Comments) - Consult
       x-child-product-name: Merchant Information & Cases
@@ -187,7 +187,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -215,7 +215,7 @@ paths:
         - name: idCase
           in: header
           description: Case ID Number (SF Internal Number). Sample '5000g000022h4qHAAQ'. It can be found when searching for cases "/sales-force-ws/caso"
-          example: 
+          example:
           required: false
           allowEmptyValue: false
           schema:
@@ -272,11 +272,6 @@ paths:
                 $ref: '#/components/schemas/InternalServerError'
       deprecated: false
 components:
-  securitySchemes:
-    JWT:
-      type: apiKey
-      name: Authorization
-      in: header
   schemas:
     Caso:
       type: object
@@ -411,7 +406,7 @@ components:
       properties:
         codigoRetorno:
           type: string
-          description: Return Code 
+          description: Return Code
           example: "00"
           enum:
             - "00 - Successfully Done"
@@ -436,7 +431,7 @@ components:
         pageNumber:
           type: integer
           format: int32
-          description: Current Page 
+          description: Current Page
         size:
           type: integer
           format: int32
@@ -524,7 +519,7 @@ components:
           example: Maria da Silva
         lastModifiedDate:
           type: string
-          description: Date/Time when the comment was updated 
+          description: Date/Time when the comment was updated
           example: "2020-08-28T11:17:44.000Z"
         lastModifiedBy:
           type: string
@@ -548,7 +543,7 @@ components:
         currentPage:
           type: integer
           format: int32
-          description: Current Page 
+          description: Current Page
       title: caseComments
     PartialContent:
       type: object
@@ -558,14 +553,14 @@ components:
           example: 9
           type: integer
           format: int32
-          enum: 
+          enum:
             - 9
             - 10
         mensagem:
           description: Description return code
           example: Campos mandatorios (meaning mdantory Fields Missing)
           type: string
-          enum: 
+          enum:
             - "9 - Campos mandatorios - (meaning Mandatory Fields Missing"
             - "10 - (Erro validaçao) - (meaning Validation Error)"
     Unauthorized:
@@ -587,14 +582,14 @@ components:
           example: 3
           type: integer
           format: int32
-          enum: 
+          enum:
             - 3
             - 6
         mensagem:
           description: Description return code
-          example: Acesso negado          
+          example: Acesso negado
           type: string
-          enum: 
+          enum:
             - "3 - Acesso negado - (meaning Access Denied)"
             - "6 - Token expirado - (meaning Expired Token)"
     NotFound:
@@ -627,13 +622,13 @@ components:
           example: 2
           type: integer
           format: int32
-          enum: 
+          enum:
             - 2
             - 7
         mensagem:
           description: Description return code
           example: Erro Interno - (meaning Internal Error)
           type: string
-          enum: 
+          enum:
             - "2 - Erro Interno - (meaning Internal Error)"
             - "7 - Erro na integracao da API. Detalhe - (meaning API Integration Error)"

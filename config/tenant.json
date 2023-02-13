@@ -30,7 +30,7 @@
           "MerchantInformationCases/searchCasesOpenedSalesforce", "MerchantInformationCases/relationshipHierarchy",
           "MerchantInformationCases/logisticInformation",
           "MerchantInformationCases/historicContract", "MerchantInformationCases/updateContactInformation",
-          "MerchantInformationCases/chargebackExternal",
+
 
           "DevicesInformation/deviceAvailability", "DevicesInformation/devicesFees",
           "DevicesInformation/batteryInformation", "DevicesInformation/deviceBillingHistory",
@@ -39,6 +39,7 @@
           "SalesInformation/merchantSales", "SalesInformation/processConsultOperation",
           "SalesInformation/keyedConsultTransaction", "SalesInformation/suspendedConsultTransaction",
           "SalesInformation/merchantAuthorizations", "SalesInformation/authorizationsHistoryBW",
+          "SalesInformation/chargebackExternal",
 
           "PaymentPrepaymentInformation/paymentAccountInfo", "PaymentPrepaymentInformation/accountPaymentInformationValidation",
           "PaymentPrepaymentInformation/paymentsInformation", "PaymentPrepaymentInformation/prepaymentFlagUpdate",

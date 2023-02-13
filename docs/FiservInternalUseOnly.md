@@ -7,6 +7,6 @@ To a brief introduction of how to use the APIS, please access our [introduction]
 
 Below you can check each link to access the detailed document for each Web-services (APIs), so you can develop and implement your business.
 
-[Token](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-token)
+[Token](TokenGenerationforWeb-services.md)
 
 [1]: APIs-Introduction.md

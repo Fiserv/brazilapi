@@ -27,7 +27,7 @@ paths:
   '/v1/relacionamento/obterEstabelecimentoPai':
     get:
       tags:
-        - Merchant Information & Cases
+        - Merchant Relationship Hierarchy Maintenance
       x-proxy-name: Merchant Relationship Hierarchy - Consult
       x-group-name: Merchant Relationship Hierarchy - Consult
       x-child-product-name: Merchant Information & Cases
@@ -129,7 +129,7 @@ paths:
   '/v1/relacionamento/incluir':
     post:
       tags:
-        - Merchant Information & Cases
+        - Merchant Relationship Hierarchy Maintenance
       x-proxy-name: Merchant Relationship Hierarchy - Add
       x-group-name: Merchant Relationship Hierarchy - Consult
       x-child-product-name: Merchant Information & Cases
@@ -237,7 +237,7 @@ paths:
   '/v1/relacionamento/excluir':
     post:
       tags:
-        - Merchant Information & Cases
+        - Merchant Relationship Hierarchy Maintenance
       x-proxy-name: Merchant Relationship Hierarchy - Remove
       x-group-name: Merchant Relationship Hierarchy - Consult
       x-child-product-name: Merchant Information & Cases
@@ -352,14 +352,14 @@ components:
           example: 9
           type: integer
           format: int32
-          enum: 
+          enum:
             - 9
             - 10
         mensagem:
           description: Description return code
           example: Campos mandatorios (meaning mdantory Fields Missing)
           type: string
-          enum: 
+          enum:
             - "9 - Campos mandatorios - (meaning Mandatory Fields Missing"
             - "10 - (Erro validaçao) - (meaning Validation Error)"
     Unauthorized:
@@ -381,14 +381,14 @@ components:
           example: 3
           type: integer
           format: int32
-          enum: 
+          enum:
             - 3
             - 6
         mensagem:
           description: Description return code
           example: Acesso negado
           type: string
-          enum: 
+          enum:
             - "3 - Acesso negado - (meaning Access Denied)"
             - "6 - Token expirado - (meaning Expired Token)"
     NotFound:
@@ -421,14 +421,14 @@ components:
           example: 2
           type: integer
           format: int32
-          enum: 
+          enum:
             - 2
             - 7
         mensagem:
           description: Description return code
           example: Erro Interno - (meaning Internal Error)
           type: string
-          enum: 
+          enum:
             - "2 - Erro Interno - (meaning Internal Error)"
             - "7 - Erro na integracao da API. Detalhe - (meaning API Integration Error)"
     ResponseEntityMerchantPaiDTO:
@@ -503,7 +503,8 @@ components:
             - "102 - Estabelecimento pai nao tem relacionamento com o estabelecimento informado"
         conteudo:
           type: object
-          $ref: '#/components/schemas/ResponseEntityStatusRespDTOIncluir'
+          allOf:
+            - $ref: '#/components/schemas/ResponseEntityStatusRespDTOIncluir'
     ResponseEntityStatusRespDTOIncluir:
       type: object
       properties:
@@ -541,7 +542,8 @@ components:
             - "105 - A exclusao solicitada nao possui hierarquia"
         conteudo:
           type: object
-          $ref: '#/components/schemas/ResponseEntityStatusRespDTOExcluir'
+          allOf:
+            - $ref: '#/components/schemas/ResponseEntityStatusRespDTOExcluir'
     ResponseEntityStatusRespDTOExcluir:
       type: object
       properties:

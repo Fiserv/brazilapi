@@ -21,8 +21,10 @@ paths:
   "/api/chargeback/apigee/filter":
     post:
       tags:
-        - Merchant Information & Cases
+        - Search for Chargeback Information by Tax ID, Merchant Code and Instituion
       x-proxy-name: Consult Chargeback Information
+      x-group-name: Consult Chargeback Information
+      x-child-product-name: Sales Information
       summary: Merchant Information & Cases
       operationId: Search for Chargeback Information by Tax ID, Merchant Code and Instituion
       parameters:
@@ -38,13 +40,6 @@ paths:
           description: APigee Key
           required: true
           example: X0GW3QGOYFn4r7DHcVC8KuatUnNs6MGB'
-          schema:
-            type: string
-        - name: Authorization
-          in: header
-          description: Oauth Key
-          required: true
-          example:
           schema:
             type: string
         - name: Timestamp
@@ -102,8 +97,14 @@ paths:
           description: Unauthorized
           content: { }
       deprecated: false
-
+      security:
+        - JWT: []
 components:
+  securitySchemes:
+    JWT:
+      type: apiKey
+      name: Authorization
+      in: header
   schemas:
     DChargebackFilterRequest:
       type: object
@@ -297,7 +298,8 @@ components:
         institution:
           type: object
           description: Institution object
-          $ref: '#/components/schemas/DInstitutionResponse'
+          oneOf:
+            - $ref: '#/components/schemas/DInstitutionResponse'
     DInstitutionResponse:
       type: object
       title: DInstitutionResponse

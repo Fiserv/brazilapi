@@ -19,7 +19,7 @@ paths:
   "/v1/receivableUnit/consulta/{dataInicio}/{dataFim}":
     get:
       tags:
-        - Merchant Information & Cases
+        - Receivable Register, Receivable Unit and Agenda Out
       x-proxy-name: Merchant Information - Registradora (CIRC3952)
       x-group-name: Merchant Information - Registradora (CIRC3952)
       x-child-product-name: Merchant Information & Cases
@@ -44,7 +44,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -158,7 +158,7 @@ paths:
   "/v1/agendaOut/consulta/{dataInicio}/{dataFim}":
     get:
       tags:
-        - Merchant Information & Cases
+        - Receivable Register, Receivable Unit and Agenda Out
       x-proxy-name: Merchant Information - Agenda Out
       x-group-name: Merchant Information - Registradora (CIRC3952)
       x-child-product-name: Merchant Information & Cases
@@ -183,7 +183,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -297,7 +297,7 @@ paths:
   "/v1/lockInformation/consulta/{dataInicio}/{dataFim}":
     get:
       tags:
-        - Merchant Information & Cases
+        - Receivable Register, Receivable Unit and Agenda Out
       x-proxy-name: Merchant Information - Lock Information
       x-group-name: Merchant Information - Registradora (CIRC3952)
       x-child-product-name: Merchant Information & Cases
@@ -322,7 +322,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -441,11 +441,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/InternalServerError'
 components:
-  securitySchemes:
-    JWT:
-      type: apiKey
-      name: Authorization
-      in: header
   schemas:
     PartialContent:
       type: object
@@ -455,14 +450,14 @@ components:
           example: 9
           type: integer
           format: int32
-          enum: 
+          enum:
             - 9
             - 10
         mensagem:
           description: Description return code
           example: Campos mandatorios (meaning mdantory Fields Missing)
           type: string
-          enum: 
+          enum:
             - "9 - Campos mandatorios - (meaning Mandatory Fields Missing)"
             - "10 - (Erro validaçao) - (meaning Validation Error)"
     Unauthorized:
@@ -484,14 +479,14 @@ components:
           example: 3
           type: integer
           format: int32
-          enum: 
+          enum:
             - 3
             - 6
         mensagem:
           description: Description return code
           example: Acesso negado- (meaning Access Denied)
           type: string
-          enum: 
+          enum:
             - "3 - Acesso negado - (meaning Access Denied)"
             - "6 - Token expirado - (meaning Expired Token)"
     NotFound:
@@ -524,14 +519,14 @@ components:
           example: 2
           type: integer
           format: int32
-          enum: 
+          enum:
             - 2
             - 7
         mensagem:
           description: Description return code
           example: Erro Interno - (meaning Internal Error)
           type: string
-          enum: 
+          enum:
             - "2 - Erro Interno - (meaning Internal Error)"
             - "7 - Erro na integracao da API. Detalhe - (meaning API Integration Error)"
     ResponseReceivableUnit:
@@ -569,7 +564,7 @@ components:
           example: 350
           type: integer
           format: int32
-        currentPage: 
+        currentPage:
           description: Current search page
           example: 0
           type: integer
@@ -646,7 +641,7 @@ components:
           example: "0"
         valorAntecipacaoAutoConf:
           type: string
-          description: Automatic Anticipation value 
+          description: Automatic Anticipation value
           example: "0"
         statusDaOperacao:
           type: string
@@ -703,7 +698,7 @@ components:
           example: 350
           type: integer
           format: int32
-        currentPage: 
+        currentPage:
           description: Current search page
           example: 0
           type: integer
@@ -937,7 +932,7 @@ components:
             - "Exclude"
         arranjo:
           type: string
-          description: Schema Payment 
+          description: Schema Payment
           example: "CBC"
           enum:
             - "ACC - Amex Credit"
@@ -986,7 +981,7 @@ components:
           type: string
           description: Effective Payment Value
           example: "55.22"
-    ResponseLockInformation:  
+    ResponseLockInformation:
       type: object
       properties:
         codigoRetorno:
@@ -1021,7 +1016,7 @@ components:
           example: 350
           type: integer
           format: int32
-        currentPage: 
+        currentPage:
           description: Current search page
           example: 0
           type: integer
@@ -1030,7 +1025,7 @@ components:
           description: Total records brought to the page
           example: 30
           type: integer
-          format: int32  
+          format: int32
     ResponseLock:
       type: object
       properties:

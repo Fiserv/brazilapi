@@ -35,34 +35,26 @@ header:
     link: "/assets/images/Fiserv_Logo.jpg"
     altText: Fiserv
 featuredFeatures:
-  - title: Work with the best!
-    description:  Specialized professionals in this industry that will dedicate all the time to understand the complexity of your business.
-    tags: ["sba-EN-solicitar-token"]
-    bullets: ["sba-EN-solicitar-token" ]
+  - title: Iniciate your experience
+    description:  Access the Introduction page for inicial orientation for how to use the APIs.
+    tags: ["tokenAccess"]
+    bullets: ["tokenAccess" ]
     relatedDocs:
       - relatedDoc: 
         title: APIs - Introduction
         description: APIs - Introduction
         link: ./docs/APIs-Introduction.md
-      - relatedDoc: 
-        title: Token Access
-        description: Token Access
-        link: ./docs/TokenGenerationforWeb-services.md
     relatedAPIs:
       - relatedAPI: 
         title: Token Access
         description: Token Access
         type: "post"
-        path: "/"
-  - title: Open Environment
-    description: If you are building a new solution 'all-in-one', looking for a PCI Compliance Solution, enabling EMV or even any other requirement, our platform will save you time, money and resource.
-    tags: [ "sba-EN-solicitar-token" ]
-    bullets: [ "sba-EN-solicitar-token" ]
+        path: "/token/"
+  - title: Get a Token for APIs access
+    description: To access the APIs get the orientation in the Token Access page.
+    tags: [ "tokenAccess" ]
+    bullets: [ "tokenAccess" ]
     relatedDocs:
-      - relatedDoc:
-        title: APIs - Introduction
-        description: APIs - Introduction
-        link: ./docs/APIs-Introduction.md
       - relatedDoc:
         title: Token Access
         description: Token Access
@@ -72,23 +64,4 @@ featuredFeatures:
         title: Token Access
         description: Token Access
         type: "post"
-        path: "/"
-  - title: All In One
-    description: Create, Test, Certify and Deliver application of payment through only one interface.
-    tags: [ "sba-EN-solicitar-token" ]
-    bullets: [ "sba-EN-solicitar-token" ]
-    relatedDocs:
-      - relatedDoc:
-        title: APIs - Introduction
-        description: APIs - Introduction
-        link: ./docs/APIs-Introduction.md
-      - relatedDoc:
-        title: Token Access
-        description: Token Access
-        link: ./docs/TokenGenerationforWeb-services.md
-    relatedAPIs:
-      - relatedAPI:
-        title: Token Access
-        description: Token Access
-        type: "post"
-        path: "/"
+        path: "/token/"

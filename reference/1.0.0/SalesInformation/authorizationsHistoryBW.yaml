@@ -22,7 +22,7 @@ paths:
   "/v1/autorizacoesbw":
     get:
       tags:
-        - Sales Information
+        - Query History of Authorized Transactions
       x-proxy-name: Merchant Authorizations History - Consult
       x-group-name: Merchant Authorizations History - Consult
       x-child-product-name: Sales Information
@@ -47,7 +47,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -166,11 +166,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/InternalServerError'
 components:
-  securitySchemes:
-    JWT:
-      type: apiKey
-      name: Authorization
-      in: header
   schemas:
     PartialContent:
       type: object
@@ -180,7 +175,7 @@ components:
           example: 9
           type: integer
           format: int32
-          enum: 
+          enum:
             - 9
             - 10
             - 101
@@ -188,7 +183,7 @@ components:
           description: Description return code
           example: Campos mandatorios (meaning mdantory Fields Missing)
           type: string
-          enum: 
+          enum:
             - "9 - Campos mandatorios - (meaning Mandatory Fields Missing)"
             - "10 - (Erro validaçao) - (meaning Validation Error)"
             - "101 - Formato de data invalido"
@@ -211,14 +206,14 @@ components:
           example: 3
           type: integer
           format: int32
-          enum: 
+          enum:
             - 3
             - 6
         mensagem:
           description: Description return code
           example: Acesso negado- (meaning Access Denied)
           type: string
-          enum: 
+          enum:
             - "3 - Acesso negado - (meaning Access Denied)"
             - "6 - Token expirado - (meaning Expired Token)"
     NotFound:
@@ -251,14 +246,14 @@ components:
           example: 2
           type: integer
           format: int32
-          enum: 
+          enum:
             - 2
             - 7
         mensagem:
           description: Description return code
           example: Erro Interno - (meaning Internal Error)
           type: string
-          enum: 
+          enum:
             - "2 - Erro Interno - (meaning Internal Error)"
             - "7 - Erro na integracao da API. Detalhe - (meaning API Integration Error)"
     ResponseEntity:
@@ -297,7 +292,7 @@ components:
           example: 273
           type: integer
           format: int32
-        currentPage: 
+        currentPage:
           description: Current search page
           example: 1
           type: integer
@@ -306,7 +301,7 @@ components:
           description: Total records brought to the page
           example: 20
           type: integer
-          format: int32  
+          format: int32
     Response:
       type: object
       properties:
@@ -320,7 +315,7 @@ components:
           example: "Declined"
         valor:
           type: string
-          description: Value 
+          description: Value
           example: "0000000000000030000"
         creditoOuDebito:
           type: string

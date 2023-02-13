@@ -23,7 +23,7 @@ paths:
   /:
     post:
       tags:
-        - Payment & Prepayment Information
+        - Account Payment Information Validation
       x-proxy-name: Payment Settlement Account - Validation
       x-group-name: Payment Settlement Account - Validation
       x-child-product-name: Payment & Prepayment Information
@@ -48,7 +48,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -82,7 +82,7 @@ paths:
   /validar:
     post:
       tags:
-        - Payment & Prepayment Information
+        - Account Payment Information Validation
       x-proxy-name: Payment Settlement Account - Validation based on Rules for Bank and Type of Account
       x-group-name: Payment Settlement Account - Validation
       x-child-product-name: Payment & Prepayment Information
@@ -107,7 +107,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -141,7 +141,7 @@ paths:
   /resources/v2/domicilio-bancario/validate:
     post:
       tags:
-        - Payment & Prepayment Information
+        - Account Payment Information Validation
       x-proxy-name: Payment Settlement Account - Validation based on Rules for Bank and Type of Account - V2
       x-group-name: Payment Settlement Account - Validation
       x-child-product-name: Payment & Prepayment Information
@@ -233,22 +233,17 @@ paths:
               schema:
                 $ref: '#/components/schemas/ResponseValidacao'
 components:
-  securitySchemes:
-    JWT:
-      type: apiKey
-      name: Authorization
-      in: header
   schemas:
     DomicilioBancarioDTO:
       required:
-      - account
-      - accountDigit
-      - agency
-      - agencyDigit
-      - cpfCnpj
-      - institution
-      - modality
-      - serviceContract
+        - account
+        - accountDigit
+        - agency
+        - agencyDigit
+        - cpfCnpj
+        - institution
+        - modality
+        - serviceContract
       type: object
       properties:
         serviceContract:
@@ -267,7 +262,7 @@ components:
         agency:
           type: string
           description: Requestor agency
-          example: "1111" 
+          example: "1111"
         agencyDigit:
           type: string
           description: Agency digit
@@ -317,7 +312,7 @@ components:
         agenciaTamanho:
           type: string
           description: Size for branch field
-          example: 4        
+          example: 4
         agenciaTamanhoMinObrigatorio:
           type: string
           description: Mandatory minimum size for branch field
@@ -442,7 +437,7 @@ components:
           type: string
           description: Type of Ownership
           example: CPF
-          enum: 
+          enum:
             - CPF - (meaning Tax ID for Individual)
             - CNPJ - (meaning Tax ID for Company)
       title: RequestRegra
@@ -457,7 +452,7 @@ components:
             - Bank Code (with 3 digits, such as 001, 341, 237, etc). If Payment Account, provide the string "Conta Pagamento"
         agencia:
           type: string
-          description: Branch Code 
+          description: Branch Code
           example: 9999
         digitoAgencia:
           type: string
@@ -508,7 +503,7 @@ components:
           example: "Regra Localizada - (meaning rule located)"
         status:
           type: boolean
-          description: Provide information about validation 
+          description: Provide information about validation
           example: true
           enum:
             - True

@@ -24,7 +24,7 @@ paths:
   "/config/motivos":
     get:
       tags:
-        - Merchant Information & Cases
+        - Search for Reason, Sub-Reason and Symptom for Cases to be opened in Salesforce
       x-proxy-name: Merchant Requests (Cases) - Open
       x-group-name: Merchant Requests (Cases) - Open
       x-child-product-name: Merchant Information & Cases
@@ -49,7 +49,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -79,7 +79,7 @@ paths:
   "/config/sub-motivos/{Id}":
     get:
       tags:
-        - Merchant Information & Cases
+        - Search for Reason, Sub-Reason and Symptom for Cases to be opened in Salesforce
       x-proxy-name: Merchant Requests (Cases) - Search for Sub-Reasons to be used for Salesforce Case Opening by Reason
       x-group-name: Merchant Requests (Cases) - Open
       x-child-product-name: Merchant Information & Cases
@@ -104,7 +104,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -141,7 +141,7 @@ paths:
   "/config/sintomas/{Id}":
     get:
       tags:
-        - Merchant Information & Cases
+        - Search for Reason, Sub-Reason and Symptom for Cases to be opened in Salesforce
       x-proxy-name: Merchant Requests (Cases) - Search for Symptom to be used for Salesforce Case Opening by Symptoms
       x-group-name: Merchant Requests (Cases) - Open
       x-child-product-name: Merchant Information & Cases
@@ -166,7 +166,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -203,7 +203,7 @@ paths:
   "/":
     post:
       tags:
-        - Merchant Information & Cases
+        - Search for Reason, Sub-Reason and Symptom for Cases to be opened in Salesforce
       x-proxy-name: Merchant Requests (Cases) - Request Opening (Cases in Salesforce)
       x-group-name: Merchant Requests (Cases) - Open
       x-child-product-name: Merchant Information & Cases
@@ -228,7 +228,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -258,7 +258,7 @@ paths:
   "/{marca}":
     post:
       tags:
-        - Merchant Information & Cases
+        - Search for Reason, Sub-Reason and Symptom for Cases to be opened in Salesforce
       x-proxy-name: Merchant Requests (Cases) - Request Opening by Brand (Cases in Salesforce)
       x-group-name: Merchant Requests (Cases) - Open
       x-child-product-name: Merchant Information & Cases
@@ -283,7 +283,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -334,11 +334,6 @@ components:
             $ref: "#/components/schemas/Caso"
       description: Caso a ser cadastrado
       required: true
-  securitySchemes:
-    JWT:
-      type: apiKey
-      name: Authorization
-      in: header
   schemas:
     reasons:
       type: array
@@ -347,11 +342,11 @@ components:
     reasonslist:
       type: object
       properties:
-        id: 
+        id:
           description: Reason Code
           type: integer
           example: 96
-        descricao: 
+        descricao:
           description: Reason Description
           type: string
           example: "Antecipação (meaning Prepayment)"
@@ -363,15 +358,15 @@ components:
     subreasonslist:
       type: object
       properties:
-        id: 
+        id:
           description: Sub-Reason Code
           type: integer
           example: 250
-        descricao: 
+        descricao:
           description: Sub-Reason Description
           type: string
           example: "Antecipação (meaning Prepayment)"
-        motivo: 
+        motivo:
           description: Not Used. It will return Null
           type: string
       title: List of Sub-Reasons
@@ -382,15 +377,15 @@ components:
     symptomlist:
       type: object
       properties:
-        id: 
+        id:
           description: Symptom Code
           type: integer
           example: 107
-        descricao: 
+        descricao:
           description: Sub-Reason Description
           type: string
           example: "Não Segura Carga (meaning Recharge Problem)"
-        subMotivo: 
+        subMotivo:
           description: Not Used. It will return Null
           type: string
         mandatoryFields:
@@ -403,21 +398,21 @@ components:
       properties:
         codigoRetorno:
           type: integer
-          description: Status Code for the request 
+          description: Status Code for the request
           example: "00"
           enum:
-            - 00 - Ok 
-            - 01 - System Error
+            - 00
+            - 01
         descricaoRetorno:
           type: string
           description: Status Code description.
           example: "00"
           enum:
-            - 00 - Ok 
+            - 00 - Ok
             - 01 - System Error
         numeroCaso:
           type: integer
-          description: Case number 
+          description: Case number
           example: "123456789"
     Caso:
       type: object
@@ -476,7 +471,7 @@ components:
           example: "Abertura via Web"
         nomeSolicitante:
           type: string
-          description: Requester Name 
+          description: Requester Name
           example: "Comercio de Bebidas 123"
         numeroCaso:
           type: string

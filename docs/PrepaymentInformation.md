@@ -10,10 +10,10 @@ Below you can check each link to access the detailed document for each Web-servi
 
 [Token Access](TokenGenerationforWeb-services.md)
       
-[Prepayment - Enable/Disable](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001_sba_wsm_flag_ant)
+[Prepayment - Enable/Disable](../api/?type=post&path=/updatePrepayFlag/)
 
-[Prepayment - Consult/Request/Cancel](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-wsm-antecipa)
+[Prepayment - Consult/Request/Cancel](../api/?type=get&path=/updatePrepayFlag/v1/antecipacao/)
 
-[Prepayment - History Fees Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-pre-pay-history)
+[Prepayment - History Fees Consult](../api/?type=get&path=/v1/consulta)
 
 [1]: APIs-Introduction.md

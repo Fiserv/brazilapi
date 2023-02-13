@@ -26,7 +26,7 @@ paths:
   '/v1/consulta/servicoBandeira':
     get:
       tags:
-        - Merchant Information & Cases
+        - Controller Consultation Service
       x-proxy-name: Merchant Services - Consult/Update for Associations/Schema
       x-group-name: Merchant Services - Consult/Update for Associations/Schema
       x-child-product-name: Merchant Information & Cases
@@ -128,7 +128,7 @@ paths:
   '/v1/consulta/servicoBandeira/{categoria}':
     get:
       tags:
-        - Merchant Information & Cases
+        - Controller Consultation Service
       x-proxy-name: Merchant Services - Consult for Associations/Schema Status by Category
       x-group-name: Merchant Services - Consult/Update for Associations/Schema
       x-child-product-name: Merchant Information & Cases
@@ -241,7 +241,7 @@ paths:
   '/v1/altera/status':
     post:
       tags:
-        - Merchant Information & Cases
+        - Controller Consultation Service
       x-proxy-name: Merchant Services - Update for Associations/Schema Status
       x-group-name: Merchant Services - Consult/Update for Associations/Schema
       x-child-product-name: Merchant Information & Cases

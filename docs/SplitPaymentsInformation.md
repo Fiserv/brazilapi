@@ -7,7 +7,7 @@ To a brief introduction of&nbsp;how to use the APIS, please access our [introduc
 
 Below you can check each link to access the detailed document for each Web-services (APIs), so you can develop and implement your business.
 
-[Token Access](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-token)
+[Token Access](TokenGenerationforWeb-services.md)
 
 [Split Payments - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-Split-Paga)
 

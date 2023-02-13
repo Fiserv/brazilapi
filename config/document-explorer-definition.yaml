@@ -29,43 +29,81 @@
 ################################################################################
 
 - sections:
-  - title: Home
-    link: docs/HomepageEditada.md
-- sections:
-  - title: Introduction
-    link: docs/APIs-Introduction.md
-- sections:
-  - title: User Manuals
-    link: docs/HomepageEditada.md
-- sections:
-  - title: Token Access
-    link: docs/TokenGenerationforWeb-services.md
-- sections:
-  - title: Prepayment Info
-    link: docs/PrepaymentInformation.md
-- sections:
-  - title: Backoffice
-    link: docs/BackofficeInformation.md
-- sections:
-  - title: Update/Get Merchant Info
-    link: docs/UpdateGetMerchantInformation.md
-- sections:
-  - title: Boarding
-    link: docs/BoardingInformation.md
-- sections:
-  - title: Logistic
-    link: docs/LogisticInformation.md
-- sections:
-  - title: Sales
-    link: docs/SalesInformation.md
-- sections:
-  - title: Split - Payments
-    link: docs/SplitPaymentsInformation.md
-- sections:
-  - title: Fiserv (Internal Use)
-    link: docs/FiservInternalUseOnly.md
-- sections:
-  - title: Release notes
+  - title: English
     sections:
-    - title: March 2022
-      link: docs/release-notes/2022/march.md
+      - title: Home
+        link: docs/HomepageEditada.md
+      - title: Introduction
+        link: docs/APIs-Introduction.md
+      - title: Token Access
+        link: docs/TokenGenerationforWeb-services.md
+      - title: Prepayment Info
+        link: docs/PrepaymentInformation.md
+      - title: Backoffice
+        link: docs/BackofficeInformation.md
+      - title: Update/Get Merchant Info
+        link: docs/UpdateGetMerchantInformation.md
+      - title: Boarding
+        link: docs/BoardingInformation.md
+      - title: Logistic
+        link: docs/LogisticInformation.md
+      - title: Sales
+        link: docs/SalesInformation.md
+      - title: Split - Payments
+        link: docs/SplitPaymentsInformation.md
+      - title: Release notes
+        sections:
+          - title: March 2022
+            link: docs/release-notes/2022/march.md
+  - title: Português
+    sections:
+      - title: Página principal
+        link: docs/portugues/HomepageEditada.md
+      - title: Introdução
+        link: docs/portugues/APIs-Introduction.md
+      - title: Acesso a Token
+        link: docs/portugues/TokenGenerationforWeb-services.md
+      - title: Informações de pré-pagamento
+        link: docs/portugues/PrepaymentInformation.md
+      - title: Backoffice
+        link: docs/portugues/BackofficeInformation.md
+      - title: Atualizar/Obter informações dos clientes
+        link: docs/portugues/UpdateGetMerchantInformation.md
+      - title: Credenciamento
+        link: docs/portugues/BoardingInformation.md
+      - title: Logística
+        link: docs/portugues/LogisticInformation.md
+      - title: Vendas
+        link: docs/portugues/SalesInformation.md
+      - title: Informações de pagamentos divididos
+        link: docs/portugues/SplitPaymentsInformation.md
+      - title: Release notes
+        sections:
+          - title: March 2022
+            link: docs/release-notes/2022/march.md
+  - title: Español
+    sections:
+      - title: Pagina principal
+        link: docs/espanol/HomepageEditada.md
+      - title: Introducción
+        link: docs/espanol/APIs-Introduction.md
+      - title: Acceso a tokens
+        link: docs/espanol/TokenGenerationforWeb-services.md
+      - title: Información de prepago
+        link: docs/espanol/PrepaymentInformation.md
+      - title: Backoffice
+        link: docs/espanol/BackofficeInformation.md
+      - title: Actualizar/Obtener información del cliente
+        link: docs/espanol/UpdateGetMerchantInformation.md
+      - title: Acreditación
+        link: docs/espanol/BoardingInformation.md
+      - title: Logística
+        link: docs/espanol/LogisticInformation.md
+      - title: Ventas
+        link: docs/espanol/SalesInformation.md
+      - title: Información de pago dividido
+        link: docs/espanol/SplitPaymentsInformation.md
+      - title: Release notes
+        sections:
+        - title: March 2022
+          link: docs/release-notes/2022/march.md

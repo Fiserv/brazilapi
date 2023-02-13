@@ -21,12 +21,12 @@ paths:
   /consultations/consultPrepayment:
     post:
       tags:
-        - Payment & Prepayment Information
+        - Prepayment Information Maintenance
       x-proxy-name: Prepayment - Maintenance/Simulate/Confirm/Reject - Consult Available Balances For Prepayment (all Associations)
       x-group-name: Prepayment - Maintenance/Simulate/Confirm/Reject
       x-child-product-name: Payment & Prepayment Information
       summary: Consult Available Balances For Prepayment (all Associations)
-      operationId: ConsultAvailableBalancesForPrepayment (all Associations) 
+      operationId: ConsultAvailableBalancesForPrepayment (all Associations)
       parameters:
         - name: Message-Signature
           in: header
@@ -46,7 +46,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -86,7 +86,7 @@ paths:
   /autoPrepayments/automaticPrepayment:
     post:
       tags:
-        - Payment & Prepayment Information
+        - Prepayment Information Maintenance
       x-proxy-name: Automatic Prepayment Information Maintenance
       x-group-name: Prepayment - Maintenance/Simulate/Confirm/Reject
       x-child-product-name: Payment & Prepayment Information
@@ -111,7 +111,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -151,7 +151,7 @@ paths:
   /prepaySimulations/prepaymentSimulation:
     post:
       tags:
-        - Payment & Prepayment Information
+        - Prepayment Information Maintenance
       x-proxy-name: Prepayment - Maintenance/Simulate/Confirm/Reject - Consult or Simulate Manual Prepayment
       x-group-name: Prepayment - Maintenance/Simulate/Confirm/Reject
       x-child-product-name: Payment & Prepayment Information
@@ -176,7 +176,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -216,7 +216,7 @@ paths:
   /prepaySimulationsAction/prepaySimConfReject:
     post:
       tags:
-        - Payment & Prepayment Information
+        - Prepayment Information Maintenance
       x-proxy-name: Prepayment - Maintenance/Simulate/Confirm/Reject - Confirmation or Rejection of Manual Prepayment Simulation
       x-group-name: Prepayment - Maintenance/Simulate/Confirm/Reject
       x-child-product-name: Payment & Prepayment Information
@@ -241,7 +241,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -279,11 +279,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/Unauthorized'
 components:
-  securitySchemes:
-    JWT:
-      type: apiKey
-      name: Authorization
-      in: header
   schemas:
     automaticPrepayments:
       type: object
@@ -313,71 +308,71 @@ components:
           type: string
           description: "Association/Schema Code for Prepayment. To request more than one schema, add ',' following the orders specificed. It is mandatory to follow the exactly sequence. IMPORTANT: In case it is requested the same dates for different Associations/Schemas, the return will consolidate with previous requests and return all the Associations/Schemas (Field is required for Request Type = 'N')"
           example: "002,003"
-          enum: 
-           - 002 Mastercard
-           - 003 Visa
-           - 004 Amex Full
-           - 009 Cabal
-           - 024 Hipercard/Hiper
-           - 025 Elo Full
-           - "POSSIBLE COMBINATION FOR MORE THAN ONE ASSOCIATION: "
-           - 002,003 - Mastercard + Visa
-           - 002,003,004 - Mastercard + Visa + Amex Full
-           - 002,003,004,009 - Mastercard + Visa + Amex Full + CABAL
-           - 002,003,004,009,024 - Mastercard + Visa + Amex Full + CABAL + Hipercard/Hiper
-           - 002,003,004,009,024,025 - Mastercard + Visa + Amex Full + CABAL + Hipercard/Hiper + ELO Full
-           - 002,003,004,009,025 - Mastercard + Visa + Amex Full + CABAL + ELO Full
-           - 002,003,004,024 - Mastercard + Visa + Amex Full + Hipercard/Hiper
-           - 002,003,004,024,025 - Mastercard + Visa + Amex Full + Hipercard/Hiper + ELO Full
-           - 002,003,004,025 - Mastercard + Visa + Amex Full + ELO Full
-           - 002,003,009 - Mastercard + Visa + CABAL
-           - 002,003,009,024 - Mastercard + Visa + CABAL + Hipercard/Hiper
-           - 002,003,009,024,025 - Mastercard + Visa + CABAL + Hipercard/Hiper + ELO Full
-           - 002,003,009,025 - Mastercard + Visa + CABAL + ELO Full
-           - 002,003,024 - Mastercard + Visa + Hipercard/Hiper
-           - 002,003,024,025 - Mastercard + Visa + Hipercard/Hiper + ELO Full
-           - 002,003,025 - Mastercard + Visa + ELO Full
-           - 002,004 - Mastercard + Amex Full
-           - 002,004,009 - Mastercard + Amex Full + CABAL
-           - 002,004,009,024 - Mastercard + Amex Full + CABAL + Hipercard/Hiper
-           - 002,004,009,024,025 - Mastercard + Amex Full + CABAL + Hipercard/Hiper + ELO Full
-           - 002,004,009,025 - Mastercard + Amex Full + CABAL + ELO Full
-           - 002,004,024 - Mastercard + Amex Full + Hipercard/Hiper
-           - 002,004,024,025 - Mastercard + Amex Full + Hipercard/Hiper + ELO Full
-           - 002,004,025 - Mastercard + Amex Full + ELO Full
-           - 002,009 - Mastercard + CABAL
-           - 002,009,024 - Mastercard + CABAL + Hipercard/Hiper
-           - 002,009,024,025 - Mastercard + CABAL + Hipercard/Hiper + ELO Full
-           - 002,009,025 - Mastercard + CABAL + ELO Full
-           - 002,024 - Mastercard + Hipercard/Hiper
-           - 002,024,025 - Mastercard + Hipercard/Hiper + ELO Full
-           - 002,025 - Mastercard + ELO Full
-           - 003,004 - Visa + Amex Full
-           - 003,004,009 - Visa + Amex Full + CABAL
-           - 003,004,009,024 - Visa + Amex Full + CABAL + Hipercard/Hiper
-           - 003,004,009,024,025 - Visa + Amex Full + CABAL + Hipercard/Hiper + ELO Full
-           - 003,004,009,025 - Visa + Amex Full + CABAL + ELO Full
-           - 003,004,024 - Visa + Amex Full + Hipercard/Hiper
-           - 003,004,024,025 - Visa + Amex Full + Hipercard/Hiper + ELO Full
-           - 003,004,025 - Visa + Amex Full + ELO Full
-           - 003,009 - Visa + CABAL
-           - 003,009,024 - Visa + CABAL + Hipercard/Hiper
-           - 003,009,024,025 - Visa + CABAL + Hipercard/Hiper + ELO Full
-           - 003,009,025 - Visa + CABAL + ELO Full
-           - 003,024 - Visa + Hipercard/Hiper
-           - 003,024,025 - Visa + Hipercard/Hiper + ELO Full
-           - 003,025 - Visa + ELO Full
-           - 004,009 - Amex Full + CABAL
-           - 004,009,024 - Amex Full + CABAL + Hipercard/Hiper
-           - 004,009,024,025 - Amex Full + CABAL + Hipercard/Hiper + ELO Full
-           - 004,009,025 - Amex Full + CABAL + ELO Full
-           - 004,024 - Amex Full + Hipercard/Hiper
-           - 004,024,025 - Amex Full + Hipercard/Hiper + ELO Full
-           - 004,025 - Amex Full + ELO Full
-           - 009,024 - CABAL + Hipercard/Hiper
-           - 009,024,025 - CABAL + Hipercard/Hiper + ELO Full
-           - 009,025 - CABAL + ELO Full
-           - 024,025 - Hipercard/Hiper + ELO Full
+          enum:
+            - 002 Mastercard
+            - 003 Visa
+            - 004 Amex Full
+            - 009 Cabal
+            - 024 Hipercard/Hiper
+            - 025 Elo Full
+            - "POSSIBLE COMBINATION FOR MORE THAN ONE ASSOCIATION: "
+            - 002,003 - Mastercard + Visa
+            - 002,003,004 - Mastercard + Visa + Amex Full
+            - 002,003,004,009 - Mastercard + Visa + Amex Full + CABAL
+            - 002,003,004,009,024 - Mastercard + Visa + Amex Full + CABAL + Hipercard/Hiper
+            - 002,003,004,009,024,025 - Mastercard + Visa + Amex Full + CABAL + Hipercard/Hiper + ELO Full
+            - 002,003,004,009,025 - Mastercard + Visa + Amex Full + CABAL + ELO Full
+            - 002,003,004,024 - Mastercard + Visa + Amex Full + Hipercard/Hiper
+            - 002,003,004,024,025 - Mastercard + Visa + Amex Full + Hipercard/Hiper + ELO Full
+            - 002,003,004,025 - Mastercard + Visa + Amex Full + ELO Full
+            - 002,003,009 - Mastercard + Visa + CABAL
+            - 002,003,009,024 - Mastercard + Visa + CABAL + Hipercard/Hiper
+            - 002,003,009,024,025 - Mastercard + Visa + CABAL + Hipercard/Hiper + ELO Full
+            - 002,003,009,025 - Mastercard + Visa + CABAL + ELO Full
+            - 002,003,024 - Mastercard + Visa + Hipercard/Hiper
+            - 002,003,024,025 - Mastercard + Visa + Hipercard/Hiper + ELO Full
+            - 002,003,025 - Mastercard + Visa + ELO Full
+            - 002,004 - Mastercard + Amex Full
+            - 002,004,009 - Mastercard + Amex Full + CABAL
+            - 002,004,009,024 - Mastercard + Amex Full + CABAL + Hipercard/Hiper
+            - 002,004,009,024,025 - Mastercard + Amex Full + CABAL + Hipercard/Hiper + ELO Full
+            - 002,004,009,025 - Mastercard + Amex Full + CABAL + ELO Full
+            - 002,004,024 - Mastercard + Amex Full + Hipercard/Hiper
+            - 002,004,024,025 - Mastercard + Amex Full + Hipercard/Hiper + ELO Full
+            - 002,004,025 - Mastercard + Amex Full + ELO Full
+            - 002,009 - Mastercard + CABAL
+            - 002,009,024 - Mastercard + CABAL + Hipercard/Hiper
+            - 002,009,024,025 - Mastercard + CABAL + Hipercard/Hiper + ELO Full
+            - 002,009,025 - Mastercard + CABAL + ELO Full
+            - 002,024 - Mastercard + Hipercard/Hiper
+            - 002,024,025 - Mastercard + Hipercard/Hiper + ELO Full
+            - 002,025 - Mastercard + ELO Full
+            - 003,004 - Visa + Amex Full
+            - 003,004,009 - Visa + Amex Full + CABAL
+            - 003,004,009,024 - Visa + Amex Full + CABAL + Hipercard/Hiper
+            - 003,004,009,024,025 - Visa + Amex Full + CABAL + Hipercard/Hiper + ELO Full
+            - 003,004,009,025 - Visa + Amex Full + CABAL + ELO Full
+            - 003,004,024 - Visa + Amex Full + Hipercard/Hiper
+            - 003,004,024,025 - Visa + Amex Full + Hipercard/Hiper + ELO Full
+            - 003,004,025 - Visa + Amex Full + ELO Full
+            - 003,009 - Visa + CABAL
+            - 003,009,024 - Visa + CABAL + Hipercard/Hiper
+            - 003,009,024,025 - Visa + CABAL + Hipercard/Hiper + ELO Full
+            - 003,009,025 - Visa + CABAL + ELO Full
+            - 003,024 - Visa + Hipercard/Hiper
+            - 003,024,025 - Visa + Hipercard/Hiper + ELO Full
+            - 003,025 - Visa + ELO Full
+            - 004,009 - Amex Full + CABAL
+            - 004,009,024 - Amex Full + CABAL + Hipercard/Hiper
+            - 004,009,024,025 - Amex Full + CABAL + Hipercard/Hiper + ELO Full
+            - 004,009,025 - Amex Full + CABAL + ELO Full
+            - 004,024 - Amex Full + Hipercard/Hiper
+            - 004,024,025 - Amex Full + Hipercard/Hiper + ELO Full
+            - 004,025 - Amex Full + ELO Full
+            - 009,024 - CABAL + Hipercard/Hiper
+            - 009,024,025 - CABAL + Hipercard/Hiper + ELO Full
+            - 009,025 - CABAL + ELO Full
+            - 024,025 - Hipercard/Hiper + ELO Full
         transactionType:
           type: string
           description: Transaction Type Code to be used for prepayment selection
@@ -450,7 +445,7 @@ components:
           example: "005"
           enum:
             - 005 – Monthly End of Month
-            - 010 – Bimonthly 
+            - 010 – Bimonthly
             - 015 – End of Next Cycle
             - 020 – Start of Cycle
             - 025 – Service Anniversary
@@ -598,7 +593,7 @@ components:
             - 007 - Efetuada enviada p pagto(meaning Done. Payment to be sent)
             - 008 - Efet parc enviada p pagto(meaning Partialy Done. To be paid)
             - 009 - Nao efetuada(meaning Request not Approved)
-            - 010 - Pago (meaning Paid) 
+            - 010 - Pago (meaning Paid)
         transactionType:
           type: string
           description: Transaction Type Code to be used for prepayment selection
@@ -612,70 +607,70 @@ components:
           description: "Association/Schema Code for Prepayment. To request more than one schema, add ',' following the orders specificed. It is mandatory to follow the exactly sequence. IMPORTANT: In case it is requested the same dates for different Associations/Schemas, the return will consolidate with previous requests and return all the Associations/Schemas"
           example: "002,024"
           enum:
-           - 002 Mastercard
-           - 003 Visa
-           - 004 Amex Full
-           - 009 Cabal
-           - 024 Hipercard/Hiper
-           - 025 Elo Full
-           - "POSSIBLE COMBINATION FOR MORE THAN ONE ASSOCIATION: "
-           - 002,003 - Mastercard + Visa
-           - 002,003,004 - Mastercard + Visa + Amex Full
-           - 002,003,004,009 - Mastercard + Visa + Amex Full + CABAL
-           - 002,003,004,009,024 - Mastercard + Visa + Amex Full + CABAL + Hipercard/Hiper
-           - 002,003,004,009,024,025 - Mastercard + Visa + Amex Full + CABAL + Hipercard/Hiper + ELO Full
-           - 002,003,004,009,025 - Mastercard + Visa + Amex Full + CABAL + ELO Full
-           - 002,003,004,024 - Mastercard + Visa + Amex Full + Hipercard/Hiper
-           - 002,003,004,024,025 - Mastercard + Visa + Amex Full + Hipercard/Hiper + ELO Full
-           - 002,003,004,025 - Mastercard + Visa + Amex Full + ELO Full
-           - 002,003,009 - Mastercard + Visa + CABAL
-           - 002,003,009,024 - Mastercard + Visa + CABAL + Hipercard/Hiper
-           - 002,003,009,024,025 - Mastercard + Visa + CABAL + Hipercard/Hiper + ELO Full
-           - 002,003,009,025 - Mastercard + Visa + CABAL + ELO Full
-           - 002,003,024 - Mastercard + Visa + Hipercard/Hiper
-           - 002,003,024,025 - Mastercard + Visa + Hipercard/Hiper + ELO Full
-           - 002,003,025 - Mastercard + Visa + ELO Full
-           - 002,004 - Mastercard + Amex Full
-           - 002,004,009 - Mastercard + Amex Full + CABAL
-           - 002,004,009,024 - Mastercard + Amex Full + CABAL + Hipercard/Hiper
-           - 002,004,009,024,025 - Mastercard + Amex Full + CABAL + Hipercard/Hiper + ELO Full
-           - 002,004,009,025 - Mastercard + Amex Full + CABAL + ELO Full
-           - 002,004,024 - Mastercard + Amex Full + Hipercard/Hiper
-           - 002,004,024,025 - Mastercard + Amex Full + Hipercard/Hiper + ELO Full
-           - 002,004,025 - Mastercard + Amex Full + ELO Full
-           - 002,009 - Mastercard + CABAL
-           - 002,009,024 - Mastercard + CABAL + Hipercard/Hiper
-           - 002,009,024,025 - Mastercard + CABAL + Hipercard/Hiper + ELO Full
-           - 002,009,025 - Mastercard + CABAL + ELO Full
-           - 002,024 - Mastercard + Hipercard/Hiper
-           - 002,024,025 - Mastercard + Hipercard/Hiper + ELO Full
-           - 002,025 - Mastercard + ELO Full
-           - 003,004 - Visa + Amex Full
-           - 003,004,009 - Visa + Amex Full + CABAL
-           - 003,004,009,024 - Visa + Amex Full + CABAL + Hipercard/Hiper
-           - 003,004,009,024,025 - Visa + Amex Full + CABAL + Hipercard/Hiper + ELO Full
-           - 003,004,009,025 - Visa + Amex Full + CABAL + ELO Full
-           - 003,004,024 - Visa + Amex Full + Hipercard/Hiper
-           - 003,004,024,025 - Visa + Amex Full + Hipercard/Hiper + ELO Full
-           - 003,004,025 - Visa + Amex Full + ELO Full
-           - 003,009 - Visa + CABAL
-           - 003,009,024 - Visa + CABAL + Hipercard/Hiper
-           - 003,009,024,025 - Visa + CABAL + Hipercard/Hiper + ELO Full
-           - 003,009,025 - Visa + CABAL + ELO Full
-           - 003,024 - Visa + Hipercard/Hiper
-           - 003,024,025 - Visa + Hipercard/Hiper + ELO Full
-           - 003,025 - Visa + ELO Full
-           - 004,009 - Amex Full + CABAL
-           - 004,009,024 - Amex Full + CABAL + Hipercard/Hiper
-           - 004,009,024,025 - Amex Full + CABAL + Hipercard/Hiper + ELO Full
-           - 004,009,025 - Amex Full + CABAL + ELO Full
-           - 004,024 - Amex Full + Hipercard/Hiper
-           - 004,024,025 - Amex Full + Hipercard/Hiper + ELO Full
-           - 004,025 - Amex Full + ELO Full
-           - 009,024 - CABAL + Hipercard/Hiper
-           - 009,024,025 - CABAL + Hipercard/Hiper + ELO Full
-           - 009,025 - CABAL + ELO Full
-           - 024,025 - Hipercard/Hiper + ELO Full
+            - 002 Mastercard
+            - 003 Visa
+            - 004 Amex Full
+            - 009 Cabal
+            - 024 Hipercard/Hiper
+            - 025 Elo Full
+            - "POSSIBLE COMBINATION FOR MORE THAN ONE ASSOCIATION: "
+            - 002,003 - Mastercard + Visa
+            - 002,003,004 - Mastercard + Visa + Amex Full
+            - 002,003,004,009 - Mastercard + Visa + Amex Full + CABAL
+            - 002,003,004,009,024 - Mastercard + Visa + Amex Full + CABAL + Hipercard/Hiper
+            - 002,003,004,009,024,025 - Mastercard + Visa + Amex Full + CABAL + Hipercard/Hiper + ELO Full
+            - 002,003,004,009,025 - Mastercard + Visa + Amex Full + CABAL + ELO Full
+            - 002,003,004,024 - Mastercard + Visa + Amex Full + Hipercard/Hiper
+            - 002,003,004,024,025 - Mastercard + Visa + Amex Full + Hipercard/Hiper + ELO Full
+            - 002,003,004,025 - Mastercard + Visa + Amex Full + ELO Full
+            - 002,003,009 - Mastercard + Visa + CABAL
+            - 002,003,009,024 - Mastercard + Visa + CABAL + Hipercard/Hiper
+            - 002,003,009,024,025 - Mastercard + Visa + CABAL + Hipercard/Hiper + ELO Full
+            - 002,003,009,025 - Mastercard + Visa + CABAL + ELO Full
+            - 002,003,024 - Mastercard + Visa + Hipercard/Hiper
+            - 002,003,024,025 - Mastercard + Visa + Hipercard/Hiper + ELO Full
+            - 002,003,025 - Mastercard + Visa + ELO Full
+            - 002,004 - Mastercard + Amex Full
+            - 002,004,009 - Mastercard + Amex Full + CABAL
+            - 002,004,009,024 - Mastercard + Amex Full + CABAL + Hipercard/Hiper
+            - 002,004,009,024,025 - Mastercard + Amex Full + CABAL + Hipercard/Hiper + ELO Full
+            - 002,004,009,025 - Mastercard + Amex Full + CABAL + ELO Full
+            - 002,004,024 - Mastercard + Amex Full + Hipercard/Hiper
+            - 002,004,024,025 - Mastercard + Amex Full + Hipercard/Hiper + ELO Full
+            - 002,004,025 - Mastercard + Amex Full + ELO Full
+            - 002,009 - Mastercard + CABAL
+            - 002,009,024 - Mastercard + CABAL + Hipercard/Hiper
+            - 002,009,024,025 - Mastercard + CABAL + Hipercard/Hiper + ELO Full
+            - 002,009,025 - Mastercard + CABAL + ELO Full
+            - 002,024 - Mastercard + Hipercard/Hiper
+            - 002,024,025 - Mastercard + Hipercard/Hiper + ELO Full
+            - 002,025 - Mastercard + ELO Full
+            - 003,004 - Visa + Amex Full
+            - 003,004,009 - Visa + Amex Full + CABAL
+            - 003,004,009,024 - Visa + Amex Full + CABAL + Hipercard/Hiper
+            - 003,004,009,024,025 - Visa + Amex Full + CABAL + Hipercard/Hiper + ELO Full
+            - 003,004,009,025 - Visa + Amex Full + CABAL + ELO Full
+            - 003,004,024 - Visa + Amex Full + Hipercard/Hiper
+            - 003,004,024,025 - Visa + Amex Full + Hipercard/Hiper + ELO Full
+            - 003,004,025 - Visa + Amex Full + ELO Full
+            - 003,009 - Visa + CABAL
+            - 003,009,024 - Visa + CABAL + Hipercard/Hiper
+            - 003,009,024,025 - Visa + CABAL + Hipercard/Hiper + ELO Full
+            - 003,009,025 - Visa + CABAL + ELO Full
+            - 003,024 - Visa + Hipercard/Hiper
+            - 003,024,025 - Visa + Hipercard/Hiper + ELO Full
+            - 003,025 - Visa + ELO Full
+            - 004,009 - Amex Full + CABAL
+            - 004,009,024 - Amex Full + CABAL + Hipercard/Hiper
+            - 004,009,024,025 - Amex Full + CABAL + Hipercard/Hiper + ELO Full
+            - 004,009,025 - Amex Full + CABAL + ELO Full
+            - 004,024 - Amex Full + Hipercard/Hiper
+            - 004,024,025 - Amex Full + Hipercard/Hiper + ELO Full
+            - 004,025 - Amex Full + ELO Full
+            - 009,024 - CABAL + Hipercard/Hiper
+            - 009,024,025 - CABAL + Hipercard/Hiper + ELO Full
+            - 009,025 - CABAL + ELO Full
+            - 024,025 - Hipercard/Hiper + ELO Full
         requestedAmount:
           type: string
           description: Prepayment Requested Amount
@@ -719,23 +714,23 @@ components:
           description: Association/Schema Code
           example: "050"
           enum:
-           - 050 - Visa Credit
-           - 051 - MC Credit
-           - 055 - Cabal Credit
-           - 059 - Hipercard Credit
-           - 060 - ELO Credit
-           - 063 - Amex Credit
+            - 050 - Visa Credit
+            - 051 - MC Credit
+            - 055 - Cabal Credit
+            - 059 - Hipercard Credit
+            - 060 - ELO Credit
+            - 063 - Amex Credit
         schemeOptionsDesc:
           type: string
           description: Association/Schema Code Description
           example: "Visa Credit"
           enum:
-           - 050 - Visa Credit
-           - 051 - MC Credit
-           - 055 - Cabal Credit
-           - 059 - Hipercard Credit
-           - 060 - ELO Credit
-           - 063 - Amex Credit
+            - 050 - Visa Credit
+            - 051 - MC Credit
+            - 055 - Cabal Credit
+            - 059 - Hipercard Credit
+            - 060 - ELO Credit
+            - 063 - Amex Credit
         transactionType:
           type: string
           description: Transaction Type Code to be used for prepayment selection
@@ -874,7 +869,7 @@ components:
           example: "005"
           enum:
             - 005 – Monthly End of Month
-            - 010 – Bimonthly 
+            - 010 – Bimonthly
             - 015 – End of Next Cycle
             - 020 – Start of Cycle
             - 025 – Service Anniversary (request date)
@@ -886,7 +881,7 @@ components:
           example: "005 – 05 Dias"
           enum:
             - 005 – Monthly End of Month
-            - 010 – Bimonthly 
+            - 010 – Bimonthly
             - 015 – End of Next Cycle
             - 020 – Start of Cycle
             - 025 – Service Anniversary (request date)
@@ -915,53 +910,53 @@ components:
           description: Return Code. A different message might be sent, with error details
           example: "00"
           enum:
-          - 00 - Request Approved
-          - 01 - Invalid Parameters (for instance, Invalid Content or Invalid Merchant)
-          - 02 - Merchant Not Available for Prepayment
-          - 03 - Effective Date Lesser than Current Date
-          - 04 - Fraud Flag set as Y
-          - 05 - Blocked Account
-          - 06 - Suspended Account
-          - 07 - Merchant Status is not Active or Dormant
-          - 08 - Merchant has no enough amount to be anticipated
-          - 09 - The combination between Prepayment Number and Merchant ID is invalid
-          - 10 - Merchant is set to USD currency
-          - 12 - Simulation with status Paid
-          - 13 - Simulation already confirmed
-          - 15 - Invalid Prepayment Number
-          - 16 - Simulation with status Expired
-          - 17 - MID + Institution combination invalid
-          - 18 - Merchant not at billing level - when acct_number is not equal to payment_acct_number in cas_client_account
-          - 14 - Merchant has automatic Pre-payment set for the Card scheme requested
-          - 17 - MID + Institution combination invalid
-          - 18 - Merchant not at billing level - Payment Hierarquy
-          - 99 - System Error        
+            - 00 - Request Approved
+            - 01 - Invalid Parameters (for instance, Invalid Content or Invalid Merchant)
+            - 02 - Merchant Not Available for Prepayment
+            - 03 - Effective Date Lesser than Current Date
+            - 04 - Fraud Flag set as Y
+            - 05 - Blocked Account
+            - 06 - Suspended Account
+            - 07 - Merchant Status is not Active or Dormant
+            - 08 - Merchant has no enough amount to be anticipated
+            - 09 - The combination between Prepayment Number and Merchant ID is invalid
+            - 10 - Merchant is set to USD currency
+            - 12 - Simulation with status Paid
+            - 13 - Simulation already confirmed
+            - 15 - Invalid Prepayment Number
+            - 16 - Simulation with status Expired
+            - 17 - MID + Institution combination invalid
+            - 18 - Merchant not at billing level - when acct_number is not equal to payment_acct_number in cas_client_account
+            - 14 - Merchant has automatic Pre-payment set for the Card scheme requested
+            - 17 - MID + Institution combination invalid
+            - 18 - Merchant not at billing level - Payment Hierarquy
+            - 99 - System Error
         responseCodeDesc:
           type: string
           description: Return Code Description
           example: "Request Approved"
           enum:
-          - 00 - Request Approved
-          - 01 - Invalid Parameters (for instance, Invalid Content or Invalid Merchant)
-          - 02 - Merchant Not Available for Prepayment
-          - 03 - Effective Date Lesser than Current Date
-          - 04 - Fraud Flag set as Y
-          - 05 - Blocked Account
-          - 06 - Suspended Account
-          - 07 - Merchant Status is not Active or Dormant
-          - 08 - Merchant has no enough amount to be anticipated
-          - 09 - The combination between Prepayment Number and Merchant ID is invalid
-          - 10 - Merchant is set to USD currency
-          - 12 - Simulation with status Paid
-          - 13 - Simulation already confirmed
-          - 15 - Invalid Prepayment Number
-          - 16 - Simulation with status Expired
-          - 17 - MID + Institution combination invalid
-          - 18 - Merchant not at billing level - when acct_number is not equal to payment_acct_number in cas_client_account
-          - 14 - Merchant has automatic Pre-payment set for the Card scheme requested
-          - 17 - MID + Institution combination invalid
-          - 18 - Merchant not at billing level - Payment Hierarquy
-          - 99 - System Error              
+            - 00 - Request Approved
+            - 01 - Invalid Parameters (for instance, Invalid Content or Invalid Merchant)
+            - 02 - Merchant Not Available for Prepayment
+            - 03 - Effective Date Lesser than Current Date
+            - 04 - Fraud Flag set as Y
+            - 05 - Blocked Account
+            - 06 - Suspended Account
+            - 07 - Merchant Status is not Active or Dormant
+            - 08 - Merchant has no enough amount to be anticipated
+            - 09 - The combination between Prepayment Number and Merchant ID is invalid
+            - 10 - Merchant is set to USD currency
+            - 12 - Simulation with status Paid
+            - 13 - Simulation already confirmed
+            - 15 - Invalid Prepayment Number
+            - 16 - Simulation with status Expired
+            - 17 - MID + Institution combination invalid
+            - 18 - Merchant not at billing level - when acct_number is not equal to payment_acct_number in cas_client_account
+            - 14 - Merchant has automatic Pre-payment set for the Card scheme requested
+            - 17 - MID + Institution combination invalid
+            - 18 - Merchant not at billing level - Payment Hierarquy
+            - 99 - System Error
     response:
       type: object
       properties:
@@ -997,14 +992,14 @@ components:
           description: Indicates whether the Merchant has prepayment request enabled (returns only the code)
           example: "0"
           enum:
-            - 0 - No  
+            - 0 - No
             - 1 - Yes
         prepaymentIndicatorDesc:
           type: string
           description: Prepayment request indicator description (returns only the description)
           example: "No"
           enum:
-            - 0 - No  
+            - 0 - No
             - 1 - Yes
         prepaymentEffectiveDate:
           type: string
@@ -1135,37 +1130,37 @@ components:
           description: Prepayment Status Code
           example: "Pending"
           enum:
-             - Inicializado (meaning Initialized)
-             - Pendente (meaning Pending)
-             - Recusada (meaning Declined)
-             - Vencido (meaning Expired)
-             - Solicitacao em andamento(meaning Waiting for approval)
-             - Efetuada enviada p pagto(meaning Done. Payment to be sent)
-             - Efet parc enviada p pagto(meaning Partialy Done. To be paid)
-             - Nao efetuada(meaning Request not Approved)
-             - Pago (meaning Paid) 
+            - Inicializado (meaning Initialized)
+            - Pendente (meaning Pending)
+            - Recusada (meaning Declined)
+            - Vencido (meaning Expired)
+            - Solicitacao em andamento(meaning Waiting for approval)
+            - Efetuada enviada p pagto(meaning Done. Payment to be sent)
+            - Efet parc enviada p pagto(meaning Partialy Done. To be paid)
+            - Nao efetuada(meaning Request not Approved)
+            - Pago (meaning Paid)
         schemeOptions:
           type: string
           description: Association/Schema Code. To request for more than 1 schema, separate with ','
           example: "050"
           enum:
-           - 050 - Visa Credit
-           - 051 - MC Credit
-           - 055 - Cabal Credit
-           - 059 - Hipercard Credit
-           - 060 - ELO Credit
-           - 063 - Amex Credit
+            - 050 - Visa Credit
+            - 051 - MC Credit
+            - 055 - Cabal Credit
+            - 059 - Hipercard Credit
+            - 060 - ELO Credit
+            - 063 - Amex Credit
         schemeOptionsDesc:
           type: string
           description: Association/Schema Description. To request for more than 1 schema, separate with ','
           example: Visa Credit
           enum:
-           - 050 - Visa Credit
-           - 051 - MC Credit
-           - 055 - Cabal Credit
-           - 059 - Hipercard Credit
-           - 060 - ELO Credit
-           - 063 - Amex Credit
+            - 050 - Visa Credit
+            - 051 - MC Credit
+            - 055 - Cabal Credit
+            - 059 - Hipercard Credit
+            - 060 - ELO Credit
+            - 063 - Amex Credit
         transactionType:
           type: string
           description: Transaction Type Code to be used for prepayment selection
@@ -1196,7 +1191,7 @@ components:
           example: "000000000132500.42"
         paymentDate:
           type: string
-          description: Prepayment Date 
+          description: Prepayment Date
           example: "20191118"
         grossAmount:
           type: string

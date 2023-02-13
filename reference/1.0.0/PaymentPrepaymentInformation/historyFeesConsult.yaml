@@ -10,7 +10,7 @@ info:
     url: http://www.apache.org/licenses/LICENSE-2.0
 servers:
   - url: https://cat.api.firstdata.com/bwa/taxa-antecipacao
-x-header-api-key: 'X0GW3QGOYFn4r7DHcVC8KuatUnNs6MGB' 
+x-header-api-key: 'X0GW3QGOYFn4r7DHcVC8KuatUnNs6MGB'
 x-header-api-secret: 'N93nmFmoY0NzSMC5'
 x-production-url: prod.api.firstdata.com/bwa/taxa-antecipacao
 x-config:
@@ -19,7 +19,7 @@ paths:
   "/v1/consulta":
     get:
       tags:
-        - Payment & Prepayment Information
+        - Payment & Prepayment Information/Prepayment Fees
       x-proxy-name: Prepayment - History Fees Consult - Consult History of Prepayment Fees
       x-group-name: Prepayment - History Fees Consult
       x-child-product-name: Payment & Prepayment Information
@@ -44,7 +44,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -91,7 +91,7 @@ paths:
             type: string
         - name: statusAntecipacao
           in: query
-          description: "Anticipation status. Possible values: '001'(INICIALIZADO) | '002'(PENDENTE) | '003'(RECUSADA) | '004'(VENCIDO)  | '006'(PAGO) | '007'(SOLICITACAO EM ANDAMENTO) | '008'(EFETUADA ENVIADA P PAGTO) | '009'(EFET PARC ENVIADA P PAGTO) | '010'(NAO EFETUADA). Search example: 001,002"
+          description: "Anticipation status. Possible values: '001'(INICIALIZADO) | '002'(PENDENTE) | '003'(RECUSADA) | '004'(VENCIDO)  | '006'(PAGO) | '007'(AGUARDANDO CONFIRMACAO) | '008'(EFETUADA ENVIADA P PAGTO) | '009'(EFET PARC ENVIADA P PAGTO) | '010'(SOLICITACAO NAO APROVADA). Search example: 001,002"
           example: "006"
           required: false
           schema:
@@ -190,7 +190,7 @@ paths:
   "/v1/consulta/resumoVendas/{prepaymentNumber}":
     get:
       tags:
-        - Payment & Prepayment Information
+        - Payment & Prepayment Information/Prepayment Fees
       x-proxy-name: Prepayment - History Fees Consult - Consult of Sales Related to Prepayment
       x-group-name: Prepayment - History Fees Consult
       x-child-product-name: Payment & Prepayment Information
@@ -215,7 +215,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -319,13 +319,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/InternalServerError'
       deprecated: false
-  
+
 components:
-  securitySchemes:
-    JWT:
-      type: apiKey
-      name: Authorization
-      in: header
   schemas:
     AntecipationResponse:
       type: object
@@ -344,7 +339,7 @@ components:
           enum:
             - 0 - Sucesso (meaning Success)
         conteudo:
-            $ref: '#/components/schemas/StcStatisticDetailAntecipationResponseDTO'
+          $ref: '#/components/schemas/StcStatisticDetailAntecipationResponseDTO'
     ResumoVendasResponse:
       type: object
       properties:
@@ -362,7 +357,7 @@ components:
           enum:
             - 0 - Sucesso (meaning Success)
         conteudo:
-            $ref: '#/components/schemas/StcStatisticResumoVendasResponseDTO'
+          $ref: '#/components/schemas/StcStatisticResumoVendasResponseDTO'
     StcStatisticDetailAntecipationResponseDTO:
       type: object
       properties:
@@ -370,7 +365,7 @@ components:
           type: string
           description: "Association / Schema service"
           example: "Visa,MasterCard"
-          enum: 
+          enum:
             - "Visa"
             - "MasterCard"
             - "Cabal"
@@ -383,14 +378,14 @@ components:
           example: "006"
           type: string
           enum:
-             - "001"
-             - "002"
-             - "003"
-             - "004"
-             - "006"
-             - "007"
-             - "009"
-             - "010"
+            - "001"
+            - "002"
+            - "003"
+            - "004"
+            - "006"
+            - "007"
+            - "009"
+            - "010"
         dataAntecipacao:
           description: "Prepayment Date - format YYYYMMDD"
           example: "20200625"
@@ -403,7 +398,7 @@ components:
           type: string
           description: Final search date
           example: "20220925"
-        dataPagamento: 
+        dataPagamento:
           description: "Prepayment Pay Date - format YYYYMMDD"
           example: "20200625"
           type: string
@@ -411,10 +406,10 @@ components:
           type: string
           description: "Simulation date"
           example: "20220925"
-        horaAntecipacao: 
+        horaAntecipacao:
           description: "Prepayment Time"
           example: "145619"
-          type: string  
+          type: string
         idUsuario:
           description: "User id"
           example: "100098"
@@ -427,10 +422,10 @@ components:
           description: "User level"
           example: "Usuário de pré-pagamento"
           type: string
-        numeroAntecipacao: 
+        numeroAntecipacao:
           description: "Prepayment Number Information"
           example: "00000097769"
-          type: string  
+          type: string
         nomeUsuario:
           description: "User name"
           example: "Renan Sperendio"
@@ -442,29 +437,29 @@ components:
         saldoDisponivel:
           description: "Balance available"
           example: "6762"
-          type: string  
-        statusAntecipacao: 
+          type: string
+        statusAntecipacao:
           description: "Prepayment Status"
           example: "Confirmado (meaning Confirmed)"
           type: string
           enum:
-             - Inicializado (meaning Initialized)
-             - Pendente (meaning Pending)
-             - Recusada (meaning Declined)
-             - Vencido (meaning Expired)
-             - Solicitacao em andamento(meaning Waiting for approval)
-             - Efetuada enviada p pagto(meaning Done. Payment to be sent)
-             - Efet parc enviada p pagto(meaning Partialy Done. To be paid)
-             - Nao efetuada(meaning Request not Approved)
-             - Pago (meaning Paid) 
-        taxaLiberada: 
+            - Inicializado (meaning Initialized)
+            - Pendente (meaning Pending)
+            - Recusada (meaning Declined)
+            - Vencido (meaning Expired)
+            - Solicitacao em andamento(meaning Waiting for approval)
+            - Efetuada enviada p pagto(meaning Done. Payment to be sent)
+            - Efet parc enviada p pagto(meaning Partialy Done. To be paid)
+            - Nao efetuada(meaning Request not Approved)
+            - Pago (meaning Paid)
+        taxaLiberada:
           description: "Date the transaction would be paid - format YYYYMMDD"
           example: "1"
-          type: string     
+          type: string
         taxaMedia:
           type: string
           description: "Average amount"
-          example: "42.65"  
+          example: "42.65"
         taxaReserva:
           type: string
           description: "Reservation fee"
@@ -476,14 +471,14 @@ components:
         tipoConta:
           description: "Accont type"
           example: "050,051"
-          type: string  
+          type: string
         tipoAntecipacao:
           description: "Prepayment Type"
           example: "Manual (meaning Confirmed)"
           type: string
           enum:
-             - Manual (meaning Manual)
-             - Automatico (meaning Automatic)
+            - Manual (meaning Manual)
+            - Automatico (meaning Automatic)
         tipoTransacao:
           description: "Transaction type"
           example: "Parcelado sem juros"
@@ -491,26 +486,26 @@ components:
         valorAntecipacao:
           type: string
           description: "Amoutn Prepayment"
-          example: "3.27"  
+          example: "3.27"
         valorBrutoMax:
           type: string
-          description: "Maximum amount" 
+          description: "Maximum amount"
           example: "46.74"
         valorBrutoMin:
           type: string
-          description: "Minimum amount" 
+          description: "Minimum amount"
           example: "46.74"
         valorLiquidoMax:
           type: string
-          description: "Minimun amount liquid" 
+          description: "Minimun amount liquid"
           example: "46.74"
         valorMaximo:
           type: string
-          description: "Maximum amount" 
+          description: "Maximum amount"
           example: "46.74"
         valorLiquidoMin:
           type: string
-          description: "Minimun amount liquid" 
+          description: "Minimun amount liquid"
           example: "46.74"
         valorRequisicao:
           description: "Request Amount"
@@ -528,7 +523,7 @@ components:
           type: string
           description: "Amoutn tax Prepayment"
           example: "260.4"
-        
+
     PartialContent:
       type: object
       properties:
@@ -537,7 +532,7 @@ components:
           example: 9
           type: integer
           format: int32
-          enum: 
+          enum:
             - 9
             - 10
             - 101
@@ -547,7 +542,7 @@ components:
           description: Description return code
           example: Campos mandatorios (meaning Missing Mandatory Fields)
           type: string
-          enum: 
+          enum:
             - 9 - Campos mandatorios...
             - 10 - (Erro validaçao)...
             - 101 - O status antecipacao informado nao e valido
@@ -571,14 +566,14 @@ components:
           example: 3
           type: integer
           format: int32
-          enum: 
+          enum:
             - 3
             - 6
         mensagem:
           description: Description return code
           example: Acesso negado (meaning Access Denied)
           type: string
-          enum: 
+          enum:
             - 3 - Acesso negado (meaning Access Denied)
             - 6 - Token expirado (meaning Expired Token)
     NotFound:
@@ -589,14 +584,14 @@ components:
           example: 5
           type: integer
           format: int32
-          enum: 
+          enum:
             - 5
             - 11
         mensagem:
           description: Description return code
           example: Item nao encontrado (meaning Item not found)
           type: string
-          enum: 
+          enum:
             - 5 - Item nao encontrado (meaning Item not found)
             - 11 - Registros nao encontrados (meaning No records found)
     Conflict:
@@ -617,14 +612,14 @@ components:
           example: 2
           type: integer
           format: int32
-          enum: 
+          enum:
             - 2
             - 7
         mensagem:
           description: Description return code
           example: Erro Interno (meaning Internal Error)
           type: string
-          enum: 
+          enum:
             - 2 - Erro Interno (meaning Internal Error)
             - 7 - Erro na integracao da API. Detalhe (meaning Integration Error)
     StcStatisticResumoVendasResponseDTO:
@@ -650,18 +645,18 @@ components:
           description: "Transaction Type Description"
           example: "Compra com 08 parcelas"
           type: string
-        numTerminal: 
+        numTerminal:
           description: "Terminal Number"
           example: "EII0051B"
           type: string
-        indCredDeb: 
+        indCredDeb:
           description: "Credit or Debit Identification"
           example: "C"
           type: string
           enum:
-             - C - Credito (meaning Credit)
-             - D - Debito (meaning Debit)
-        numParcelado: 
+            - C - Credito (meaning Credit)
+            - D - Debito (meaning Debit)
+        numParcelado:
           description: "Transaction Installment Number"
           example: "02509362311"
           type: string
@@ -709,9 +704,9 @@ components:
           type: string
           description: "Transaction Number"
           example: "02509362317"
-        statusInclusao: 
+        statusInclusao:
           type: string
-          description: "The inclusion status for the composition of the anticipation value. Possible values: '000' (High and Low Amount) | '001' (Only High Amount) | '002' (Only High Amount)"  
+          description: "The inclusion status for the composition of the anticipation value. Possible values: '000' (High and Low Amount) | '001' (Only High Amount) | '002' (Only High Amount)"
           example: "001"
           enum:
             - "000"
@@ -725,6 +720,3 @@ components:
             - "000 (High and Low Amount)"
             - "001 (Only High Amount)"
             - "002 (Only High Amount)"
-          
-          
-          

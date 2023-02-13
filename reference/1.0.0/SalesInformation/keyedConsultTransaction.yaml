@@ -20,7 +20,7 @@ paths:
   '/v1/consulta':
     get:
       tags:
-        - Sales Information
+        - Search for keyed transaction status, with CNAE details
       x-proxy-name: Merchant Sales - Keyed Trans Permission - Consult
       x-group-name: Merchant Sales - Keyed Trans Permission - Consult
       x-child-product-name: Sales Information
