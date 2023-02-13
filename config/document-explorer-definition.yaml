@@ -35,8 +35,6 @@
         link: docs/HomepageEditada.md
       - title: Introduction
         link: docs/APIs-Introduction.md
-      - title: User Manuals
-        link: docs/HomepageEditada.md
       - title: Token Access
         link: docs/TokenGenerationforWeb-services.md
       - title: Prepayment Info
@@ -53,14 +51,16 @@
         link: docs/SalesInformation.md
       - title: Split - Payments
         link: docs/SplitPaymentsInformation.md
+      - title: Release notes
+        sections:
+          - title: March 2022
+            link: docs/release-notes/2022/march.md
   - title: Português
     sections:
       - title: Página principal
         link: docs/portugues/HomepageEditada.md
       - title: Introdução
         link: docs/portugues/APIs-Introduction.md
-      - title: Manual do Usuário
-        link: docs/portugues/HomepageEditada.md
       - title: Acesso a Token
         link: docs/portugues/TokenGenerationforWeb-services.md
       - title: Informações de pré-pagamento
@@ -71,14 +71,39 @@
         link: docs/portugues/UpdateGetMerchantInformation.md
       - title: Credenciamento
         link: docs/portugues/BoardingInformation.md
-      - title: Logistica
+      - title: Logística
         link: docs/portugues/LogisticInformation.md
       - title: Vendas
         link: docs/portugues/SalesInformation.md
       - title: Informações de pagamentos divididos
         link: docs/portugues/SplitPaymentsInformation.md
-- sections:
-  - title: Release notes
+      - title: Release notes
+        sections:
+          - title: March 2022
+            link: docs/release-notes/2022/march.md
+  - title: Español
     sections:
-    - title: March 2022
-      link: docs/release-notes/2022/march.md
+      - title: Pagina principal
+        link: docs/portugues/HomepageEditada.md
+      - title: Introducción
+        link: docs/portugues/APIs-Introduction.md
+      - title: Acceso a tokens
+        link: docs/portugues/TokenGenerationforWeb-services.md
+      - title: Información de prepago
+        link: docs/portugues/PrepaymentInformation.md
+      - title: Backoffice
+        link: docs/portugues/BackofficeInformation.md
+      - title: Actualizar/Obtener información del cliente
+        link: docs/portugues/UpdateGetMerchantInformation.md
+      - title: Acreditación
+        link: docs/portugues/BoardingInformation.md
+      - title: Logística
+        link: docs/portugues/LogisticInformation.md
+      - title: Ventas
+        link: docs/portugues/SalesInformation.md
+      - title: Información de pago dividido
+        link: docs/portugues/SplitPaymentsInformation.md
+      - title: Release notes
+        sections:
+        - title: March 2022
+          link: docs/release-notes/2022/march.md
