@@ -1,44 +1,19 @@
+# Main Page APIs
 
-# Build best solutions
-    
-## We are here to help! To star, click on Start Link
- 
-### We do the best for your Business
+Welcome to our API support documentation!
 
-    Have access to a complete set of APIs without pain! Find development tools, samples of codes and resources to help you in order to integrate your Apps integrally or partially using Fiserv Platform!
-    
-    Wish to start a new revenue source? Integrate your platform to Fiserv Marketplace, and register merchants to have payments processed directly in your site, and be paid for that!
-    
----
+For a brief introduction on how to use the APIS, visit our [introduction][1].
 
-## Work with the best
- 
- Specialized professionals in this industry that will dedicate 
- 
- all the time to understand the complexity of your business.
+This page describes the REST APIs and resources provided by Fiserv.
 
-## Open Environment
+Our systems are reliable with great performance and elasticity.
 
-If you are building a new solution 'all-in-one',
+As business leaders in the payments space, APIs will provide an opportunity for developers to leverage our payments ecosystem and extensive infrastructure.
 
- looking for a PCI Compliance Solution, enabling 
- 
- EMV or even any other requirement, our platform 
- 
- will save you time, money and resource.
+Our APIs have URI paths and use native HTTP authentication, providing secure access to information.
 
-## All In One
-      
-Create, Test, Certify and Deliver application of payment through only one interface.
-      
-## Value your Customers
-      
-Create reward programs for your customers and develop Apps to our Clover Marketplace.
+Make HTTP requests using GET and POST methods, receive responses in JSON format.
 
-## Customized Solutions
-      
-No matter the nature of your business, we have the ideal integration model.
+This allows developers to use any programming language to access our APIs, securely integrate and build many different applications.
 
-## Get Bonus
-      
-Have one of our most flexible business models and be paid when you register customers to have payments processed with us.
+To access the APIs, start by acquiring an [Access Token](../api/?type=post&path=/token/)

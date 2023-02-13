@@ -84,25 +84,25 @@
   - title: Español
     sections:
       - title: Pagina principal
-        link: docs/portugues/HomepageEditada.md
+        link: docs/espanol/HomepageEditada.md
       - title: Introducción
-        link: docs/portugues/APIs-Introduction.md
+        link: docs/espanol/APIs-Introduction.md
       - title: Acceso a tokens
-        link: docs/portugues/TokenGenerationforWeb-services.md
+        link: docs/espanol/TokenGenerationforWeb-services.md
       - title: Información de prepago
-        link: docs/portugues/PrepaymentInformation.md
+        link: docs/espanol/PrepaymentInformation.md
       - title: Backoffice
-        link: docs/portugues/BackofficeInformation.md
+        link: docs/espanol/BackofficeInformation.md
       - title: Actualizar/Obtener información del cliente
-        link: docs/portugues/UpdateGetMerchantInformation.md
+        link: docs/espanol/UpdateGetMerchantInformation.md
       - title: Acreditación
-        link: docs/portugues/BoardingInformation.md
+        link: docs/espanol/BoardingInformation.md
       - title: Logística
-        link: docs/portugues/LogisticInformation.md
+        link: docs/espanol/LogisticInformation.md
       - title: Ventas
-        link: docs/portugues/SalesInformation.md
+        link: docs/espanol/SalesInformation.md
       - title: Información de pago dividido
-        link: docs/portugues/SplitPaymentsInformation.md
+        link: docs/espanol/SplitPaymentsInformation.md
       - title: Release notes
         sections:
         - title: March 2022

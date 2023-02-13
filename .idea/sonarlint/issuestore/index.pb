@@ -12,8 +12,6 @@ R
 .docignore,0\5\058602980aa3c3dfe7e2bf3a636363bc87ad8206
 h
 8reference/1.0.0/MerchantInformationCases/chargeback.yaml,a\4\a4cecf63e9e2ee50bb22b83de9bbfe7a84b921af
-G
-docs/getting-started.md,9\8\980fc86dbce9c0cdce28255dfc275d1dd842443a
 k
 ;reference/1.0.0/ServiceOrderInformation/zipcodeConsult.yaml,f\7\f725a79585b3cf64e0896690eeee78c2006d3c8a
 o
@@ -104,8 +102,6 @@ I
 docs/APIs-Introduction.md,a\1\a1f0046854d41a4e0bc5ae25c9a59f7b7eb413bf
 M
 docs/FiservInternalUseOnly.md,8\0\80a2b21319cfadf4904759d982d97536c1b069ab
-G
-docs/HomepageEditada.md,e\2\e2b59c1462e5e5c40760b320ac41de68b1d89c70
 q
 Areference/1.0.0/MerchantInformationCases/logisticInformation.yaml,8\c\8cac689bb8ca06dddc0067e89c24c895e6f29813
 B
