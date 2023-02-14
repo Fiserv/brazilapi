@@ -13,21 +13,21 @@ Below you can check each link to access the detailed document for each Web-servi
 
 [Merchant Addresses - Update](../api/?type=post&path=/updateAddress/)
 
-[Merchant Devices and Fees - Consult](../api/?type=get&path=/{institution}/{merchanID}/)
+[Merchant Devices and Fees - Consult](../api/?type=get&path=/mdr-fees/{institution}/{merchanID}/)
 
-[Merchant Customer Information - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-estabelecimento)
+[Merchant Customer Information - Consult](../api/?type=get&path=/estabelecimento/v2)
 
 [Merchant Trade Name - Update](../api/?type=post&path=/updateTradeName/)
 
-[Operations - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-consulta-ops)
+[Operations - Consult](../api/?type=post&path=/processConsultOperationRequest/)
 
-[Proposal Status - Consult (Out of Online Boarding)](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-status-propo)
+[Proposal Status - Consult (Out of Online Boarding)](../api/?type=get&path=/status/{inst}/{doc})
 
 [Prepayment - Enable/Disable](../api/?type=post&path=/updatePrepayFlag/)
 
-[Prepayment - Consult/Request/Cancel](../api/?type=get&path=/updatePrepayFlag/v1/antecipacao/)
+[Prepayment - Consult/Request/Cancel](../api/?type=get&path=/antecipacao-automatica/v1/antecipacao/)
 
-[Service Fees (MDR) - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-mdr-fee)
+[Service Fees (MDR) - Consult](../api/?type=get&path=/mdr-fees/v2)
 
 [Zipcode (CEP) - Consult](../api/?type=get&path=/cep/{cep})
 
