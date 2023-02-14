@@ -11,17 +11,17 @@ info:
     name: Licença - Open Source
     url: https://www.firstdata.com/pt_br/home.html
 servers:
-  - url: https://cat.api.firstdata.com/bwa/autorizacoes
+  - url: https://cat.api.firstdata.com/bwa
 x-header-api-key: 'X0GW3QGOYFn4r7DHcVC8KuatUnNs6MGB'
 x-header-api-secret: 'N93nmFmoY0NzSMC5'
-x-production-url: prod.api.firstdata.com/bwa/autorizacoes
+x-production-url: prod.api.firstdata.com/bwa
 x-config:
   tryItOut: true
 tags:
   - name: Transacions Authorization
     description: Transacions Authorization
 paths:
-  "/{inst}/{merchant}":
+  "/autorizacoes/{inst}/{merchant}":
     get:
       tags:
         - Search for Transactions Authorization
@@ -88,7 +88,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/Response"
       deprecated: false
-  "/{inst}/{merchant}/{terminals}":
+  "/autorizacoes/{inst}/{merchant}/{terminals}":
     get:
       tags:
         - Search for Transactions Authorization

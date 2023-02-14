@@ -32,25 +32,25 @@
   - title: English
     sections:
       - title: Home
-        link: docs/HomepageEditada.md
+        link: docs/english/HomepageEditada.md
       - title: Introduction
-        link: docs/APIs-Introduction.md
+        link: docs/english/APIs-Introduction.md
       - title: Token Access
-        link: docs/TokenGenerationforWeb-services.md
+        link: docs/english/TokenGenerationforWeb-services.md
       - title: Prepayment Info
-        link: docs/PrepaymentInformation.md
+        link: docs/english/PrepaymentInformation.md
       - title: Backoffice
-        link: docs/BackofficeInformation.md
+        link: docs/english/BackofficeInformation.md
       - title: Update/Get Merchant Info
-        link: docs/UpdateGetMerchantInformation.md
+        link: docs/english/UpdateGetMerchantInformation.md
       - title: Boarding
-        link: docs/BoardingInformation.md
+        link: docs/english/BoardingInformation.md
       - title: Logistic
-        link: docs/LogisticInformation.md
+        link: docs/english/LogisticInformation.md
       - title: Sales
-        link: docs/SalesInformation.md
+        link: docs/english/SalesInformation.md
       - title: Split - Payments
-        link: docs/SplitPaymentsInformation.md
+        link: docs/english/SplitPaymentsInformation.md
       - title: Release notes
         sections:
           - title: March 2022

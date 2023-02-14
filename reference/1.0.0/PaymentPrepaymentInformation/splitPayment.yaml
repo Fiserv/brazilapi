@@ -14,9 +14,9 @@ x-header-api-key: X0GW3QGOYFn4r7DHcVC8KuatUnNs6MGB
 x-config:
   tryItOut: true
 x-header-api-secret: N93nmFmoY0NzSMC5
-x-production-url: https://prod.api.firstdata.com/bwa/split-payment-api
+x-production-url: https://prod.api.firstdata.com/bwa
 servers:
-- url: https://cat.api.firstdata.com/bwa/split-payment-api
+- url: https://cat.api.firstdata.com/bwa
 security:
 - JWT: []
 tags:
@@ -39,10 +39,13 @@ tags:
 - name: Transactions
   description: Transactions list and summary for master merchant of all its sellers.
 paths:
-  /v1/transactions:
+  /split-payment-api/v1/transactions:
     post:
       tags:
       - Transactions
+      x-proxy-name: Transactions
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: List all transactions.
       operationId: listTransactions
       parameters:
@@ -103,10 +106,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/TransactionPaginadoTO'
-  /v1/transactions/summary:
+  /split-payment-api/v1/transactions/summary:
     post:
       tags:
       - Transactions
+      x-proxy-name: Transactions Summarized
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: Transactions Summary.
       operationId: getTransactionsSummary
       parameters:
@@ -169,10 +175,13 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/MasterTransactionSummary'
-  /v1/sellers:
+  /split-payment-api/v1/sellers:
     get:
       tags:
       - Sellers
+      x-proxy-name: Sellers
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: Returns the list of sellers associated with a master merchant.
       operationId: getSellersByMastersIds
       parameters:
@@ -274,6 +283,9 @@ paths:
     post:
       tags:
       - Sellers
+      x-proxy-name: Register a merchant seller for a master merchant
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: Register a merchant seller for a master merchant.
       operationId: createSeller
       parameters:
@@ -343,10 +355,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/SellerRest'
-  /v1/sellers/{sellerId}/update:
+  /split-payment-api/v1/sellers/{sellerId}/update:
     post:
       tags:
       - Sellers
+      x-proxy-name: Update seller's data
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: Update seller's data.
       operationId: updateSeller
       parameters:
@@ -428,10 +443,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/SellerRest'
-  /v1/rules:
+  /split-payment-api/v1/rules:
     get:
       tags:
       - Rules
+      x-proxy-name: List the rules created by the master for its sellers
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: List the rules created by the master for its sellers.
       operationId: listRules
       parameters:
@@ -510,6 +528,9 @@ paths:
     post:
       tags:
       - Rules
+      x-proxy-name: Create a split rule for a specific seller or for all the sellers
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: Create a split rule for a specific seller or for all the sellers
         of a master user.
       operationId: createRule
@@ -582,10 +603,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PartialContent'
-  /v1/rules/{ruleId}/update:
+  /split-payment-api/v1/rules/{ruleId}/update:
     post:
       tags:
       - Rules
+      x-proxy-name: Update rule's data
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: Update rule's data.
       operationId: updateRule
       parameters:
@@ -667,10 +691,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/RuleRest'
-  /v1/ruleTypes:
+  /split-payment-api/v1/ruleTypes:
     get:
       tags:
       - RuleTypes
+      x-proxy-name: List the available rule types
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: List the available rule types.
       operationId: list
       parameters:
@@ -724,6 +751,9 @@ paths:
     post:
       tags:
       - RuleTypes
+      x-proxy-name: Create a new type of rule to be used in split manager
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: Create a new type of rule to be used in split manager
       operationId: createRuleType
       parameters:
@@ -785,10 +815,13 @@ paths:
               schema:
                 anyOf:
                 - $ref: '#/components/schemas/PartialContent'
-  /v1/optin:
+  /split-payment-api/v1/optin:
     get:
       tags:
       - Optin
+      x-proxy-name: List the registered optins
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: List the registered optins.
       operationId: listOptin
       parameters:
@@ -843,6 +876,9 @@ paths:
     post:
       tags:
       - Optin
+      x-proxy-name: Register the optin for a user
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: Register the optin for a user. It will only be able to use the
         service after the optin is registered.
       operationId: createOptin
@@ -907,10 +943,13 @@ paths:
               schema:
                 anyOf:
                 - $ref: '#/components/schemas/PartialContent'
-  /v1/masters:
+  /split-payment-api/v1/masters:
     post:
       tags:
       - Masters
+      x-proxy-name: Create (register) a master user in the split plataform
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: Create (register) a master user in the split plataform
       operationId: createMaster
       parameters:
@@ -973,10 +1012,13 @@ paths:
               schema:
                 anyOf:
                 - $ref: '#/components/schemas/PartialContent'
-  /v1/fees:
+  /split-payment-api/v1/fees:
     get:
       tags:
       - Fees
+      x-proxy-name: List the fees registered by the master for its sellers
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: List the fees registered by the master for its sellers
       operationId: listFees
       parameters:
@@ -1055,6 +1097,9 @@ paths:
     post:
       tags:
       - Fees
+      x-proxy-name: Create a extra fee to a specific or for all the sellers of a master user
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: Create a extra fee to a specific or for all the sellers of a master
         user.
       operationId: createFee
@@ -1123,10 +1168,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/FeeRest'
-  /v1/fees/{feeId}/update:
+  /split-payment-api/v1/fees/{feeId}/update:
     post:
       tags:
       - Fees
+      x-proxy-name: Update a fee
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: Update a fee.
       operationId: updateFee
       parameters:
@@ -1208,10 +1256,13 @@ paths:
                 anyOf:
                 - $ref: '#/components/schemas/PartialContent'
                 - $ref: '#/components/schemas/Conflict'
-  /v1/sellers/{sellerId}:
+  /split-payment-api/v1/sellers/{sellerId}:
     get:
       tags:
       - Sellers
+      x-proxy-name: Returns a single seller associated with a master merchant
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: Returns a single seller associated with a master merchant.
       operationId: getSellerById
       parameters:
@@ -1275,10 +1326,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/SellerRest'
-  /v1/sellers/{sellerId}/delete:
+  /split-payment-api/v1/sellers/{sellerId}/delete:
     get:
       tags:
       - Sellers
+      x-proxy-name: Deactivate a user seller
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: Deactivate a user seller.
       operationId: deleteSeller
       parameters:
@@ -1342,10 +1396,13 @@ paths:
                 $ref: '#/components/schemas/NotFound'
         "200":
           description: Successfully Done
-  /v1/sellers/{sellerEc}/transactions:
+  /split-payment-api/v1/sellers/{sellerEc}/transactions:
     get:
       tags:
       - Sellers
+      x-proxy-name: List sellers transactions
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: "List sellers transactions. Accepts date range filter. If none\
         \ start or end date is provided, the default search is the lastest 7 days."
       operationId: listSellerTransactions
@@ -1445,10 +1502,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PartialContent'
-  /v1/sellers/{sellerEc}/transactions/summary:
+  /split-payment-api/v1/sellers/{sellerEc}/transactions/summary:
     get:
       tags:
       - Sellers
+      x-proxy-name: Returns a summary of sellers transactions
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: "Returns a summary of sellers transactions. Accepts date range\
         \ filter. If none start or end date is provided, the default search is the\
         \ lastest 7 days."
@@ -1537,10 +1597,13 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/SellerTransactionRest'
-  /v1/rules/{ruleId}:
+  /split-payment-api/v1/rules/{ruleId}:
     get:
       tags:
       - Rules
+      x-proxy-name: Read a specific rule by id
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: Read a specific rule by id.
       operationId: getRuleById
       parameters:
@@ -1614,10 +1677,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/RuleRest'
-  /v1/rules/{ruleId}/delete:
+  /split-payment-api/v1/rules/{ruleId}/delete:
     get:
       tags:
       - Rules
+      x-proxy-name: Delete a rule
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: Delete a rule.
       operationId: deleteRule
       parameters:
@@ -1691,10 +1757,13 @@ paths:
           description: Successfully Done
           content:
             application/json: {}
-  /v1/rules/sellers/{sellerEc}:
+  /split-payment-api/v1/rules/sellers/{sellerEc}:
     get:
       tags:
       - Rules
+      x-proxy-name: List the rules for a specific seller
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: List the rules for a specific seller.
       operationId: listRulesBySeller
       parameters:
@@ -1775,10 +1844,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/RulePage'
-  /v1/ruleTypes/{ruleTypeId}:
+  /split-payment-api/v1/ruleTypes/{ruleTypeId}:
     get:
       tags:
       - RuleTypes
+      x-proxy-name: Get a rule tyep for its id
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: Get a rule tyep for its id
       operationId: getTerm
       parameters:
@@ -1839,10 +1911,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/RuleTypeRest'
-  /v1/optin/seller/{sellerEc}:
+  /split-payment-api/v1/optin/seller/{sellerEc}:
     get:
       tags:
       - Optin
+      x-proxy-name: Get the optin for a specific seller
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: Get the optin for a specific seller.
       operationId: getSellerOptin
       parameters:
@@ -1912,10 +1987,13 @@ paths:
               schema:
                 allOf:
                 - $ref: '#/components/schemas/InternalServerError'
-  /v1/optin/master:
+  /split-payment-api/v1/optin/master:
     get:
       tags:
       - Optin
+      x-proxy-name: Get the master user optin
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: Get the master user optin
       operationId: getMasterOptin
       parameters:
@@ -1978,10 +2056,13 @@ paths:
               schema:
                 allOf:
                 - $ref: '#/components/schemas/InternalServerError'
-  /v1/masters/{cpfCnpj}/{institution}:
+  /split-payment-api/v1/masters/{cpfCnpj}/{institution}:
     get:
       tags:
       - Masters
+      x-proxy-name: Get master by Document (CPF/CNPJ)
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: Get master by Document (CPF/CNPJ)
       operationId: getMastersByCpfCnpj
       parameters:
@@ -2062,10 +2143,13 @@ paths:
               schema:
                 anyOf:
                 - $ref: '#/components/schemas/PartialContent'
-  /v1/fees/{feeId}/delete:
+  /split-payment-api/v1/fees/{feeId}/delete:
     get:
       tags:
       - Fees
+      x-proxy-name: Delete a fee
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: Delete a fee.
       operationId: deleteFee
       parameters:
@@ -2139,10 +2223,13 @@ paths:
           description: Successfully Done
           content:
             application/json: {}
-  /isAlive:
+  /split-payment-api/isAlive:
     get:
       tags:
       - IsAlive
+      x-proxy-name: Get API operation status
+      x-group-name: Split Payment
+      x-child-product-name: Payment & Prepayment Information
       description: Get API operation status
       operationId: isAlive
       parameters:

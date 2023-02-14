@@ -9,16 +9,16 @@ info:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0
 servers:
-  - url: https://cat.api.firstdata.com/bwa/estabelecimento
+  - url: https://cat.api.firstdata.com/bwa
 x-header-api-key: 'X0GW3QGOYFn4r7DHcVC8KuatUnNs6MGB'
 x-header-api-secret: 'N93nmFmoY0NzSMC5'
-x-production-url: prod.api.firstdata.com/bwa/estabelecimento
+x-production-url: prod.api.firstdata.com/bwa
 x-config:
   tryItOut: true
 tags:
   - name: Search for Merchant Information by Tax ID or Merchant Code
 paths:
-  "/v2":
+  "/estabelecimento/v2":
     get:
       tags:
         - Search for Merchant Information by Tax ID or Merchant Code
@@ -91,7 +91,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/EstabelecimentoResponse"
       deprecated: false
-  "/{instituicao}/{documento}":
+  "/estabelecimento/{instituicao}/{documento}":
     get:
       tags:
         - Search for Merchant Information by Tax ID or Merchant Code
