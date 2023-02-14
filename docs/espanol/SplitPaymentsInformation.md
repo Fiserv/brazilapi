@@ -9,6 +9,6 @@ A continuación puede consultar cada enlace para acceder al documento detallado 
 
 [Token Access](TokenGenerationforWeb-services.md)
 
-[Split Payments - Consult](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-Split-Paga)
+[Split Payments - Consult](../api/?type=get&path=/split-payment-api/v1/sellers)
 
 [1]: APIs-Introduction.md

@@ -116,8 +116,6 @@ S
 #docs/english/BoardingInformation.md,8\7\8748430bc7f697ed50f17866bd6c05be4427574d
 P
  docs/espanol/SalesInformation.md,d\e\de0f595d22a55c8ff04d7c8660c470edaa8c28e7
-X
-(docs/espanol/SplitPaymentsInformation.md,b\f\bf26dd6e390cda9a8381576a1417838ede72e979
 U
 %docs/english/BackofficeInformation.md,f\c\fca04d377b73cd303aa9885f70228e4296883d4a
 W
@@ -142,8 +140,6 @@ U
 .docs/portugues/UpdateGetMerchantInformation.md,b\4\b4d76d7beba72f797559b307296a1a275681520f
 \
 ,docs/espanol/UpdateGetMerchantInformation.md,d\0\d037569badec65495fcd25b51175f00b5e713c8c
-Q
-!docs/espanol/APIs-Introduction.md,e\8\e819f390e84c281b7fbc4a5f8eb7ec1a8bd977f9
 l
 <reference/1.0.0/DevicesInformation/deviceBillingHistory.yaml,2\6\264264ef79bf0e3c273fd75895c7554c7b27e8d2
 e

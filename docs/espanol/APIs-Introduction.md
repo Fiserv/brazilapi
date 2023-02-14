@@ -101,6 +101,7 @@ Deberá enviar los siguientes parámetros en el encabezado de cada solicitud de 
 | Timestamp         | Date in "Unix epoch time" format - milisseconds |
 | Message-Signature | HMAC authentication string                      |
 | Client-Request-Id | Alphanumeric string randomly generated          |
+
 ### 3.1 autenticación
 
 En el parámetro **auth** - encabezado - el usuario debe enviar el valor obtenido en [Detalles del token][2].
