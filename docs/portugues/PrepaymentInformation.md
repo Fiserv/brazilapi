@@ -9,10 +9,10 @@ Abaixo você pode conferir cada link para acessar o documento detalhado de cada 
 
 
 [Token Access](TokenGenerationforWeb-services.md)
-      
+
 [Prepayment - Enable/Disable](../api/?type=post&path=/updatePrepayFlag/)
 
-[Prepayment - Consult/Request/Cancel](../api/?type=get&path=/updatePrepayFlag/v1/antecipacao/)
+[Prepayment - Consult/Request/Cancel](../api/?type=get&path=/antecipacao-automatica/v1/antecipacao/)
 
 [Prepayment - History Fees Consult](../api/?type=get&path=/v1/consulta)
 

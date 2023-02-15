@@ -13,9 +13,9 @@ Below you can check each link to access the detailed document for each Web-servi
 
 [Merchant Addresses - Update](../api/?type=post&path=/updateAddress/)
 
-[Merchant Devices Billing History](../api/?type=get&path=/v1/consulta/{data}/)
+[Merchant Devices Billing History](../api/?type=get&path=/cobranca-terminal/v1/consulta/{data}/)
 
-[Merchant Devices and Fees - Consult](../api/?type=get&path=/{institution}/{merchanID}/)
+[Merchant Devices and Fees - Consult](../api/?type=get&path=/mdr-fees/{institution}/{merchanID}/)
 
 [Merchant Trade Name - Update](../api/?type=post&path=/updateTradeName/)
 
@@ -31,6 +31,6 @@ Below you can check each link to access the detailed document for each Web-servi
 
 [Service Order - Cancelling](../api/?type=post&path=/canceloperation/processCancelOperationRequest)
 
-[Service Order - Consult](../api/?type=get&path=/{instituicao}/{numeroMerchant}/)
+[Service Order - Consult](../api/?type=get&path=/consultaos/{instituicao}/{numeroMerchant}/)
 
 [1]: APIs-Introduction.md

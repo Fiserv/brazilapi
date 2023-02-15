@@ -162,15 +162,15 @@ Fiserv returns HTTP standard code status, for successful and unsuccessful reques
 
 Following an example of a GET Request from CEP Verification, using [Postman][3].
 
-![Imagem mostrando a URL utilizada, com o CEP sendo igual a 04794000](../assets/images/cep-url.JPG "cep")
+![Imagem mostrando a URL utilizada, com o CEP sendo igual a 04794000](../../assets/images/cep-url.JPG "cep")
 
 The parameters in header are:
 
-![Headers metodo GET](../assets/images/new_headers_get_0.PNG "header")
+![Headers metodo GET](../../assets/images/new_headers_get_0.PNG "header")
 
 The response is:
 
-![Print do Postman mostrando a resposta do request GET feito. Na resposta, é possível ver o resultado mostrando que o CEP é na cidade de São Paulo](../assets/images/reponse.JPG "response")
+![Print do Postman mostrando a resposta do request GET feito. Na resposta, é possível ver o resultado mostrando que o CEP é na cidade de São Paulo](../../assets/images/reponse.JPG "response")
 
 ### 5.2 Sample in Python 3
 
@@ -308,19 +308,19 @@ The response is:
 
 Following in POST request for address update in [Postman][6]
 
-![Imagem mostrando a URL da API de atualização de endereços](../assets/images/address-url.JPG "post request")
+![Imagem mostrando a URL da API de atualização de endereços](../../assets/images/address-url.JPG "post request")
 
 The parameters in header are:
 
-![Headers Método POST](../assets/images/new_headers_post.PNG "post header")
+![Headers Método POST](../../assets/images/new_headers_post.PNG "post header")
 
 The JSON bory is:
 
-![Imagem representando o JSON enviado no body do request POST](../assets/images/body_post.JPG "post body")
+![Imagem representando o JSON enviado no body do request POST](../../assets/images/body_post.JPG "post body")
 
 The response is:
 
-![Imagem mostrando o body da resposta do request POST](../assets/images/response_post.JPG "post response")
+![Imagem mostrando o body da resposta do request POST](../../assets/images/response_post.JPG "post response")
 
 ### 6.2 Sample of Python 3
 

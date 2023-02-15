@@ -9,16 +9,16 @@ info:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0
 servers:
-  - url: https://cat.api.firstdata.com/bwa/consultaos
+  - url: https://cat.api.firstdata.com/bwa
 x-header-api-key: 'X0GW3QGOYFn4r7DHcVC8KuatUnNs6MGB'
 x-header-api-secret: 'N93nmFmoY0NzSMC5'
-x-production-url: prod.api.firstdata.com/bwa/consultaos
+x-production-url: prod.api.firstdata.com/bwa
 x-config:
   tryItOut: true
 tags:
   - name: Service Order Search
 paths:
-  /{instituicao}/{numeroMerchant}:
+  /consultaos/{instituicao}/{numeroMerchant}:
     get:
       tags:
         - Service Order Search
@@ -85,7 +85,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/Response"
       deprecated: true
-  /byos/{instituicao}/{osNumero}:
+  /consultaos/byos/{instituicao}/{osNumero}:
     get:
       tags:
         - Service Order Search
@@ -152,7 +152,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/Response"
       deprecated: true
-  /trackos/{instituicao}/{numeroMerchant}:
+  /consultaos/trackos/{instituicao}/{numeroMerchant}:
     get:
       tags:
         - Service Order Search
@@ -219,7 +219,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/ResponseTrack"
       deprecated: true
-  /resources/v2/os:
+  /consultaos/resources/v2/os:
     get:
       tags:
         - Service Order Search
@@ -286,7 +286,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/DResponse"
       deprecated: false
-  /resources/v1/os/{osNumero}:
+  /consultaos/resources/v1/os/{osNumero}:
     get:
       tags:
         - Service Order Search
@@ -353,7 +353,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/DResponse"
       deprecated: false
-  /resources/v1/trackos:
+  /consultaos/resources/v1/trackos:
     get:
       tags:
         - Service Order Search
@@ -420,7 +420,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/DResponseTrack"
       deprecated: false
-  /resources/v1/trackos/{osNumero}:
+  /consultaos/resources/v1/trackos/{osNumero}:
     get:
       tags:
         - Service Order Search

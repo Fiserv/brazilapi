@@ -1,62 +1,62 @@
-# APIs - Introduction
+# API - Introducción
 
-## 1. Introduction
+## 1. Introducción
 
-This document describes the APIs REST, and resources provided by Fiserv. Our systems are reliable with great performance and elasticity. As business leader in payment segment, the APIs will provide an opportunity to developers to take advantage of our ecosystem of payments and our extensive infrastructure.
+Este documento describe las API REST y los recursos proporcionados por Fiserv. Nuestros sistemas son confiables con gran desempeño y elasticidad. Como líder empresarial en el segmento de pagos, las API brindarán una oportunidad a los desarrolladores para aprovechar nuestro ecosistema de pagos y nuestra amplia infraestructura.
 
-Our APIs have paths URI and use native HTTP authentication, providing safety access to the information. Do HTTP requests using GET and POST methods, receive responses in JSON format. This enables that developers use any programming language to access our APIs, integrate in a safety manner and build various different applications.
+Nuestras API tienen rutas URI y utilizan autenticación HTTP nativa, lo que proporciona un acceso seguro a la información. Realice solicitudes HTTP utilizando métodos GET y POST, reciba respuestas en formato JSON. Esto permite que los desarrolladores utilicen cualquier lenguaje de programación para acceder a nuestras API, integrarlas de manera segura y crear varias aplicaciones diferentes.
 
-## 2. First Step
+## 2. Primer paso
 
-To start using our APIs, the developer shall follow the steps listed below:
+Para comenzar a utilizar nuestras API, el desarrollador deberá seguir los pasos que se detallan a continuación:
 
-  1. Create an user/password in the Dev Portal;
-  2. When ready the understanding of APIs and development of integration is in progress, please request the Token User/Password through the box **FiservDigitalBrazil@firstdatacorp.com.br.**When sending the e-mail, please, provide: 
-      * **Subject**: Requisição de Usuário para Autenticação;
-      * Body: 
-          * **Your name / Company Name**
-          * **Company Description**: Brief Description of your Company;
-          * **Fiserv Representative**: Who from commercial Fiserv team works with your company;
-          * **Institution***: What Institution the integration is related, for instance: BIN, Sicredi, etc.;
-          * **Service Contract***: Service Contract registered within Fiserv;
-          * **E-mail**: Institutional e-mail contact;
-          * **Phone Number**: Institutional phone number contact;
-          * **Comments**: Any comment you would like to add, related to the integration project;
-  3. Use the values of User/Password to generate an Authentication Token. The Token will be used to access the APIs
-  4. Create an application in [Application][1] menu, and select the products you wish to have access
-  5. Use the available values for "Consumer Key" and "Consumer Secret" in application page (they will be required to access the APIs)
+1. Cree un usuario/contraseña en Dev Portal;
+2. Cuando esté listo, la comprensión de las API y el desarrollo de la integración estén en progreso, solicite el Usuario/Contraseña del Token a través de la casilla **FiservDigitalBrazil@firstdatacorp.com.br.**Al enviar el correo electrónico, proporcione:
+    * **Asunto**: Requisição de Usuário para Autenticação;
+    * Cuerpo:
+        * **Su nombre / Nombre de la empresa**
+        * **Descripción de la Empresa**: Breve Descripción de su Empresa;
+        * **Representante Fiserv**: Quien del equipo comercial Fiserv trabaja con su empresa;
+        * **Institución***: A qué Institución se relaciona la integración, por ejemplo: BIN, Sicredi, etc.;
+        * **Contrato de Servicio***: Contrato de Servicio registrado en Fiserv;
+        * **Correo electrónico**: Correo electrónico de contacto institucional;
+        * **Teléfono**: Teléfono de contacto institucional;
+        * **Comentarios**: Cualquier comentario que desee agregar, relacionado con el proyecto de integración;
+3. Utilice los valores de Usuario/Contraseña para generar un token de autenticación. El Token se utilizará para acceder a las API
+4. Cree una aplicación en el menú [Aplicación][1] y seleccione los productos a los que desea tener acceso
+5. Use los valores disponibles para "Clave de consumidor" y "Secreto de consumidor" en la página de la aplicación (serán necesarios para acceder a las API)
 
-_* If you are not aware of your Institution or Service Contract, please contact your Fiserv representative._
+_* Si no conoce su Institución o Contrato de Servicio, por favor contacte a su representante de Fiserv._
 
 
-### 2.1 Generating Token
+### 2.1 Generación de token
 
-To generate the Token, you should access the page with specific instructions [Token Access](../api/?type=post&path=/token/).
+Para generar el Token, debe acceder a la página con instrucciones específicas [Token Access](../api/?type=post&path=/token/).
 
-**Important&nbsp;Notice:**
+**Aviso importante:**
 
-* The custody of the credentials is the responsibility of the client;
-* Do not share the Credentials with whom must not have access to them;
-* Store the Token Credentials in an specific Vault. Avoid storing in the same application database that will consume resources;
-* In case of compromise/lost your credentials, you must contact us, immediately;
+* La custodia de las credenciales es responsabilidad del cliente;
+* No compartir las Credenciales con quien no deba tener acceso a ellas;
+* Almacene las credenciales de token en una bóveda específica. Evite almacenar en la misma base de datos de la aplicación que consumirá recursos;
+* En caso de compromiso/pérdida de sus credenciales, debe contactarnos inmediatamente;
 
-#### 2.1.1 Request
+#### 2.1.1 Solicitud
 
-To receive the Token, you need to send a POST request for "[Token Access](../api/?type=post&path=/token/)" with the following parameters:
+Para recibir el Token, debe enviar una solicitud POST para "[Token Access](../api/?type=post&path=/token/)" con los siguientes parámetros:
 
 | Content-Type | Local  | Type   | Value                                                                                  | 
 |--------------|--------|--------|----------------------------------------------------------------------------------------|
 | Content-Type | Header | String | application/x-www-form-urlencoded                                                      |
 | Body         | Body   | String | grant_type=password&client_id=estabelecimento&username={user_name}&password={password} |
 
-where:
+dónde:
 
-* user_name: the user name you got in the step #1
-* password: the password you got in the step #1
+* user_name: el nombre de usuario que obtuviste en el paso #1
+* password: la contraseña que obtuviste en el paso #1
 
-#### 2.1.2 Response
+#### 2.1.2 Respuesta
 
-The POST response is a JSON with the following information:
+La respuesta POST es un JSON con la siguiente información:
 
 | Name               | Type    | Description                                    | Sample                                      |
 |--------------------|---------|------------------------------------------------|---------------------------------------------|
@@ -69,9 +69,9 @@ The POST response is a JSON with the following information:
 | not-before-policy  | integer || 0                                              |     |
 | session-state      | string  | Session Status                                 | "3a639a9b-2c42-472e-911b-209f9e01e077"      |
 
-Where access_token is the value to be used to in all other APIs.
+Donde access_token es el valor que se utilizará en todas las demás API.
 
-Sample of response
+Muestra de respuesta
 
 ```json
 {
@@ -86,13 +86,13 @@ Sample of response
 }
 ```
 
-## 3. Authentication
+## 3. Autenticación
 
-Fiserv APIs use [HMAC Authentication][2].
+Las API de Fiserv usan [autenticación HMAC][2].
 
-To be able to access any of the Codes or APIs described in this platform, it will require the credentials sent by e-mail. Don't have the credentials? Create your account and request an User/Password sending an e-mail to the box **FiservDigitalBrazil@firstdatacorp.com.br**.
+Para poder acceder a cualquiera de los Códigos o APIs descritos en esta plataforma, se requerirán las credenciales enviadas por correo electrónico. ¿No tienes las credenciales? Cree su cuenta y solicite un Usuario/Contraseña enviando un e-mail a la casilla **FiservDigitalBrazil@firstdatacorp.com.br**.
 
-You shall send the following parameters in header for each APIs request:
+Deberá enviar los siguientes parámetros en el encabezado de cada solicitud de API:
 
 | Name              | Description                                     |
 |-------------------|-------------------------------------------------|
@@ -102,48 +102,48 @@ You shall send the following parameters in header for each APIs request:
 | Message-Signature | HMAC authentication string                      |
 | Client-Request-Id | Alphanumeric string randomly generated          |
 
-### 3.1 auth
+### 3.1 autenticación
 
-In **auth** parameter - header - the user must sent the value got in [Token details][2].
+En el parámetro **auth** - encabezado - el usuario debe enviar el valor obtenido en [Detalles del token][2].
 
-Token sample: "eyJhbGciOiJSUzI1NiIsInR5cCIgO [...] tFlCzaiEx06ETdkwoTC-CfzSaVA"
+Muestra de token: "eyJhbGciOiJSUzI1NiIsInR5cCIgO [...] tFlCzaiEx06ETdkwoTC-CfzSaVA"
 
-### 3.2 Api-Key
+### 3.2 Clave API
 
-Key got from developer [application][1] page
+Clave obtenida de la página del desarrollador [aplicación][1]
 
-Sample: "X0GW3QGOYFn4r7DHcVC8KuatUnNs6MGB"
+Muestra: "X0GW3QGOYFn4r7DHcVC8KuatUnNs6MGB"
 
-### 3.3 Timestamp
+### 3.3 Marca de tiempo
 
-Current date in "Unix epoch time" format in milliseconds, that consists in a number in milliseconds since from 00:00 - 1st January, 1970.
+Fecha actual en formato "Unix epoch time" en milisegundos, que consiste en un número en milisegundos desde las 00:00 hasta el 1 de enero de 1970.
 
-Sample: 1568914752721
+Muestra: 1568914752721
 
-### 3.4 Message-Signature
+### 3.4 Mensaje-Firma
 
-HMAC string authentication.
+Autenticación de cadena HMAC.
 
-To generate this string, the user needs to follow the below steps:
+Para generar esta cadena, el usuario debe seguir los siguientes pasos:
 
-  1. Get the key from developer application - appKey
-  2. Get the password from the developer application - secret
-  3. Generate the date in Unix epoch format - milliseconds (Date)
-  4. Generate a randomly alphanumeric string (Client-Request-Id)
-  5. Create the JSON that will be sent in body (POST request)
-  6. Concatenate all the instructions items 1, 3, 4 e 5: appKey + Client + Date + JSON
-  7. Encrypt the result from item #6 (OpenSSL base64 using the secret - item #2 - as HMAC key)
-  8. Provide the string #7 as Parameter "Message-Signature"
+1. Obtenga la clave de la aplicación del desarrollador - appKey
+2. Obtenga la contraseña de la aplicación del desarrollador - secreto
+3. Genere la fecha en formato de época Unix - milisegundos (Date)
+4. Genere una cadena alfanumérica aleatoria (Client-Request-Id)
+5. Cree el JSON que se enviará en el cuerpo (solicitud POST)
+6. Concatene todos los elementos de instrucciones 1, 3, 4 y 5: appKey + Client + Date + JSON
+7. Cifre el resultado del elemento n.° 6 (OpenSSL base64 usando el secreto, elemento n.° 2, como clave HMAC)
+8. Proporcione la cadena #7 como parámetro "Message-Signature"
 
-### 3.5 Client-Request-Id
+### 3.5 ID de solicitud de cliente
 
-Alphanumeric string generated by the user.
+Cadena alfanumérica generada por el usuario.
 
-Sample: "6NYHj9Pgyxc84rmafpwG4fjhLwFfJYFVmxJOcgziD0QN3q6mGC"
+Muestra: "6NYHj9Pgyxc84rmafpwG4fjhLwFfJYFVmxJOcgziD0QN3q6mGC"
 
-## 4. Status Codes for APIs REST
+## 4. Códigos de estado para API REST
 
-Fiserv returns HTTP standard code status, for successful and unsuccessful requests. See the below table for more detais:
+Fiserv devuelve el estado del código estándar HTTP, para solicitudes exitosas y no exitosas. Consulte la siguiente tabla para obtener más detalles:
 
 | Code | Description           | Meaning                                                                                                                                                      |
 |------|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -156,25 +156,25 @@ Fiserv returns HTTP standard code status, for successful and unsuccessful reques
 | 500  | Internal Server Error | Fiserv server might be down or unresponsive                                                                                                                  |
 | 502  | Bad Gateway           | The server (gateway or proxy) received an invalide response by an internal server                                                                            |
 
-## 5. Request GET
+## 5. Solicitud OBTENER
 
-### 5.1 Postman Sample
+### 5.1 Ejemplo de cartero
 
-Following an example of a GET Request from CEP Verification, using [Postman][3].
+Siguiendo un ejemplo de una solicitud GET de CEP Verification, usando [Postman][3].
 
 ![Imagem mostrando a URL utilizada, com o CEP sendo igual a 04794000](../assets/images/cep-url.JPG "cep")
 
-The parameters in header are:
+Los parámetros en el encabezado son:
 
 ![Headers metodo GET](../assets/images/new_headers_get_0.PNG "header")
 
-The response is:
+La respuesta es:
 
 ![Print do Postman mostrando a resposta do request GET feito. Na resposta, é possível ver o resultado mostrando que o CEP é na cidade de São Paulo](../assets/images/reponse.JPG "response")
 
-### 5.2 Sample in Python 3
+### 5.2 Muestra enPython 3
 
-#### 5.2.1 Code
+#### 5.2.1 Código
 
 ```python
     from hashlib import sha256
@@ -235,7 +235,7 @@ The response is:
           f'Body: {json.dumps(r.json(), indent=4, sort_keys=True, ensure_ascii=False)}')
 ``` 
 
-#### 5.2.2 Output
+#### 5.2.2 Producción
 
 ```json
     Status: 200
@@ -254,9 +254,9 @@ The response is:
     }
 ```
     
-### 5.3 Sample in Shell script
+### 5.3 Muestra en script
 
-#### 5.3.1 Code
+#### 5.3.1 Código
 
 ```shell
     #!/bin/bash
@@ -292,7 +292,7 @@ The response is:
     curl -H "auth: $TOKEN" -H "Api-Key: $APPKEY" -H "Timestamp: $DATE" -H "Message-Signature: $HMAC_AUTH" -H "Client-Request-Id: $CLIENT_REQUEST_ID" $URL
 ```
     
-#### 5.3.2 Output
+#### 5.3.2 Producción
 
 ```json
 
@@ -302,29 +302,29 @@ The response is:
     {"code":200,"description":"Search done successfully!","cepResponse":{"state":"SP","city":"São Paulo","neighborhood":"Vila Gertrudes","address":"Avenida das Nações Unidas","complement":"- lado ímpar","zipCode":"04794000","genericZipCode":"Não"}}
 ```
 
-## 6. Request POST
+## 6. Solicitud POST
 
-### 6.1 Sample in Postman
+### 6.1 Ejemplo en Postman
 
-Following in POST request for address update in [Postman][6]
+Siguiendo en solicitud POST para actualización de dirección en [Postman][6]
 
 ![Imagem mostrando a URL da API de atualização de endereços](../assets/images/address-url.JPG "post request")
 
-The parameters in header are:
+Los parámetros en el encabezado son:
 
 ![Headers Método POST](../assets/images/new_headers_post.PNG "post header")
 
-The JSON bory is:
+El JSON bory es:
 
 ![Imagem representando o JSON enviado no body do request POST](../assets/images/body_post.JPG "post body")
 
-The response is:
+La respuesta es:
 
 ![Imagem mostrando o body da resposta do request POST](../assets/images/response_post.JPG "post response")
 
-### 6.2 Sample of Python 3
+### 6.2 Muestra de Python 3
 
-#### 6.2.1 Code
+#### 6.2.1 Código
 
 ```python
     from hashlib import sha256
@@ -406,7 +406,7 @@ The response is:
 ```
     
 
-#### 6.2.2 Output
+#### 6.2.2 Producción
 
 ```json
     Status: 200
@@ -431,9 +431,9 @@ The response is:
     }
 ```
 
-### 6.3 Sample of Shell script
+### 6.3 Ejemplo de script de Shell
 
-#### 6.3.1 Code
+#### 6.3.1 Código
 
 ```shell
     #!/bin/bash
@@ -472,7 +472,7 @@ The response is:
     curl -H "auth: $TOKEN" -H "Api-Key: $APPKEY" -H "Timestamp: $DATE" -H "Message-Signature: $HMAC_AUTH" -H "Client-Request-Id: $CLIENT_REQUEST_ID" -H "Content-Type: application/json" -d "$JSON" -X POST $URL
 ```
     
-#### 6.3.2 Output
+#### 6.3.2 Producción
 
 ```json
       % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current

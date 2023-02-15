@@ -11,16 +11,16 @@ info:
     name: Licença - Open Source
     url: https://www.firstdata.com/pt_br/home.html
 servers:
-  - url: https://cat.api.firstdata.com/bwa/proposta/status
+  - url: https://cat.api.firstdata.com/bwa/proposta
 x-header-api-key: 'X0GW3QGOYFn4r7DHcVC8KuatUnNs6MGB'
 x-header-api-secret: 'N93nmFmoY0NzSMC5'
-x-production-url: prod.api.firstdata.com/bwa/proposta/status
+x-production-url: prod.api.firstdata.com/bwa/proposta
 x-config:
   tryItOut: true
 tags:
   - name: Search for Proposal Status
 paths:
-  "/{inst}/{doc}":
+  "/status/{inst}/{doc}":
     get:
       tags:
         - Online Boarding

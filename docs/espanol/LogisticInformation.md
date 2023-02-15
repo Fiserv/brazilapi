@@ -23,7 +23,7 @@ A continuación puede consultar cada enlace para acceder al documento detallado 
 
 [Service Order - Cancelling](../api/?type=post&path=/canceloperation/processCancelOperationRequest)
 
-[Service Order - Consult](../api/?type=get&path=/{instituicao}/{numeroMerchant}/)
+[Service Order - Consult](../api/?type=get&path=/consultaos/{instituicao}/{numeroMerchant}/)
 
 [Service Order - Terminal Maintenance](../api/?type=post&path=/updatePrepayFlag/)
 
