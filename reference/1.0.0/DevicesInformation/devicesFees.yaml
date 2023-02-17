@@ -44,7 +44,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -111,7 +111,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -157,7 +157,7 @@ paths:
       x-proxy-name: Search for Device Service Types
       x-group-name: Merchant Devices and Fees - Consult
       x-child-product-name: Devices Information
-      summary: Search for Device Service Types 
+      summary: Search for Device Service Types
       operationId: searchForDeviceServiceTypes
       parameters:
         - name: Message-Signature
@@ -178,7 +178,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -225,11 +225,6 @@ paths:
                 $ref: "#/components/schemas/TerminalServiceResponse"
       deprecated: false
 components:
-  securitySchemes:
-    JWT:
-      type: apiKey
-      name: Authorization
-      in: header
   schemas:
     Terminal:
       type: object
@@ -278,7 +273,7 @@ components:
         descricaoModeloTerminal:
           type: string
           description: Device Model Description
-          example: 
+          example:
           enum:
             - "300 - POS ISO"
             - "301 - POS GPRS"
@@ -582,7 +577,7 @@ components:
         descricaoModeloTerminal:
           type: string
           description: Device Model Description
-          example: 
+          example:
           enum:
             - "300 - POS ISO"
             - "301 - POS GPRS"

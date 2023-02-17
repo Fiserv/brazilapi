@@ -9,16 +9,16 @@ info:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0
 servers:
-  - url: https://cat.api.firstdata.com/bwa/estabelecimento
+  - url: https://cat.api.firstdata.com/bwa
 x-header-api-key: 'X0GW3QGOYFn4r7DHcVC8KuatUnNs6MGB'
 x-header-api-secret: 'N93nmFmoY0NzSMC5'
-x-production-url: prod.api.firstdata.com/bwa/estabelecimento
+x-production-url: prod.api.firstdata.com/bwa
 x-config:
   tryItOut: true
 tags:
   - name: Search for Merchant Information by Tax ID or Merchant Code
 paths:
-  "/v2":
+  "/estabelecimento/v2":
     get:
       tags:
         - Search for Merchant Information by Tax ID or Merchant Code
@@ -46,7 +46,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -91,7 +91,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/EstabelecimentoResponse"
       deprecated: false
-  "/{instituicao}/{documento}":
+  "/estabelecimento/{instituicao}/{documento}":
     get:
       tags:
         - Search for Merchant Information by Tax ID or Merchant Code
@@ -119,7 +119,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -158,11 +158,6 @@ paths:
                 $ref: "#/components/schemas/EstabelecimentoResponse"
       deprecated: true
 components:
-  securitySchemes:
-    JWT:
-      type: apiKey
-      name: Authorization
-      in: header
   schemas:
     Contato:
       type: object
@@ -207,7 +202,7 @@ components:
             - "002 - Debit"
         codigoBandeira:
           type: string
-          description: Association/Schema to be paid for the payment information 
+          description: Association/Schema to be paid for the payment information
           example: "009"
           enum:
             - "002 - Mastercard"
@@ -216,7 +211,7 @@ components:
             - "009 - Cabal"
             - "020 - MDS (Maestro)"
             - "024 - Hipercard/Hiper"
-            - "025 - Elo Full" 
+            - "025 - Elo Full"
         tipoConta:
           type: string
           description: Settlement Account Type
@@ -349,7 +344,7 @@ components:
           type: string
           description: Merchant Status Code
           example: "001"
-          enum: 
+          enum:
             - "001 - Ativo - (meaning Active)"
             - "002 - Inativo - (meaning Inactive)"
             - "003 - Suspenso - (meaning Suspended)"
@@ -361,7 +356,7 @@ components:
           type: string
           description: Merchant Merchant Status Description
           example: "Ativo"
-          enum: 
+          enum:
             - "001 - Ativo - (meaning Active)"
             - "002 - Inativo - (meaning Inactive)"
             - "003 - Suspenso - (meaning Suspended)"
@@ -373,7 +368,7 @@ components:
           type: string
           description: Cancelling Reason, when applicable
           example: "Suspensão Requisição Cliente"
-          enum: 
+          enum:
             - Operações Default - (meaning Operations - Default)
             - Inoperante - (meaning Inoperative)
             - Suspensão Fraude - (meaning Fraud Suspension)
@@ -389,7 +384,7 @@ components:
           description: Temporary block
           maxLength: 50
           example: Sim
-          enum: 
+          enum:
             - Sim - (Yes)
             - Nao - (No)
         nomeEstabelecimento:
@@ -445,7 +440,7 @@ components:
           type: string
           description: Boarding Channel Code (Internal Information)
           example: "007"
-        serviceContract:  
+        serviceContract:
           type: string
           description: Service Contract Id
         descTipoCanalBoarding:
@@ -454,10 +449,12 @@ components:
           example: "01. BANCO"
         enderecoPadrao:
           description: Billing Address
-          $ref: "#/components/schemas/EnderecoBilling"
+          oneOf:
+            - $ref: "#/components/schemas/EnderecoBilling"
         enderecoComercial:
           description: Shipping Address
-          $ref: "#/components/schemas/EnderecoShipping"
+          oneOf:
+            - $ref: "#/components/schemas/EnderecoShipping"
         contato:
           $ref: "#/components/schemas/Contato"
         socios:
@@ -479,14 +476,14 @@ components:
           type: string
           description: Return Code
           example: "00"
-          enum: 
+          enum:
             - "00 Successfully Done"
             - "01 Error Message"
         descricaoRetorno:
           type: string
           description: Return Code Description
           example: "00"
-          enum: 
+          enum:
             - "00 Successfully Done"
             - "01 Error Message"
         estabelecimentos:

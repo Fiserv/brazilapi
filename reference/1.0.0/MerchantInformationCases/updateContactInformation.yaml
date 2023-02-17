@@ -46,7 +46,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -84,11 +84,6 @@ paths:
               schema:
                 $ref: "#/components/schemas/Unauthorized"
 components:
-  securitySchemes:
-    JWT:
-      type: apiKey
-      name: Authorization
-      in: header
   schemas:
     updateContactInformation:
       type: object
@@ -133,9 +128,9 @@ components:
           type: string
           description: Politically Exposed Person Indicator
           example: "000"
-          enum: 
+          enum:
             - 000 - No
-            - 001 - Yes 
+            - 001 - Yes
         signedAverageTicketValue:
           type: string
           description: Merchant Average Ticket of sales
@@ -161,7 +156,7 @@ components:
       properties:
         responseCode:
           type: string
-          description: Return code 
+          description: Return code
           example: "00"
           enum:
             - 00 - Atualização realizada com sucesso. -(meaning Updated Successfully Done)

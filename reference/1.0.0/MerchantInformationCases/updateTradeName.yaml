@@ -9,16 +9,16 @@ info:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0
 servers:
-  - url: https://cat.api.firstdata.com/bwa/wsm/merchantinformation/tradeName/updateTradeName
+  - url: https://cat.api.firstdata.com/bwa/wsm/merchantinformation/tradeName
 x-header-api-key: 'X0GW3QGOYFn4r7DHcVC8KuatUnNs6MGB'
 x-header-api-secret: 'N93nmFmoY0NzSMC5'
-x-production-url: prod.api.firstdata.com/bwa/wsm/merchantinformation/tradeName/updateTradeName
+x-production-url: prod.api.firstdata.com/bwa/wsm/merchantinformation/tradeName
 x-config:
   tryItOut: true
 tags:
   - name: Merchant Trade Name Update
 paths:
-  /:
+  "/updateTradeName/":
     post:
       tags:
         - Merchant Trade Name Update
@@ -46,7 +46,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -84,11 +84,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/Unauthorized'
 components:
-  securitySchemes:
-    JWT:
-      type: apiKey
-      name: Authorization
-      in: header
   schemas:
     updateTradeName:
       type: object
@@ -123,7 +118,7 @@ components:
           type: string
           description: Return Code
           example: "00"
-          enum: 
+          enum:
             - 00 - Atualização realizada com sucesso. -(meaning Updated Successfully Done)
             - 01 - Atualização realizada com sucesso, mas mensagem UNS não enviada - (meaning Update Successfully done without UNS)
             - 02 - Parâmetros inválidos - (meaning Invalid Parameters)
@@ -136,7 +131,7 @@ components:
         responseCodeDesc:
           type: string
           description: Return Code Description
-          enum: 
+          enum:
             - 00 - Atualização realizada com sucesso. -(meaning Updated Successfully Done)
             - 01 - Atualização realizada com sucesso, mas mensagem UNS não enviada - (meaning Update Successfully done without UNS)
             - 02 - Parâmetros inválidos - (meaning Invalid Parameters)

@@ -30,9 +30,6 @@ paths:
     post:
       tags:
         - Request TOKEN for APIs access
-      x-proxy-name: Token Access
-      x-group-name: Token Access
-      x-child-product-name: Authentication
       summary: Token Access
       operationId: requestTokenForAPIsAccess
       requestBody:
@@ -50,6 +47,10 @@ paths:
               schema:
                 $ref: "#/components/schemas/Response"
       deprecated: false
+      x-proxy-name: Token Access
+      x-group-name: Token Access
+      x-child-product-name: Authentication
+      x-core: Token
 components:
   schemas:
     Response:

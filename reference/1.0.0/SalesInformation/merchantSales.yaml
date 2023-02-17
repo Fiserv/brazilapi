@@ -348,11 +348,6 @@ paths:
                 $ref: "#/components/schemas/VendasResponse"
       deprecated: false
 components:
-  securitySchemes:
-    JWT:
-      type: apiKey
-      name: Authorization
-      in: header
   schemas:
     Sumarizacao:
       type: object

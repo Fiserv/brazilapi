@@ -18,7 +18,7 @@ x-config:
 tags:
   - name: Payment Account Information for Settlement (Domicílio Bancário)
 paths:
-  /:
+  "/paymentAccountInfo/":
     post:
       tags:
         - Payment Account Information for Settlement
@@ -46,7 +46,7 @@ paths:
           in: header
           description: Oauth Key
           required: true
-          example: 
+          example:
           schema:
             type: string
         - name: Timestamp
@@ -84,11 +84,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/Unauthorized'
 components:
-  securitySchemes:
-    JWT:
-      type: apiKey
-      name: Authorization
-      in: header
   schemas:
     paymentAccountInfo:
       type: object
@@ -125,7 +120,7 @@ components:
             - 050 - Visa Credit
             - 051 - Marter Credit
             - 052 - Master Debit
-            - 053 - Visa Debit 
+            - 053 - Visa Debit
             - 055 - Cabal Credit
             - 056 - Cabal Debit
             - 059 - Hipercard Credit
@@ -173,7 +168,7 @@ components:
       properties:
         merchantId:
           type: string
-          description: Merchant Code for Payment PrePayment 
+          description: Merchant Code for Payment PrePayment
           example: "91002806"
         accountTypeId:
           type: string
@@ -183,7 +178,7 @@ components:
             - 050 - Visa Credit
             - 051 - Marter Credit
             - 052 - Master Debit
-            - 053 - Visa Debit 
+            - 053 - Visa Debit
             - 055 - Cabal Credit
             - 056 - Cabal Debit
             - 059 - Hipercard Credit
@@ -220,7 +215,7 @@ components:
       properties:
         responseCode:
           type: string
-          description: Return Status Code. 
+          description: Return Status Code.
           example: "00"
           enum:
             - 00 - Successfully.
@@ -234,15 +229,15 @@ components:
             - 08 - Invalid Account Number.
             - 09 - Invalid Payment Account Number.
             - 10 - Invalid UserID.
-            - 11 - Update Already requested. 
+            - 11 - Update Already requested.
             - 12 - Invalid Parameters.
             - 13 - Bank Account is Locked.
-            - 14 - Upper Level Hierarchy shall be isolated. 
+            - 14 - Upper Level Hierarchy shall be isolated.
             - 15 - Required Information not Sent.
             - 99 - System Error.
         responseCodeDesc:
           type: string
-          description: Return Code description. 
+          description: Return Code description.
           example: "Successfully"
           enum:
             - 00 - Successfully.
@@ -256,10 +251,10 @@ components:
             - 08 - Invalid Account Number.
             - 09 - Invalid Payment Account Number.
             - 10 - Invalid UserID.
-            - 11 - Update Already requested. 
+            - 11 - Update Already requested.
             - 12 - Invalid Parameters.
             - 13 - Bank Account is Locked.
-            - 14 - Upper Level Hierarchy shall be isolated. 
+            - 14 - Upper Level Hierarchy shall be isolated.
             - 15 - Required Information not Sent.
             - 99 - System Error.
     response:

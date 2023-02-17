@@ -42,13 +42,6 @@ paths:
           example: X0GW3QGOYFn4r7DHcVC8KuatUnNs6MGB'
           schema:
             type: string
-        - name: Authorization
-          in: header
-          description: Oauth Key
-          required: true
-          example:
-          schema:
-            type: string
         - name: Timestamp
           in: header
           description: Date - Epoch Format
@@ -104,8 +97,14 @@ paths:
           description: Unauthorized
           content: { }
       deprecated: false
-
+      security:
+        - JWT: []
 components:
+  securitySchemes:
+    JWT:
+      type: apiKey
+      name: Authorization
+      in: header
   schemas:
     DChargebackFilterRequest:
       type: object
@@ -299,7 +298,8 @@ components:
         institution:
           type: object
           description: Institution object
-          $ref: '#/components/schemas/DInstitutionResponse'
+          oneOf:
+            - $ref: '#/components/schemas/DInstitutionResponse'
     DInstitutionResponse:
       type: object
       title: DInstitutionResponse
