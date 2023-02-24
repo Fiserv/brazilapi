@@ -45,7 +45,7 @@
           "PaymentPrepaymentInformation/paymentsInformation", "PaymentPrepaymentInformation/prepaymentFlagUpdate",
           "PaymentPrepaymentInformation/prepaymentInformation", "PaymentPrepaymentInformation/historyFeesConsult",
           "PaymentPrepaymentInformation/automaticPrepayment", "PaymentPrepaymentInformation/anticipationsRealized",
-          "PaymentPrepaymentInformation/splitPayment.yaml",
+          "PaymentPrepaymentInformation/splitPayment",
 
           "ServiceOrderInformation/devicesMaintenance", "ServiceOrderInformation/serviceOrderCancelling",
           "ServiceOrderInformation/serviceOrderSearch", "ServiceOrderInformation/zipcodeConsult",
