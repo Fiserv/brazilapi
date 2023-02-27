@@ -1,0 +1,216 @@
+swagger: '2.0'
+info:
+  version: v1.11.50
+  title: BRFTS API
+basePath: /bwa/brfts/rest
+tags:
+  - name: 'Wallet: PIX'
+paths:
+  /pix/transactions:
+    get:
+      tags:
+        - 'Wallet: PIX'
+      x-proxy-name: Transactions
+      x-group-name: Wallet - PIX
+      x-child-product-name: Payment & Prepayment Information
+      summary: Transaction query
+      description: Consultation of transactions carried out by BRFTS
+      operationId: getTransactionData
+      produces:
+        - application/json
+      parameters:
+        - name: institutionNumber
+          in: header
+          description: Institution Number
+          required: true
+          type: string
+        - name: serviceContractId
+          in: header
+          description: Service Contract Identity
+          required: true
+          type: string
+        - name: merchantId
+          in: header
+          description: Merchant Identity
+          required: true
+          type: string
+        - name: terminalId
+          in: header
+          description: Terminal Identity
+          required: false
+          type: string
+        - name: dateBegin
+          in: header
+          description: 'input format: yyyy-MM-dd HH:mm:ss'
+          required: false
+          type: string
+        - name: dateEnd
+          in: header
+          description: 'input format: yyyy-MM-dd HH:mm:ss'
+          required: false
+          type: string
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/TransactionQRCodeDTO'
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+  /pix/credentials/{pspCode}/{taxIdNumber1}:
+    get:
+      tags:
+        - 'Wallet: PIX'
+      x-proxy-name: Credentials
+      x-group-name: Wallet - PIX
+      x-child-product-name: Payment & Prepayment Information
+      summary: Credential query
+      description: Consultation of credential carried out by BRFTS
+      operationId: getMerchantData
+      produces:
+        - application/json
+      parameters:
+        - name: pspCode
+          in: path
+          description: PSP Code - Payment Service Provider Code
+          required: true
+          type: string
+        - name: taxIdNumber1
+          in: path
+          description: CPF or CNPJ
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/CredentialDataResponse'
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+  /pix/credentials:
+    post:
+      tags:
+        - 'Wallet: PIX'
+      x-proxy-name: New Credentials
+      x-group-name: Wallet - PIX
+      x-child-product-name: Payment & Prepayment Information
+      summary: Registration new credential
+      description: Registration of new credential in BRFTS
+      operationId: addMerchantData
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: credentialData
+          required: true
+          schema:
+            $ref: '#/definitions/CredentialDataRequest'
+      responses:
+        '201':
+          description: Created
+          schema:
+            $ref: '#/definitions/CredentialDataResponse'
+        '400':
+          description: Missing or invalid request body
+        '500':
+          description: Internal Server Error
+definitions:
+  TransactionQRCodeDTO:
+    type: object
+    properties:
+      taxIdNumber:
+        type: string
+        example: E.g. CPF with 11 digits (###.###.###-##) and CNPJ with 14 digits(##.###.###/####-##)
+        description: Identification Number for Individuals or Legal Entities (CPF or CNPJ)
+      merchantId:
+        type: string
+        description: Merchant ID which acquired the top up transaction
+      terminalId:
+        type: string
+        description: Terminal ID linked to Merchant ID
+      status:
+        type: string
+        example: 'Existing status types: UNAUTHORIZED,CANCELED,UNDONE,UNCONFIRMED,APPROVED,TIMEOUT '
+        description: QRCode transaction status
+      dateQRCodeGenerated:
+        type: string
+        description: QRCode generation date
+      confirmationReceived:
+        type: string
+        description: Settlement date/time QRCode
+      Amount:
+        type: string
+        description: QRCode value
+      Wallet:
+        type: string
+        example: E.g. QR-Code Elo
+        description: Defines the transaction type
+      included:
+        type: string
+        description: creation date
+      InstitutionNumber:
+        type: string
+        example: E.g. the number '000004' refers to 'SICREDI
+        description: 'The number of the institution according to the records in brfts '
+      ServiceContractId:
+        type: string
+        example: E.g. 101, 104, 110, 113, 149
+        description: Service contract identification number that define the parameters and rules of this contract
+      amountTransaction:
+        type: string
+      Undo date:
+        type: string
+        description: Date of authorization of undoing
+      Undo code:
+        type: string
+        description: Undo authorizing code
+      Undo reason code:
+        type: string
+        description: Undo reason code
+      nsu:
+        type: string
+      pspcode:
+        type: string
+  CredentialDataResponse:
+    type: object
+    properties:
+      pspCode:
+        type: string
+      pspName:
+        type: string
+      pspClientId:
+        type: string
+      pspClientSecret:
+        type: string
+      taxIdNumber1:
+        type: string
+      keyType:
+        type: string
+      key:
+        type: string
+      dateLastBoarding:
+        type: string
+      dataLastBoarding:
+        type: string
+  CredentialDataRequest:
+    type: object
+    properties:
+      pspCode:
+        type: string
+      pspName:
+        type: string
+      pspClientId:
+        type: string
+      pspClientSecret:
+        type: string
+      taxIdNumber1:
+        type: string
+      keyType:
+        type: string
+      key:
+        type: string
