@@ -34,6 +34,7 @@ header:
   image: 
     link: "/assets/images/Fiserv_Logo.jpg"
     altText: Fiserv
+getStarted: /docs/english/APIs-Introduction.md
 featuredFeatures:
   - title: Iniciate your experience
     description:  Access the Introduction page for inicial orientation for how to use the APIs.
