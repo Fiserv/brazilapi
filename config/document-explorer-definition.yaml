@@ -27,6 +27,9 @@
 # are granted or extended by this work or 
 # the delivery of this work
 ################################################################################
+- sections:
+    - title: Getting Started
+      link: docs/english/APIs-Introduction.md
 
 - sections:
   - title: English
